@@ -1,0 +1,9 @@
+TCAdefaults {
+    tt_content {
+        space_before_class = 0
+        space_after_class = 100
+        sectionIndex = 0
+        filelink_size = 1
+        uploads_type = 1
+    }
+}

@@ -1,0 +1,105 @@
+<f:comment>
+In this partial we deal with the information to be inserted in the html header. The goal is that the recommended meta tags are always inserted:
+
+robots
+description
+og:type
+og:site_name
+og:title
+og:description
+og:url
+og:image
+og:image:width
+og:image:height
+twitter:card
+twitter:site
+twitter:title
+twitter:description
+twitter:image
+
+even if they don't have any content. 
+
+Plus:
+
+title
+canonical
+
+If an og or twitter meta tag doesn't have any content we take it from the page: title, description, image. For instance, the metas og:title and twitter:title are inserted only if the page field seo_title is not empty. Since we want to insert always these meta tags, here we have to deal with the fields that are empty and use the page's fields instead.
+
+The optional meta tags:
+
+author
+keywords
+
+will be inserted only if they have any content. These are handled by the extension seo, but it only inserts a meta tag if the related field has content.
+
+With this partial, the extension yoast_seo, if installed, is only used for the analysis shown in the BE.
+</f:comment>
+
+<f:variable name="rootline" value="{v:page.rootline()}" />
+<f:variable name="home" value="{rootline.0}" />
+<f:variable name="bstheme" value="{rootline.0.tx_das_bstheme}" />
+
+<f:if condition="{bstheme}">
+    <v:page.header name="tx-das-page-theme">
+<script>let theme = "{bstheme}";</script>
+    </v:page.header>
+</f:if>
+
+<v:page.header name="tx-das-page-copy_to_clipboard">
+<script>let copy_to_clipboard = "{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang.xlf:copy_to_clipboard')}";</script>
+</v:page.header>
+
+<v:page.resources.fal table="pages" field="tx_das_logo" as="images" uid="{home.uid}">
+    {images -> v:iterator.first() -> f:variable(name: 'image')}
+    <f:if condition="{image.uid}">
+        <f:variable name="schema_image" value="{f:uri.image(src:'{image.uid}', treatIdAsReference: 1, absolute: 1)}" />
+    </f:if>
+</v:page.resources.fal>
+
+<f:variable name="schema_image_width" value="{v:format.trim(content: '{imageWidth}', characters: 'cm')}" />
+<f:variable name="schema_image_height" value="{v:format.trim(content: '{imageHeight}', characters: 'cm')}" />
+<f:variable name="pageNumber" value="{f:if(condition: '{f:cObject(typoscriptObjectPath: \'lib.pageNumber\')}', then: ' {f:cObject(typoscriptObjectPath: \'lib.pageNumber\')}')}" />
+
+<v:page.header.title title="{f:if(condition: '{titlePrepend}', then: '{titlePrepend} ')}{f:if(condition: '{data.seo_title}', then: '{data.seo_title}', else: '{data.title}{pageNumber}')} . {siteTitle}{f:if(condition: '{titleAppend}', then: ' . {titleAppend}')}" />
+
+<f:if condition="{data.author}">
+    <v:page.header.meta name="author" content="{data.author}" />
+</f:if>
+
+<f:if condition="{data.keywords}">
+    <v:page.header.meta name="keywords" content="{data.keywords}" />
+</f:if>
+
+<f:comment>
+<v:page.header.meta property="og:site_name" content="{siteTitle}" />
+<v:page.header.meta property="og:url" content="{v:page.absoluteUrl()}" />
+<f:if condition="{fbAdmins}">
+    <v:page.header.meta property="fb:admins" content="{fbAdmins}" />
+</f:if>
+<f:if condition="{fbAppId}">
+    <v:page.header.meta property="fb:app_id" content="{fbAppId}" />
+</f:if>
+<v:page.header.meta name="twitter:site" content="{siteTitle}" />
+</f:comment>
+
+<v:page.header name="tx-das-page-icons">
+    <link rel="shortcut icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/favicon.png')}" />
+    <meta name="msapplication-TileColor" content="#fff" />
+    <meta name="msapplication-TileImage" content="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/mstile-144x144.png')}" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-57x57.png')}" sizes="57x57" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-60x60.png')}" sizes="60x60" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-72x72.png')}" sizes="72x72" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-76x76.png')}" sizes="76x76" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-114x114.png')}" sizes="114x114" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-120x120.png')}" sizes="120x120" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-144x144.png')}" sizes="144x144" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-152x152.png')}" sizes="152x152" />
+    <link rel="apple-touch-icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-180x180.png')}" sizes="180x180" />
+    <link rel="icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-16x16.png')}" sizes="16x16" />
+    <link rel="icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-32x32.png')}" sizes="32x32" />
+    <link rel="icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-96x96.png')}" sizes="96x96" />
+    <link rel="icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-128x128.png')}" sizes="128x128" />
+    <link rel="icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-160x160.png')}" sizes="160x160" />
+    <link rel="icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-192x192.png')}" sizes="192x192" />
+</v:page.header>

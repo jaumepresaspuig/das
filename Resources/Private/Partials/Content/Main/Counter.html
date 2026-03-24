@@ -1,0 +1,8 @@
+<div class="tx-das-content-counter tx-das-content-counter-layout-{layout}" data-id="c{record.uid}"{f:if(condition: '{animate}', then: ' data-aos="fade-up"')}>
+    <f:if condition="{number_from} != '' && {number_to} != ''">
+        <h1 class="text-center text-nowrap mb-0"><small class="fs-5">{prepend_text} </small><span id="counter-{record.uid}" class="d-inline w-auto my-0 text-{counter_color}" data-from="{number_from as integer}" data-to="{number_to as integer}" data-speed="{speed}"></span><small class="fs-5"> {append_text}</small></h1>
+        <f:if condition="{caption}">
+            <p class="text-center">{caption}</p>
+        </f:if>
+    </f:if>
+</div>

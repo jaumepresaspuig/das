@@ -1,0 +1,14 @@
+<div class="tx-das-content-jumbotron tx-das-content-jumbotron-layout-{layout} py-2 {text_alignment}" data-id="c{record.uid}"{f:if(condition: '{animate}', then: ' data-aos="fade-up"')}>
+    <f:if condition="{header}">
+        <h1>{header}</h1>
+    </f:if>
+    <f:if condition="{subheader}">
+        <h4>{subheader}</h4>
+    </f:if>
+    <f:if condition="{text}">
+        <p><f:format.nl2br>{text}</f:format.nl2br></p>
+    </f:if>
+    <f:if condition="{link} && {link_text}">
+        <p><f:link.typolink parameter="{link}" class="btn btn-{link_style}">{link_text}</f:link.typolink></p>
+    </f:if>
+</div>

@@ -1,0 +1,67 @@
+<f:if condition="{gallery.rows}">
+    <f:if condition="{data.imagecols} == 1 && {data.imageorient} < 25">
+        <f:then>
+            <f:switch expression="{data.tx_das_imageratio}">
+                <f:case value="16x9">
+                    <f:variable name="width" value="965c" />
+                    <f:variable name="height" value="543c" />
+                </f:case>
+                <f:case value="4x3">
+                    <f:variable name="width" value="965c" />
+                    <f:variable name="height" value="724c" />
+                </f:case>
+                <f:case value="1x1">
+                    <f:variable name="width" value="965c" />
+                    <f:variable name="height" value="965c" />
+                </f:case>
+                <f:case value="3x4">
+                    <f:variable name="width" value="724c" />
+                    <f:variable name="height" value="965c" />
+                </f:case>
+                <f:defaultCase>
+                    <f:variable name="width" value="965" />
+                    <f:variable name="height" value="" />
+                </f:defaultCase>
+            </f:switch>
+        </f:then>
+        <f:else>
+            <f:switch expression="{data.tx_das_imageratio}">
+                <f:case value="16x9">
+                    <f:variable name="width" value="500c" />
+                    <f:variable name="height" value="282c" />
+                </f:case>
+                <f:case value="4x3">
+                    <f:variable name="width" value="500c" />
+                    <f:variable name="height" value="375c" />
+                </f:case>
+                <f:case value="1x1">
+                    <f:variable name="width" value="500c" />
+                    <f:variable name="height" value="500c" />
+                </f:case>
+                <f:case value="4x3">
+                    <f:variable name="width" value="375c" />
+                    <f:variable name="height" value="500c" />
+                </f:case>
+                <f:defaultCase>
+                    <f:variable name="width" value="500" />
+                    <f:variable name="height" value="" />
+                </f:defaultCase>
+            </f:switch>
+        </f:else>
+    </f:if>
+    <f:variable name="gallery_width" value="{f:if(condition: '{data.imageorient} >= 25', then: '{gallery_width}', else: '12')}" />
+    <f:variable name="gallery_id" value="{f:if(condition: '{data.tx_das_pagegallery}', then: 'p{data.pid}', else: 'c{data.uid}')}" />
+    <div class="ce-type-textmedia-gallery {settings.layoutGalleryClasses.gallery.{data.imageorient}} col-md-{gallery_width}{f:if(condition: '{data.imageorient} >= 25', then: ' pl-0 pr-0')}{f:if(condition: '{data.imageorient} == 25 && {data.tx_das_order1}', then: ' mobile-order-1')}" id="gallery-{data.uid}">
+        <f:for each="{gallery.rows}" as="row">
+            <div class="row">
+                <f:for each="{row.columns}" as="column">
+                    <f:if condition="{column.media}">
+                        <div class="col-sm">
+                            <f:render partial="Media/Type" arguments="{file: column.media, data: data, settings: settings, width: width, height: height, gallery_id: gallery_id}" />
+                        </div>
+                    </f:if>
+                </f:for>
+            </div>
+        </f:for>
+    </div>
+</f:if>

@@ -1,0 +1,9 @@
+<f:if condition="{data.header_layout} != 100">
+    <f:if condition="{data.header} || {data.subheader} || {data.date} || {data.tx_das_faicon}">
+        <header>
+            <f:render partial="Header/SubHeader" arguments="{data: data}" />
+            <f:render partial="Header/Header" arguments="{data: data}" />
+            <f:render partial="Header/Date" arguments="{data: data}" />
+        </header>
+    </f:if>
+</f:if>

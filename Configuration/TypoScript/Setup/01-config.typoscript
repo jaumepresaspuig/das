@@ -1,0 +1,40 @@
+config {
+    doctype = {$config.doctype}
+    additionalHeaders.10.header = {$config.additionalHeaders}
+    xmlprologue = {$config.xmlprologue}
+    metaCharset = {$config.metaCharset}
+    prefixLocalAnchors = all
+    linkVars = {$linkVars}
+    no_cache = {$config.no_cache}
+    sendCacheHeaders = 1
+    index_enable = {$config.index_enable}
+    spamProtectEmailAddresses = {$config.spamProtectEmailAddresses}
+    spamProtectEmailAddresses_atSubst = {$config.spamProtectEmailAddresses_atSubst}
+    spamProtectEmailAddresses_lastDotSubst = {$config.spamProtectEmailAddresses_lastDotSubst}
+    language = {$config.language}
+    locale_all = {$config.locale_all}.{$config.metaCharset}
+    sys_language_uid = {$config.languageUid}
+    htmlTag.attributes.class = {$config.htmlTagAttributesClass}
+    htmlTag.attributes.dir = {$config.htmlTagAttributesDir}
+    contentObjectExceptionHandler = {$config.contentObjectExceptionHandler}
+    noPageTitle = {$config.noPageTitle}
+    removeDefaultJS = {$config.removeDefaultJS}
+    removeDefaultCS = {$config.removeDefaultCS}
+    removePageCss = {$config.removePageCss}
+    disableBaseWrap = {$config.disableBaseWrap}
+    disablePrefixComment = {$config.disablePrefixComment}
+    sys_language_mode = {$config.sys_language_mode}
+    sys_language_overlay = {$config.sys_language_overlay}
+    typolinkEnableLinksAcrossDomains = {$config.typolinkEnableLinksAcrossDomains}
+    compressCss = {$config.compressCss}
+    compressJs = {$config.compressJs}
+    concatenateCss = {$config.concatenateCss}
+    concatenateJs = {$config.concatenateJs}
+    admPanel = {$config.admPanel}
+    debug = {$config.debug}
+    headerComment (
+Das · TYPO3 made easy
+https://das.jaumepresas.com
+jaume@jaumepresas.com
+    )
+}

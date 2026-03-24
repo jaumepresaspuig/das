@@ -1,0 +1,138 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Chart"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Chart.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.select
+            name="type"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.type"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.type.bar', 1: 'bar', 2: 'EXT:das/Resources/Public/Icons/Content/Chart/Bars.png'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.type.line', 1: 'line', 2: 'EXT:das/Resources/Public/Icons/Content/Chart/Lines.png'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.type.doughnut', 1: 'doughnut', 2: 'EXT:das/Resources/Public/Icons/Content/Chart/Doughnut.png'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.type.pie', 1: 'pie', 2: 'EXT:das/Resources/Public/Icons/Content/Chart/Pie.png'}
+            }"
+            showIconTable="1"
+            requestUpdate="1"
+        />
+        <f:if condition="{type} == 'bar' || {type} == 'line'">
+            <flux:field.select
+                name="hv"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.hv"
+                items="{
+                    0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.hv.1', 1: 1},
+                    1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.hv.2', 1: 2}
+                }"
+            />
+        </f:if>
+        <flux:field.input
+            name="label"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.label"
+        />
+        <flux:field.input
+            name="glue"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.glue"
+            size="5"
+        />
+        <flux:field.input
+            name="file"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.file"
+            config="{renderType: 'inputLink', fieldControl: {linkPopup: {options: {allowedExtensions: 'csv,txt', blindLinkFields: 'class,params,target,title,', blindLinkOptions: 'folder,mail,page,spec,telephone,url'}}}}"
+        />
+        <flux:field.text
+            name="data"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.data"
+            default="label#data#color"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.type" />
+                </th>
+                <td>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.type.{type}" />
+                </td>
+            </tr>
+            <f:if condition="{type} == 'bar' || {type} == 'line'">
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.hv" />
+                    </th>
+                    <td>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.hv.{hv}" />
+                    </td>
+                </tr>
+            </f:if>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.glue.preview" />
+                </th>
+                <td>
+                    {glue}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.file" />
+                </th>
+                <td>
+                    <f:if condition="{file}">                
+                        <f:render partial="Content/Icon" arguments="{icon: 'Text'}" />
+                        <v:resource.record table="sys_file" uid="{f:replace(value: '{file}', search: 't3://file?uid=', replace: '')}" field="identifier" as="file">
+                            <a href="/fileadmin{file.0}" target="_blank">/fileadmin{file.0}</a>
+                        </v:resource.record>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.chart.data" />
+                </th>
+                <td>
+                    <pre>{data}</pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Chart" arguments="{_all}" />
+</f:section>

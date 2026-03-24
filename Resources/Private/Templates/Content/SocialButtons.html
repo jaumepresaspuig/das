@@ -1,0 +1,168 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="SocialButtons"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/SocialButtons.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.select
+            name="size"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:size"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:small', 1: 'sm'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:medium', 1: ''},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:large', 1: 'lg'}
+            }"
+        />
+        <flux:field.checkbox
+            name="rounded"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.rounded"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:field.select
+            name="alignment"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:alignment"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:text-left', 1: 'text-left'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:text-center', 1: 'text-center'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:text-end', 1: 'text-end'}
+            }"
+            default="text-left"
+        />
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.buttons"
+        >
+            <flux:form.section
+                name="items"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.buttons"
+            >
+                <flux:form.object
+                    name="item"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.button"
+                >
+                    <f:render partial="Content/Access" arguments="{_all}" />
+                    <flux:field.select
+                        name="platorm"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.platorm"
+                        items="{
+                            0:{0: 'Bandcamp', 1: 'Bandcamp', 2: 'EXT:das/Resources/Public/Images/Social/Bandcamp.png'},
+                            1:{0: 'Facebook', 1: 'Facebook', 2: 'EXT:das/Resources/Public/Images/Social/Facebook.png'},
+                            2:{0: 'Flickr', 1: 'Flickr', 2: 'EXT:das/Resources/Public/Images/Social/Flickr.png'},
+                            3:{0: 'Foursquare', 1: 'Foursquare', 2: 'EXT:das/Resources/Public/Images/Social/Foursquare.png'},
+                            4:{0: 'Instagram', 1: 'Instagram', 2: 'EXT:das/Resources/Public/Images/Social/Instagram.png'},
+                            5:{0: 'LinkedIn', 1: 'LinkedIn', 2: 'EXT:das/Resources/Public/Images/Social/LinkedIn.png'},
+                            6:{0: 'Pinterest', 1: 'Pinterest', 2: 'EXT:das/Resources/Public/Images/Social/Pinterest.png'},
+                            7:{0: 'Reddit', 1: 'Reddit', 2: 'EXT:das/Resources/Public/Images/Social/Reddit.png'},
+                            8:{0: 'SnapChat', 1: 'SnapChat', 2: 'EXT:das/Resources/Public/Images/Social/SnapChat.png'},
+                            9:{0: 'SoundCloud', 1: 'SoundCloud', 2: 'EXT:das/Resources/Public/Images/Social/SoundCloud.png'},
+                            10:{0: 'Stumbleupon', 1: 'Stumbleupon', 2: 'EXT:das/Resources/Public/Images/Social/Stumbleupon.png'},
+                            11:{0: 'TikTok', 1: 'TikTok', 2: 'EXT:das/Resources/Public/Images/Social/TikTok.png'},
+                            12:{0: 'Tumblr', 1: 'Tumblr', 2: 'EXT:das/Resources/Public/Images/Social/Tumblr.png'},
+                            13:{0: 'X/Twitter', 1: 'Twitter', 2: 'EXT:das/Resources/Public/Images/Social/Twitter.png'},
+                            14:{0: 'Xing', 1: 'Xing', 2: 'EXT:das/Resources/Public/Images/Social/Xing.png'},
+                            15:{0: 'Vimeo', 1: 'Vimeo', 2: 'EXT:das/Resources/Public/Images/Social/Vimeo.png'},
+                            16:{0: 'Vine', 1: 'Vine', 2: 'EXT:das/Resources/Public/Images/Social/Vine.png'},
+                            17:{0: 'Yahoo', 1: 'Yahoo', 2: 'EXT:das/Resources/Public/Images/Social/Yahoo.png'},
+                            18:{0: 'YouTube', 1: 'YouTube', 2: 'EXT:das/Resources/Public/Images/Social/YouTube.png'}
+                        }"
+                        default="Facebook"
+                        showIconTable="1"
+                    />
+                    <flux:field.input
+                        name="url"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.url"
+                        required="1"
+                    />
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:size" />
+                </th>
+                <td>
+                    <f:switch expression="{size}">
+                        <f:case value="sm">
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:small" />
+                        </f:case>
+                        <f:case value="dlgas_modal">
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:large" />
+                        </f:case>
+                        <f:defaultCase>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:medium" />
+                        </f:defaultCase>
+                    </f:switch>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.rounded" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: rounded}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:alignment" />
+                </th>
+                <td>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{alignment}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong> <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.socialbuttons.buttons" /></strong>
+                    <ul class="mt-2">
+                        <f:for each="{items}" as="item">
+                            <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
+                                <f:image src="EXT:das/Resources/Public/Images/Social/{item.item.platorm}.png" alt="{item.item.platorm}" class="me-1 mb-1" /><a href="{item.item.url}" target="_blank">{item.item.url}</a>
+                            </li>
+                        </f:for>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/SocialButtons" arguments="{_all}" />
+</f:section>

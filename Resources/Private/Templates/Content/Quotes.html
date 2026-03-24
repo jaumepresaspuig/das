@@ -1,0 +1,237 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Quotes"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Quotes.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="carousel"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:carousel"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
+        <flux:field.select
+            name="columns"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:columns"
+            items="{
+                0:{0: '1', 1: '1'},
+                1:{0: '2', 1: '2'},
+                2:{0: '3', 1: '3'},
+                3:{0: '4', 1: '4'}
+            }"
+            default="2"
+            displayCond="FIELD:options.carousel:=:0"
+        />
+        <flux:field.select
+            name="transition"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.transition"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.transition.0', 1: '0'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.transition.1', 1: '1'}
+            }"
+            default=""
+            showIconTable="1"
+            displayCond="FIELD:options.carousel:=:1"
+        />
+        <flux:field.checkbox
+            name="pagination"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.pagination"
+            config="{renderType: 'checkboxToggle'}"
+            displayCond="FIELD:options.carousel:=:1"
+        />
+        <flux:field.checkbox
+            name="navigation"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.navigation"
+            config="{renderType: 'checkboxToggle'}"
+            displayCond="FIELD:options.carousel:=:1"
+        />
+        <flux:field.checkbox
+            name="autoplay"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.autoplay"
+            config="{renderType: 'checkboxToggle'}"
+            default="1"
+            displayCond="FIELD:options.carousel:=:1"
+            requestUpdate="1"
+        />
+        <f:if condition="{autoplay}">
+            <flux:field.input
+                name="interval"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.interval"
+                size="3"
+                config="{eval: 'int', range: {lower: 0, upper: 10}, slider: {step: 1, width: 200}}"
+                displayCond="FIELD:options.carousel:=:1"
+            />
+        </f:if>
+        <flux:field.checkbox
+            name="animate"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:animate_entries"
+            config="{renderType: 'checkboxToggle'}"
+            displayCond="FIELD:options.carousel:!=:1"
+        />
+        <flux:field.select
+            name="default_color"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default_color"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_primary.svg'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_secondary.svg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/bg_success.svg'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/bg_danger.svg'},
+                4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/bg_warning.svg'},
+                5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/bg_info.svg'},
+                6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
+                7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
+            }"
+            default=""
+            showIconTable="1"
+        />
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.quotes"
+        >
+            <flux:form.section
+                name="items"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.quotes"
+            >
+                <flux:form.object
+                    name="item"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.quote"
+                >
+                    <f:render partial="Content/Access" arguments="{_all}" />
+                    <flux:field.input
+                        name="author"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.author"
+                        required="1"
+                    />
+                    <flux:field.input
+                        name="date"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.date"
+                        config="{renderType: 'datetime', format: 'date'}"
+                    />
+                    <flux:field.text
+                        name="text"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.text"
+                        rows="4"
+                        required="1"
+                    />
+                    <flux:field.input
+                        name="image"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.image"
+                        config="{renderType: 'inputLink', fieldControl: {linkPopup: {options: {allowedExtensions: 'jpg,jpeg,png,gif,webp', blindLinkFields: 'class,params,target,title', blindLinkOptions: 'folder,mail,page,spec,telephone,url'}}}}"
+                    />
+                    <flux:field.select
+                        name="color"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:color"
+                        items="{
+                            0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '', 2: 'EXT:das/Resources/Public/Images/Colors/bg_.svg'},
+                            1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_primary.svg'},
+                            2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_secondary.svg'},
+                            3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/bg_success.svg'},
+                            4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/bg_danger.svg'},
+                            5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/bg_warning.svg'},
+                            6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/bg_info.svg'},
+                            7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
+                            8:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
+                        }"
+                        showIconTable="1"
+                    />
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:columns" />
+                </th>
+                <td>
+                    {columns}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:carousel" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: carousel}" />
+                </td>
+            </tr>
+            <f:if condition="{carousel} == 0">
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:animate_entries" />
+                    </th>
+                    <td>
+                        <f:render partial="Content/Check" arguments="{condition: animate}" />
+                    </td>
+                </tr>
+            </f:if>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default_color" />
+                </th>
+                <td>
+                    <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{default_color}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{default_color}')}" class="d-inline-block me-1 mb-1" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.quotes" /></strong>
+                    <ul class="mt-2">
+                        <f:for each="{items}" as="item">
+                            <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
+                                <f:if condition="{item.item.image}">
+                                    <f:then>                                    
+                                        <img src="{f:uri.image(src: '{item.item.image}', width: '20c', height: '20c', absolute: 1)}" width="20" height="20" alt="{item.item.name}" class="me-1 mb-1" />
+                                    </f:then>
+                                    <f:else>
+                                        <f:render partial="Content/TransparentPng" arguments="{width: 20}" />
+                                    </f:else>
+                                </f:if>
+                                <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{f:if(condition: '{item.item.color}', then: '{item.item.color}', else: '{default_color}')}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{f:if(condition: \'{item.item.color}\', then: \'colors.{item.item.color}\', else: \'default\')}')}" class="d-inline-block me-1 mb-1" />"{item.item.text}". <em>{item.item.author}<f:if condition="{item.item.date}"> (<f:format.date format="%B %e, %Y">{item.item.date}</f:format.date>)</em></f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Quotes" arguments="{_all}" />
+</f:section>

@@ -1,0 +1,79 @@
+<f:if condition="{items}">    
+    <div class="tx-das-content-quotes tx-das-content-quotes-layout-{layout}" id="tx-das-content-quotes-{record.uid}" data-id="c{record.uid}">
+        <f:if condition="{carousel}">
+            <f:then>
+                <div id="carousel-{record.uid}" class="carousel slide{f:if(condition: '{transition}', then: ' carousel-fade')}"{f:if(condition: '{autoplay}', then: ' data-bs-ride="carousel" data-bs-interval="{interval}000"')}>
+                    <f:if condition="{pagination}">
+                        <div class="carousel-indicators">
+                            <f:variable name="carouselItems" value="{items -> f:count()}" />
+                            <f:variable name="carouselItems" value="{carouselItems / columns}" />
+                            <f:variable name="carouselItems" value="{carouselItems-> v:math.ceil()}" />
+                            <v:iterator.for from="0" to="{carouselItems - 1}" iteration="iteration">
+                                <button type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide-to="{iteration.index}"{f:if(condition: '{iteration.isFirst}', then: ' class="active"')}></button>
+                            </v:iterator.for>
+                        </div>
+                    </f:if>
+                    <div class="carousel-inner d-flex">
+                        <f:for each="{items}" as="item" iteration="iteration">
+                            <div class="carousel-item h-100 text-center{f:if(condition: '{iteration.isFirst}', then: ' active')}">
+                                <f:render section="quote" arguments="{_all}" />
+                            </div>
+                        </f:for>
+                    </div>
+                    <f:if condition="{navigation}">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </f:if>
+                </div>
+            </f:then>
+            <f:else>
+                <f:if condition="{columns} == 1">
+                    <f:then>
+                        <f:for each="{items}" as="item" iteration="iteration">
+                            <f:render section="quote" arguments="{_all}" />
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <f:variable name="colss" value="{12 / columns}" />
+                        <f:variable name="counter" value="0" />
+                        <f:for each="{items -> v:iterator.chunk(count: '{columns}')}" as="itemx" iteration="iteration">
+                            <div class="row h-100 w-100{f:if(condition: '{carousel}', then: ' carousel-item')}{f:if(condition: '{carousel} && {iteration.isFirst}', then: ' active')}">
+                                <f:for each="{itemx}" as="item" iteration="iterationx">
+                                    <f:variable name="cols" value="{f:if(condition: '{iterationx.total} < {columns}', then: '{12 / iterationx.total}', else: '{colss}')}" />
+                                    <div class="col-md-{cols} mb-2 d-flex">
+                                        <f:variable name="counter" value="{counter + 1}" />
+                                        <f:render section="quote" arguments="{_all}" />
+                                    </div>
+                                </f:for>
+                            </div>
+                        </f:for>
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+<f:section name="quote">
+    <f:variable name="color" value="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" />
+    <figure class="note note-primary p-4 rounded-2 border-{color}"{f:if(condition: '!{carousel} && {animate}', then: ' data-aos="fade-up" data-aos-delay="{counter}00"')}>
+        <i class="fas fa-quote-left fa-2x mb-3 text-{color}"></i>
+        <f:if condition="{item.image}">
+            <p class="text-center">
+                <img src="{f:uri.image(src: '{item.image}', width: '80c', height: '80c', absolute: 1)}" width="80" height="80" alt="{item.author}" class="rounded-circle" />
+            </p>
+        </f:if>
+        <blockquote class="blockquote">
+            <p class="pb-2">
+                <f:format.nl2br>{item.text}</f:format.nl2br>
+            </p>
+        </blockquote>
+        <figcaption class="blockquote-footer mb-0">
+            {item.author}<f:if condition="{item.date}">, <small><f:format.date format="%B %e, %Y">{item.date}</f:format.date></small></f:if>
+        </figcaption>
+    </figure>
+</f:section>

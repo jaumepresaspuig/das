@@ -1,0 +1,21 @@
+sitemap = PAGE
+sitemap {
+    typeNum = 101
+    config {
+        absRefPrefix =
+        disableAllHeaderCode = 1
+        xhtml_cleaning = none
+        admPanel = 0
+        debug = 0
+        disablePrefixComment = 1
+        metaCharset = utf-8
+        additionalHeaders.10.header = Content-Type:text/xml;charset=utf-8
+    }
+    wrap (
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+    |
+</urlset>
+    )
+    10 < lib.sitemapXml
+}

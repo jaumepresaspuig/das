@@ -1,0 +1,8 @@
+<figure class="figure w-100" data-aos="{f:if(condition: '{data.tx_das_galleryanimate}', then: 'fade-up')}" data-aos-delay="100">
+    <f:media class="audio-embed-item" file="{file}" alt="{file.alternative}" title="{file.title}" class="w-100" />
+    <f:if condition="{file.description}">
+        <figcaption class="figure-caption">
+            <f:format.nl2br>{file.description}</f:format.nl2br>
+        </figcaption>
+    </f:if>
+</figure>

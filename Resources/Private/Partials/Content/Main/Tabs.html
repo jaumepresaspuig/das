@@ -1,0 +1,49 @@
+<f:variable name="items" value="{v:content.get(column: '{record.uid}91')}" />
+<f:if condition="{items}">
+    <div class="tx-das-content-tabs tx-das-content-tabs-layout-{layout}" data-id="c{record.uid}">
+        <f:if condition="{vertical_tabs}">
+            <f:then>
+                <div class="row">
+                    <div class="col-3">
+                        <ul class="nav nav-tabs flex-column me-3" role="tablist" aria-orientation="vertical">
+                            <f:for each="{items}" as="item" iteration="iteration">
+                                <li class="nav-item" role="presentation">
+                                    <a href="#tabs-{record.uid}-{item.uid}" class="nav-link{f:if(condition: '{iteration.isFirst}', then: ' active')}" data-bs-toggle="tab" role="tab" aria-controls="tabs-{record.uid}-{item.uid}" aria-selected="{f:if(condition: '{iteration.isFirst}', then: 'true', else: 'false')}">
+                                        {item.header}
+                                    </a>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </div>
+                    <div class="col-9">
+                        <div class="tab-content">
+                            <f:for each="{items}" as="item" iteration="iteration">
+                                <div class="tab-pane fade mx-n3{f:if(condition: '{iteration.isFirst}', then: ' show active')}" id="tabs-{record.uid}-{item.uid}">
+                                    <v:content.render contentUids="{0: item.uid}" /> 
+                                </div>
+                            </f:for>
+                        </div>
+                    </div>
+                </div>
+            </f:then>
+            <f:else>
+                <ul class="nav nav-tabs mb-3{f:if(condition: '{fill}', then: ' nav-fill')}" id="tabs-tab-{record.uid}" role="tablist">
+                    <f:for each="{items}" as="item" iteration="iteration">
+                        <li class="nav-item">
+                            <a class="nav-link{f:if(condition: '{iteration.isFirst}', then: ' active')}" data-bs-toggle="tab" href="#tabs-{record.uid}-{item.uid}">
+                                {item.header}
+                            </a>
+                        </li>
+                    </f:for>
+                </ul>
+                <div class="tab-content" id="tabs-tabContent-{record.uid}">
+                    <f:for each="{items}" as="item" iteration="iteration">
+                        <div class="tab-pane container fade mx-n3{f:if(condition: '{iteration.isFirst}', then: ' show active')}" id="tabs-{record.uid}-{item.uid}">
+                            <v:content.render contentUids="{0: item.uid}" />
+                        </div>
+                    </f:for>
+                </div>
+            </f:else>
+        </f:if>
+    </div>
+</f:if>

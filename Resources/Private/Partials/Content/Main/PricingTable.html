@@ -1,0 +1,52 @@
+<f:if condition="{items}">
+    <div class="tx-das-content-pricingtable tx-das-content-pricingtable-layout-{layout}" data-id="c{record.uid}">
+        <f:if condition="{columns} == 1">
+            <f:then>
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <f:render section="price" arguments="{_all}" />
+                </f:for>
+            </f:then>
+            <f:else>
+                <f:render section="columns" arguments="{_all}" />
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+<f:section name="columns">
+    <f:variable name="colss" value="{12 / columns}" />
+    <f:variable name="counter" value="0" />
+    <f:for each="{items -> v:iterator.chunk(count: '{columns}')}" as="itemx" iteration="iteration">
+        <div class="row row-cols-1 row-cols-md-{columns">
+            <f:for each="{itemx}" as="item" iteration="iterationx">
+                <f:variable name="cols" value="{f:if(condition: '{iterationx.total} < {columns}', then: '{12 / iterationx.total}', else: '{colss}')}" />
+                <div class="col-md-{cols} d-flex">
+                    <f:variable name="counter" value="{counter + 1}" />
+                    <f:render section="price" arguments="{_all}" />
+                </div>
+            </f:for>
+        </div>
+    </f:for>
+</f:section>
+
+<f:section name="price">
+    <f:variable name="color" value="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" />
+    <div class="card mb-4 rounded-3 w-100 text-center shadow-sm {color}" style="width: 18rem; display: flex; flex-direction: column; justify-content: space-between;"{f:if(condition: '!{carousel} && {animate}', then: ' data-aos="fade-up" data-aos-delay="{counter}00"')}>
+        <div class="card-header py-3{f:if(condition: '{color}', then: ' text-white bg-{color} border-{color}')}" id="tabs-{record.uid}-{item.uid}">
+            <h4 class="my-0 fw-normal{f:if(condition: '{color} == \'info\' || {color} == \'light\' || {color} == \'warning\'', then: ' text-black')}">
+                {item.title}
+            </h4>
+        </div>
+        <div class="card-body">
+            <h1 class="card-title pricing-card-title"><f:if condition="{item.currency_position} == 2">{item.currency}</f:if>{item.price}<f:if condition="{item.currency_position} == 1">{item.currency}</f:if><f:if condition="{item.text_after}"><small class="text-muted fw-light">{item.text_after}</small></f:if></h1>
+            <p class="card-text mt-3">
+                <f:format.nl2br>{item.text}</f:format.nl2br>
+            </p>
+        </div>
+        <f:if condition="{item.button} && {item.link}">
+            <f:link.typolink parameter="{item.link}" class="btn btn-lg m-2 {f:if(condition: '{color}', then: 'btn-{color}', else: 'btn-outline-dark')}">
+                {item.button}
+            </f:link.typolink>
+        </f:if>
+    </div>
+</f:section>

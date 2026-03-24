@@ -1,0 +1,89 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Tabs"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.tabs"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.tabs.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Tabs.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="vertical_tabs"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.tabs.vertical_tabs"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="fill"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.tabs.fill"
+            config="{renderType: 'checkboxToggle'}"
+            displayCond="FIELD:options.vertical_tabs:=:0"
+        />
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column
+                    colPos="91"
+                    name="ce1"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:content"
+                />
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.tabs.vertical_tabs" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: vertical_tabs}" />
+                </td>
+            </tr>
+            <f:if condition="!{vertical_tabs}">
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.tabs.fill" />
+                    </th>
+                    <td>
+                    <f:render partial="Content/Check" arguments="{condition: fill}" />
+                    </td>
+                </tr>
+            </f:if>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Tabs" arguments="{_all}" />
+</f:section>

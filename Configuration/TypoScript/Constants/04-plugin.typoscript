@@ -1,0 +1,16 @@
+plugin {
+    tx_felogin_login {
+        view {
+            templateRootPath = EXT:das/Resources/Private/Extensions/fe_login/Templates/
+            partialRootPath = EXT:das/Resources/Private/Extensions/fe_login/Partials/
+            layoutRootPath = EXT:das/Resources/Private/Extensions/fe_login/Layouts/
+        }
+    }
+    tx_indexedsearch {
+        view {
+            templateRootPath = EXT:das/Resources/Private/Extensions/indexed_search/Templates/
+            partialRootPath = EXT:das/Resources/Private/Extensions/indexed_search/Partials/
+            layoutRootPath = EXT:das/Resources/Private/Extensions/indexed_search/Layouts/
+        }
+    }
+}

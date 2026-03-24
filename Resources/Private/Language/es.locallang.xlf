@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="es" datatype="plaintext" original="messages" date="2026-03-04T16:25:19Z" product-name="das">
+        <header/>
+        <body>
+            <trans-unit id="flux.newContentWizard.dasContent">
+                <source>Das content</source>
+                <target>Contenido de Das</target>
+            </trans-unit>  
+            <trans-unit id="search_placeholder">
+                <source>Search</source>
+                <target>Buscar</target>
+            </trans-unit>
+            <trans-unit id="more_info">
+                <source>More info</source>
+                <target>Más información</target>
+            </trans-unit>
+            <trans-unit id="read_more">
+                <source>Read more</source>
+                <target>Leer más</target>
+            </trans-unit>
+            <trans-unit id="back">
+                <source>Back</source>
+                <target>Atrás</target>
+            </trans-unit>
+            <trans-unit id="copy_to_clipboard">
+                <source>Copy to clipboard</source>
+                <target>Copiar al portapapeles</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

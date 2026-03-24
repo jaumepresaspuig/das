@@ -1,0 +1,11 @@
+seo {
+    siteTitle = Das
+    titlePrepend =
+    titleAppend = : {$seo.siteTitle}
+    imageWidth = 1200c
+    imageHeight = 628c
+    ogType = website
+    fbAdmins =
+    fbAppId =
+    twitterCard = summary
+}

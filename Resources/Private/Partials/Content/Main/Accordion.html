@@ -1,0 +1,19 @@
+<f:variable name="items" value="{v:content.get(column: '{record.uid}91')}" />
+<f:if condition="{items}">
+    <div class="tx-das-content-accordion tx-das-content-accordion-layout-{layout} accordion" id="tx-das-content-accordion-{record.uid}" data-id="c{record.uid}">
+        <f:for each="{items}" as="item" iteration="iteration">
+            <div class="accordion-item">
+                <h2 class="accordion-header mb-0" id="heading-accordion-{record.uid}-{iteration.cycle}">
+                    <button class="accordion-button{f:if(condition: '{iteration.isFirst} && !{open_first_item}', then: ' collapsed')}{f:if(condition: '!{iteration.isFirst}', then: ' collapsed')}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-accordion-{record.uid}-{iteration.cycle}" aria-expanded="{f:if(condition: '{iteration.isFirst} && {open_first_item}', then: 'true', else: 'false')}" aria-controls="collapse-accordion-{record.uid}-{iteration.cycle}">
+                        {item.header}
+                    </button>
+                </h2>
+                <div id="collapse-accordion-{record.uid}-{iteration.cycle}" class="accordion-collapse collapse{f:if(condition: '{iteration.isFirst} && {open_first_item}', then: ' show')}" aria-labelledby="heading-accordion-{record.uid}-{iteration.cycle}"{f:if(condition: '{allow_multipe_open_items}', else: ' data-bs-parent="#tx-das-content-accordion-{record.uid}"')}>
+                    <div class="accordion-body mx-n1">
+                        <v:content.render contentUids="{0: item.uid}" />
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</f:if>

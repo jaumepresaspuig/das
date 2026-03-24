@@ -1,0 +1,16 @@
+<div class="tx-das-content-cols" data-id="c{record.uid}">
+    <f:variable name="mb" value="{f:if(condition: '{gutter} != \'\'', then: '{gutter}', else: 4)}" />
+    <div class="row{f:if(condition: '{gutter} != \'\'', then: ' gx-{gutter}')}">
+        <v:iterator.for from="1" to="{columns}" iteration="iteration">
+            <div class="col-{iteration.index} {col{iteration.index}xs} {col{iteration.index}sm} {col{iteration.index}md} {col{iteration.index}lg} {col{iteration.index}xl} {col{iteration.index}class}{f:if(condition: '{col{iteration.index}bg}', then: ' mb-{mb}')}" data-aos="{col{iteration.index}animation}">
+                <f:if condition="{col{iteration.index}bg}">
+                    <div class="w-100 h-100 p-4" style="background-color: {col{iteration.index}bg}">
+                </f:if>
+                    <flux:content.render area="ce{iteration.index}" />
+                <f:if condition="{col{iteration.index}bg}">
+                    </div>
+                </f:if>
+            </div>
+        </v:iterator.for>
+    </div>
+</div>

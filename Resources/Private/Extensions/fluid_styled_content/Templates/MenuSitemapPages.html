@@ -1,0 +1,41 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <f:render section="Menu" arguments="{menu: menu, data: data}" />
+</f:section>
+
+<f:section name="Menu">
+    <f:if condition="{menu}">
+        <ul id="accordion-{data.uid}" class="nav nav-pills flex-column">
+            <f:for each="{menu}" as="page">
+                <li class="nav-item">
+                    <f:if condition="{page.children}">
+                        <f:then>
+                            <a href="#item-{data.uid}-{page.data.uid}" class="nav-link {f:if(condition: '{page.active} || {page.current}', then: 'active')}" data-toggle="collapse" data-parent="#accordion-{data.uid}">
+                                {page.title}
+                            </a>
+                            <div id="item-{data.uid}-{page.data.uid}" class="collapse {f:if(condition: '{page.active} || {page.current}', then: 'show')}">
+                                <ul class="nav flex-column ml-3">
+                                    <f:for each="{page.children}" as="subpage">
+                                        <li class="nav-item">
+                                            <f:render section="Link" arguments="{page: subpage}" />
+                                        </li>
+                                    </f:for>
+                                </ul>
+                            </div>
+                        </f:then>
+                        <f:else>
+                            <f:render section="Link" arguments="{page: page}" />
+                        </f:else>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+</f:section>
+
+<f:section name="Link">
+    <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{page.title}" class="nav-link {f:if(condition: '{page.active} || {page.current}', then: 'active')}">
+        {page.title}
+    </a>
+</f:section>

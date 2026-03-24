@@ -1,0 +1,1860 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="es" datatype="plaintext" original="messages" date="2026-03-04T16:25:19Z" product-name="das">
+        <header/>
+        <body>
+            <trans-unit id="checked.0">
+                <source>No</source>
+                <target>No</target>
+            </trans-unit>
+            <trans-unit id="checked.1">
+                <source>Yes</source>
+                <target>Sí</target>
+            </trans-unit>
+            <trans-unit id="before">
+                <source>Before</source>
+                <target>Antes</target>
+            </trans-unit>
+            <trans-unit id="after">
+                <source>After</source>
+                <target>Después</target>
+            </trans-unit>
+            <trans-unit id="columns">
+                <source>Columns</source>
+                <target>Columnas</target>
+            </trans-unit>
+            <trans-unit id="tt_content">
+                <source>Content</source>
+                <target>Contenido</target>
+            </trans-unit>
+            <trans-unit id="data">
+                <source>Data</source>
+                <target>Datos</target>
+            </trans-unit>
+            <trans-unit id="access">
+                <source>Access</source>
+                <target>Acceso</target>
+            </trans-unit>
+            <trans-unit id="active">
+                <source>Active</source>
+                <target>Activo</target>
+            </trans-unit>
+            <trans-unit id="starttime">
+                <source>Publish Date</source>
+                <target>Fecha de publicación</target>
+            </trans-unit>
+            <trans-unit id="endtime">
+                <source>Expiration Date</source>
+                <target>Fecha de expiración</target>
+            </trans-unit>
+            <trans-unit id="fe_group">
+                <source>Usergroup Access Rights</source>
+                <target>Derechos de acceso de grupo de usuarios</target>
+            </trans-unit>
+            <trans-unit id="extra_fields">
+                <source>Enable extra fields</source>
+                <target>Habilitar campos adicionales</target>
+            </trans-unit>
+            <trans-unit id="default">
+                <source>Default</source>
+                <target>Por defecto</target>
+            </trans-unit>
+            <trans-unit id="color">
+                <source>Color</source>
+                <target>Color</target>
+            </trans-unit>
+            <trans-unit id="none">
+                <source>None</source>
+                <target>Ninguno</target>
+            </trans-unit>
+            <trans-unit id="size">
+                <source>Size</source>
+                <target>Tamaño</target>
+            </trans-unit>
+            <trans-unit id="small">
+                <source>Small</source>
+                <target>Pequeño</target>
+            </trans-unit>
+            <trans-unit id="normal">
+                <source>Normal</source>
+                <target>Normal</target>
+            </trans-unit>
+            <trans-unit id="medium">
+                <source>Medium</source>
+                <target>Mediano</target>
+            </trans-unit>
+            <trans-unit id="large">
+                <source>Large</source>
+                <target>Grande</target>
+            </trans-unit>
+            <trans-unit id="notset">
+                <source>Not set</source>
+                <target>No establecido</target>
+            </trans-unit>
+            <trans-unit id="visible">
+                <source>Visible</source>
+                <target>Visible</target>
+            </trans-unit>
+            <trans-unit id="hidden">
+                <source>Hidden</source>
+                <target>Oculto</target>
+            </trans-unit>
+            <trans-unit id="configuration">
+                <source>Configuration</source>
+                <target>Configuración</target>
+            </trans-unit>
+            <trans-unit id="custom_classes_and_styles">
+                <source>Custom classes and styles</source>
+                <target>Clases y estilos personalizados</target>
+            </trans-unit>
+            <trans-unit id="custom_classes">
+                <source>Custom classes</source>
+                <target>Clases personalizadas</target>
+            </trans-unit>
+            <trans-unit id="custom_styles">
+                <source>Custom styles</source>
+                <target>Estilos personalizados</target>
+            </trans-unit>
+            <trans-unit id="animation">
+                <source>Animation</source>
+                <target>Animación</target>
+            </trans-unit>
+            <trans-unit id="animation.r">
+                <source>Fade right</source>
+                <target>Fundido a la derecha</target>
+            </trans-unit>
+            <trans-unit id="animation.l">
+                <source>Fade left</source>
+                <target>Fundido a la izquierda</target>
+            </trans-unit>
+            <trans-unit id="animation.u">
+                <source>Fade up</source>
+                <target>Fundido hacia arriba</target>
+            </trans-unit>
+            <trans-unit id="animation.d">
+                <source>Fade down</source>
+                <target>Fundido hacia abajo</target>
+            </trans-unit>
+            <trans-unit id="drop_shadow">
+                <source>Drop shadow</source>
+                <target>Sombra</target>
+            </trans-unit>
+            <trans-unit id="visibility">
+                <source>Visibility</source>
+                <target>Visibilidad</target>
+            </trans-unit>
+            <trans-unit id="responsive">
+                <source>Hide content on these devices</source>
+                <target>Ocultar contenido en estos dispositivos</target>
+            </trans-unit>
+            <trans-unit id="hidden.xs">
+                <source>Extra small: phones (&lt;576px)</source>
+                <target>Extra pequeño: teléfonos (&lt;576px)</target>
+            </trans-unit>
+            <trans-unit id="hidden.sm">
+                <source>Small: phones (&gt;=576px)</source>
+                <target>Pequeño: teléfonos (&gt;=576px)</target>
+            </trans-unit>
+            <trans-unit id="hidden.md">
+                <source>Medium: tablets (&gt;=768px)</source>
+                <target>Mediano: tabletas (&gt;=768px)</target>
+            </trans-unit>
+            <trans-unit id="hidden.lg">
+                <source>Large: desktops (&gt;=992px)</source>
+                <target>Grande: escritorios (&gt;=992px)</target>
+            </trans-unit>
+            <trans-unit id="hidden.xl">
+                <source>Extra large: desktops (&gt;=1200px)</source>
+                <target>Extra grande: escritorios (&gt;=1200px)</target>
+            </trans-unit>
+            <trans-unit id="html_in_header">
+                <source>Move the content to the html header</source>
+                <target>Mover el contenido a la cabecera html</target>
+            </trans-unit>
+            <trans-unit id="html_in_header.description">
+                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend</source>
+                <target>Hará que todos los campos de la pestaña de Apariencia sean ignorados al renderizar el frontend</target>
+            </trans-unit>
+            <trans-unit id="gallery_animate">
+                <source>Animate images</source>
+                <target>Animar imágenes</target>
+            </trans-unit>
+            <trans-unit id="hide_caption">
+                <source>Hide caption for the thumbnails</source>
+                <target>Ocultar título para las miniaturas</target>
+            </trans-unit>
+            <trans-unit id="style_menu">
+                <source>Style menu</source>
+                <target>Menú de estilo</target>
+            </trans-unit>
+            <trans-unit id="page_gallery">
+                <source>Include the media in the page gallery instead of the content</source>
+                <target>Incluir los ficheros en la galería de la página en lugar del contenido</target>
+            </trans-unit>
+            <trans-unit id="gallery_order1">
+                <source>Move gallery over the text on small devices</source>
+                <target>Mover la galería sobre el texto en dispositivos pequeños</target>
+            </trans-unit>
+            <trans-unit id="gallery_width">
+                <source>Gallery width</source>
+                <target>Ancho de la galería</target>
+            </trans-unit>
+            <trans-unit id="image_ratio">
+                <source>Image aspect ratio</source>
+                <target>Proporción de aspecto de la imagen</target>
+            </trans-unit>
+            <trans-unit id="image_ratio.original">
+                <source>Original</source>
+                <target>Original</target>
+            </trans-unit>
+            <trans-unit id="colors.primary">
+                <source>Primary</source>
+                <target>Primario</target>
+            </trans-unit>
+            <trans-unit id="colors.secondary">
+                <source>Secondary</source>
+                <target>Secundario</target>
+            </trans-unit>
+            <trans-unit id="colors.success">
+                <source>Success</source>
+                <target>Éxito</target>
+            </trans-unit>
+            <trans-unit id="colors.danger">
+                <source>Danger</source>
+                <target>Peligro</target>
+            </trans-unit>
+            <trans-unit id="colors.warning">
+                <source>Warning</source>
+                <target>Advertencia</target>
+            </trans-unit>
+            <trans-unit id="colors.info">
+                <source>Info</source>
+                <target>Información</target>
+            </trans-unit>
+            <trans-unit id="colors.light">
+                <source>Light</source>
+                <target>Claro</target>
+            </trans-unit>
+            <trans-unit id="colors.dark">
+                <source>Dark</source>
+                <target>Oscuro</target>
+            </trans-unit>
+            <trans-unit id="colors.blur">
+                <source>Blur</source>
+                <target>Desenfoque</target>
+            </trans-unit>
+            <trans-unit id="template">
+                <source>Template</source>
+                <target>Plantilla</target>
+            </trans-unit>
+            <trans-unit id="layout">
+                <source>Layout</source>
+                <target>Diseño</target>
+            </trans-unit>
+            <trans-unit id="custom">
+                <source>Custom</source>
+                <target>Personalizado</target>
+            </trans-unit>
+            <trans-unit id="full_width">
+                <source>Full width</source>
+                <target>Ancho completo</target>
+            </trans-unit>
+            <trans-unit id="full_width_with_centered_content">
+                <source>Full width with centered content</source>
+                <target>Ancho completo con contenido centrado</target>
+            </trans-unit>
+            <trans-unit id="width_75_percent">
+                <source>Width 75%</source>
+                <target>Ancho 75%</target>
+            </trans-unit>
+            <trans-unit id="width_50_percent">
+                <source>Width 50%</source>
+                <target>Ancho 50%</target>
+            </trans-unit>
+            <trans-unit id="bg">
+                <source>Background</source>
+                <target>Fondo</target>
+            </trans-unit>
+            <trans-unit id="bg_predefined_color">
+                <source>Background predefined color</source>
+                <target>Color de fondo por defecto</target>
+            </trans-unit>
+            <trans-unit id="bg_color">
+                <source>Background color</source>
+                <target>Color de fondo</target>
+            </trans-unit>
+            <trans-unit id="bg_color.description">
+                <source>Overwrites background predefined color</source>
+                <target>Sobrescribe el color de fondo por defecto</target>
+            </trans-unit>
+            <trans-unit id="bg_image">
+                <source>Background image or video</source>
+                <target>Imagen o video de fondo</target>
+            </trans-unit>
+            <trans-unit id="bg_overlay">
+                <source>Background overlay</source>
+                <target>Superposición del fondo</target>
+            </trans-unit>
+            <trans-unit id="bg_overlayvignete">
+                <source>Background overlay vignete</source>
+                <target>CSuperposición del fondo con viñete</target>
+            </trans-unit>
+            <trans-unit id="fixed_bg">
+                <source>Fixed background image</source>
+                <target>Imagen de fondo fija</target>
+            </trans-unit>
+            <trans-unit id="text_alignment">
+                <source>Text alignment</source>
+                <target>Alineación de texto</target>
+            </trans-unit>
+            <trans-unit id="center">
+                <source>Center</source>
+                <target>Centro</target>
+            </trans-unit>
+            <trans-unit id="top">
+                <source>Top</source>
+                <target>Arriba</target>
+            </trans-unit>
+            <trans-unit id="bottom">
+                <source>Bottom</source>
+                <target>Abajo</target>
+            </trans-unit>
+            <trans-unit id="left">
+                <source>Left</source>
+                <target>Izquierda</target>
+            </trans-unit>
+            <trans-unit id="right">
+                <source>Right</source>
+                <target>Derecha</target>
+            </trans-unit>
+            <trans-unit id="header_type">
+                <source>Header type</source>
+                <target>Tipo de encabezado</target>
+            </trans-unit>
+            <trans-unit id="size">
+                <source>Size</source>
+                <target>Tamaño</target>
+            </trans-unit>
+            <trans-unit id="alignment">
+                <source>Alignment</source>
+                <target>Alineación</target>
+            </trans-unit>
+            <trans-unit id="text-left">
+                <source>Left</source>
+                <target>Izquierda</target>
+            </trans-unit>
+            <trans-unit id="text-center">
+                <source>Center</source>
+                <target>Centrar</target>
+            </trans-unit>
+            <trans-unit id="text-end">
+                <source>Right</source>
+                <target>Derecha</target>
+            </trans-unit>
+            <trans-unit id="animate">
+                <source>Animate content objects</source>
+                <target>Animar objetos de contenido</target>
+            </trans-unit>
+            <trans-unit id="text_color">
+                <source>Text color</source>
+                <target>Color del texto</target>
+            </trans-unit>
+            <trans-unit id="black">
+                <source>Black</source>
+                <target>Negro</target>
+            </trans-unit>
+            <trans-unit id="white">
+                <source>White</source>
+                <target>Blanco</target>
+            </trans-unit>
+            <trans-unit id="animate_entries">
+                <source>Animate entries</source>
+                <target>Animar entradas</target>
+            </trans-unit>
+            <trans-unit id="carousel">
+                <source>Carousel</source>
+                <target>Carrusel</target>
+            </trans-unit>
+            <trans-unit id="content">
+                <source>Content</source>
+                <target>Contenido</target>
+            </trans-unit>
+            <trans-unit id="format_date">
+                <source>F j, Y</source>
+                <target>j F Y</target>
+            </trans-unit>
+            <trans-unit id="format_datetime">
+                <source>F j, Y H:i</source>
+                <target>j F Y H:i</target>
+            </trans-unit>
+            <trans-unit id="pages.site_configuration">
+                <source>Das: site configuration</source>
+                <target>Das: configuración del sitio</target>
+            </trans-unit>
+            <trans-unit id="pages.page_header">
+                <source>Page header</source>
+                <target>Encabezado de página</target>
+            </trans-unit>
+            <trans-unit id="pages.logo">
+                <source>Logo</source>
+                <target>Logo</target>
+            </trans-unit>
+            <trans-unit id="pages.search_page_uid">
+                <source>Search page</source>
+                <target>Página de búsqueda</target>
+            </trans-unit>
+            <trans-unit id="pages.search_page_uid.description">
+                <source>To enable search box (it requires the extension indexed_search)</source>
+                <target>Habilitar el campo de búsqueda (requiere la extensión indexed_search)</target>
+            </trans-unit>
+            <trans-unit id="pages.navigation_levels">
+                <source>Number of navigation levels to show</source>
+                <target>Número de niveles de navegación a mostrar</target>
+            </trans-unit>
+            <trans-unit id="pages.show_language_selector">
+                <source>Show language selector</source>
+                <target>Mostrar selector de idioma</target>
+            </trans-unit>
+            <trans-unit id="pages.html_header">
+                <source>HTML header</source>
+                <target>Encabezado HTML</target>
+            </trans-unit>
+            <trans-unit id="pages.favicon">
+                <source>Favicon</source>
+                <target>Favicon</target>
+            </trans-unit>
+            <trans-unit id="pages.icons_path">
+                <source>Path to the the folder that contains the icons</source>
+                <target>Ruta a la carpeta que contiene los iconos</target>
+            </trans-unit>
+            <trans-unit id="pages.structured_data">
+                <source>Structured data</source>
+                <target>Datos estructurados</target>
+            </trans-unit>
+            <trans-unit id="pages.structured_data.json">
+                <source>JSON-LD</source>
+                <target>JSON-LD</target>
+            </trans-unit>
+            <trans-unit id="pages.structured_data.microdata">
+                <source>Microdata</source>
+                <target>Microdatos</target>
+            </trans-unit>
+            <trans-unit id="pages.structured_data.rdfa">
+                <source>RDFa</source>
+                <target>RDFa</target>
+            </trans-unit>
+            <trans-unit id="pages.page">
+                <source>Page</source>
+                <target>Página</target>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb">
+                <source>Show breadcrumb</source>
+                <target>Mostrar el camino de navegación</target>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb.description">
+                <source>In all pages except home</source>
+                <target>En todas las páginas excepto en la de inicio</target>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb.0">
+                <source>Don't show it</source>
+                <target>No mostrarlo</target>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb.1">
+                <source>Before the featured content</source>
+                <target>Antes del contenido destacado</target>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb.2">
+                <source>After the featured content</source>
+                <target>Después del contenido destacado</target>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb_separator">
+                <source>Breadcrumb items separator</source>
+                <target>Separador de elementos del camino de navegación</target>
+            </trans-unit>
+            <trans-unit id="pages.show_page_title">
+                <source>Show page title</source>
+                <target>Mostrar título de la página</target>
+            </trans-unit>
+            <trans-unit id="pages.show_page_title.description">
+                <source>H1, in all pages except home</source>
+                <target>H1, en todas las páginas excepto en la de inicio</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout">
+                <source>Page Layout</source>
+                <target>Diseño de página</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout_subpages">
+                <source>Page Layout (sub-pages of this page)</source>
+                <target>Diseño de página (subpáginas de esta página)</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.Home">
+                <source>Home</source>
+                <target>Inicio</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.Interior">
+                <source>Interior</source>
+                <target>Interior</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorL">
+                <source>Interior with left column</source>
+                <target>Interior con columna izquierda</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLs">
+                <source>Interior with left column (inheriting content)</source>
+                <target>Interior con columna izquierda (heredando contenido)</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorR">
+                <source>Interior with right column</source>
+                <target>Interior con columna derecha</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorRs">
+                <source>Interior with right column (inheriting content)</source>
+                <target>Interior con columna derecha (heredando contenido)</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLR">
+                <source>Interior with left and right columns</source>
+                <target>Interior con columnas izquierda y derecha</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLsR">
+                <source>Interior with left and right columns (only left inheriting content)</source>
+                <target>Interior con columnas izquierda y derecha (sólo la izquierda heredando contenido)</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLRs">
+                <source>Interior with left and right columns (only right inheriting content)</source>
+                <target>Interior con columnas izquierda y derecha (sólo la derecha heredando contenido)</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLsRs">
+                <source>Interior with left and right columns (both inheriting content)</source>
+                <target>Interior con columnas izquierda y derecha (ambas heredando contenido)</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.OnlyContent">
+                <source>Only content (without header and footer)</source>
+                <target>Solo contenido (sin encabezado y pie de página)</target>
+            </trans-unit>
+            <trans-unit id="pages.bstheme">
+                <source>Theme</source>
+                <target>Tema</target>
+            </trans-unit>
+            <trans-unit id="pages.bstheme.auto">
+                <source>Auto</source>
+                <target>Auto</target>
+            </trans-unit>
+            <trans-unit id="pages.bstheme.light">
+                <source>Light</source>
+                <target>Claro</target>
+            </trans-unit>
+            <trans-unit id="pages.bstheme.dark">
+                <source>Dark</source>
+                <target>Oscuro</target>
+            </trans-unit>
+            <trans-unit id="pages.header">
+                <source>Header to be inherited by sub-pages</source>
+                <target>Encabezado que será heredado por subpáginas</target>
+            </trans-unit>
+            <trans-unit id="pages.featured_content">
+                <source>Featured content</source>
+                <target>Contenido destacado</target>
+            </trans-unit>
+            <trans-unit id="pages.main_content">
+                <source>Main content</source>
+                <target>Contenido principal</target>
+            </trans-unit>
+            <trans-unit id="pages.main_content_slide">
+                <source>Main content to be inherited by sub-pages</source>
+                <target>Contenido principal que será heredado por subpáginas</target>
+            </trans-unit>
+            <trans-unit id="pages.sub_footer">
+                <source>Subfooter</source>
+                <target>Subpie de página</target>
+            </trans-unit>
+            <trans-unit id="pages.footer">
+                <source>Footer to be inherited by sub-pages</source>
+                <target>Pie de página que será heredado por subpáginas</target>
+            </trans-unit>
+            <trans-unit id="pages.left_column">
+                <source>Left column</source>
+                <target>Columna izquierda</target>
+            </trans-unit>
+            <trans-unit id="pages.left_column_with_inherited_content">
+                <source>Left column with inherited content</source>
+                <target>Columna izquierda con contenido heredado</target>
+            </trans-unit>
+            <trans-unit id="pages.right_column">
+                <source>Right column</source>
+                <target>Columna derecha</target>
+            </trans-unit>
+            <trans-unit id="pages.right_column_with_inherited_content">
+                <source>Right column with inherited content</source>
+                <target>Columna derecha con contenido heredado</target>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome">
+                <source>Add icon to the header</source>
+                <target>Agregar icono al encabezado</target>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.icon">
+                <source>Icon from the Font Awesome icon set</source>
+                <target>Icono del conjunto de iconos Font Awesome</target>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.icon.description">
+                <source>For example: fab fa-typo3, fas fa-exclamation</source>
+                <target>Por ejemplo: fab fa-typo3, fas fa-exclamation</target>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.size">
+                <source>Size</source>
+                <target>Tamaño</target>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.predefined_color">
+                <source>Predefined color</source>
+                <target>Color por defecto</target>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.color">
+                <source>Color</source>
+                <target>Color</target>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.color.description">
+                <source>Overrides the predefined color</source>
+                <target>Sustituye el color por defecto</target>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.position">
+                <source>Position</source>
+                <target>Posición</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout">
+                <source>Page layout (this page only)</source>
+                <target>Diseño de página (sólo esta página)</target>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout_next_level">
+                <source>Page layout (sub-pages of this page)</source>
+                <target>Diseño de página (subpáginas de esta página)</target>
+            </trans-unit>
+            <trans-unit id="pages.mega_menu">
+                <source>Show sub-pages of this page as a mega menu in the navigation bar</source>
+                <target>Mostrar subpáginas de esta página como un mega menú en la barra de navegación</target>
+            </trans-unit>
+            <trans-unit id="tt_content.accordion">
+                <source>Accordion</source>
+                <target>Acordeón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.accordion.description">
+                <source>Container of content elements to be shown in an accordion.</source>
+                <target>Contenedor de elementos de contenido que se mostrarán en un acordeón.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.accordion.allow_multipe_open_items">
+                <source>Allow to have multiple items open</source>
+                <target>Permitir tener múltiples elementos abiertos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.accordion.open_first_item">
+                <source>Show first item already open</source>
+                <target>Mostrar el primer elemento ya abierto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons">
+                <source>Buttons</source>
+                <target>Botones</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.description">
+                <source>Buttons with different sizes and styles.</source>
+                <target>Botones con diferentes tamaños y estilos.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.buttons">
+                <source>Buttons</source>
+                <target>Botones</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.button">
+                <source>Button</source>
+                <target>Botón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.full_width">
+                <source>Full width</source>
+                <target>Todo el ancho</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.group">
+                <source>Group buttons</source>
+                <target>Agrupar botones</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.outline">
+                <source>Outline</source>
+                <target>Contorno</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.animate_buttons">
+                <source>Animate buttons</source>
+                <target>Animar botones</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.text">
+                <source>Text</source>
+                <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.link">
+                <source>Link</source>
+                <target>Enlace</target>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.style">
+                <source>Style</source>
+                <target>Estilo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards">
+                <source>Cards</source>
+                <target>Tarjetas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.description">
+                <source>Cards with image, title, subtitle, and optional link.</source>
+                <target>Tarjetas con imagen, título, subtítulo y enlace opcional.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.columns">
+                <source>Columns</source>
+                <target>Columnas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.animate_cards">
+                <source>Animate cards</source>
+                <target>Animate tarjetas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.cards">
+                <source>Cards</source>
+                <target>Tarjetas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.card">
+                <source>Card</source>
+                <target>Tarjeta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image">
+                <source>Image</source>
+                <target>Imagen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image_position">
+                <source>Image position</source>
+                <target>Posición de la imagen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image_position.0">
+                <source>Top</source>
+                <target>Arriba</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image_position.1">
+                <source>Bottom</source>
+                <target>Abajo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image_position.2">
+                <source>Background</source>
+                <target>Fondo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.title">
+                <source>Title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.subtitle">
+                <source>Subtitle</source>
+                <target>Subtítulo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.email">
+                <source>Email</source>
+                <target>Correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.text">
+                <source>Text</source>
+                <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.page">
+                <source>Personal page</source>
+                <target>Página personal</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.facebook">
+                <source>Facebook</source>
+                <target>Facebook</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.twitter">
+                <source>X/Twitter</source>
+                <target>X/Twitter</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.linkedin">
+                <source>LinkedIn</source>
+                <target>LinkedIn</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.instagram">
+                <source>Instagram</source>
+                <target>Instagram</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.pinterest">
+                <source>Pinterest</source>
+                <target>Pinterest</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.xing">
+                <source>Xing</source>
+                <target>Xing</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.button">
+                <source>Button</source>
+                <target>Botón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.button_color">
+                <source>Button color</source>
+                <target>Color del botón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.link">
+                <source>Link</source>
+                <target>Enlace</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel">
+                <source>Carousel</source>
+                <target>Carrusel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.description">
+                <source>Container of content elements to be shown in a carousel.</source>
+                <target>Contenedor de elementos de contenido que se mostrarán en un carrusel.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.transition">
+                <source>Transition</source>
+                <target>Transición</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.transition.0">
+                <source>Slide</source>
+                <target>Deslizar</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.transition.1">
+                <source>Fade</source>
+                <target>Fundido</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.pagination">
+                <source>Show pagination dots</source>
+                <target>Mostrar puntos de paginación</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.navigation">
+                <source>Show navigation arrows</source>
+                <target>Mostrar flechas de navegación</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.autoplay">
+                <source>Autoplay</source>
+                <target>Reproducción automática</target>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.interval">
+                <source>Interval between items (seconds)</source>
+                <target>Intervalo entre elementos (segundos)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols">
+                <source>Columns</source>
+                <target>Columnas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.description">
+                <source>Columns (up to six) where to place any content.</source>
+                <target>Columnas (hasta seis) donde colocar cualquier contenido.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.content">
+                <source>Content</source>
+                <target>Contenido</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.columns">
+                <source>Number of columns</source>
+                <target>Número de columnas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.gutter">
+                <source>Spacing between columns</source>
+                <target>Espaciado entre columnas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.columns.auto">
+                <source>Auto</source>
+                <target>Automático</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column">
+                <source>Column</source>
+                <target>Columna</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.col">
+                <source>Content elements for each column</source>
+                <target>Elementos de contenido para cada columna</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_1">
+                <source>Column 1</source>
+                <target>Columna 1</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_2">
+                <source>Column 2</source>
+                <target>Columna 2</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_3">
+                <source>Column 3</source>
+                <target>Columna 3</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_4">
+                <source>Column 4</source>
+                <target>Columna 4</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_5">
+                <source>Column 5</source>
+                <target>Columna 5</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_6">
+                <source>Column 6</source>
+                <target>Columna 6</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.xs">
+                <source>Extra small: phones (&lt;576px)</source>
+                <target>Muy pequeño: teléfonos (&lt;576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.sm">
+                <source>Small: phones (&gt;=576px)</source>
+                <target>Pequeño: teléfonos (&gt;=576px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.md">
+                <source>Medium: tablets (&gt;=768px)</source>
+                <target>Mediano: tabletas (&gt;=768px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.lg">
+                <source>Large: desktops (&gt;=992px)</source>
+                <target>Grande: escritorios (&gt;=992px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.xl">
+                <source>Extra large: desktops (&gt;=1200px)</source>
+                <target>Extra grande: escritorios (&gt;=1200px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.container">
+                <source>Container</source>
+                <target>Contenedor</target>
+            </trans-unit>
+            <trans-unit id="tt_content.container.description">
+                <source>Container of content elements grouped so they can share a common background and a set of classes and styles.</source>
+                <target>Contenedor de elementos de contenido agrupados para que puedan compartir un fondo común y un conjunto de clases y estilos.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.container.bg_color">
+                <source>Background color</source>
+                <target>Color de fondo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.container.bg_color.description">
+                <source>Overrides the background predefined color</source>
+                <target>Sustituye el color de fondo por defecto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.container.bg_file">
+                <source>Background image or video</source>
+                <target>Imagen o video de fondo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.container.fixed_bg">
+                <source>Fixed background image</source>
+                <target>Imagen de fondo fija</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter">
+                <source>Counter</source>
+                <target>Contador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.description">
+                <source>Animated counter from one number to another.</source>
+                <target>Contador animado de un número a otro.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.number_from">
+                <source>Number from</source>
+                <target>Número desde</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.number_to">
+                <source>Number to</source>
+                <target>Número hasta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.prepend_text">
+                <source>Prepend text</source>
+                <target>Texto anterior</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.append_text">
+                <source>Append text</source>
+                <target>Texto posterior</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed">
+                <source>Speed</source>
+                <target>Velocidad</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed.1">
+                <source>Ultra fast</source>
+                <target>Ultra rápido</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed.10">
+                <source>Fast</source>
+                <target>Rápido</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed.25">
+                <source>Slow</source>
+                <target>Lento</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed.50">
+                <source>Ultra slow</source>
+                <target>Ultra lento</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.animate">
+                <source>Animate counter</source>
+                <target>Animar contador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.caption">
+                <source>Caption</source>
+                <target>Subtítulo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.counter_color">
+                <source>Counter color</source>
+                <target>Color del contador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs">
+                <source>Faq's</source>
+                <target>Preguntas frecuentes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.description">
+                <source>Frequently asked questions.</source>
+                <target>Preguntas frecuentes.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.faqs">
+                <source>Faq's</source>
+                <target>Preguntas frecuentes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.faq">
+                <source>Faq</source>
+                <target>Pregunta frecuente</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.question">
+                <source>Question</source>
+                <target>Pregunta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.answer">
+                <source>Answer</source>
+                <target>Respuesta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.accordion">
+                <source>Accordion</source>
+                <target>Acordeón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.allow_multipe_open_items">
+                <source>Allow to have multiple items open</source>
+                <target>Permitir tener múltiples elementos abiertos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.open_first_item">
+                <source>Show first item already open</source>
+                <target>Mostrar el primer elemento ya abierto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.iframe">
+                <source>Iframe</source>
+                <target>Iframe</target>
+            </trans-unit>
+            <trans-unit id="tt_content.iframe.description">
+                <source>Responsive iframe with different aspect ratios.</source>
+                <target>Iframe responsivo con diferentes relaciones de aspecto.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.iframe.url">
+                <source>Url</source>
+                <target>Url</target>
+            </trans-unit>
+            <trans-unit id="tt_content.iframe.ratio">
+                <source>Aspect ratio</source>
+                <target>Relación de aspecto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal">
+                <source>Modal window</source>
+                <target>Ventana modal</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.description">
+                <source>Modal window to show content elements, that opens when the page is loaded, with or without a delay, each time or once per session.</source>
+                <target>Ventana modal para mostrar elementos de contenido, que se abre cuando se carga la página, con o sin demora, cada vez o una vez por sesión.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.position">
+                <source>Position</source>
+                <target>Posición</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size">
+                <source>Size</source>
+                <target>Tamaño</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size.sm">
+                <source>Small</source>
+                <target>Pequeño</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size.lg">
+                <source>Large</source>
+                <target>Grande</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size.xl">
+                <source>Extra large</source>
+                <target>Extra grande</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size.fullscreen">
+                <source>Full screen</source>
+                <target>Pantalla completa</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.title">
+                <source>Title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.close">
+                <source>Text for the button to close it</source>
+                <target>Texto para el botón de cerrarla</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.style">
+                <source>Close button style</source>
+                <target>Estilo del botón de cierre</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.show_x">
+                <source>Show the X button to close it</source>
+                <target>Mostrar el botón X para cerrarla</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.force_user">
+                <source>Force the user to close it only by clicking in the X or the close button</source>
+                <target>Forzar al usuario a cerrarla sólo haciendo clic en la X o el botón de cerrar</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.autoopen">
+                <source>Open it in n seconds</source>
+                <target>Abrirla en n segundos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.autoopen.description">
+                <source>If 0, it opens once the page is loaded</source>
+                <target>Si es 0, se abre una vez que la página está cargada</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.autoclose">
+                <source>Close it in n seconds after it has been opened</source>
+                <target>Cerrarla en n segundos después de haber sido abierta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.autoclose.description">
+                <source>If 0, user has to close it</source>
+                <target>Si es 0, el usuario debe cerrarla</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.show_only_once">
+                <source>Show the modal window only once per user session</source>
+                <target>Mostrar la ventana modal sólo una vez por sesión de usuario</target>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.content">
+                <source>Content elements</source>
+                <target>Elementos de contenido</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator">
+                <source>Paginator</source>
+                <target>Paginador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.description">
+                <source>Paginator of pages of the same level.</source>
+                <target>Paginador de páginas del mismo nivel.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.layout">
+                <source>Layout</source>
+                <target>Diseño</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.layout.1">
+                <source>&#8249; Previous page title - Next page title &#8250;</source>
+                <target>&#8249; Título de la página anterior - Título de la página siguiente &#8250;</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.layout.2">
+                <source>&#8249;&#8249; First - &#8249; Previous - Next &#8250; - Last &#8250;&#8250;</source>
+                <target>&#8249;&#8249; Primera - &#8249; Anterior - Siguiente &#8250; - Última &#8250;&#8250;</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.first">
+                <source>First</source>
+                <target>Primera</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.prev">
+                <source>Previous</source>
+                <target>Anterior</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.next">
+                <source>Next</source>
+                <target>Siguiente</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.last">
+                <source>Last</source>
+                <target>Última</target>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.only_subpages">
+                <source>Show only in first level of sub-pages</source>
+                <target>Mostrar sólo en el primer nivel de subpáginas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars">
+                <source>Progress bars</source>
+                <target>Barras de progreso</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.description">
+                <source>Fancy horizontal and vertical progress bars.</source>
+                <target>Barras de progreso horizontales y verticales elegantes.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.default_area_color">
+                <source>Default color for the bars</source>
+                <target>Color por defecto para las barras</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.stripped_bars">
+                <source>Stripped bars</source>
+                <target>Barras estriadas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.animated_stripes">
+                <source>Animated stripes</source>
+                <target>Estrias animadas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.animated_bars">
+                <source>Animated bars</source>
+                <target>Barras animadas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.vertical_bars">
+                <source>Vertical bars</source>
+                <target>Barras verticales</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.vertical_bars_height">
+                <source>Height of vertical bars (px)</source>
+                <target>Altura de las barras verticales (px)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.bars">
+                <source>Bars</source>
+                <target>Barras</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.bar">
+                <source>Bar</source>
+                <target>Barra</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.title">
+                <source>Title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.area">
+                <source>Area (%)</source>
+                <target>Área (%)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.area_color">
+                <source>Bar color</source>
+                <target>Color de la barra</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.area_color.description">
+                <source>Overrides the default one</source>
+                <target>Sustituye el por defecto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.show_label">
+                <source>Show percentage inside the bars</source>
+                <target>Mostrar porcentaje dentro de las barras</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes">
+                <source>Quotes</source>
+                <target>Citas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.description">
+                <source>Gallery of quotes.</source>
+                <target>Galería de citas.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.transition">
+                <source>Transition</source>
+                <target>Transición</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.transition.0">
+                <source>Slide</source>
+                <target>Deslizar</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.transition.1">
+                <source>Fade</source>
+                <target>Fundido</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.pagination">
+                <source>Show pagination dots</source>
+                <target>Mostrar puntos de paginación</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.navigation">
+                <source>Show navigation arrows</source>
+                <target>Mostrar flechas de navegación</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.autoplay">
+                <source>Autoplay</source>
+                <target>Reproducción automática</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.interval">
+                <source>Interval between items (seconds)</source>
+                <target>Intervalo entre elementos (segundos)</target>
+            </trans-unit>
+            <trans-unit id="default_color">
+                <source>Default color</source>
+                <target>Color por defecto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.quotes">
+                <source>Quotes</source>
+                <target>Citas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.quote">
+                <source>Quote</source>
+                <target>Cita</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.author">
+                <source>Author</source>
+                <target>Autor</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.date">
+                <source>Date</source>
+                <target>Fecha</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.text">
+                <source>Text</source>
+                <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="color">
+                <source>Color</source>
+                <target>Color</target>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.image">
+                <source>Image</source>
+                <target>Imagen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons">
+                <source>Social buttons</source>
+                <target>Botones sociales</target>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.description">
+                <source>Buttons of the most common social platfroms.</source>
+                <target>Botones de las plataformas sociales más comunes.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.buttons">
+                <source>Buttons</source>
+                <target>Botones</target>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.button">
+                <source>Button</source>
+                <target>Botón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.platform">
+                <source>Platform</source>
+                <target>Plataforma</target>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.url">
+                <source>Url</source>
+                <target>Url</target>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.rounded">
+                <source>Rounded</source>
+                <target>Redondeado</target>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs">
+                <source>Tabs</source>
+                <target>Pestañas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs.description">
+                <source>Container of content elements to be shown in tabs.</source>
+                <target>Contenedor de elementos de contenido que se mostrarán en pestañas.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs.vertical_tabs">
+                <source>Vertical tabs</source>
+                <target>Pestañas verticales</target>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs.fill">
+                <source>Make the tabs fill the 100% of the available width</source>
+                <target>Hacer que las pestañas llenen el 100% del ancho disponible</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline">
+                <source>Timeline</source>
+                <target>Cronología</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.description">
+                <source>Timeline.</source>
+                <target>Cronología.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.entries">
+                <source>Entries</source>
+                <target>Entradas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.entry">
+                <source>Entry</source>
+                <target>Entrada</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.icon">
+                <source>Icon from the Font Awesome icon set</source>
+                <target>Icono del conjunto de iconos Font Awesome</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.icon_color">
+                <source>Color for the icon</source>
+                <target>Color para el icono</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.title">
+                <source>Title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.subtitle">
+                <source>Subtitle</source>
+                <target>Subtítulo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.text">
+                <source>Text</source>
+                <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.searchbox">
+                <source>Search box</source>
+                <target>Campo de búsqueda</target>
+            </trans-unit>
+            <trans-unit id="tt_content.searchbox.description">
+                <source>Search box for the TYPO3 indexed search engine.</source>
+                <target>Campo de búsqueda para el motor de búsqueda indexado de TYPO3.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.searchbox.placeholder">
+                <source>Placeholder word</source>
+                <target>Palabra de marcador de posición</target>
+            </trans-unit>
+            <trans-unit id="tt_content.searchbox.search_uid">
+                <source>Page that contains the search results</source>
+                <target>Página que contiene los resultados de búsqueda</target>
+            </trans-unit>
+            <trans-unit id="tt_content.catsmenu">
+                <source>Categories menu</source>
+                <target>Menú de categorías</target>
+            </trans-unit>
+            <trans-unit id="tt_content.catsmenu.description">
+                <source>Categories menu</source>
+                <target>Menú de categorías</target>
+            </trans-unit>
+            <trans-unit id="tt_content.catsmenu.page_uid">
+                <source>Parent page</source>
+                <target>Página padre</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart">
+                <source>Chart</source>
+                <target>Gráfico</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.description">
+                <source>A chart that can be bars, lines, doughnut or pie.</source>
+                <target>Un gráfico que puede ser barras, líneas, donut o pastel.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type">
+                <source>Type</source>
+                <target>Tipo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type.bar">
+                <source>Bars</source>
+                <target>Barras</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type.line">
+                <source>Lines</source>
+                <target>Líneas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type.doughnut">
+                <source>Doughnut</source>
+                <target>Donut</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type.pie">
+                <source>Pie</source>
+                <target>Pastel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.hv">
+                <source>Disposition</source>
+                <target>Disposición</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.hv.1">
+                <source>Vertical</source>
+                <target>Vertical</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.hv.2">
+                <source>Horizontal</source>
+                <target>Horizontal</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.label">
+                <source>Label</source>
+                <target>Etiqueta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.glue">
+                <source>Character to separate fields (for example: , ; # |)</source>
+                <target>Carácter para separar campos (por ejemplo: , ; # |)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.glue.preview">
+                <source>Character to separate fields</source>
+                <target>Carácter para separar campos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.file">
+                <source>File from where to import the data</source>
+                <target>Archivo del que importar los datos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.data">
+                <source>Data (overwrites file)</source>
+                <target>Datos (sobrescribe el archivo)</target>
+            </trans-unit>  
+            <trans-unit id="tt_content.pricingtable">
+                <source>Pricing table</source>
+                <target>Tabla de precios</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.description">
+                <source>Table to show pricing options or packages available for a product or service.</source>
+                <target>Tabla para mostrar opciones de precios o paquetes disponibles para un producto o servicio.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.columns">
+                <source>Columns</source>
+                <target>Columnas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.prices">
+                <source>Prices</source>
+                <target>Precios</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.price">
+                <source>Price</source>
+                <target>Precio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.title">
+                <source>Title</source>
+                <target>Título</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.currency">
+                <source>Currency character</source>
+                <target>Carácter de moneda</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.currency_position">
+                <source>Position of the currency character</source>
+                <target>Posición del carácter de moneda</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.currency_position.1">
+                <source>After</source>
+                <target>Después</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.currency_position.2">
+                <source>Before</source>
+                <target>Antes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.text_after">
+                <source>Text to add after the price</source>
+                <target>Texto para agregar después del precio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.text_after.description">
+                <source>For example: /mo</source>
+                <target>Por ejemplo: /mes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.text">
+                <source>Description</source>
+                <target>Descripción</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.button">
+                <source>Button</source>
+                <target>Botón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.link">
+                <source>Link</source>
+                <target>Enlace</target>
+            </trans-unit>
+            <trans-unit id="color">
+                <source>Color</source>
+                <target>Color</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert">
+                <source>Alert</source>
+                <target>Alerta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.description">
+                <source>Alert message.</source>
+                <target>Mensaje de alerta.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.type">
+                <source>Type</source>
+                <target>Tipo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.text">
+                <source>Text</source>
+                <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.show_icon">
+                <source>Show icon</source>
+                <target>Mostrar icono</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.show_dismiss_button">
+                <source>Show dismiss button</source>
+                <target>Mostrar botón de descartar</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron">
+                <source>Jumbotron</source>
+                <target>Jumbotron</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.description">
+                <source>Box to showcase key marketing messages.</source>
+                <target>Cuadro para presentar mensajes clave de marketing.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.header">
+                <source>Header</source>
+                <target>Encabezado</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.subheader">
+                <source>Subheader</source>
+                <target>Subencabezado</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.text">
+                <source>Text</source>
+                <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link">
+                <source>Link</source>
+                <target>Enlace</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link_text">
+                <source>Link button text</source>
+                <target>Texto del botón de enlace</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link_style">
+                <source>Button style</source>
+                <target>Estilo del botón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar">
+                <source>Calendar</source>
+                <target>Calendario</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.description">
+                <source>Calendar.</source>
+                <target>Calendario.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day">
+                <source>First day of the week</source>
+                <target>Primer día de la semana</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day.0">
+                <source>Monday</source>
+                <target>Lunes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day.1">
+                <source>Sunday</source>
+                <target>Domingo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.start_view">
+                <source>Start view</source>
+                <target>Vista inicial</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views_to_show">
+                <source>Views to show</source>
+                <target>Vistas a mostrar</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views.day">
+                <source>Day</source>
+                <target>Día</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views.week">
+                <source>Week</source>
+                <target>Semana</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views.month">
+                <source>Month</source>
+                <target>Mes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views.year">
+                <source>Year</source>
+                <target>Año</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.external_ics">
+                <source>External ICS file</source>
+                <target>Archivo ICS externo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.show_search_box">
+                <source>Show search box</source>
+                <target>Mostrar caja de búsqueda</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.events">
+                <source>Events</source>
+                <target>Eventos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event">
+                <source>Event</source>
+                <target>Evento</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.name">
+                <source>Name</source>
+                <target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.description">
+                <source>Description</source>
+                <target>Descripción</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.link">
+                <source>Link</source>
+                <target>Enlace</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.starting_time">
+                <source>Starting time</source>
+                <target>Hora de inicio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.ending_time">
+                <source>Ending time</source>
+                <target>Hora de finalización</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.all_day">
+                <source>All day event</source>
+                <target>Evento de todo el día</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.location">
+                <source>Location</source>
+                <target>Ubicación</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.organizer">
+                <source>Organizer</source>
+                <target>Organizador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.color">
+                <source>Color</source>
+                <target>Color</target>
+            </trans-unit>
+            <trans-unit id="tt_content.textincolumns">
+                <source>Show text in columns</source>
+                <target>Mostrar texto en columnas</target>
+            </trans-unit>
+            <trans-unit id="rte.btn-primary">
+                <source>Button primary</source>
+                <target>Botón primario</target>
+            </trans-unit>
+            <trans-unit id="rte.btn-secondary">
+                <source>Button secondary</source>
+                <target>Botón secundario</target>
+            </trans-unit>
+            <trans-unit id="rte.btn-success">
+                <source>Button success</source>
+                <target>Botón de éxito</target>
+            </trans-unit>
+            <trans-unit id="rte.btn-danger">
+                <source>Button danger</source>
+                <target>Botón de peligro</target>
+            </trans-unit>
+            <trans-unit id="rte.btn-warning">
+                <source>Button warning</source>
+                <target>Botón de advertencia</target>
+            </trans-unit>
+            <trans-unit id="rte.btn-info">
+                <source>Button info</source>
+                <target>Botón de información</target>
+            </trans-unit>
+            <trans-unit id="rte.btn-light">
+                <source>Button light</source>
+                <target>Botón claro</target>
+            </trans-unit>
+            <trans-unit id="rte.btn-dark">
+                <source>Button dark</source>
+                <target>Botón oscuro</target>
+            </trans-unit>
+            <trans-unit id="rte.badge-primary">
+                <source>Badge primary</source>
+                <target>Insignia primaria</target>
+            </trans-unit>
+            <trans-unit id="rte.badge-secondary">
+                <source>Badge secondary</source>
+                <target>Insignia secundaria</target>
+            </trans-unit>
+            <trans-unit id="rte.badge-success">
+                <source>Badge success</source>
+                <target>Insignia de éxito</target>
+            </trans-unit>
+            <trans-unit id="rte.badge-danger">
+                <source>Badge danger</source>
+                <target>Insignia de peligro</target>
+            </trans-unit>
+            <trans-unit id="rte.badge-warning">
+                <source>Badge warning</source>
+                <target>Insignia de advertencia</target>
+            </trans-unit>
+            <trans-unit id="rte.badge-info">
+                <source>Badge info</source>
+                <target>Insignia de información</target>
+            </trans-unit>
+            <trans-unit id="rte.badge-light">
+                <source>Badge light</source>
+                <target>Insignia clara</target>
+            </trans-unit>
+            <trans-unit id="rte.badge-dark">
+                <source>Badge dark</source>
+                <target>Insignia oscura</target>
+            </trans-unit>
+            <trans-unit id="rte.text-primary">
+                <source>Text primary</source>
+                <target>Texto primario</target>
+            </trans-unit>
+            <trans-unit id="rte.text-secondary">
+                <source>Text secondary</source>
+                <target>Texto secundario</target>
+            </trans-unit>
+            <trans-unit id="rte.text-success">
+                <source>Text success</source>
+                <target>Texto de éxito</target>
+            </trans-unit>
+            <trans-unit id="rte.text-danger">
+                <source>Text danger</source>
+                <target>Texto de peligro</target>
+            </trans-unit>
+            <trans-unit id="rte.text-warning">
+                <source>Text warning</source>
+                <target>Texto de advertencia</target>
+            </trans-unit>
+            <trans-unit id="rte.text-info">
+                <source>Text info</source>
+                <target>Texto de información</target>
+            </trans-unit>
+            <trans-unit id="rte.text-light">
+                <source>Text light</source>
+                <target>Texto claro</target>
+            </trans-unit>
+            <trans-unit id="rte.text-dark">
+                <source>Text dark</source>
+                <target>Texto oscuro</target>
+            </trans-unit>
+            <trans-unit id="rte.link-primary">
+                <source>Link primary</source>
+                <target>Enlace primario</target>
+            </trans-unit>
+            <trans-unit id="rte.link-secondary">
+                <source>Link secondary</source>
+                <target>Enlace secundario</target>
+            </trans-unit>
+            <trans-unit id="rte.link-success">
+                <source>Link success</source>
+                <target>Enlace de éxito</target>
+            </trans-unit>
+            <trans-unit id="rte.link-danger">
+                <source>Link danger</source>
+                <target>Enlace de peligro</target>
+            </trans-unit>
+            <trans-unit id="rte.link-warning">
+                <source>Link warning</source>
+                <target>Enlace de advertencia</target>
+            </trans-unit>
+            <trans-unit id="rte.link-info">
+                <source>Link info</source>
+                <target>Enlace de información</target>
+            </trans-unit>
+            <trans-unit id="rte.link-light">
+                <source>Link light</source>
+                <target>Enlace claro</target>
+            </trans-unit>
+            <trans-unit id="rte.link-dark">
+                <source>Link dark</source>
+                <target>Enlace oscuro</target>
+            </trans-unit>
+            <trans-unit id="rte.link-underline-opacity-0">
+                <source>Link without underline</source>
+                <target>Enlace sin subrayado</target>
+            </trans-unit>
+            <trans-unit id="rte.text-small">
+                <source>Small</source>
+                <target>Pequeño</target>
+            </trans-unit>
+            <trans-unit id="rte.text-lowercase">
+                <source>lowercase</source>
+                <target>minúsculas</target>
+            </trans-unit>
+            <trans-unit id="rte.text-uppercase">
+                <source>Uppercase</source>
+                <target>Mayúsculas</target>
+            </trans-unit>
+            <trans-unit id="rte.text-capitalize">
+                <source>Capitalize</source>
+                <target>Capitalizar</target>
+            </trans-unit>
+            <trans-unit id="rte.text-underline">
+                <source>Underline</source>
+                <target>Subrayar</target>
+            </trans-unit>
+            <trans-unit id="rte.p">
+                <source>Pragraph</source>
+                <target>Párrafo</target>
+            </trans-unit>
+            <trans-unit id="rte.h1">
+                <source>H1</source>
+                <target>H1</target>
+            </trans-unit>
+            <trans-unit id="rte.h2">
+                <source>H2</source>
+                <target>H2</target>
+            </trans-unit>
+            <trans-unit id="rte.h3">
+                <source>H3</source>
+                <target>H3</target>
+            </trans-unit>
+            <trans-unit id="rte.h4">
+                <source>H4</source>
+                <target>H4</target>
+            </trans-unit>
+            <trans-unit id="rte.h5">
+                <source>H5</source>
+                <target>H5</target>
+            </trans-unit>
+            <trans-unit id="rte.pre">
+                <source>Pre formatted</source>
+                <target>Preformateado</target>
+            </trans-unit>
+            <trans-unit id="rte.code">
+                <source>Code</source>
+                <target>Código</target>
+            </trans-unit>
+            <trans-unit id="rte.table-striped">
+                <source>Striped table</source>
+                <target>Tabla rayada</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

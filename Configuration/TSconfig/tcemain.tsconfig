@@ -1,0 +1,22 @@
+TCEMAIN {
+    permissions {
+        groupid = 1
+        user = show, editcontent, edit, new, delete
+        group = show, editcontent, edit, new, delete
+        everybody =
+    }
+    translateToHidden = 1
+    clearCache_pageGrandParent = 1
+    clearCache_pageSiblingChildren = 1
+    table {
+        pages {
+            disablePrependAtCopy = 1
+            disableHideAtCopy = 1
+        }
+
+        tt_content {
+            disablePrependAtCopy = 1
+            disableHideAtCopy = 1
+        }
+    }
+}

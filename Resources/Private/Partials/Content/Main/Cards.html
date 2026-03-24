@@ -1,0 +1,96 @@
+<f:if condition="{items}">
+    <div class="tx-das-content-cards tx-das-content-cards-layout-{layout} {text_alignment}" data-id="c{record.uid}">
+        <f:if condition="{columns} == 1">
+            <f:then>
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <f:render section="card" arguments="{_all}" />
+                </f:for>
+            </f:then>
+            <f:else>
+                <f:render section="columns" arguments="{_all}" />
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+<f:section name="columns">
+    <f:variable name="colss" value="{12 / columns}" />
+    <f:variable name="counter" value="0" />
+    <f:for each="{items -> v:iterator.chunk(count: '{columns}')}" as="itemx" iteration="iteration">
+        <div class="row">
+            <f:for each="{itemx}" as="item" iteration="iterationx">
+                <f:variable name="cols" value="{f:if(condition: '{iterationx.total} < {columns}', then: '{12 / iterationx.total}', else: '{colss}')}" />
+                <div class="col-md-{cols}{f:if(condition: '!{iteration.isLast}', then: ' mb-4')}{f:if(condition: '{iteration.isLast} && !{iterationx.isLast}', then: ' mb-4 mb-md-0')} d-flex">
+                    <f:variable name="counter" value="{counter + 1}" />
+                    <f:render section="card" arguments="{_all}" />
+                </div>
+            </f:for>
+        </div>
+    </f:for>
+</f:section>
+
+<f:section name="card">
+    <f:if condition="{item.image}">
+        <f:if condition="{item.image_position} == 2">
+            <f:then>
+                <f:variable name="image" value="{f:uri.image(src: '{item.image}', absolute: 1)}" />
+            </f:then>
+            <f:else>
+                <f:variable name="image" value="{f:uri.image(src: '{item.image}', height: 260, absolute: 1)}" />
+            </f:else>
+        </f:if>
+    </f:if>
+    <div class="card w-100{f:if(condition: '{columns} == 1', then: ' mb-4')}"{f:if(condition: '{image} && {item.image_position} == 2', then: ' style="background-image: url({image});"')}{f:if(condition: '{animate}', then: ' data-aos="fade-up" data-aos-delay="{counter}00"')}>
+        <f:if condition="{image} && {item.image_position} == 0">
+            <div class="card-img card-img-top" style="background-image: url({image});"></div>
+        </f:if>
+        <div class="card-body {item.text_color}">
+            <f:if condition="{item.title}">
+                <h5 class="card-title">
+                    {item.title}
+                </h5>
+            </f:if>
+            <f:if condition="{item.subtitle}">
+                <p class="card-text">
+                    {item.subtitle}
+                </p>
+            </f:if>
+            <f:if condition="{extra_fields}">
+                <p>
+                    <f:if condition="{item.email}">
+                        <a href="mailto:{item.email}" class="fa fa-envelope link-underline link-underline-opacity-0 text-{item.button_color}" title="E-mail"></a>
+                    </f:if>
+                    <f:if condition="{item.page}">
+                        <f:link.typolink parameter="{item.page}" class="fa fa-square-plus link-underline link-underline-opacity-0 text-{item.button_color}">&nbsp;</f:link.typolink>
+                    </f:if>
+                    <f:if condition="{item.facebook}">
+                        <a href="{item.facebook}" class="fab fa-facebook blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Facebook"></a>
+                    </f:if>
+                    <f:if condition="{item.twitter}">
+                        <a href="{item.twitter}" class="fab fa-twitter blank link-underline link-underline-opacity-0 text-{item.button_color}" title="X"></a>
+                    </f:if>
+                    <f:if condition="{item.instagram}">
+                        <a href="{item.instagram}" class="fab fa-instagram blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Instagram"></a>
+                    </f:if>
+                    <f:if condition="{item.linkedin}">
+                        <a href="{item.linkedin}" class="fab fa-linkedin blank link-underline link-underline-opacity-0 text-{item.button_color}" title="LinkedIn"></a>
+                    </f:if>
+                    <f:if condition="{item.pinterest}">
+                        <a href="{item.pinterest}" class="fab fa-square-pinterest blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Pinterest"></a>
+                    </f:if>
+                    <f:if condition="{item.xing}">
+                        <a href="{item.xing}" class="fab fa-square-xing blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Xing"></a>
+                    </f:if>
+                </p>
+            </f:if>
+            <f:if condition="{item.button} && {item.link}">
+                <f:link.typolink parameter="{item.link}" class="btn btn-{item.button_color} btn-sm">
+                    {item.button}
+                </f:link.typolink>
+            </f:if>
+        </div>
+        <f:if condition="{image} && {item.image_position} == 1">
+            <div class="card-img card-img-bottom" style="background-image: url({image});"></div>
+        </f:if>
+    </div>
+</f:section>

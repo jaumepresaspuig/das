@@ -1,0 +1,19 @@
+<f:if condition="{items}">
+    <div class="tx-das-content-progressbar tx-das-content-progressbar-layout-{layout} {f:if(condition: '{vertical_bars} && {vertical_bars_height}', then: 'tx-das-content-progressbar-vertical')}" data-barsheight="{vertical_bars_height}" data-id="c{record.uid}">
+        <f:for each="{items}" as="item" iteration="iteration">
+            <f:variable name="area" value="{item.area as integer}" />
+            <f:variable name="area" value="{f:if(condition: '{area} > 100', then: '100', else: '{area}')}" />
+    <f:variable name="color" value="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" />
+            <div class="progress-container mb-2"{f:if(condition: '{vertical_bars} && {vertical_bars_height}', then: ' style="width: {vertical_bars_height}px;"')}>
+                <div class="figure-caption mx-1">
+                    {item.title}<f:if condition="!{show_label}"> <small>({area}%)</small></f:if>
+                </div>
+                <div class="progress" style="height: {f:if(condition: '{layout} == 1', then: '{size}', else: '30')}px;">
+                    <div class="progress-bar {f:if(condition: '{stripped_bars}', then: 'progress-bar-striped')} {f:if(condition: '{animated_stripes}', then: 'progress-bar-animated')}" aria-valuenow="{area}" role="progressbar" data-area="{area}" style="width: {f:if(condition: '{animated_bars}', then: '0', else: '{area}%')}; background-color: {color}">
+                        <f:if condition="{show_label}">{area}%</f:if>
+                    </div>
+                </div>
+            </div>
+        </f:for>
+    </div>
+</f:if>

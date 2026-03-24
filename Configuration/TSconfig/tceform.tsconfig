@@ -1,0 +1,204 @@
+TCEFORM {
+    pages {
+        layout.disabled = 1
+        media.config.appearance.fileUploadAllowed = 0
+        backend_layout.label = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout
+        backend_layout_next_level.label = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout_next_level
+        backend_layout.removeItems = flux__
+        backend_layout_next_level.removeItems = flux__
+        tx_fed_page_controller_action.disabled = 1
+        tx_fed_page_controller_action_sub.disabled = 1
+    }
+    tt_content {
+        assets.config.appearance.fileUploadAllowed = 0
+        pi_flexform.label = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:configuration
+        CType.removeItems = header, text, textpic, image, bullets, media, search, table
+        header_layout {
+            altLabels {
+                1 = H1
+                2 = H2
+                3 = H3
+                4 = H4
+                5 = H5
+            }
+        }
+        header_position {
+            keepItems =
+            addItems {
+                0 = LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.default_value
+                center = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.1
+                end = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.2
+                left = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.3
+            }
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        date {
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        header_link {
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        subheader {
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_faicon {
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_fasize {
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_fapredefinedcolor {
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_facolor {
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_faposition {
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        layout {
+            keepItems =
+            addItems {
+                0 = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default
+                1 = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:full_width
+                2 = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:full_width_with_centered_content
+                3 = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:width_75_percent
+                4 = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:width_50_percent
+            }
+            types {
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        space_before_class {
+            keepItems =
+            addItems {
+                0 = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:none
+                1 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_small
+                2 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_small
+                3 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_medium
+                4 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large
+                5 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large
+            }
+            types {
+                div.disabled = 1
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        space_after_class {
+            keepItems =
+            addItems {
+                0 = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:none 
+                100 = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default 
+                1 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_small
+                2 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_small
+                3 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_medium
+                4 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_large
+                5 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_extra_large
+            }
+            types {
+                div.disabled = 1
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        sectionIndex{
+            types {
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_gallerytemplate {
+            disabled = 1
+            types {
+                textmedia.disabled = 0
+            }
+        }
+        imageorient {
+            removeItems = 1,2,9,10,17,18
+        }
+        imagewidth.disabled = 1
+        imageheight.disabled = 1
+        imageborder.disabled = 1
+        frame_class.disabled = 1
+        imagecols.removeItems = 7,8
+        linkToTop.disabled = 1
+        tx_das_dropshadow {
+            types {
+                div.disabled = 1
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_bgpredefinedcolor {
+            types {
+                div.disabled = 1
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_bgcolor {
+            types {
+                div.disabled = 1
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_bgimage {
+            types {
+                div.disabled = 1
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_textcolor {
+            types {
+                div.disabled = 1
+                shortcut.disabled = 1
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_customclasses {
+            types {
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_customstyles {
+            types {
+                das_modal.disabled = 1
+            }
+        }
+        tx_das_visibility {
+            types {
+                das_modal.disabled = 1
+            }
+        }
+    }
+}

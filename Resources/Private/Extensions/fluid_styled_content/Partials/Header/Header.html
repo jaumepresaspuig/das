@@ -1,0 +1,17 @@
+<f:if condition="{data.header}">
+    <f:variable name="h" value="{f:if(condition: '{data.header_layout} == 0', then: '{settings.defaultHeaderType}', else: '{data.header_layout}')}" />
+    <f:variable name="faposition" value="{f:if(condition: '{data.tx_das_faposition} == \'left\' || {data.tx_das_faposition} == \'top\'', then: '1', else: '2')}" />
+    <h{h} class="{f:if(condition: '{data.header_position}', then: 'text-{data.header_position} ')}{data.tx_das_textcolor}">
+        <f:render section="faicon" arguments="{data: '{data}', position: '1', faposition: faposition}" />
+        <f:link.typolink parameter="{data.header_link}">
+            {data.header}
+        </f:link.typolink>
+        <f:render section="faicon" arguments="{data: '{data}', position: '2', faposition: faposition}" />
+    </h{h}>
+</f:if>
+
+<f:section name="faicon">
+    <f:if condition="{data.tx_das_faicon} && {position} == {faposition}">
+        <i class="w-auto align-middle {data.tx_das_faicon}{f:if(condition: '{data.tx_das_fapredefinedcolor} && !{data.tx_das_facolor}', then: ' {data.tx_das_fapredefinedcolor}')}{f:if(condition: '{data.tx_das_faposition} == \'top\' || {data.tx_das_faposition} == \'bottom\'', then: ' d-block mx-auto')}" style="font-size: {data.tx_das_fasize}em;{f:if(condition: '{data.tx_das_facolor}', then: 'color: {data.tx_das_facolor};')}"></i>
+    </f:if>
+</f:section>

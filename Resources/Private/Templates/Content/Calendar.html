@@ -1,0 +1,255 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="calendar"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Calendar.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.select
+            name="first_day"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.first_day"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.first_day.0', 1: '0'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.first_day.1', 1: '1'}
+            }"
+        />
+        <flux:field.select
+            name="views_to_show"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views_to_show"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.day', 1: 'day'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.week', 1: 'week'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.month', 1: 'month'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.year', 1: 'year'}
+            }"
+            size="4"
+            multiple="true"
+            renderType="selectSingleBox"
+            minItems="1"
+            maxItems="4"
+        />
+        <flux:field.select
+            name="start_view"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.start_view"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.day', 1: 'day'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.week', 1: 'week'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.month', 1: 'month'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.year', 1: 'year'}
+            }"
+            default="month"
+        />
+        <flux:field.input
+            name="external_ics"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.external_ics"
+            config="{renderType: 'inputLink', fieldControl: {linkPopup: {options: {allowedExtensions: 'ics', blindLinkFields: 'class,params,target,title,', blindLinkOptions: 'folder,mail,page,spec,telephone'}}}}"
+        />
+        <flux:field.checkbox
+            name="show_search_box"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.show_search_box"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.events"
+        >
+            <flux:form.section
+                name="items"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.events"
+            >
+                <flux:form.object
+                    name="item"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event"
+                >
+                    <f:render partial="Content/Access" arguments="{_all}" />
+                    <flux:field.input
+                        name="name"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.name"
+                        required="1"
+                    />
+                    <flux:field.input
+                        name="starting_time"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.starting_time"
+                        config="{renderType: 'datetime'}"
+                        size="13"
+                    />
+                    <flux:field.input
+                        name="ending_time"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.ending_time"
+                        config="{renderType: 'datetime'}"
+                        size="13"
+                        displayCond="FIELD:all_day:=:0"
+                    />
+                    <flux:field.checkbox
+                        name="all_day"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.all_day"
+                        default="0"
+                        config="{renderType: 'checkboxToggle'}"
+                        requestUpdate="1"
+                    />
+                    <flux:field.input
+                        name="location"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.location"
+                        size="13"
+                    />
+                    <flux:field.input
+                        name="organizer"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.organizer"
+                        size="13"
+                    />
+                    <flux:field.select
+                        name="color"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.color"
+                        items="{
+                            0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_primary.svg'},
+                            1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_secondary.svg'},
+                            2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/bg_success.svg'},
+                            3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/bg_danger.svg'},
+                            4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/bg_warning.svg'},
+                            5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/bg_info.svg'},
+                            6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
+                            7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
+                        }"
+                        showIconTable="1"
+                    />
+                    <flux:field.text
+                        name="description"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.description"
+                        rows="3"
+                    />
+                    <flux:field.input
+                        name="link"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.link"
+                        config="{renderType: 'inputLink'}"
+                    />
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.first_day" />
+                </th>
+                <td>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.first_day.{first_day}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views_to_show" />
+                </th>
+                <td>
+                    <f:for each="{v:iterator.explode(content: '{views_to_show}', glue: ',')}" as="view" iteration="iteration">                  
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.{view}" /><f:if condition="!{iteration.isLast}">, </f:if>  
+                    </f:for>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.start_view" />
+                </th>
+                <td>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.views.{start_view}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.external_ics" />
+                </th>
+                <td>
+                    <f:if condition="{external_ics}">                
+                        <f:render partial="Content/Icon" arguments="{icon: 'Text'}" />
+                        <f:if condition="{f:startsWith(search: 't3://file?uid=', subject: '{external_ics}')}">
+                            <f:then>
+                                <v:resource.record table="sys_file" uid="{f:replace(value: '{external_ics}', search: 't3://file?uid=', replace: '')}" field="identifier" as="file">                            
+                                    <a href="/fileadmin{file.0}" target="_blank">/fileadmin{file.0}</a>
+                                </v:resource.record>
+                            </f:then>
+                            <f:else>
+                                <a href="{external_ics}" target="_blank">{external_ics}</a>
+                            </f:else> 
+                        </f:if>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.show_search_box" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: show_search_box}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.events" /></strong>
+                    <ul class="mt-2">
+                        <f:for each="{items}" as="item">
+                            <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
+                                <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{item.item.color}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{item.item.color}')}" class="d-inline-block me-1 mb-1" /><strong>{item.item.name}.</strong>
+                                <f:if condition="{item.item.location}">
+                                    {item.item.location}.
+                                </f:if>
+                                <f:if condition="{item.item.organizer}">
+                                    {item.item.organizer}.
+                                </f:if>
+                                <f:if condition="{item.item.all_day}">
+                                    <f:then>
+                                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.all_day" />.
+                                    </f:then>
+                                    <f:else>
+                                        <f:if condition="{item.item.starting_time}">
+                                            <f:format.date format="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:format_datetime')}">{item.item.starting_time}</f:format.date>
+                                            <f:if condition="{item.item.ending_time}">
+                                                - <f:format.date format="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:format_datetime')}">{item.item.ending_time}</f:format.date>
+                                            </f:if>
+                                        </f:if>
+                                    </f:else>
+                                </f:if>
+                            </li>
+                        </f:for>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Calendar" arguments="{_all}" />
+</f:section>

@@ -1,0 +1,1397 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2026-03-04T16:25:19Z" product-name="das">
+        <header/>
+        <body>
+            <trans-unit id="checked.0">
+                <source>No</source>
+            </trans-unit>
+            <trans-unit id="checked.1">
+                <source>Yes</source>
+            </trans-unit>
+            <trans-unit id="before">
+                <source>Before</source>
+            </trans-unit>
+            <trans-unit id="after">
+                <source>After</source>
+            </trans-unit>
+            <trans-unit id="columns">
+                <source>Columns</source>
+            </trans-unit>
+            <trans-unit id="tt_content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="data">
+                <source>Data</source>
+            </trans-unit>
+            <trans-unit id="access">
+                <source>Access</source>
+            </trans-unit>
+            <trans-unit id="active">
+                <source>Active</source>
+            </trans-unit>
+            <trans-unit id="starttime">
+                <source>Publish Date</source>
+            </trans-unit>
+            <trans-unit id="endtime">
+                <source>Expiration Date</source>
+            </trans-unit>
+            <trans-unit id="fe_group">
+                <source>Usergroup Access Rights</source>
+            </trans-unit>
+            <trans-unit id="extra_fields">
+                <source>Enable extra fields</source>
+            </trans-unit>
+            <trans-unit id="color">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="none">
+                <source>None</source>
+            </trans-unit>
+            <trans-unit id="size">
+                <source>Size</source>
+            </trans-unit>
+            <trans-unit id="small">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="normal">
+                <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="medium">
+                <source>Medium</source>
+            </trans-unit>
+            <trans-unit id="large">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="notset">
+                <source>Not set</source>
+            </trans-unit>
+            <trans-unit id="visible">
+                <source>Visible</source>
+            </trans-unit>
+            <trans-unit id="hidden">
+                <source>Hidden</source>
+            </trans-unit>
+            <trans-unit id="configuration">
+                <source>Configuration</source>
+            </trans-unit>
+            <trans-unit id="custom_classes_and_styles">
+                <source>Custom classes and styles</source>
+            </trans-unit>
+            <trans-unit id="custom_classes">
+                <source>Custom classes</source>
+            </trans-unit>
+            <trans-unit id="custom_styles">
+                <source>Custom styles</source>
+            </trans-unit>
+            <trans-unit id="animation">
+                <source>Animation</source>
+            </trans-unit>
+            <trans-unit id="animation.r">
+                <source>Fade right</source>
+            </trans-unit>
+            <trans-unit id="animation.l">
+                <source>Fade left</source>
+            </trans-unit>
+            <trans-unit id="animation.u">
+                <source>Fade up</source>
+            </trans-unit>
+            <trans-unit id="animation.d">
+                <source>Fade down</source>
+            </trans-unit>
+            <trans-unit id="drop_shadow">
+                <source>Drop shadow</source>
+            </trans-unit>
+            <trans-unit id="visibility">
+                <source>Visibility</source>
+            </trans-unit>
+            <trans-unit id="responsive">
+                <source>Hide content on these devices</source>
+            </trans-unit>
+            <trans-unit id="hidden.xs">
+                <source>Extra small: phones (&lt;576px)</source>
+            </trans-unit>
+            <trans-unit id="hidden.sm">
+                <source>Small: phones (&gt;=576px)</source>
+            </trans-unit>
+            <trans-unit id="hidden.md">
+                <source>Medium: tablets (&gt;=768px)</source>
+            </trans-unit>
+            <trans-unit id="hidden.lg">
+                <source>Large: desktops (&gt;=992px)</source>
+            </trans-unit>
+            <trans-unit id="hidden.xl">
+                <source>Extra large: desktops (&gt;=1200px)</source>
+            </trans-unit>
+            <trans-unit id="html_in_header">
+                <source>Move the content to the html header</source>
+            </trans-unit>
+            <trans-unit id="html_in_header.description">
+                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend</source>
+            </trans-unit>
+            <trans-unit id="gallery_animate">
+                <source>Animate images</source>
+            </trans-unit>
+            <trans-unit id="hide_caption">
+                <source>Hide caption for the thumbnails</source>
+            </trans-unit>
+            <trans-unit id="style_menu">
+                <source>Style menu</source>
+            </trans-unit>
+            <trans-unit id="page_gallery">
+                <source>Include the media in the page gallery instead of the content</source>
+            </trans-unit>
+            <trans-unit id="gallery_order1">
+                <source>Move gallery over the text on small devices</source>
+            </trans-unit>
+            <trans-unit id="gallery_width">
+                <source>Gallery width</source>
+            </trans-unit>
+            <trans-unit id="image_ratio">
+                <source>Image aspect ratio</source>
+            </trans-unit>
+            <trans-unit id="image_ratio.original">
+                <source>Original</source>
+            </trans-unit>
+            <trans-unit id="default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="colors.primary">
+                <source>Primary</source>
+            </trans-unit>
+            <trans-unit id="colors.secondary">
+                <source>Secondary</source>
+            </trans-unit>
+            <trans-unit id="colors.success">
+                <source>Success</source>
+            </trans-unit>
+            <trans-unit id="colors.danger">
+                <source>Danger</source>
+            </trans-unit>
+            <trans-unit id="colors.warning">
+                <source>Warning</source>
+            </trans-unit>
+            <trans-unit id="colors.info">
+                <source>Info</source>
+            </trans-unit>
+            <trans-unit id="colors.light">
+                <source>Light</source>
+            </trans-unit>
+            <trans-unit id="colors.dark">
+                <source>Dark</source>
+            </trans-unit>
+            <trans-unit id="colors.blur">
+                <source>Blur</source>
+            </trans-unit>
+            <trans-unit id="template">
+                <source>Template</source>
+            </trans-unit>
+            <trans-unit id="layout">
+                <source>Layout</source>
+            </trans-unit>
+            <trans-unit id="custom">
+                <source>Custom</source>
+            </trans-unit>
+            <trans-unit id="full_width">
+                <source>Full width</source>
+            </trans-unit>
+            <trans-unit id="full_width_with_centered_content">
+                <source>Full width with centered content</source>
+            </trans-unit>
+            <trans-unit id="width_75_percent">
+                <source>Width 75%</source>
+            </trans-unit>
+            <trans-unit id="width_50_percent">
+                <source>Width 50%</source>
+            </trans-unit>
+            <trans-unit id="bg">
+                <source>Background</source>
+            </trans-unit>
+            <trans-unit id="bg_predefined_color">
+                <source>Background predefined color</source>
+            </trans-unit>
+            <trans-unit id="bg_color">
+                <source>Background color</source>
+            </trans-unit>
+            <trans-unit id="bg_color.description">
+                <source>Overwrites background predefined color</source>
+            </trans-unit>
+            <trans-unit id="bg_image">
+                <source>Background image or video</source>
+            </trans-unit>
+            <trans-unit id="bg_overlay">
+                <source>Background overlay</source>
+            </trans-unit>
+            <trans-unit id="bg_overlayvignete">
+                <source>Background overlay vignete</source>
+            </trans-unit>
+            <trans-unit id="fixed_bg">
+                <source>Fixed background image</source>
+            </trans-unit>
+            <trans-unit id="text_alignment">
+                <source>Text alignment</source>
+            </trans-unit>
+            <trans-unit id="center">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="top">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="bottom">
+                <source>Bottom</source>
+            </trans-unit>
+            <trans-unit id="left">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="right">
+                <source>Right</source>
+            </trans-unit>
+            <trans-unit id="header_type">
+                <source>Header type</source>
+            </trans-unit>
+            <trans-unit id="size">
+                <source>Size</source>
+            </trans-unit>
+            <trans-unit id="alignment">
+                <source>Alignment</source>
+            </trans-unit>
+            <trans-unit id="text-left">
+                <source>Left</source>
+            </trans-unit>
+            <trans-unit id="text-center">
+                <source>Center</source>
+            </trans-unit>
+            <trans-unit id="text-end">
+                <source>Right</source>
+            </trans-unit>
+            <trans-unit id="animate">
+                <source>Animate content objects</source>
+            </trans-unit>
+            <trans-unit id="text_color">
+                <source>Text color</source>
+            </trans-unit>
+            <trans-unit id="black">
+                <source>Black</source>
+            </trans-unit>
+            <trans-unit id="white">
+                <source>White</source>
+            </trans-unit>
+            <trans-unit id="animate_entries">
+                <source>Animate entries</source>
+            </trans-unit>
+            <trans-unit id="carousel">
+                <source>Carousel</source>
+            </trans-unit>
+            <trans-unit id="content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="format_date">
+                <source>F j, Y</source>
+            </trans-unit>
+            <trans-unit id="format_datetime">
+                <source>F j, Y H:i</source>
+            </trans-unit>
+            <trans-unit id="pages.site_configuration">
+                <source>Das: site configuration</source>
+            </trans-unit>
+            <trans-unit id="pages.page_header">
+                <source>Page header</source>
+            </trans-unit>
+            <trans-unit id="pages.logo">
+                <source>Logo</source>
+            </trans-unit>
+            <trans-unit id="pages.search_page_uid">
+                <source>Search page</source>
+            </trans-unit>
+            <trans-unit id="pages.search_page_uid.description">
+                <source>To enable search box (it requires the extension indexed_search)</source>
+            </trans-unit>
+            <trans-unit id="pages.navigation_levels">
+                <source>Number of navigation levels to show</source>
+            </trans-unit>
+            <trans-unit id="pages.show_language_selector">
+                <source>Show language selector</source>
+            </trans-unit>
+            <trans-unit id="pages.html_header">
+                <source>HTML header</source>
+            </trans-unit>
+            <trans-unit id="pages.favicon">
+                <source>Favicon</source>
+            </trans-unit>
+            <trans-unit id="pages.icons_path">
+                <source>Path to the the folder that contains the icons</source>
+            </trans-unit>
+            <trans-unit id="pages.structured_data">
+                <source>Structured data</source>
+            </trans-unit>
+            <trans-unit id="pages.structured_data.json">
+                <source>JSON-LD</source>
+            </trans-unit>
+            <trans-unit id="pages.structured_data.microdata">
+                <source>Microdata</source>
+            </trans-unit>
+            <trans-unit id="pages.structured_data.rdfa">
+                <source>RDFa</source>
+            </trans-unit>
+            <trans-unit id="pages.page">
+                <source>Page</source>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb">
+                <source>Show breadcrumb</source>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb.description">
+                <source>In all pages except home</source>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb.0">
+                <source>Don't show it</source>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb.1">
+                <source>Before the featured content</source>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb.2">
+                <source>After the featured content</source>
+            </trans-unit>
+            <trans-unit id="pages.breadcrumb_separator">
+                <source>Breadcrumb items separator</source>
+            </trans-unit>
+            <trans-unit id="pages.show_page_title">
+                <source>Show page title</source>
+            </trans-unit>
+            <trans-unit id="pages.show_page_title.description">
+                <source>H1, in all pages except home</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout">
+                <source>Page Layout</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout_subpages">
+                <source>Page Layout (sub-pages of this page)</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.Home">
+                <source>Home</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.Interior">
+                <source>Interior</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorL">
+                <source>Interior with left column</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLs">
+                <source>Interior with left column (inheriting content)</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorR">
+                <source>Interior with right column</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorRs">
+                <source>Interior with right column (inheriting content)</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLR">
+                <source>Interior with left and right columns</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLsR">
+                <source>Interior with left and right columns (only left inheriting content)</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLRs">
+                <source>Interior with left and right columns (only right inheriting content)</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.InteriorLsRs">
+                <source>Interior with left and right columns (both inheriting content)</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout.OnlyContent">
+                <source>Only content (without header and footer)</source>
+            </trans-unit>
+            <trans-unit id="pages.bstheme">
+                <source>Theme</source>
+            </trans-unit>
+            <trans-unit id="pages.bstheme.auto">
+                <source>Auto</source>
+            </trans-unit>
+            <trans-unit id="pages.bstheme.light">
+                <source>Light</source>
+            </trans-unit>
+            <trans-unit id="pages.bstheme.dark">
+                <source>Dark</source>
+            </trans-unit>
+            <trans-unit id="pages.header">
+                <source>Header to be inherited by sub-pages</source>
+            </trans-unit>
+            <trans-unit id="pages.featured_content">
+                <source>Featured content</source>
+            </trans-unit>
+            <trans-unit id="pages.main_content">
+                <source>Main content</source>
+            </trans-unit>
+            <trans-unit id="pages.main_content_slide">
+                <source>Main content to be inherited by sub-pages</source>
+            </trans-unit>
+            <trans-unit id="pages.sub_footer">
+                <source>Subfooter</source>
+            </trans-unit>
+            <trans-unit id="pages.footer">
+                <source>Footer to be inherited by sub-pages</source>
+            </trans-unit>
+            <trans-unit id="pages.left_column">
+                <source>Left column</source>
+            </trans-unit>
+            <trans-unit id="pages.left_column_with_inherited_content">
+                <source>Left column with inherited content</source>
+            </trans-unit>
+            <trans-unit id="pages.right_column">
+                <source>Right column</source>
+            </trans-unit>
+            <trans-unit id="pages.right_column_with_inherited_content">
+                <source>Right column with inherited content</source>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome">
+                <source>Add icon to the header</source>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.icon">
+                <source>Icon from the Font Awesome icon set</source>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.icon.description">
+                <source>For example: fab fa-typo3, fas fa-exclamation</source>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.size">
+                <source>Size</source>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.predefined_color">
+                <source>Predefined color</source>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.color">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.color.description">
+                <source>Overrides the predefined color</source>
+            </trans-unit>
+            <trans-unit id="pages.fontawesome.position">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout">
+                <source>Page layout (this page only)</source>
+            </trans-unit>
+            <trans-unit id="pages.backend_layout_next_level">
+                <source>Page layout (sub-pages of this page)</source>
+            </trans-unit>
+            <trans-unit id="pages.mega_menu">
+                <source>Show sub-pages of this page as a mega menu in the navigation bar</source>
+            </trans-unit>
+            <trans-unit id="tt_content.accordion">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="tt_content.accordion.description">
+                <source>Container of content elements to be shown in an accordion.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.accordion.allow_multipe_open_items">
+                <source>Allow to have multiple items open</source>
+            </trans-unit>
+            <trans-unit id="tt_content.accordion.open_first_item">
+                <source>Show first item already open</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons">
+                <source>Buttons</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.description">
+                <source>Buttons with different sizes and styles.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.buttons">
+                <source>Buttons</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.button">
+                <source>Button</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.full_width">
+                <source>Full width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.group">
+                <source>Group buttons</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.outline">
+                <source>Outline</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.animate_buttons">
+                <source>Animate buttons</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.buttons.style">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards">
+                <source>Cards</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.description">
+                <source>Cards with image, title, subtitle, and optional link.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.columns">
+                <source>Columns</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.animate_cards">
+                <source>Animate cards</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.cards">
+                <source>Cards</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.card">
+                <source>Card</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image_position">
+                <source>Image position</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image_position.0">
+                <source>Top</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image_position.1">
+                <source>Bottom</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.image_position.2">
+                <source>Background</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.subtitle">
+                <source>Subtitle</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.page">
+                <source>Personal page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.facebook">
+                <source>Facebook</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.twitter">
+                <source>X/Twitter</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.linkedin">
+                <source>LinkedIn</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.instagram">
+                <source>Instagram</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.pinterest">
+                <source>Pinterest</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.xing">
+                <source>Xing</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.button">
+                <source>Button</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.button_color">
+                <source>Button color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cards.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel">
+                <source>Carousel</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.description">
+                <source>Container of content elements to be shown in a carousel.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.transition">
+                <source>Transition</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.transition.0">
+                <source>Slide</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.transition.1">
+                <source>Fade</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.pagination">
+                <source>Show pagination dots</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.navigation">
+                <source>Show navigation arrows</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.autoplay">
+                <source>Autoplay</source>
+            </trans-unit>
+            <trans-unit id="tt_content.carousel.interval">
+                <source>Interval between items (seconds)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols">
+                <source>Columns</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.description">
+                <source>Columns (up to six) where to place any content.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.columns">
+                <source>Number of columns</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.gutter">
+                <source>Spacing between columns</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.columns.auto">
+                <source>Auto</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column">
+                <source>Column</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.col">
+                <source>Content elements for each column</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_1">
+                <source>Column 1</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_2">
+                <source>Column 2</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_3">
+                <source>Column 3</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_4">
+                <source>Column 4</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_5">
+                <source>Column 5</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.column_6">
+                <source>Column 6</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.xs">
+                <source>Extra small: phones (&lt;576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.sm">
+                <source>Small: phones (&gt;=576px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.md">
+                <source>Medium: tablets (&gt;=768px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.lg">
+                <source>Large: desktops (&gt;=992px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.cols.xl">
+                <source>Extra large: desktops (&gt;=1200px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.container">
+                <source>Container</source>
+            </trans-unit>
+            <trans-unit id="tt_content.container.description">
+                <source>Container of content elements grouped so they can share a common background and a set of classes and styles.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.container.bg_color">
+                <source>Background color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.container.bg_color.description">
+                <source>Overrides the background predefined color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.container.bg_file">
+                <source>Background image or video</source>
+            </trans-unit>
+            <trans-unit id="tt_content.container.fixed_bg">
+                <source>Fixed background image</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter">
+                <source>Counter</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.description">
+                <source>Animated counter from one number to another.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.number_from">
+                <source>Number from</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.number_to">
+                <source>Number to</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.prepend_text">
+                <source>Prepend text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.append_text">
+                <source>Append text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed">
+                <source>Speed</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed.1">
+                <source>Ultra fast</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed.10">
+                <source>Fast</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed.25">
+                <source>Slow</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.speed.50">
+                <source>Ultra slow</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.animate">
+                <source>Animate counter</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.caption">
+                <source>Caption</source>
+            </trans-unit>
+            <trans-unit id="tt_content.counter.counter_color">
+                <source>Counter color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs">
+                <source>Faq's</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.description">
+                <source>Frequently asked questions.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.faqs">
+                <source>Faq's</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.faq">
+                <source>Faq</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.question">
+                <source>Question</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.answer">
+                <source>Answer</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.accordion">
+                <source>Accordion</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.allow_multipe_open_items">
+                <source>Allow to have multiple items open</source>
+            </trans-unit>
+            <trans-unit id="tt_content.faqs.open_first_item">
+                <source>Show first item already open</source>
+            </trans-unit>
+            <trans-unit id="tt_content.iframe">
+                <source>Iframe</source>
+            </trans-unit>
+            <trans-unit id="tt_content.iframe.description">
+                <source>Responsive iframe with different aspect ratios.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.iframe.url">
+                <source>Url</source>
+            </trans-unit>
+            <trans-unit id="tt_content.iframe.ratio">
+                <source>Aspect ratio</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal">
+                <source>Modal window</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.description">
+                <source>Modal window to show content elements, that opens when the page is loaded, with or without a delay, each time or once per session.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.position">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size">
+                <source>Size</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size.sm">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size.lg">
+                <source>Large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size.xl">
+                <source>Extra large</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.size.fullscreen">
+                <source>Full screen</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.close">
+                <source>Text for the button to close it</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.style">
+                <source>Close button style</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.show_x">
+                <source>Show the X button to close it</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.force_user">
+                <source>Force the user to close it only by clicking in the X or the close button</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.autoopen">
+                <source>Open it in n seconds</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.autoopen.description">
+                <source>If 0, it opens once the page is loaded</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.autoclose">
+                <source>Close it in n seconds after it has been opened</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.autoclose.description">
+                <source>If 0, user has to close it</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.show_only_once">
+                <source>Show the modal window only once per user session</source>
+            </trans-unit>
+            <trans-unit id="tt_content.modal.content">
+                <source>Content elements</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator">
+                <source>Paginator</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.description">
+                <source>Paginator of pages of the same level.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.layout">
+                <source>Layout</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.layout.1">
+                <source>&#8249; Previous page title - Next page title &#8250;</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.layout.2">
+                <source>&#8249;&#8249; First - &#8249; Previous - Next &#8250; - Last &#8250;&#8250;</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.first">
+                <source>First</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.prev">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.next">
+                <source>Next</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.last">
+                <source>Last</source>
+            </trans-unit>
+            <trans-unit id="tt_content.paginator.only_subpages">
+                <source>Show only in first level of sub-pages</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars">
+                <source>Progress bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.description">
+                <source>Fancy horizontal and vertical progress bars.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.default_area_color">
+                <source>Default color for the bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.stripped_bars">
+                <source>Stripped bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.animated_stripes">
+                <source>Animated stripes</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.animated_bars">
+                <source>Animated bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.vertical_bars">
+                <source>Vertical bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.vertical_bars_height">
+                <source>Height of vertical bars (px)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.bars">
+                <source>Bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.bar">
+                <source>Bar</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.area">
+                <source>Area (%)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.area_color">
+                <source>Bar color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.area_color.description">
+                <source>Overrides the default one</source>
+            </trans-unit>
+            <trans-unit id="tt_content.progressbars.show_label">
+                <source>Show percentage inside the bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes">
+                <source>Quotes</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.description">
+                <source>Gallery of quotes.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.transition">
+                <source>Transition</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.transition.0">
+                <source>Slide</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.transition.1">
+                <source>Fade</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.pagination">
+                <source>Show pagination dots</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.navigation">
+                <source>Show navigation arrows</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.autoplay">
+                <source>Autoplay</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.interval">
+                <source>Interval between items (seconds)</source>
+            </trans-unit>
+            <trans-unit id="default_color">
+                <source>Default color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.quotes">
+                <source>Quotes</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.quote">
+                <source>Quote</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.author">
+                <source>Author</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.date">
+                <source>Date</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="color">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.quotes.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons">
+                <source>Social buttons</source>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.description">
+                <source>Buttons of the most common social platfroms.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.buttons">
+                <source>Buttons</source>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.button">
+                <source>Button</source>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.platform">
+                <source>Platform</source>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.url">
+                <source>Url</source>
+            </trans-unit>
+            <trans-unit id="tt_content.socialbuttons.rounded">
+                <source>Rounded</source>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs">
+                <source>Tabs</source>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs.description">
+                <source>Container of content elements to be shown in tabs.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs.vertical_tabs">
+                <source>Vertical tabs</source>
+            </trans-unit>
+            <trans-unit id="tt_content.tabs.fill">
+                <source>Make the tabs fill the 100% of the available width</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline">
+                <source>Timeline</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.description">
+                <source>Timeline.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.entries">
+                <source>Entries</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.entry">
+                <source>Entry</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.icon">
+                <source>Icon from the Font Awesome icon set</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.icon_color">
+                <source>Color for the icon</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.subtitle">
+                <source>Subtitle</source>
+            </trans-unit>
+            <trans-unit id="tt_content.timeline.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.searchbox">
+                <source>Search box</source>
+            </trans-unit>
+            <trans-unit id="tt_content.searchbox.description">
+                <source>Search box for the TYPO3 indexed search engine.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.searchbox.placeholder">
+                <source>Placeholder word</source>
+            </trans-unit>
+            <trans-unit id="tt_content.searchbox.search_uid">
+                <source>Page that contains the search results</source>
+            </trans-unit>
+            <trans-unit id="tt_content.catsmenu">
+                <source>Categories menu</source>
+            </trans-unit>
+            <trans-unit id="tt_content.catsmenu.description">
+                <source>Categories menu</source>
+            </trans-unit>
+            <trans-unit id="tt_content.catsmenu.page_uid">
+                <source>Parent page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart">
+                <source>Chart</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.description">
+                <source>A chart that can be bars, lines, doughnut or pie.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type.bar">
+                <source>Bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type.line">
+                <source>Lines</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type.doughnut">
+                <source>Doughnut</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.type.pie">
+                <source>Pie</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.hv">
+                <source>Disposition</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.hv.1">
+                <source>Vertical</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.hv.2">
+                <source>Horizontal</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.label">
+                <source>Label</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.glue">
+                <source>Character to separate fields (for example: , ; # |)</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.glue.preview">
+                <source>Character to separate fields</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.file">
+                <source>File from where to import the data</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.data">
+                <source>Data (overwrites file)</source>
+            </trans-unit>  
+            <trans-unit id="tt_content.pricingtable">
+                <source>Pricing table</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.description">
+                <source>Table to show pricing options or packages available for a product or service.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.columns">
+                <source>Columns</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.prices">
+                <source>Prices</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.price">
+                <source>Price</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.currency">
+                <source>Currency character</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.currency_position">
+                <source>Position of the currency character</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.currency_position.1">
+                <source>After</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.currency_position.2">
+                <source>Before</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.text_after">
+                <source>Text to add after the price</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.text_after.description">
+                <source>For example: /mo</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.text">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.button">
+                <source>Button</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="color">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.alert">
+                <source>Alert</source>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.description">
+                <source>Alert message.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.type">
+                <source>Type</source>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.show_icon">
+                <source>Show icon</source>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.show_dismiss_button">
+                <source>Show dismiss button</source>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron">
+                <source>Jumbotron</source>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.description">
+                <source>Box to showcase key marketing messages.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.header">
+                <source>Header</source>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.subheader">
+                <source>Subheader</source>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link_text">
+                <source>Link button text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link_style">
+                <source>Button style</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar">
+                <source>Calendar</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.description">
+                <source>Calendar.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day">
+                <source>First day of the week</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day.0">
+                <source>Monday</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day.1">
+                <source>Sunday</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.start_view">
+                <source>Start view</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views_to_show">
+                <source>Views to show</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views.day">
+                <source>Day</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views.week">
+                <source>Week</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views.month">
+                <source>Month</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views.year">
+                <source>Year</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.external_ics">
+                <source>External ICS file</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.show_search_box">
+                <source>Show search box</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.events">
+                <source>Events</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event">
+                <source>Event</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.name">
+                <source>Name</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.description">
+                <source>Description</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.starting_time">
+                <source>Starting time</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.ending_time">
+                <source>Ending time</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.all_day">
+                <source>All day event</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.location">
+                <source>Location</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.organizer">
+                <source>Organizer</source>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.event.color">
+                <source>Color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.textincolumns">
+                <source>Show text in columns</source>
+            </trans-unit>
+            <trans-unit id="rte.btn-primary">
+                <source>Button primary</source>
+            </trans-unit>
+            <trans-unit id="rte.btn-secondary">
+                <source>Button secondary</source>
+            </trans-unit>
+            <trans-unit id="rte.btn-success">
+                <source>Button success</source>
+            </trans-unit>
+            <trans-unit id="rte.btn-danger">
+                <source>Button danger</source>
+            </trans-unit>
+            <trans-unit id="rte.btn-warning">
+                <source>Button warning</source>
+            </trans-unit>
+            <trans-unit id="rte.btn-info">
+                <source>Button info</source>
+            </trans-unit>
+            <trans-unit id="rte.btn-light">
+                <source>Button light</source>
+            </trans-unit>
+            <trans-unit id="rte.btn-dark">
+                <source>Button dark</source>
+            </trans-unit>
+            <trans-unit id="rte.badge-primary">
+                <source>Badge primary</source>
+            </trans-unit>
+            <trans-unit id="rte.badge-secondary">
+                <source>Badge secondary</source>
+            </trans-unit>
+            <trans-unit id="rte.badge-success">
+                <source>Badge success</source>
+            </trans-unit>
+            <trans-unit id="rte.badge-danger">
+                <source>Badge danger</source>
+            </trans-unit>
+            <trans-unit id="rte.badge-warning">
+                <source>Badge warning</source>
+            </trans-unit>
+            <trans-unit id="rte.badge-info">
+                <source>Badge info</source>
+            </trans-unit>
+            <trans-unit id="rte.badge-light">
+                <source>Badge light</source>
+            </trans-unit>
+            <trans-unit id="rte.badge-dark">
+                <source>Badge dark</source>
+            </trans-unit>
+            <trans-unit id="rte.text-primary">
+                <source>Text primary</source>
+            </trans-unit>
+            <trans-unit id="rte.text-secondary">
+                <source>Text secondary</source>
+            </trans-unit>
+            <trans-unit id="rte.text-success">
+                <source>Text success</source>
+            </trans-unit>
+            <trans-unit id="rte.text-danger">
+                <source>Text danger</source>
+            </trans-unit>
+            <trans-unit id="rte.text-warning">
+                <source>Text warning</source>
+            </trans-unit>
+            <trans-unit id="rte.text-info">
+                <source>Text info</source>
+            </trans-unit>
+            <trans-unit id="rte.text-light">
+                <source>Text light</source>
+            </trans-unit>
+            <trans-unit id="rte.text-dark">
+                <source>Text dark</source>
+            </trans-unit>
+            <trans-unit id="rte.link-primary">
+                <source>Link primary</source>
+            </trans-unit>
+            <trans-unit id="rte.link-secondary">
+                <source>Link secondary</source>
+            </trans-unit>
+            <trans-unit id="rte.link-success">
+                <source>Link success</source>
+            </trans-unit>
+            <trans-unit id="rte.link-danger">
+                <source>Link danger</source>
+            </trans-unit>
+            <trans-unit id="rte.link-warning">
+                <source>Link warning</source>
+            </trans-unit>
+            <trans-unit id="rte.link-info">
+                <source>Link info</source>
+            </trans-unit>
+            <trans-unit id="rte.link-light">
+                <source>Link light</source>
+            </trans-unit>
+            <trans-unit id="rte.link-dark">
+                <source>Link dark</source>
+            </trans-unit>
+            <trans-unit id="rte.link-underline-opacity-0">
+                <source>Link without underline</source>
+            </trans-unit>
+            <trans-unit id="rte.text-small">
+                <source>Small</source>
+            </trans-unit>
+            <trans-unit id="rte.text-lowercase">
+                <source>lowercase</source>
+            </trans-unit>
+            <trans-unit id="rte.text-uppercase">
+                <source>Uppercase</source>
+            </trans-unit>
+            <trans-unit id="rte.text-capitalize">
+                <source>Capitalize</source>
+            </trans-unit>
+            <trans-unit id="rte.text-underline">
+                <source>Underline</source>
+            </trans-unit>
+            <trans-unit id="rte.p">
+                <source>Pragraph</source>
+            </trans-unit>
+            <trans-unit id="rte.h1">
+                <source>H1</source>
+            </trans-unit>
+            <trans-unit id="rte.h2">
+                <source>H2</source>
+            </trans-unit>
+            <trans-unit id="rte.h3">
+                <source>H3</source>
+            </trans-unit>
+            <trans-unit id="rte.h4">
+                <source>H4</source>
+            </trans-unit>
+            <trans-unit id="rte.h5">
+                <source>H5</source>
+            </trans-unit>
+            <trans-unit id="rte.pre">
+                <source>Pre formatted</source>
+            </trans-unit>
+            <trans-unit id="rte.code">
+                <source>Code</source>
+            </trans-unit>
+            <trans-unit id="rte.table-striped">
+                <source>Striped table</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,40 @@
+<f:if condition="!{width}">
+    <f:variable name="width" value="{dimensions.width}" />
+</f:if>
+<f:if condition="!{height}">
+    <f:variable name="height" value="{dimensions.height}" />
+</f:if>
+<figure class="figure w-100" data-aos="{f:if(condition: '{data.tx_das_galleryanimate}', then: 'fade-up')}" data-aos-delay="100">
+    <f:if condition="{file.link}">
+        <f:then>
+            <f:link.typolink parameter="{file.link}" title="{file.title}">
+                <f:render section="image" arguments="{_all}" />
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <f:if condition="{data.image_zoom}">
+                <a href="{file.publicUrl}" title="{file.title}" class="glightbox glightbox-{gallery_id}" data-glightbox-id="glightbox-{gallery_id}" data-glightbox="title:{file.title}{f:if(condition: '{file.description}', then: '. {file.description}')}">
+            </f:if>
+            <f:render section="image" arguments="{_all}" />
+            <f:if condition="{data.image_zoom}">
+                </a>
+            </f:if>
+        </f:else>
+    </f:if>
+    <f:if condition="!{data.tx_das_hidecaption} && {file.description}">
+        <figcaption class="figure-caption">
+            <f:format.nl2br>{file.description}</f:format.nl2br>
+        </figcaption>
+    </f:if>
+</figure>
+
+<f:section name="image">    
+    <f:if condition="{file.extension} == 'svg'">
+        <f:then>
+            <img  src="{file.publicUrl}" alt="{file.alternative}" title="{file.title}" loading="{settings.lazyLoading}" class="img-fluid w-100" />
+        </f:then>
+        <f:else>
+            <f:media class="img-fluid w-100" file="{file}" width="{width}" height="{height}" alt="{file.alternative}" title="{file.title}" loading="{settings.lazyLoading}" />
+        </f:else>
+    </f:if>
+</f:section>

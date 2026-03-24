@@ -1,0 +1,56 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Paginator"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Paginator.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.layout.1', 1: '1'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.layout.2', 1: '2'}
+            }"
+        />
+        <flux:field.checkbox
+            name="only_subpages"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.only_subpages"
+            config="{renderType: 'checkboxToggle'}"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.layout" />
+                </th>
+                <td width="20%">
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.layout.{layout}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.only_subpages" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: only_subpages}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Paginator" arguments="{_all}" />
+</f:section>

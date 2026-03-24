@@ -1,0 +1,238 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="ProgressBars"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/ProgressBars.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.select
+            name="size"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:size"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:small', 1: '20'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:medium', 1: '30'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:large', 1: '40'}
+            }"
+            default="30"
+        />
+        <flux:field.input
+            name="default_color"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default_color"
+            size="5"
+            config="{renderType: 'colorpicker'}"
+        />
+        <flux:field.checkbox
+            name="stripped_bars"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.stripped_bars"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="animated_stripes"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.animated_stripes"
+            config="{renderType: 'checkboxToggle'}"
+            displayCond="FIELD:options.stripped_bars:=:1"
+        />
+        <flux:field.checkbox
+            name="animated_bars"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.animated_bars"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:field.checkbox
+            name="show_label"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.show_label"
+            config="{renderType: 'checkboxToggle'}"
+            default="1"
+        />
+        <flux:field.checkbox
+            name="vertical_bars"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.vertical_bars"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
+        <f:if condition="{vertical_bars} == 1">
+            <flux:field.input
+                name="vertical_bars_height"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.vertical_bars_height"
+                size="5"
+                config="{eval: 'int', range: {lower: 200, upper: 600}, slider: {step: 10, width: 200}}"
+                displayCond="FIELD:options.layout:=:1"
+            />
+        </f:if>
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.bars"
+        >
+            <flux:form.section
+                name="items"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.bars"
+            >
+                <flux:form.object
+                    name="item"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.bar"
+                >
+                    <f:render partial="Content/Access" arguments="{_all}" />
+                    <flux:field.input
+                        name="title"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.title"
+                        required="1"
+                    />
+                    <flux:field.input
+                        name="area"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.area"
+                        size="5"
+                        config="{eval: 'int', range: {lower: 0, upper: 100}, slider: {step: 1, width: 200}}"
+                    />
+                    <flux:field.input
+                        name="color"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:color"
+                        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.area_color.description"
+                        size="5"
+                        config="{renderType: 'colorpicker'}"
+                    />
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:size" />
+                </th>
+                <td>
+                    <f:switch expression="{size}">
+                        <f:case value="20">
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:small" />
+                        </f:case>
+                        <f:case value="40">
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:large" />
+                        </f:case>
+                        <f:defaultCase>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:medium" />
+                        </f:defaultCase>
+                    </f:switch>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default_color" />
+                </th>
+                <td>
+                    <f:if condition="{default_area_color}">
+                        <span style="display: inline-block; width: 20px; height: 20px; background-color: {default_color};" title="{default_color}"></span>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.stripped_bars" />
+                </th>
+                <td>
+                <f:render partial="Content/Check" arguments="{condition: stripped_bars}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.animated_stripes" />
+                </th>
+                <td>
+                <f:render partial="Content/Check" arguments="{condition: animated_stripes}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.animated_bars" />
+                </th>
+                <td>
+                <f:render partial="Content/Check" arguments="{condition: animated_bars}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.show_label" />
+                </th>
+                <td>
+                <f:render partial="Content/Check" arguments="{condition: show_label}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.vertical_bars" />
+                </th>
+                <td>
+                <f:render partial="Content/Check" arguments="{condition: vertical_bars}" />
+                </td>
+            </tr>
+            <f:if condition="{vertical_bars}">
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.vertical_bars_height" />
+                    </th>
+                    <td>
+                        {vertical_bars_height}
+                    </td>
+                </tr>
+            </f:if>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.bars" /></strong>
+                    <table class="mt-2">
+                        <tbody>
+                            <f:for each="{items}" as="item">
+                                <f:variable name="area" value="{item.item.area as integer}" />
+                                <f:variable name="area" value="{f:if(condition: '{area}>100', then: '100', else: '{area}')}" />
+                                <tr>
+                                    <td><ul><li>{item.item.title}</li></ul></td>
+                                    <td>
+                                        <span class="d-inline-block mx-1 mb-1" style="width: 300px; background-color: #eaeaea;">
+                                            <span class="d-inline-block" style="width: {v:math.product(a: '{area}', b: '3')}px; background-color: {f:if(condition: '{item.item.color}', then: '{item.item.color}', else: '{default_area_color}')};">&nbsp;</span>
+                                        </span>
+                                    </td>
+                                    <td>{area}%</td>
+                                </tr>
+                            </f:for>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/ProgressBars" arguments="{_all}" />
+</f:section>

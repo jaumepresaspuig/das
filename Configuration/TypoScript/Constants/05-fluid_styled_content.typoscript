@@ -1,0 +1,22 @@
+styles {
+    templates {
+        templateRootPath = EXT:das/Resources/Private/Extensions/fluid_styled_content/Templates/
+        partialRootPath = EXT:das/Resources/Private/Extensions/fluid_styled_content/Partials/
+        layoutRootPath = EXT:das/Resources/Private/Extensions/fluid_styled_content/Layouts/
+    }
+    content {
+        imgtext {
+            layoutKey = default
+            maxW = {$plugin.tx_das.settings.contentWidth}
+            maxWInText = {$plugin.tx_das.settings.contentWidth}
+            linkWrap.width = {$plugin.tx_das.settings.contentWidth}
+        }
+        textmedia {
+            maxW = {$plugin.tx_das.settings.contentWidth}
+            maxWInText = {$plugin.tx_das.settings.contentWidth}
+        }
+        image.lazyLoading = {$plugin.tx_das.settings.lazyLoading}
+        loginform.emailFrom = myemail@mydomain.com
+        loginform.emailFromName = My Domain
+    }
+}

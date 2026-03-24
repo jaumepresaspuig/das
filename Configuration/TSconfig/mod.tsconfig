@@ -1,0 +1,482 @@
+mod.web_layout.BackendLayouts {
+    Home {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.Home
+        icon = EXT:das/Resources/Public/Icons/Page/Home.svg
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.footer
+                                colPos = 3
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    Interior {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.Interior
+        icon = EXT:das/Resources/Public/Icons/Page/Interior.svg
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    InteriorL {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.InteriorL
+        icon = EXT:das/Resources/Public/Icons/Page/InteriorL.svg
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.left_column
+                                colPos = 1
+                                colspan = 3
+                            }
+                            2 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                                colspan = 9
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    InteriorLs {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.InteriorLs
+        icon = EXT:das/Resources/Public/Icons/Page/InteriorLs.svg
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.left_column_with_inherited_content
+                                colPos = 1
+                                colspan = 3
+                            }
+                            2 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                                colspan = 9
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    InteriorR {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.InteriorR
+        icon = EXT:das/Resources/Public/Icons/Page/InteriorR.svg
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                                colspan = 9
+                            }
+                            2 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.right_column
+                                colPos = 2
+                                colspan = 3
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    InteriorRs {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.InteriorRs
+        icon = EXT:das/Resources/Public/Icons/Page/InteriorRs.svg
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                                colspan = 9
+                            }
+                            12 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.right_column_with_inherited_content
+                                colPos = 2
+                                colspan = 3
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    InteriorLR {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.InteriorLR
+        icon = EXT:das/Resources/Public/Icons/Page/InteriorLR.svg
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.left_column
+                                colPos = 1
+                                colspan = 2
+                            }
+                            2 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                                colspan = 8
+                            }
+                            3 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.right_column
+                                colPos = 2
+                                colspan = 2
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    InteriorLsR {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.InteriorLsR
+        icon = EXT:das/Resources/Public/Icons/Page/InteriorLsR.svg
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.left_column_with_inherited_content
+                                colPos = 1
+                                colspan = 2
+                            }
+                            2 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                                colspan = 8
+                            }
+                            3 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.right_column
+                                colPos = 2
+                                colspan = 2
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    InteriorLRs {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.InteriorLRs
+        icon = EXT:das/Resources/Public/Icons/Page/InteriorLRs.svg
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.left_column
+                                colPos = 1
+                                colspan = 2
+                            }
+                            2 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                                colspan = 8
+                            }
+                            3 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.right_column_with_inherited_content
+                                colPos = 2
+                                colspan = 2
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    InteriorLsRs {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.InteriorLsRs
+        icon = EXT:das/Resources/Public/Icons/Page/InteriorLsRs.svg
+        config {
+            backend_layout {
+                colCount = 12
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                                colspan = 12
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.left_column_with_inherited_content
+                                colPos = 1
+                                colspan = 2
+                            }
+                            2 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                                colspan = 8
+                            }
+                            3 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.right_column_with_inherited_content
+                                colPos = 2
+                                colspan = 2
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                                colspan = 12
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    OnlyContent {
+        title = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.backend_layout.OnlyContent
+        icon = EXT:das/Resources/Public/Icons/Page/OnlyContent.svg
+        config {
+            backend_layout {
+                colCount = 1
+                rowCount = 3
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.featured_content
+                                colPos = 4
+                            }
+                        }
+                    }
+                    2 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content
+                                colPos = 0
+                            }
+                        }
+                    }
+                    3 {
+                        columns {
+                            1 {
+                                name = LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.main_content_slide
+                                colPos = 5
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

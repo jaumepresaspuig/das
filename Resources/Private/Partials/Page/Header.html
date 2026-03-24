@@ -1,0 +1,248 @@
+<f:variable name="rootline" value="{v:page.rootline()}" />
+<f:variable name="home" value="{rootline.0}" />
+<header id="pageHeader" class="fixed-top shadow-sm{f:if(condition: '{home.tx_das_bstheme} == \'light\'', then: ' bg-white')}">
+    <nav class="navbar navbar-expand-lg container">
+        <div class="container">
+            <f:link.typolink parameter="{home.uid}" class="navbar-brand">
+                <v:page.resources.fal table="pages" field="tx_das_logo" as="images" uid="{home.uid}">
+                    {images -> v:iterator.first() -> f:variable(name: 'image')}
+                    <img src="{f:if(condition: '{image.uid}', then: '{f:uri.image(src: \'{image.uid}\', treatIdAsReference: 1)}', else: '{f:uri.image(src: \'EXT:{theme}/Resources/Public/Images/logo.png\', treatIdAsReference: 1)}')}" alt="{siteTitle}" title="{siteTitle}" />
+                </v:page.resources.fal>
+            </f:link.typolink>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <v:menu pageUid="{home.uid}">
+                    <f:if condition="{menu}">
+                        <ul class="navbar-nav me-auto mb-2">
+                            <f:for each="{menu}" as="page">
+                                <li class="nav-item{f:if(condition: '{page.hasSubPages}', then: ' dropdown')}{f:if(condition: '{page.hasSubPages} && {page.tx_das_megamenu}', then: ' dropdown-mega position-static')}{f:if(condition: '{page.active}', then: ' active')}">
+                                    <f:if condition="{page.hasSubPages}">
+                                        <f:then>
+                                            <a href="#" class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                                                <f:if condition="{page.nav_title}">
+                                                    <f:then>
+                                                        {page.nav_title}
+                                                    </f:then>
+                                                    <f:else>
+                                                        {page.title}
+                                                    </f:else>
+                                                </f:if>
+                                            </a>
+                                            <v:menu pageUid="{page.uid}">
+                                                <f:if condition="{menu}">
+                                                    <f:if condition="{page.tx_das_megamenu}">
+                                                        <f:then>
+                                                            <div class="dropdown-menu w-100 mx-0 mx-lg-2" data-bs-popper="static">
+                                                                <div class="mega-content">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <f:for each="{menu}" as="subPage">
+                                                                                <div  class="col-md-3">
+                                                                                    <f:link.typolink parameter="{subPage.uid}" class="dropdown-item align-middle text-wrap">
+                                                                                        <f:variable name="icon" value="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAKklEQVR4nO3OIQEAAAACIIP/NzvDAgtozpozAQEBAQEBAQEBAQEBAQGBATicAIHWkF/LAAAAAElFTkSuQmCC" />
+                                                                                        <f:if condition="{subPage.media}">
+                                                                                            <v:page.resources.fal table="pages" field="media" as="images" uid="{subPage.uid}">
+                                                                                                {images -> v:iterator.first() -> f:variable(name: 'icon')} 
+                                                                                                <f:variable name="icon" value="{f:uri.image(src: '{icon.uid}', treatIdAsReference: 1)}" />                  
+                                                                                            </v:page.resources.fal>
+                                                                                        </f:if>
+                                                                                        <img src="{icon}" with="32" height="32" alt="{subPage.title}" title="{subPage.title}" class="float-start me-2" />
+                                                                                        <f:if condition="{subPage.nav_title}">
+                                                                                            <f:then>
+                                                                                                {subPage.nav_title}
+                                                                                            </f:then>
+                                                                                            <f:else>
+                                                                                                {subPage.title}
+                                                                                            </f:else>
+                                                                                        </f:if>
+                                                                                    </f:link.typolink>
+                                                                                </div>
+                                                                            </f:for>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="dropdown-menu">
+                                                                <f:for each="{menu}" as="subPage">
+                                                                    <li{f:if(condition: '{subPage.hasSubPages}', then: ' class="dropend"')}>
+                                                                        <f:if condition="{subPage.hasSubPages}">
+                                                                            <f:then>
+                                                                                <a href="#" class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                    <f:if condition="{subPage.nav_title}">
+                                                                                        <f:then>
+                                                                                            {subPage.nav_title}
+                                                                                        </f:then>
+                                                                                        <f:else>
+                                                                                            {subPage.title}
+                                                                                        </f:else>
+                                                                                    </f:if>
+                                                                                </a>
+                                                                                <v:menu pageUid="{subPage.uid}">
+                                                                                    <f:if condition="{menu}">
+                                                                                        <ul class="dropdown-menu">
+                                                                                            <f:for each="{menu}" as="subSubPage">
+                                                                                                <li class="dropdown-item{f:if(condition: '{subSubPage.hasSubPages}', then: ' active')}">
+                                                                                                    <f:link.typolink parameter="{subSubPage.uid}" class="dropdown-item">
+                                                                                                        <f:if condition="{subSubPage.nav_title}">
+                                                                                                            <f:then>
+                                                                                                                {subSubPage.nav_title}
+                                                                                                            </f:then>
+                                                                                                            <f:else>
+                                                                                                                {subSubPage.title}
+                                                                                                            </f:else>
+                                                                                                        </f:if>
+                                                                                                    </f:link.typolink>
+                                                                                                </li>
+                                                                                            </f:for>
+                                                                                        </ul>
+                                                                                    </f:if>
+                                                                                </v:menu>
+                                                                            </f:then>
+                                                                            <f:else>
+                                                                                <f:link.typolink parameter="{subPage.uid}" class="dropdown-item">
+                                                                                    <f:if condition="{subPage.nav_title}">
+                                                                                        <f:then>
+                                                                                            {subPage.nav_title}
+                                                                                        </f:then>
+                                                                                        <f:else>
+                                                                                            {subPage.title}
+                                                                                        </f:else>
+                                                                                    </f:if>
+                                                                                </f:link.typolink>
+                                                                            </f:else>
+                                                                        </f:if>
+                                                                    </li>
+                                                                </f:for>
+                                                            </ul>
+                                                        </f:then>
+                                                        <f:else>
+                                                            <ul class="dropdown-menu">
+                                                                <f:for each="{menu}" as="subPage">
+                                                                    <li{f:if(condition: '{subPage.hasSubPages}', then: ' class="dropend"')}>
+                                                                        <f:if condition="{subPage.hasSubPages}">
+                                                                            <f:then>
+                                                                                <a href="#" class="dropdown-item dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                                    <f:if condition="{subPage.nav_title}">
+                                                                                        <f:then>
+                                                                                            {subPage.nav_title}
+                                                                                        </f:then>
+                                                                                        <f:else>
+                                                                                            {subPage.title}
+                                                                                        </f:else>
+                                                                                    </f:if>
+                                                                                </a>
+                                                                                <v:menu pageUid="{subPage.uid}">
+                                                                                    <f:if condition="{menu}">
+                                                                                        <ul class="dropdown-menu">
+                                                                                            <f:for each="{menu}" as="subSubPage">
+                                                                                                <li class="dropdown-item{f:if(condition: '{subSubPage.hasSubPages}', then: ' active')}">
+                                                                                                    <f:link.typolink parameter="{subSubPage.uid}" class="dropdown-item">
+                                                                                                        <f:if condition="{subPage.nav_title}">
+                                                                                                            <f:then>
+                                                                                                                {subPage.nav_title}
+                                                                                                            </f:then>
+                                                                                                            <f:else>
+                                                                                                                {subPage.title}
+                                                                                                            </f:else>
+                                                                                                        </f:if>
+                                                                                                    </f:link.typolink>
+                                                                                                </li>
+                                                                                            </f:for>
+                                                                                        </ul>
+                                                                                    </f:if>
+                                                                                </v:menu>
+                                                                            </f:then>
+                                                                            <f:else>
+                                                                                <f:link.typolink parameter="{subPage.uid}" class="dropdown-item">
+                                                                                    <f:if condition="{subPage.nav_title}">
+                                                                                        <f:then>
+                                                                                            {subPage.nav_title}
+                                                                                        </f:then>
+                                                                                        <f:else>
+                                                                                            {subPage.title}
+                                                                                        </f:else>
+                                                                                    </f:if>
+                                                                                </f:link.typolink>
+                                                                            </f:else>
+                                                                        </f:if>
+                                                                    </li>
+                                                                </f:for>
+                                                            </ul>
+                                                        </f:else>
+                                                    </f:if>
+                                                </f:if>
+                                            </v:menu>
+                                        </f:then>
+                                        <f:else>
+                                            <f:link.typolink parameter="{page.uid}" class="nav-link">
+                                                <f:if condition="{page.nav_title}">
+                                                    <f:then>
+                                                        {page.nav_title}
+                                                    </f:then>
+                                                    <f:else>
+                                                        {page.title}
+                                                    </f:else>
+                                                </f:if>
+                                            </f:link.typolink>
+                                        </f:else>
+                                    </f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </v:menu>
+                <f:if condition="{home.tx_das_showlanguageselector} || {home.tx_das_searchpageuid}">
+                    <f:if condition="{home.tx_das_showlanguageselector}">
+                        <ul class="navbar-nav ms-auto mx-3">
+                            <li class="nav-item dropdown float-end text-uppercase">                            
+                                <v:page.languageMenu hideNotTranslated="0" as="languages">
+                                    <f:for each="{languages}" as="language">
+                                        <f:if condition="{language.current}">
+                                            <a href="#" class="nav-link dropdown-toggle show" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                {language.iso}
+                                            </a>
+                                        </f:if>
+                                    </f:for>
+                                    <ul class="dropdown-menu w-auto">
+                                        <f:for each="{languages}" as="language">
+                                            <f:if condition="!{language.current}">
+                                                <li>
+                                                    <a href="{language.url}" title="{language.label}" class="dropdown-item">
+                                                        {language.iso}
+                                                    </a>
+                                                </li>
+                                            </f:if>
+                                        </f:for>
+                                    </ul>
+                                </v:page.languageMenu>
+                            </li>
+                        </ul>
+                    </f:if>
+                    <f:if condition="{home.tx_das_searchpageuid}">
+                        <form action="{f:uri.page(pageUid: '{home.tx_das_searchpageuid}', additionalParams: '{tx_indexedsearch_pi2: {action: \'search\', controller: \'Search\'}}')}" id="searchform-{record.uid}" name="searchform" method="post" class="d-flex mt-1" role="search">
+                            <fieldset class="input-group input-group-sm">
+                                <input type="text" name="tx_indexedsearch_pi2[search][sword]" placeholder="{f:translate(extensionName: 'das', key: 'search_placeholder')}" aria-label="{f:translate(extensionName: 'das', key: 'search_placeholder')}" class="form-control" />
+                                <button type="submit" name="tx_indexedsearch_pi2[search][submitButton]" id="searchbutton" class="btn btn-secondary rounded-end"><span class="fa fa-search"></span></button>
+                                <div style="display: none;">
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][_sections]" value="0" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][_freeIndexUid]" value="_" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][pointer]" value="0" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][ext]" value="" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][searchType]" value="1" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][defaultOperand]" value="0" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][mediaType]" value="-1" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][sortOrder]" value="rank_flag" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][group]" value="" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][desc]" value="" />
+                                    <input type="hidden" name="tx_indexedsearch_pi2[search][extendedSearch]" value="" />
+                                </div>
+                            </fieldset>
+                        </form>
+                    </f:if>
+                </f:if>
+            </div>
+        </div>
+    </nav>
+</header>

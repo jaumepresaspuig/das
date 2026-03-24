@@ -1,0 +1,18 @@
+{namespace v=FluidTYPO3\Vhs\ViewHelpers}
+
+<f:layout name="Default" />
+
+<f:if condition="{data.tx_das_htmlinheader}">
+    <f:then>
+        <v:page.header name="tx-das-content-html" overwrite="0">
+            <f:render section="Main" optional="true" />
+        </v:page.header>
+    </f:then>
+    <f:else>
+        <f:render section="Main" optional="true" />
+    </f:else>
+</f:if>
+
+<f:section name="Main">
+    <f:format.raw>{data.bodytext}</f:format.raw>
+</f:section>

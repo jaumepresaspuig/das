@@ -1,0 +1,120 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Alert"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.alert"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.alert.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Alert.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+        />
+        <flux:field.select
+            name="type"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.alert.type"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/button_primary.svg'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/button_secondary.svg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/button_success.svg'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/button_danger.svg'},
+                4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/button_warning.svg'},
+                5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/button_info.svg'},
+                6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/button_light.svg'},
+                7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/button_dark.svg'}
+            }"
+            showIconTable="1"
+        />
+        <flux:field.input
+            name="text"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.alert.text"
+            size="60"
+            required="1"
+        />
+        <flux:field.checkbox
+            name="show_icon"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.alert.show_icon"
+            config="{renderType: 'checkboxToggle'}"
+            default="0"
+        />
+        <flux:field.checkbox
+            name="show_dismiss_button"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.alert.show_dismiss_button"
+            config="{renderType: 'checkboxToggle'}"
+            default="0"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="alert alert-{type} alert-dismissible d-flex align-items-center" role="alert">
+                        <f:if condition="{show_icon}">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+                                <symbol id="check-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </symbol>
+                                <symbol id="info-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                </symbol>
+                                <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+                                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </symbol>
+                            </svg>
+                            <f:switch expression="{type}">
+                                <f:case value="success">
+                                    <f:variable name="icon" value="check-circle-fill" />
+                                </f:case>
+                                <f:case value="danger">
+                                    <f:variable name="icon" value="exclamation-triangle-fill" />
+                                </f:case>
+                                <f:case value="warning">
+                                    <f:variable name="icon" value="exclamation-triangle-fill" />
+                                </f:case>
+                                <f:defaultCase>
+                                    <f:variable name="icon" value="info-fill" />
+                                </f:defaultCase>
+                            </f:switch>
+                            <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:" style="width: 2em; height: 2em; fill: currentcolor;"><use xlink:href="#{icon}"/></svg>
+                        </f:if>
+                        {text}
+                        <f:if condition="{show_dismiss_button}">
+                            <button type="button" class="btn-close" aria-label="Close" style="position: absolute; top: auto; right: 15px;"></button>
+                        </f:if>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Alert" arguments="{_all}" />
+</f:section>

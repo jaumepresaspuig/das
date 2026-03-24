@@ -1,0 +1,32 @@
+<f:if condition="{items}">
+    <div class="tx-das-content-buttons tx-das-content-buttons-layout-{layout} {alignment}" data-id="c{record.uid}">
+        <div class="{f:if(condition: '{alignment} == \'\' || {size} == \'btn-lg\'', then: 'ml-n{settings.marginForButtons}')}{f:if(condition: '{alignment} == \'text-end\'', then: 'mr-n{settings.marginForButtons}')}">
+            <f:if condition="{group} && !{full_width}">
+                <div class="btn-group" role="group" aria-label="Buttons">
+            </f:if>
+                <f:variable name="animationOdd" value="" />
+                <f:variable name="animationEven" value="" />
+                <f:if condition="{animate}">
+                    <f:if condition="{full_width}">
+                        <f:then>
+                            <f:variable name="animationOdd" value="animated bounceInLeft" />
+                            <f:variable name="animationEven" value="animated bounceInRight" />
+                        </f:then>
+                        <f:else>
+                            <f:variable name="animationOdd" value="animated bounceInDown" />
+                            <f:variable name="animationEven" value="animated bounceInUp" />
+                        </f:else>
+                    </f:if>
+                </f:if>
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <f:if condition="{item.text} && {item.link}">
+                        <f:variable name="button" value="{item}" />
+                        <f:link.typolink parameter="{item.link}" class="btn btn-{f:if(condition: '{outline}', then: 'outline-')}{item.style} {size} {f:if(condition: '{full_width}', then: 'btn-block w-100')} mb-{settings.marginForButtons} {f:if(condition: '!{full_width} && !{group}', then: 'mx-{settings.marginForButtons}')}" additionalAttributes="{data-aos: '{f:if(condition: \'{animate}\', then: \'fade-up\')}', data-aos-delay: '100'}">{item.text}</f:link.typolink>
+                    </f:if>
+                </f:for>
+            <f:if condition="{group} && !{full_width}">
+                </div>
+            </f:if>
+        </div>
+    </div>
+</f:if>

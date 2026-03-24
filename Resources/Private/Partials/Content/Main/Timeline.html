@@ -1,0 +1,37 @@
+<f:if condition="{items}">
+    <div class="tx-das-content-timeline tx-das-content-timeline-layout-{layout}" data-id="c{record.uid}">
+        <ul class="timeline">
+            <f:for each="{items}" as="item" iteration="iteration">
+                <li class="mx-3{f:if(condition: '{iteration.isEven}', then: ' timeline-inverted')}">
+                    <div class="timeline-badge shadow bg-{f:if(condition: '{item.icon_color}', then: '{item.icon_color}', else: '{default_color}')}">
+                        <i class="{item.icon}" aria-hidden="true"></i>
+                    </div>
+                    <div class="timeline-panel shadow {f:if(condition: '{record.tx_das_textcolor} == \'text-white\'', then: 'bg-dark')}"
+                    data-aos="{f:if(condition: '{animate}', then: '{f:if(condition: \'{iteration.isEven}\', then: \'fade-left\', else: \'fade-right\')}')}" data-aos-delay="{iteration.cycle}00">
+                        <f:if condition="{item.title} || {item.subtitle}">
+                            <div class="timeline-heading">
+                                <f:if condition="{item.title}">
+                                    <h4 class="timeline-title">
+                                        {item.title}
+                                    </h4>
+                                    <f:if condition="{item.subtitle}">
+                                        <p>
+                                            <small class="text-muted">
+                                                {item.subtitle}
+                                            </small>
+                                        </p>
+                                    </f:if>
+                                </f:if>
+                            </div>
+                        </f:if>
+                        <div class="timeline-body">
+                            <f:format.html>
+                                {item.text}
+                            </f:format.html>
+                        </div>
+                    </div>
+                </li>
+            </f:for>
+        </ul>
+    </div>
+</f:if>

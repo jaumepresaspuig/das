@@ -1,0 +1,36 @@
+plugin {
+    tx_das {
+        settings {
+            marginForButtons = {$plugin.tx_das.settings.marginForButtons}
+            lazyLoading = {$plugin.tx_das.settings.lazyLoading}
+            seo {
+                siteTitle = {$seo.siteTitle}
+                titlePrepend= {$seo.titlePrepend}
+                titleAppend = {$seo.titleAppend}
+                imageWidth = {$seo.imageWidth}
+                imageHeight = {$seo.imageHeight}
+                ogType = {$seo.ogType}
+                fbAdmins = {$seo.fbAdmins}
+                fbAppId = {$seo.fbAppId}
+                twitterCard = {$seo.twitterCard}
+            }
+        }
+        view {
+            templateRootPaths.0 = EXT:das/Resources/Private/Templates/
+            templateRootPaths.10 = {$plugin.tx_das.view.templateRootPath}
+            partialRootPaths.0 = EXT:das/Resources/Private/Partials/
+            partialRootPaths.10 = {$plugin.tx_das.view.partialRootPath}
+            layoutRootPaths.0 = EXT:das/Resources/Private/Layouts/
+            layoutRootPaths.10 = {$plugin.tx_das.view.layoutRootPath}
+        }
+    }
+    tx_form {
+        settings {
+            yamlConfigurations {
+                100 = EXT:das/Configuration/Yaml/Form.yaml
+            }
+        }
+    }
+}
+
+module.tx_form.settings.yamlConfigurations.100 < plugin.tx_form.settings.yamlConfigurations.100

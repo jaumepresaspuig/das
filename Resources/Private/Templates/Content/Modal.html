@@ -1,0 +1,199 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Modal"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Modal.png"
+        />
+        <flux:field.select
+            name="position"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.position"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:center', 1: '0'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:top', 1: '1'}
+            }"
+        />
+        <flux:field.select
+            name="size"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.size"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.size.sm', 1: 'sm'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.size.lg', 1: 'lg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.size.xl', 1: 'xl'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.size.fullscreen', 1: 'fullscreen'}
+            }"
+        />
+        <flux:field.input
+            name="title"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.title"
+        />
+        <flux:field.input
+            name="close_button"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.close"
+            size="10"
+        />
+        <flux:field.select
+            name="close_button_style"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.style"
+            items="{
+                0:{0: '', 1: '', 2: 'EXT:das/Resources/Public/Images/Colors/bg_.svg'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/button_primary.svg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/button_secondary.svg'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/button_success.svg'},
+                4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/button_danger.svg'},
+                5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/button_warning.svg'},
+                6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/button_info.svg'},
+                7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/button_light.svg'},
+                8:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/button_dark.svg'}
+            }"
+            default="primary"
+            showIconTable="1"
+        />
+        <flux:field.checkbox
+            name="show_x"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.show_x"
+            default="1"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:field.checkbox
+            name="force_user"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.force_user"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:field.input
+            name="autoopen"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.autoopen"
+            description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.autoopen.description"
+            size="3"
+            config="{eval: 'int', range: {lower: 0, upper: 10}, slider: {step: 1, width: 200}}"
+        />
+        <flux:field.input
+            name="autoclose"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.autoclose"
+            description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.autoclose.description"
+            size="3"
+            config="{eval: 'int', range: {lower: 0, upper: 30}, slider: {step: 1, width: 200}}"
+        />
+        <flux:field.checkbox
+            name="show_only_once"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.show_only_once"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:form.content
+            name="ce"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.content"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.position" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{position} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:center" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:top" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:size" />
+                </th>
+                <td>
+                    <f:if condition="{position} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:normal" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:large" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.title" />
+                </th>
+                <td>
+                    {title}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.close" />
+                </th>
+                <td>
+                    {close_button}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.style" />
+                </th>
+                <td>
+                    <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{close_button_style}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{close_button_style}')}" class="d-inline-block me-1 mb-1" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.show_x" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: show_x}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.force_user" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: force_user}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.autoopen" />
+                </th>
+                <td>
+                    {autoopen}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.autoclose" />
+                </th>
+                <td>
+                    {autoclose}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.modal.show_only_once" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: show_only_once}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Modal" arguments="{_all}" />
+</f:section>

@@ -1,0 +1,52 @@
+{namespace das=Jp\Das\ViewHelpers}
+
+<f:variable name="rawData" value="{data}" />
+<f:if condition="{rawData} == '' && {file}">
+    <v:resource.record table="sys_file" uid="{f:replace(value: '{file}', search: 't3://file?uid=', replace: '')}" field="identifier" as="file">
+        <f:variable name="rawData" value="{das:getFileContent(filepath: 'fileadmin{file.0}')}" />  
+    </v:resource.record>
+</f:if>
+<f:if condition="{rawData} != ''">
+    <f:asset.script identifier="chart_js" src="EXT:das/Resources/Public/JavaScript/chart.min.js" />
+    <f:variable name="glue" value="{f:if(condition: '{glue}', then: '{glue}', else: ',')}" />
+    <f:variable name="data" value="" />
+    <f:variable name="labels" value="" />
+    <f:variable name="backgroundColor" value="" />
+    <f:variable name="indexAxis" value="{f:if(condition: '{hv} == 2', then: 'y', else: 'x')}" />
+    <f:variable name="borderWidth" value="{f:if(condition: '{type} == \'line\'', then: '5', else: '1')}" />
+    <f:for each="{v:iterator.explode(content: '{rawData}', glue: '{v:const(name: \'LF\')}')}" as="row" iteration="iteration">
+        <f:variable name="cols" value="{v:iterator.explode(content: '{row}', glue: '{glue}')}" />
+        <f:variable name="labels" value="{labels}{f:if(condition: '!{iteration.isFirst}', then: ', ')}\"{cols.0}\"" />
+        <f:variable name="data" value="{data}{f:if(condition: '!{iteration.isFirst}', then: ', ')}\"{cols.1}\"" />
+        <f:variable name="backgroundColor" value="{backgroundColor}{f:if(condition: '!{iteration.isFirst}', then: ', ')}\"{cols.2}\"" />
+    </f:for>
+    <div class="tx-das-content-chart tx-das-content-chart-layout-{layout}">
+        <canvas id="chart{record.uid}"></canvas>
+    </div>
+    <script>
+        jQuery(document).ready(function ($) {bracket}
+            const chart{record.uid} = document.getElementById("chart{record.uid}");
+            new Chart(chart{record.uid}, {bracket}
+                type: "{type}",
+                responsive: true,
+                data: {bracket}
+                    labels: [<f:format.raw value="{labels}" />],
+                    datasets: [{bracket}
+                        label: "{label}",
+                        data: [<f:format.raw value="{data}" />],
+                        backgroundColor: [<f:format.raw value="{backgroundColor}" />],
+                        borderWidth: {borderWidth}
+                    }]
+                },
+                options: {bracket}
+                    scales: {bracket}
+                        y: {bracket}
+                            beginAtZero: true
+                        }
+                    },
+                    indexAxis: "{indexAxis}"
+                }
+            });
+        });
+    </script>
+</f:if>

@@ -1,0 +1,28 @@
+<f:render partial="HtmlHeader" arguments="{_all}" />
+<f:render partial="Header" arguments="{_all}" />
+<f:variable name="rootline" value="{v:page.rootline()}" />
+<f:variable name="home" value="{rootline.0}" />
+<f:if condition="{home.tx_das_breadcrumb} == 1">
+    <f:render partial="Breadcrumb" arguments="{_all}" />
+</f:if>
+<div class="featured">
+    <v:content.render column="4" />
+</div>
+<div class="container pt-4">
+    <div class="row">
+        <aside id="leftColumn" class="col-md-3 gx-0">
+            <v:content.render column="1" />
+        </aside>
+        <div id="pageContent" class="col-md-9 gx-0">
+            <f:if condition="{home.tx_das_breadcrumb} == 2">
+                <f:render partial="Breadcrumb" arguments="{_all}" />
+            </f:if>
+            <!--TYPO3SEARCH_begin-->
+            <f:render partial="H1" arguments="{_all}" />
+            <v:content.render column="0" />
+            <v:content.render column="5" slide="-1" />
+            <!--TYPO3SEARCH_end-->
+        </div>
+    </div>
+</div>
+<f:render partial="Footer" arguments="{_all}" />

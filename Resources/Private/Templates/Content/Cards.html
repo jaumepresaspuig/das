@@ -1,0 +1,248 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Cards"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Cards.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.select
+            name="text_alignment"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:text_alignment"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:left', 1: ''},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:center', 1: 'text-center'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:right', 1: 'text-end'}
+            }"
+            default=""
+        />
+        <flux:field.select
+            name="columns"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.columns"
+            items="{
+                0:{0: '1', 1: '1'},
+                1:{0: '2', 1: '2'},
+                2:{0: '3', 1: '3'},
+                3:{0: '4', 1: '4'}
+            }"
+            default="3"
+        />
+        <flux:field.checkbox
+            name="animate"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.animate_cards"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:field.checkbox
+            name="extra_fields"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:extra_fields"
+            default="0"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.cards"
+        >
+            <flux:form.section
+                name="items"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.cards"
+            >
+                <flux:form.object
+                    name="item"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.card"
+                >
+                    <f:render partial="Content/Access" arguments="{_all}" />
+                    <flux:field.input
+                        name="image"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.image"
+                        config="{renderType: 'inputLink', fieldControl: {linkPopup: {options: {allowedExtensions: 'jpg,jpeg,png,gif,webp', blindLinkFields: 'class,params,target,title', blindLinkOptions: 'folder,mail,page,spec,telephone,url'}}}}"
+                    />
+                    <flux:field.select
+                        name="image_position"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.image_position"
+                        items="{
+                            0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.image_position.0', 1: '0'},
+                            1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.image_position.1', 1: '1'},
+                            2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.image_position.2', 1: '2'}
+                        }"
+                        default="0"
+                    />
+                    <flux:field.input
+                        name="title"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.title"
+                        size="20"
+                    />
+                    <flux:field.input
+                        name="subtitle"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.subtitle"
+                        size="90"
+                    />
+                    <flux:field.select
+                        name="text_color"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:text_color"
+                        items="{
+                            0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: ''},
+                            1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:black', 1: 'text-black'},
+                            2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:white', 1: 'text-white'}
+                        }"
+                    />
+                    <flux:field.input
+                        name="email"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.email"
+                        displayCond="FIELD:options.extra_fields:=:1"
+                    />
+                    <flux:field.input
+                        name="page"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.page"
+                        config="{renderType: 'inputLink', blindLinkOptions: 'file,mail,spec,folder'}"
+                        displayCond="FIELD:options.extra_fields:=:1"
+                    />
+                    <flux:field.input
+                        name="facebook"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.facebook"
+                        displayCond="FIELD:options.extra_fields:=:1"
+                    />
+                    <flux:field.input
+                        name="twitter"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.twitter"
+                        displayCond="FIELD:options.extra_fields:=:1"
+                    />
+                    <flux:field.input
+                        name="linkedin"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.linkedin"
+                        displayCond="FIELD:options.extra_fields:=:1"
+                    />
+                    <flux:field.input
+                        name="instagram"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.instagram"
+                        displayCond="FIELD:options.extra_fields:=:1"
+                    />
+                    <flux:field.input
+                        name="pinterest"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.pinterest"
+                        displayCond="FIELD:options.extra_fields:=:1"
+                    />
+                    <flux:field.input
+                        name="xing"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.xing"
+                        displayCond="FIELD:options.extra_fields:=:1"
+                    />
+                    <flux:field.input
+                        name="button"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.button"
+                        size="20"
+                    />
+                    <flux:field.select
+                        name="button_color"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.button_color"
+                        items="{
+                            0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_primary.svg'},
+                            1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_secondary.svg'},
+                            2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/bg_success.svg'},
+                            3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/bg_danger.svg'},
+                            4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/bg_warning.svg'},
+                            5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/bg_info.svg'},
+                            6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
+                            7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
+                        }"
+                        showIconTable="1"
+                    />
+                    <flux:field.input
+                        name="link"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.link"
+                        config="{renderType: 'inputLink'}"
+                    />
+                    <flux:field.input
+                        name="social"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.subtitle"
+                        displayCond="FIELD:options.layout:>=:3"
+                    />
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.columns" />
+                </th>
+                <td>
+                    {columns}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.animate_cards" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: animate}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:extra_fields" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: extra_fields}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.cards.cards" /></strong>
+                    <ul class="mt-2">
+                        <f:for each="{items}" as="item">
+                            <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
+                                <f:if condition="{item.item.image}">
+                                    <f:then>
+                                        <img src="{f:uri.image(src: '{item.item.image}', width: '20c', height: '20c', absolute: 1)}" width="20" height="20" alt="{item.item.name}" class="me-1 mb-1" />
+                                    </f:then>
+                                    <f:else>
+                                        <f:render partial="Content/TransparentPng" arguments="{width: 20}" />
+                                    </f:else>
+                                </f:if>
+                                <strong>{item.item.title}</strong>&nbsp;{item.item.subtitle}
+                            </li>
+                        </f:for>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Cards" arguments="{_all}" />
+</f:section>

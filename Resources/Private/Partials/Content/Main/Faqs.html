@@ -1,0 +1,61 @@
+<f:if condition="{items}">
+    <div class="tx-das-content-faqs tx-das-content-faqs-layout-{layout}{f:if(condition: '{accordion}', then: ' accordion')}" id="tx-das-content-faqs-{record.uid}" data-id="c{record.uid}">
+        <f:if condition="{accordion}">
+            <f:then>
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header mb-0" id="heading-accordion-{record.uid}-{iteration.cycle}">
+                            <button class="accordion-button{f:if(condition: '{iteration.isFirst} && !{open_first_item}', then: ' collapsed')}{f:if(condition: '!{iteration.isFirst}', then: ' collapsed')}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-accordion-{record.uid}-{iteration.cycle}" aria-expanded="{f:if(condition: '{iteration.isFirst} && {open_first_item}', then: 'true', else: 'false')}" aria-controls="collapse-accordion-{record.uid}-{iteration.cycle}">
+                                {item.question}
+                            </button>
+                        </h2>
+                        <div id="collapse-accordion-{record.uid}-{iteration.cycle}" class="accordion-collapse collapse{f:if(condition: '{iteration.isFirst} && {open_first_item}', then: ' show')}" aria-labelledby="heading-accordion-{record.uid}-{iteration.cycle}"{f:if(condition: '{allow_multipe_open_items}', else: ' data-bs-parent="#tx-das-content-faqs-{record.uid}"')}>
+                            <div class="accordion-body mx-n1">
+                                <f:format.html>
+                                    {item.answer}
+                                </f:format.html>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </f:then>
+            <f:else>
+                <f:variable name="cols" value="{12 / columns}" />
+                <f:if condition="{columns} == 1">
+                    <f:then>
+                        <f:for each="{items}" as="item" iteration="iteration">
+                            <f:render section="faq" arguments="{_all}" />
+                        </f:for>
+                    </f:then>
+                    <f:else>
+                        <f:render section="columns" arguments="{_all}" />
+                    </f:else>
+                </f:if>
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+<f:section name="columns">
+    <f:variable name="colss" value="{cols}" />
+    <f:for each="{items -> v:iterator.chunk(count: '{columns}')}" as="itemx" iteration="iteration">
+        <div class="row">
+            <f:for each="{itemx}" as="item" iteration="iterationx">
+                <f:variable name="cols" value="{f:if(condition: '{iterationx.total} < {columns}', then: '{12 / iterationx.total}', else: '{colss}')}" />
+                <f:render section="faq" arguments="{_all}" />
+            </f:for>
+        </div>
+    </f:for>
+</f:section>
+
+<f:section name="faq">
+    <div class="col-md-{cols} mb-4" data-aos="{f:if(condition: '{animate}', then: 'fade-up')}">
+        <h3 class="d-flex">
+            {item.question}
+        </h3>
+        <f:format.html>
+            {item.answer}
+        </f:format.html>
+    </div>
+</f:section>
+

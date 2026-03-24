@@ -1,0 +1,87 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Accordion"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.accordion"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.accordion.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Accordion.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="allow_multipe_open_items"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.accordion.allow_multipe_open_items"
+            config="{renderType: 'checkboxToggle'}"
+            default="0"
+        />
+        <flux:field.checkbox
+            name="open_first_item"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.accordion.open_first_item"
+            config="{renderType: 'checkboxToggle'}"
+            default="1"
+        />
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column
+                    colPos="91"
+                    name="ce1"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:content"
+                />
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.accordion.allow_multipe_open_items" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: allow_multipe_open_items}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.accordion.open_first_item" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: open_first_item}" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Accordion" arguments="{_all}" />
+</f:section>

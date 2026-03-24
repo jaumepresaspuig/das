@@ -1,0 +1,30 @@
+<v:page.footer name="tx-das-content-modal">
+    <div class="tx-das-content-modal modal fade" tabindex="-1" role="dialog" id="tx-das-modal-{record.uid}" data-autoopen="{autoopen}" data-autoclose="{autoclose}" data-showonlyonce="{show_only_once}" {f:if(condition: '{force_user}', then: 'data-backdrop="static" data-keyboard="false"')}>
+        <div class="modal-dialog modal-{size}{f:if(condition: '{position} == 0', then: ' modal-dialog-centered')}">
+            <div class="modal-content">
+                <f:if condition="{title} || {show_x}">
+                    <div class="modal-header">
+                        <f:if condition="{title}">
+                            <h5 class="modal-title">
+                                {title}
+                            </h5>
+                        </f:if>
+                        <f:if condition="{show_x}">
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </f:if>
+                    </div>
+                </f:if>
+                <div class="modal-body">
+                    <flux:content.render area="ce" />
+                </div>
+                <f:if condition="{close_button}">
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-{close_button_style}" data-bs-dismiss="modal">
+                            {close_button}
+                        </button>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</v:page.footer>

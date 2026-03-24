@@ -1,0 +1,12 @@
+<f:if condition="{items}">
+    <div class="tx-das-content-socialbuttons tx-das-content-socialbuttons-layout-{layout} {alignment} {f:if(condition: '{size}', then: 'tx-das-content-socialbuttons-{size}')}" data-id="c{record.uid}">
+        <div class="{f:if(condition: '{alignment} == \'\' || {type} == \'btn-block btn-social\'', then: 'ml-n{settings.marginForButtons}')}{f:if(condition: '{alignment} == \'text-end\'', then: 'mr-n{settings.marginForButtons}')}">
+            <f:for each="{items}" as="item" iteration="iteration">
+                <f:variable name="platorm" value="{item.platorm -> f:format.case(mode: 'lower')}" />
+                <f:link.typolink parameter="{item.url}" class="{platorm} mb-{settings.marginForButtons} mx-{settings.marginForButtons}{f:if(condition: '{rounded}', then: ' rounded-circle')} tooltipthis"  title="{item.platorm}" target="_blank">
+                    <i class="fab fa-{platorm}"></i>
+                </f:link.typolink>
+            </f:for>
+        </div>
+    </div>
+</f:if>

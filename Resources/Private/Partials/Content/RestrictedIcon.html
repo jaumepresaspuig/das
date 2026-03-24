@@ -1,0 +1,26 @@
+<f:if condition="{fe_group}">
+    <f:then>
+        <span class="icon-overlay icon-overlay-restricted" style="top: 0;">
+            <svg class="icon-color w-100" style="height: 15px;">
+                <use xlink:href="{f:uri.image(src:'EXT:core/Resources/Public/Icons/T3Icons/sprites/overlay.svg')}#overlay-restricted"></use>
+            </svg>
+        </span>
+    </f:then>
+    <f:else>
+        <f:variable name="isPublished" value="1" />
+        <f:if condition="{starttime} || {endtime}">
+            <f:variable name="starttime" value="{f:format.date(date: '{starttime}', format: 'U')}" />
+            <f:variable name="endtime" value="{f:format.date(date: '{endtime}', format: 'U')}" />
+            <f:if condition="{starttime} > {now} || {endtime} < {now}">
+                <f:variable name="isPublished" value="0" />
+            </f:if>
+        </f:if>
+        <f:if condition="!{isPublished}">
+            <span class="icon-overlay icon-overlay-scheduled" style="top: 0;">
+                <svg class="icon-color w-100" style="height: 15px;">
+                    <use xlink:href="{f:uri.image(src:'EXT:core/Resources/Public/Icons/T3Icons/sprites/overlay.svg')}#overlay-scheduled"></use>
+                </svg>
+            </span>
+        </f:if>
+    </f:else>
+</f:if>

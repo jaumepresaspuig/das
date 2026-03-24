@@ -1,0 +1,36 @@
+
+<div class="list-group">
+    <f:render section="Menu" arguments="{menu: menu, type: type, content: content, padding: 0}" />
+</div>
+
+<f:section name="Menu">
+    <f:if condition="{menu}">
+        <f:for each="{menu}" as="page">
+            <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')}{f:if(condition: '{page.current}', then: ' aria-current="true"')} title="{page.title}" class="list-group-item list-group-item-action{f:if(condition: '{page.current}', then: ' active')}">
+                <f:if condition="{padding}"><span class="px-{padding}">&nbsp;</span></f:if>{page.title}
+                <f:if condition="{type} == 'abstract' && {page.data.abstract}">
+                    <br /><sup><f:format.html>{page.data.abstract}</f:format.html></sup>
+                </f:if>
+            </a>
+            <f:if condition="{type} == 'section' && {page.content}">
+                <f:for each="{page.content}" as="element">
+                    <f:if condition="{element.data.header}">
+                        <a href="{page.link}#c{element.data.uid}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{element.data.header}" class="list-group-item list-group-item-action">
+                            <span class="px-2">&nbsp;</span><small>{element.data.header}</small>
+                        </a>
+                    </f:if>
+                </f:for>
+            </f:if>
+            <f:if condition="{type} == 'sitemap'">
+                <f:render section="Menu" arguments="{menu: page.children, type: 'sitemap', padding: '{padding + 2}'}" />
+            </f:if>
+        </f:for>
+    </f:if>
+    <f:if condition="{content}">
+        <f:for each="{content}" as="element">
+            <f:link.page pageUid="{element.data.pid}" section="{element.data.uid}" title="{element.data.header}" class="list-group-item list-group-item-action">
+                {element.data.header}
+            </f:link.page>
+        </f:for>
+    </f:if>
+</f:section>

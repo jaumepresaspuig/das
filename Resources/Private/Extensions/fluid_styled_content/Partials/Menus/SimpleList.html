@@ -1,0 +1,45 @@
+<f:render section="Menu" arguments="{menu: menu, type: type, contebt: content}" />
+
+<f:section name="Menu">
+    <ul>
+        <f:if condition="{menu}">
+            <f:for each="{menu}" as="page">
+                <li>
+                    <a href="{page.link}"{f:if(condition: page.target, then: ' target="{page.target}"')}{f:if(condition: page.current, then: ' aria-current="page"')} title="{page.title}">
+                        {page.title}
+                        <f:if condition="{type} == 'abstract' && {page.data.abstract}">
+                            <br /><sup><f:format.html>{page.data.abstract}</f:format.html></sup>
+                        </f:if>
+                    </a>
+                    <f:if condition="{type} == 'section' || {type} == 'section_pages'">
+                        <f:if condition="{page.content}">
+                            <ul>
+                                <f:for each="{page.content}" as="element">
+                                    <f:if condition="{element.data.header}">
+                                        <li>
+                                            <a href="{page.link}#c{element.data.uid}"{f:if(condition: page.target, then: ' target="{page.target}"')} title="{element.data.header}">
+                                                {element.data.header}
+                                            </a>
+                                        </li>
+                                    </f:if>
+                                </f:for>
+                            </ul>
+                        </f:if>
+                    </f:if>
+                    <f:if condition="{type} == 'sitemap' && {page.children}">
+                        <f:render section="Menu" arguments="{menu: page.children, type: 'sitemap'}" />
+                    </f:if>
+                </li>
+            </f:for>
+        </f:if>
+        <f:if condition="{content}">
+            <f:for each="{content}" as="element">
+                <li>
+                    <f:link.page pageUid="{element.data.pid}" section="{element.data.uid}" title="{element.data.header}">
+                        {element.data.header}
+                    </f:link.page>
+                </li>
+            </f:for>
+        </f:if>
+    </ul>
+</f:section>

@@ -1,0 +1,59 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Iframe"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.iframe"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.iframe.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Iframe.png"
+        />
+        <flux:field.input
+            name="url"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.iframe.url"
+            required="1"
+        />
+        <flux:field.select
+            name="ratio"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.iframe.ratio"
+            items="{
+                0:{0: '21:9', 1: '21x9'},
+                1:{0: '16:9', 1: '16x9'},
+                2:{0: '4:3', 1: '4x3'},
+                3:{0: '1:1', 1: '1x1'}
+            }"
+            default="16x9"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+    <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.iframe.url" />
+                </th>
+                <td width="20%">
+                    <a href="{url}" target="_blank">{url}</a>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.iframe.ratio" />
+                </th>
+                <td>
+                    <f:replace value="{ratio}" search="by" replace=":" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Iframe" arguments="{_all}" />
+</f:section>

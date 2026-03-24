@@ -1,0 +1,54 @@
+<f:variable name="show" value="1" />
+<f:if condition="{only_subpages}">
+    <f:if condition="{page.uid} == {record.pid} || {page.pid} != {record.pid}">
+        <f:variable name="show" value="0" />
+    </f:if>
+</f:if>
+<f:if condition="{show}">
+    <div class="tx-dioptrine-content-paginator tx-dioptrine-content-paginator-layout-{layout}" data-id="c{record.uid}">
+        <nav aria-label="">
+            <ul class="pagination justify-content-center">
+                <v:menu.browse as="pages">
+                    <f:if condition="{layout} == 1">
+                        <li class="page-item {f:if(condition: '!{pages.prev}', then: 'disabled')}">
+                            <a class="page-link" href="{f:if(condition: '{pages.prev}', then: '{pages.prev.link}', else: '#')}" aria-label="{pages.prev.title}">
+                                <span aria-hidden="true">&laquo;</span> {pages.prev.title}
+                            </a>
+                        </li>
+                        <li class="page-item {f:if(condition: '!{pages.next}', then: 'disabled')}">
+                            <a class="page-link" href="{f:if(condition: '{pages.next}', then: '{pages.next.link}', else: '#')}" aria-label="{pages.next.title}">
+                                {pages.next.title} <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </f:if>
+                    <f:if condition="{layout} == 2">
+                        <f:variable name="disable" value="{f:if(condition: '!{pages.first} || {pages.first.uid} == {page.uid}', then: '1', else: '0')}" />
+                        <li class="page-item {f:if(condition: '{disable}', then: 'disabled')}">
+                            <a class="page-link" href="{f:if(condition: '{disable}', then: '#', else: '{pages.first.link}')}" aria-label="{pages.first.title}"{f:if(condition: '{disable}', else: ' title="{pages.first.title}"')}>
+                                <span aria-hidden="true">&laquo;</span> <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.first" />
+                            </a>
+                        </li>
+                        <f:variable name="disable" value="{f:if(condition: '!{pages.prev} || {pages.prev.uid} == {page.uid}', then: '1', else: '0')}" />
+                        <li class="page-item {f:if(condition: '{disable}', then: 'disabled')}">
+                            <a class="page-link" href="{f:if(condition: '{disable}', then: '#', else: '{pages.prev.link}')}" aria-label="{pages.prev.title}"{f:if(condition: '{disable}', else: ' title="{pages.prev.title}"')}>
+                                <span aria-hidden="true">&lsaquo;</span> <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.prev" />
+                            </a>
+                        </li>
+                        <f:variable name="disable" value="{f:if(condition: '!{pages.next} || {pages.next.uid} == {page.uid}', then: '1', else: '0')}" />
+                        <li class="page-item {f:if(condition: '{disable}', then: 'disabled')}">
+                            <a class="page-link" href="{f:if(condition: '{disable}', then: '#', else: '{pages.next.link}')}" aria-label="{pages.next.title}"{f:if(condition: '{disable}', else: ' title="{pages.next.title}"')}>
+                                <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.next" /> <span aria-hidden="true">&rsaquo;</span>
+                            </a>
+                        </li>
+                        <f:variable name="disable" value="{f:if(condition: '!{pages.last} || {pages.last.uid} == {page.uid}', then: '1', else: '0')}" />
+                        <li class="page-item {f:if(condition: '{disable}', then: 'disabled')}">
+                            <a class="page-link" href="{f:if(condition: '{disable}', then: '#', else: '{pages.last.link}')}" aria-label="{pages.last.title}"{f:if(condition: '{disable}', else: ' title="{pages.last.title}"')}>
+                                <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.paginator.last" /> <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </f:if>
+                </v:menu.browse>
+            </ul>
+        </nav>
+    </div>
+</f:if>

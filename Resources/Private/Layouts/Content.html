@@ -1,0 +1,51 @@
+<f:if condition="{items}">
+    <f:variable name="itemx" value="{}" />
+    <f:variable name="now" value="{f:format.date(date: 'now', format: 'U')}" />  
+    <f:for each="{items}" as="item">        
+        <f:if condition="{item.item.active}">
+            <f:variable name="isPublished" value="1" />
+            <f:if condition="{item.item.fe_group}">
+                <f:variable name="isPublished" value="0" />
+                <f:variable name="usergroup" value="{f:cObject(typoscriptObjectPath: 'lib.usergroup')}" />
+                <f:switch expression="{item.item.fe_group}">
+                    <f:case value="-1">                        
+                        <f:if condition="{usergroup} == ''">
+                            <f:variable name="isPublished" value="1" />
+                        </f:if>
+                    </f:case>
+                    <f:case value="-2">
+                        <f:if condition="{usergroup} != ''">
+                            <f:variable name="isPublished" value="1" />
+                        </f:if>
+                    </f:case>
+                    <f:defaultCase>                                  
+                        <f:for each="{v:iterator.explode(content: '{usergroup}', glue: ',')}" as="group">
+                            <f:contains subject=",{item.item.fe_group}," value=",{group},">
+                                <f:variable name="isPublished" value="1" />
+                            </f:contains>
+                        </f:for>
+                    </f:defaultCase>
+                </f:switch>                
+            </f:if>
+            <f:if condition="{isPublished}">
+                <f:if condition="{item.item.starttime} || {item.item.endtime}">
+                    <f:variable name="starttime" value="{f:format.date(date: '{item.item.starttime}', format: 'U')}" />
+                    <f:variable name="endtime" value="{f:format.date(date: '{item.item.endtime}', format: 'U')}" />
+                    <f:if condition="{starttime} > {now} || {endtime} < {now}">
+                        <f:variable name="isPublished" value="0" />
+                    </f:if>
+                </f:if>
+            </f:if>
+            <f:if condition="{isPublished}">
+                <f:variable name="itemx" value="{itemx -> v:iterator.push(add: '{item.item}')}" />
+            </f:if>
+        </f:if>
+    </f:for>
+    <f:variable name="items" value="{itemx}" />
+</f:if>
+
+<f:variable name="bracket" value="{f:format.raw(value: '{')}" />
+
+<f:layout name="Content" />
+
+<f:render section="Main" arguments="{_all}" />

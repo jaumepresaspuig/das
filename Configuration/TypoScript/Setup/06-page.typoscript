@@ -1,0 +1,122 @@
+PAGE_TARGET =
+
+content {
+    pageFrameObj =
+    RTE_compliant = 0
+    defaultHeaderType = 2
+}
+
+seo.siteTitle = {$seo.siteTitle}
+
+page = PAGE
+page {
+    typeNum = 0
+    5 >
+    10 = FLUIDTEMPLATE
+    10 {
+        templateName = TEXT
+        templateName.stdWrap.cObject = CASE
+        templateName.stdWrap.cObject {
+            key.data = pagelayout
+            default = TEXT
+            default.value = Interior
+            pagets__Home = TEXT
+            pagets__Home.value = Home
+            pagets__Interior = TEXT
+            pagets__Interior.value = Interior
+            pagets__InteriorL = TEXT
+            pagets__InteriorL.value = InteriorL
+            pagets__InteriorLR = TEXT
+            pagets__InteriorLR.value = InteriorLR
+            pagets__InteriorLRs = TEXT
+            pagets__InteriorLRs.value = InteriorLRs
+            pagets__InteriorLs = TEXT
+            pagets__InteriorLs.value = InteriorLs
+            pagets__InteriorLsR = TEXT
+            pagets__InteriorLsR.value = InteriorLsR
+            pagets__InteriorLsRs = TEXT
+            pagets__InteriorLsRs.value = InteriorLsRs
+            pagets__InteriorR = TEXT
+            pagets__InteriorR.value = InteriorR
+            pagets__InteriorRs = TEXT
+            pagets__InteriorRs.value = InteriorRs
+            pagets__OnlyContent = TEXT
+            pagets__OnlyContent.value = OnlyContent
+        }
+        templateRootPaths {
+            0 = EXT:das/Resources/Private/Templates/Page/
+            10 = {$plugin.tx_das.view.templates.templateRootPath}
+        }
+        partialRootPaths {
+            0 = EXT:das/Resources/Private/Partials/Page/
+            10 = {$plugin.tx_das.view.templates.partialRootPath}
+        }
+        variables {
+            theme = TEXT
+            theme.value = {$plugin.tx_das.settings.theme}
+            year = TEXT
+            year.data = date:U
+            year.strftime = %Y
+            viewport = TEXT
+            viewport.value = {$plugin.tx_das.settings.metaViewport}
+            InteriorLRsSlide = TEXT
+            InteriorLRsSlide.value = {$plugin.tx_das.settings.InteriorLRsSlide}
+            InteriorLsSlide = TEXT
+            InteriorLsSlide.value = {$plugin.tx_das.settings.InteriorLsSlide}
+            InteriorLsRSlide = TEXT
+            InteriorLsRSlide.value = {$plugin.tx_das.settings.InteriorLsRSlide}
+            InteriorLsRsSlide = TEXT
+            InteriorLsRsSlide.value = {$plugin.tx_das.settings.InteriorLsRsSlide}
+            InteriorRsSlide = TEXT
+            InteriorRsSlide.value = {$plugin.tx_das.settings.InteriorRsSlide}
+            siteTitle = TEXT
+            siteTitle.value = {$seo.siteTitle}
+            titlePrepend = TEXT
+            titlePrepend.value = {$seo.titlePrepend}
+            titleAppend.value = TEXT
+            titleAppend.value = : {$seo.siteTitle}
+            imageWidth = TEXT
+            imageWidth.value = {$seo.imageWidth}
+            imageHeight = TEXT
+            imageHeight.value = {$seo.imageHeight}
+            ogType = TEXT
+            ogType.value = {$seo.ogType}
+            fbAdmins = TEXT
+            fbAdmins.value = {$seo.fbAdmins}
+            fbAppId = TEXT
+            fbAppId.value = {$seo.fbAppId}
+            twitterCard = TEXT
+            twitterCard.value = {$seo.twitterCard}
+        }
+    }
+    includeCSS {
+        file10 = {$plugin.tx_das.settings.cssFile10}
+        file20 = {$plugin.tx_das.settings.cssFile20}
+        file30 = {$plugin.tx_das.settings.cssFile30}
+        file40 = {$plugin.tx_das.settings.cssFile40}
+        file50 = {$plugin.tx_das.settings.cssFile50}
+        file90 = {$plugin.tx_das.settings.cssFile90}
+    }
+    includeJS {
+        file10 = {$plugin.tx_das.settings.jsFile10}
+        file20 = {$plugin.tx_das.settings.jsFile20}
+        file30 = {$plugin.tx_das.settings.jsFile30}
+        file40 = {$plugin.tx_das.settings.jsFile40}
+        file50 = {$plugin.tx_das.settings.jsFile50}
+        file90 = {$plugin.tx_das.settings.jsFile90}
+    }
+    bodyTag >
+    bodyTagCObject = COA
+    bodyTagCObject {
+        10 = TEXT
+        10 {
+            field = uid
+            dataWrap = id="p|"
+        }
+        stdWrap.noTrimWrap = |<body |>|
+    }
+    meta {
+        viewport = {$plugin.tx_das.settings.metaViewport}
+        robots = index,follow
+    }
+}

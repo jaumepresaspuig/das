@@ -1,0 +1,11 @@
+<f:switch expression="{file.type}">
+    <f:case value="3">
+        <f:render partial="Media/Type/Audio" arguments="{file: file, data: data, settings: settings}" />
+    </f:case>
+    <f:case value="4">
+        <f:render partial="Media/Type/Video" arguments="{file: file, data: data, settings: settings, width: width, height: heigh, gallery_id: gallery_id}" />
+    </f:case>
+    <f:defaultCase>
+        <f:render partial="Media/Type/Image" arguments="{file: file, data: data, settings: settings, width: width, height: height, gallery_id: gallery_id}" />
+    </f:defaultCase>
+</f:switch>

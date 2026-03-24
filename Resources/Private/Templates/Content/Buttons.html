@@ -1,0 +1,163 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Buttons"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Buttons.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.select
+            name="alignment"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:alignment"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:left', 1: ''},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:center', 1: 'text-center'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:right', 1: 'text-end'}
+            }"
+            displayCond="FIELD:options.full_width:=:0"
+        />
+        <flux:field.select
+            name="size"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:size"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:small', 1: 'btn-sm'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:normal', 1: ''},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:large', 1: 'btn-lg'}
+            }"
+        />
+        <flux:field.checkbox
+            name="full_width"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.full_width"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="group"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.group"
+            config="{renderType: 'checkboxToggle'}"
+            displayCond="FIELD:options.full_width:=:0"
+        />
+        <flux:field.checkbox
+            name="outline"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.outline"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:field.checkbox
+            name="animate"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.animate_buttons"
+            config="{renderType: 'checkboxToggle'}"
+        />
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.buttons"
+        >
+            <flux:form.section
+                name="items"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.buttons"
+            >
+                <flux:form.object
+                    name="item"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.button"
+                >
+                    <f:render partial="Content/Access" arguments="{_all}" />
+                    <flux:field.input
+                        name="text"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.text"
+                        size="5"
+                        required="1"
+                    />
+                    <flux:field.input
+                        name="link"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.link"
+                        config="{renderType: 'inputLink'}"
+                    />
+                    <flux:field.select
+                        name="style"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.style"
+                        items="{
+                            0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/button_primary.svg'},
+                            1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/button_secondary.svg'},
+                            2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/button_success.svg'},
+                            3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/button_danger.svg'},
+                            4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/button_warning.svg'},
+                            5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/button_info.svg'},
+                            6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/button_light.svg'},
+                            7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/button_dark.svg'}
+                        }"
+                        default="primary"
+                        showIconTable="1"
+                    />
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.animate_buttons" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: animate}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.buttons.buttons" /></strong>
+                    <div class="{f:if(condition: '!{full_width}', then: '{alignment}')}" style="{f:if(condition: '!{full_width} && {alignment} == \'text-end\'', then: 'text-align: right;')}">
+                        <f:if condition="!{full_width} && {group}">
+                            <div class="btn-group" role="group" aria-label="Buttons">
+                        </f:if>
+                        <f:for each="{items}" as="item">
+                            <f:if condition="{item.item.active}">
+                                <span class="btn btn-{f:if(condition: '{outline}', then: 'outline-')}{item.item.style}{f:if(condition: '{full_width}', then: ' w-100 mb-1')}">
+                                    {item.item.text}
+                                </span>
+                            </f:if>
+                            <f:if condition="!{full_width} && !{group}">&nbsp;</f:if>
+                        </f:for>
+                        <f:if condition="!{full_width} && {group}">
+                            </div>
+                        </f:if>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Buttons" arguments="{_all}" />
+</f:section>

@@ -1,0 +1,196 @@
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <f:if condition="{files}">
+        <f:if condition="{data.tx_das_columns} == 1">
+            <f:then>
+                <f:for each="{files}" as="file" iteration="iteration">
+                    <f:render section="upload" arguments="{_all}" />
+                </f:for>
+            </f:then>
+            <f:else>
+                <f:render section="columns" arguments="{_all}" />
+            </f:else>
+        </f:if>
+        <f:for each="{files}" as="file" iteration="fileIterator">
+        </f:for>
+    </f:if>
+</f:section>
+
+<f:section name="columns">
+    <f:variable name="colss" value="{12 / data.tx_das_columns}" />
+    <f:variable name="counter" value="0" />
+    <f:for each="{files -> v:iterator.chunk(count: '{data.tx_das_columns}')}" as="filex" iteration="iteration">
+        <div class="row gx-2">
+            <f:for each="{filex}" as="file" iteration="iterationx">
+                <f:variable name="cols" value="{f:if(condition: '{iterationx.total} < {data.tx_das_columns}', then: '{12 / iterationx.total}', else: '{colss}')}" />
+                <div class="col-md-{cols}{f:if(condition: '!{iteration.isLast}', then: ' mb-2')}{f:if(condition: '{iteration.isLast} && !{iterationx.isLast}', then: ' mb-2 mb-md-0')} d-flex">
+                    <f:variable name="counter" value="{counter + 1}" />
+                    <f:render section="upload" arguments="{_all}" />
+                </div>
+            </f:for>
+        </div>
+    </f:for>
+</f:section>
+
+<f:section name="upload">
+    <f:switch expression="{file.extension}">
+        <f:case value="pdf">
+            <f:variable name="icon" value="pdf" />
+        </f:case>
+        <f:case value="odt">
+            <f:variable name="icon" value="lines" />
+        </f:case>
+        <f:case value="doc">
+            <f:variable name="icon" value="lines" />
+        </f:case>
+        <f:case value="docx">
+            <f:variable name="icon" value="lines" />
+        </f:case>
+        <f:case value="text">
+            <f:variable name="icon" value="lines" />
+        </f:case>
+        <f:case value="ods">
+            <f:variable name="icon" value="excel" />
+        </f:case>
+        <f:case value="xls">
+            <f:variable name="icon" value="excel" />
+        </f:case>
+        <f:case value="xlsx">
+            <f:variable name="icon" value="excel" />
+        </f:case>
+        <f:case value="csv">
+            <f:variable name="icon" value="excel" />
+        </f:case>
+        <f:case value="odp">
+            <f:variable name="icon" value="powerpoint" />
+        </f:case>
+        <f:case value="ppt">
+            <f:variable name="icon" value="powerpoint" />
+        </f:case>
+        <f:case value="pptx">
+            <f:variable name="icon" value="powerpoint" />
+        </f:case>
+        <f:case value="zip">
+            <f:variable name="icon" value="zipper" />
+        </f:case>
+        <f:case value="zipx">
+            <f:variable name="icon" value="zipper" />
+        </f:case>
+        <f:case value="7z">
+            <f:variable name="icon" value="zipper" />
+        </f:case>
+        <f:case value="rar">
+            <f:variable name="icon" value="zipper" />
+        </f:case>
+        <f:case value="tar">
+            <f:variable name="icon" value="zipper" />
+        </f:case>
+        <f:case value="tgz">
+            <f:variable name="icon" value="zipper" />
+        </f:case>
+        <f:case value="iso">
+            <f:variable name="icon" value="zipper" />
+        </f:case>
+        <f:case value="svg">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="jpg">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="jpeg">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="png">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="gif">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="webp">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="tif">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="tiff">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="bmp">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="eps">
+            <f:variable name="icon" value="image" />
+        </f:case>
+        <f:case value="mp4">
+            <f:variable name="icon" value="video" />
+        </f:case>
+        <f:case value="mpg">
+            <f:variable name="icon" value="video" />
+        </f:case>
+        <f:case value="mov">
+            <f:variable name="icon" value="video" />
+        </f:case>
+        <f:case value="wmv">
+            <f:variable name="icon" value="video" />
+        </f:case>
+        <f:case value="avi">
+            <f:variable name="icon" value="video" />
+        </f:case>
+        <f:case value="mp3">
+            <f:variable name="icon" value="audio" />
+        </f:case>
+        <f:case value="wav">
+            <f:variable name="icon" value="audio" />
+        </f:case>
+        <f:defaultCase>
+            <f:variable name="icon" value="file" />
+        </f:defaultCase>
+    </f:switch>
+    <a href="{file.publicUrl}" {f:if(condition:data.target,then: ' target="{data.target}"')}{f:if(condition: file.title, then: ' title="{file.title}"')} class="btn btn-light w-100 text-start">
+        <i class="small fa-solid fa-download float-end mt-1"></i>
+        <f:if condition="{data.uploads_type} == 1">
+            <i class="fa-solid fa-file-{icon}"></i>
+        </f:if>
+        <f:if condition="{data.uploads_type} == 2">
+            <f:if condition="{file.type} == 2">
+                <f:then>
+                    <f:if condition="{f:uri.image(src: 'file:{f:if(condition: file.originalFile, then: \'file:{file.originalFile.uid}\', else: \'file:{file.uid}\')}')} != '/'">
+                        <f:then>
+                            <f:media file="{file}" width="50c" height="50c" alt="{file.properties.alternative}" class="float-start me-2" />
+                        </f:then>
+                        <f:else>
+                            <img src="data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="50" height="50" alt="" class="float-start me-2" />
+                        </f:else>
+                    </f:if>
+                </f:then>
+                <f:else>
+                    <img src="data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="50" height="50" alt="" class="float-start me-2" />
+                </f:else>
+            </f:if>
+        </f:if>
+        <f:if condition="{file.properties.title}">
+            <f:then>
+                {file.properties.title}
+            </f:then>
+            <f:else>
+                <f:format.htmlspecialchars>{file.name}</f:format.htmlspecialchars>
+            </f:else>
+        </f:if>
+        <f:if condition="{data.uploads_type}">
+            <f:if condition="{data.filelink_size} || {file.properties.description}">
+                <br />
+            </f:if>
+            <small>
+                <f:if condition="{data.filelink_size}">
+                        <f:format.bytes>{file.properties.size}</f:format.bytes>
+                </f:if>
+                <f:if condition="{file.properties.description}">
+                    <f:if condition="{data.uploads_description}">
+                        <span class="ce-uploads-description">{file.properties.description}</span>
+                    </f:if>
+                </f:if>
+            </small>
+        </f:if>
+    </a>
+</f:section>

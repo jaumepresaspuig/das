@@ -1,0 +1,5 @@
+<f:if condition="{data.subheader}">
+    <span class="caption d-block mb-2 font-secondary {f:if(condition: '{data.tx_das_textcolor}', then: '{data.tx_das_textcolor}', else: 'text-secondary')} font-weight-bold {f:if(condition: data.header_position, then: 'text-{data.header_position}')}">
+        {data.subheader}
+    </span>
+</f:if>

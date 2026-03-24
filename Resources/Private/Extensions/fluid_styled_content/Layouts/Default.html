@@ -1,0 +1,106 @@
+<f:variable name="wrapping" value="1" />
+<f:variable name="show_header" value="1" />
+<f:variable name="contentPadding" value="{f:if(condition: '{data.tx_das_dropshadow} || {data.tx_das_bgpredefinedcolor} || {data.tx_das_bgcolor} || {data.tx_das_bgimage}', then: '{settings.contentPadding}')}" />
+<f:switch expression="{data.CType}">
+    <f:case value="das_banner">
+        <f:variable name="show_header" value="0" />
+    </f:case>
+    <f:case value="das_carousel">
+        <f:variable name="wrapping" value="1" />
+        <f:variable name="show_header" value="0" />
+        <f:variable name="contentPadding" value="" />
+    </f:case>
+    <f:case value="das_modal">
+        <f:variable name="wrapping" value="0" />
+    </f:case>
+    <f:case value="html">
+        <f:if condition="{data.tx_das_htmlinheader}">
+            <f:variable name="wrapping" value="0" />
+        </f:if>
+    </f:case>
+    <f:case value="shortcut">
+        <f:variable name="wrapping" value="0" />
+    </f:case>
+    <f:defaultCase>
+    </f:defaultCase>
+</f:switch>
+<f:if condition="!{wrapping}">
+    <f:then>
+        <f:if condition="{data.CType} == 'html'">
+            <f:then>
+                <v:page.header name="tx-das-htmlheader" overwrite="0">
+                    <f:render section="Main" optional="true" />
+                </v:page.header>
+            </f:then>
+            <f:else>
+                <f:render section="Main" optional="true" />
+            </f:else>
+        </f:if>
+    </f:then>
+    <f:else>
+        <f:variable name="bg" value="0" />
+        <f:if condition="{data.tx_das_bgcolor} || {data.tx_das_bgpredefinedcolor} || {data.tx_das_bgimage}">
+        <f:variable name="bg" value="1" />
+        </f:if>
+        <f:variable name="bg_img" value="" />
+        <f:if condition="{data.tx_das_bgimage}">
+            {v:content.resources.fal(field: 'tx_das_bgimage', uid: '{data.uid}', asObjects: 1) -> v:iterator.first() -> f:variable(name: 'bg')}
+            <f:if condition="{bg.extension} == 'jpg' || {bg.extension} == 'jpeg' || {bg.extension} == 'png' || {bg.extension} == 'gif' || {bg.extension} == 'webp'">
+                <f:variable name="bg_img" value="{f:uri.image(image: '{bg}')}" />
+            </f:if>
+        </f:if>
+        <f:if condition="{data.layout} == 3 || {data.layout} == 4">
+            <div class="container">
+        </f:if>
+            <div id="c{f:if(condition: '{data._LOCALIZED_UID}', then: '{data._LOCALIZED_UID}', else: '{data.uid}')}" class="ce ce-type-{data.CType} {f:if(condition: '{data.colPos} > 100', then: '', else: '{settings.layoutClasses.{data.layout}}')} {f:if(condition: '{data.tx_das_dropshadow}', then: '{settings.shadowClasses.{data.tx_das_dropshadow}}')} {f:if(condition: '{data.tx_das_dropshadow}', then: '{settings.contentPadding}')} mt-{data.space_before_class} mb-{f:if(condition: '{data.space_after_class} == 100', then: '{settings.defaultSpaceAfter}', else: '{data.space_after_class}')} {f:if(condition: '{data.tx_das_visibility}', then: '{settings.colClasses.{data.tx_das_visibility}}')} {data.tx_das_textcolor} {data.tx_das_customclasses}" style="{data.tx_das_customstyles}">
+                <f:if condition="{bg}">
+                    <div class="tx-das-bg{f:if(condition: '!{data.tx_das_bgcolor}', then: ' {data.tx_das_bgpredefinedcolor}')}{f:if(condition: ' {data.tx_das_fixedbg}', then: ' tx-das-bg-fixed')} {settings.contentPadding} px-4 px-md-5" style="{f:if(condition: '{data.tx_das_bgcolor}', then: 'background-color: {data.tx_das_bgcolor};')}{f:if(condition: '{bg_img}', then: ' background-image: url({bg_img});')}">
+                </f:if>
+                <f:if condition="{data.tx_das_bgimage} && {data.tx_das_bgoverlay}">
+                    <div class="overlay {data.tx_das_bgoverlay}{f:if(condition: '{data.tx_das_bgoverlay} != \'bg-blur\' && {data.tx_das_bgoverlayvignete}', then: '-vignete')}"></div>
+                </f:if>
+                <f:if condition="{bg} && {bg_img} == ''">
+                    <f:if condition="{bg.extension} == 'youtube' || {bg.extension} == 'vimeo'">
+                        <f:then>
+                            <f:variable name="video_url" value="{v:iterator.explode(content: '{f:media(file: bg)}', glue: '\"')}" />
+                            <f:variable name="glue" value="{f:if(condition: '{bg.extension} == \'youtube\'', then: 'embed/', else: 'video/')}" />
+                            <f:for each="{v:iterator.explode(content: '{video_url.1}', glue: '{glue}')}" as="eps" iteration="iteration">
+                                <f:for each="{v:iterator.explode(content: '{eps}', glue: '?')}" as="epss" iteration="iteration">
+                                    <f:if condition="{iteration.isFirst}">
+                                        <f:variable name="code" value="{epss}" />
+                                    </f:if>
+                                </f:for>
+                            </f:for>
+                            <f:variable name="bg_iframevideo" value="{f:replace(value: '{settings.{bg.extension}BgIframeUrl}', search: '###VIDEO_ID###', replace: '{code}')}" />
+                            <figure class="video-bg">
+                                <iframe src="{bg_iframevideo}" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                            </figure>
+                        </f:then>
+                        <f:else if="{bg.extension} == 'mp4'">
+                            <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="bg-video">
+                                <source src="{f:uri.image(image: '{bg}')}" type="{bg.mime_type}" />
+                            </video>
+                        </f:else>
+                    </f:if>
+                </f:if>
+                <f:if condition="{data.layout} == 2">
+                    <div class="container">
+                </f:if>
+                <f:if condition="{show_header}">
+                    <f:render section="Header" optional="true">
+                        <f:render partial="Header/All" arguments="{_all}" />
+                    </f:render>
+                </f:if>
+                <f:render section="Main" optional="true" />
+                <f:if condition="{data.layout} == 2">
+                    </div>
+                </f:if>
+                <f:if condition="{bg}">
+                    </div>
+                </f:if>
+            <f:if condition="{data.layout} == 3 || {data.layout} == 4">
+                </div>
+            </f:if>
+        </div>
+    </f:else>
+</f:if>

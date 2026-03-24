@@ -1,0 +1,168 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Faqs"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Faqs.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="accordion"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.accordion"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="allow_multipe_open_items"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.allow_multipe_open_items"
+            config="{renderType: 'checkboxToggle'}"
+            default="0"
+            displayCond="FIELD:options.accordion:=:1"
+        />
+        <flux:field.checkbox
+            name="open_first_item"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.open_first_item"
+            config="{renderType: 'checkboxToggle'}"
+            default="1"
+            displayCond="FIELD:options.accordion:=:1"
+        />
+        <flux:field.select
+            name="columns"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:columns"
+            items="{
+                0:{0: '1', 1: '1'},
+                1:{0: '2', 1: '2'},
+                2:{0: '3', 1: '3'},
+                3:{0: '4', 1: '4'}
+            }"
+            default="2"
+            displayCond="FIELD:options.accordion:!=:1"
+        />
+        <flux:field.checkbox
+            name="animate"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:animate_entries"
+            config="{renderType: 'checkboxToggle'}"
+            displayCond="FIELD:options.accordion:!=:1"
+        />
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.faqs"
+        >
+            <flux:form.section
+                name="items"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.faqs"
+            >
+                <flux:form.object
+                    name="item"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.faq"
+                >
+                    <f:render partial="Content/Access" arguments="{_all}" />
+                    <flux:field.input
+                        name="question"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.question"
+                        required="1"
+                    />
+                    <flux:field.text
+                        name="answer"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.answer"
+                        rows="5"
+                        enableRichText="1"
+                        required="1"
+                    />
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <f:if condition="{accordion}">
+                <f:then>
+                    <tr>
+                        <th>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.accordion" />
+                        </th>
+                        <td>
+                            <f:render partial="Content/Check" arguments="{condition: accordion}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.allow_multipe_open_items" />
+                        </th>
+                        <td>
+                            <f:render partial="Content/Check" arguments="{condition: allow_multipe_open_items}" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.open_first_item" />
+                        </th>
+                        <td>
+                            <f:render partial="Content/Check" arguments="{condition: open_first_item}" />
+                        </td>
+                    </tr>
+                </f:then>
+                <f:else>
+                    <tr>
+                        <th>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:columns" />
+                        </th>
+                        <td>
+                            {columns}
+                        </td>
+                    </tr>
+                </f:else>
+            </f:if>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.faqs.faqs" /></strong>
+                    <ul class="mt-2">
+                        <f:for each="{items}" as="item">
+                            <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
+                                <strong>{item.item.question}</strong>
+                                <br />
+                                {item.item.answer -> f:format.stripTags() -> f:format.htmlspecialchars()}
+                            </li>
+                        </f:for>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Faqs" arguments="{_all}" />
+</f:section>

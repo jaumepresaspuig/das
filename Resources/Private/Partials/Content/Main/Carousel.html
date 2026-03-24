@@ -1,0 +1,27 @@
+<f:variable name="items" value="{v:content.get(column: '{record.uid}91')}" />
+<f:if condition="{items}">
+    <div id="carousel-{record.uid}" class="carousel slide{f:if(condition: '{transition}', then: ' carousel-fade')}"{f:if(condition: '{autoplay}', then: ' data-bs-ride="carousel" data-bs-interval="{interval}000"')}>
+        <f:if condition="{pagination}">
+            <div class="carousel-indicators">
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <button type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide-to="{iteration.index}"{f:if(condition: '{iteration.isFirst}', then: ' class="active"')}></button>
+                </f:for>
+            </div>
+        </f:if>        
+        <div class="carousel-inner d-flex">
+            <f:for each="{items}" as="item" iteration="iteration">
+                <div class="carousel-item text-center{f:if(condition: '{iteration.isFirst}', then: ' active')}">
+                    <v:content.render contentUids="{0: item.uid}" />
+                </div>
+            </f:for>
+        </div>
+        <f:if condition="{navigation}">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </f:if>
+    </div>
+</f:if>

@@ -1,0 +1,37 @@
+{namespace das=Jp\Das\ViewHelpers}
+
+<flux:field.checkbox
+    name="active"
+    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:active"
+    default="1"
+    config="{renderType: 'checkboxToggle'}"
+/>
+<flux:field.input
+    name="starttime"
+    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:starttime"
+    config="{renderType: 'datetime'}"
+    size="13"
+/>
+<flux:field.input
+    name="endtime"
+    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:endtime"
+    config="{renderType: 'datetime'}"
+    size="13"
+/>
+<f:variable name="fe_groups" value="{
+    0:{0: 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.hide_at_login', 1: '-1'},
+    1:{0: 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.any_login', 1: '-2'},
+    2:{0: 'LLL:EXT:core/Resources/Private/Language/locallang_general.xlf:LGL.usergroups', 1: '--div--'}
+    }"
+/>
+<f:variable name="fe_group" value="{f:merge(array: '{fe_groups}', with: '{das:getFeGroups()}')}" />
+<flux:field.select
+    name="fe_group"
+    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:fe_group"
+    items="{fe_group}"
+    size="5"
+    maxItems="20"
+    renderType="selectMultipleSideBySide"
+    config="{exclusiveKeys: '-1,-2'}"
+    exclude="true"
+/>

@@ -1,0 +1,127 @@
+plugin.tx_das {
+
+    settings {
+
+        # cat=plugin.tx_das/01; type=string; label= Theme (extension name).
+        theme = das
+
+        # cat=plugin.tx_das/02; type=boolean; label= Value for the viewport meta tag.
+        metaViewport = width=device-width, initial-scale=1.0, shrink-to-fit=no
+
+        cssFile10 = EXT:das/Resources/Public/Css/fonts.min.css
+        cssFile20 = EXT:das/Resources/Public/Css/bootstrap.min.css
+        cssFile30 = EXT:das/Resources/Public/Css/fontawesome-all.min.css
+        cssFile40 = EXT:das/Resources/Public/Css/aos.min.css
+        cssFile50 = EXT:das/Resources/Public/JavaScript/glightbox/css/glightbox.min.css
+        cssFile90 = EXT:das/Resources/Public/Css/css.css
+
+        jsFile10  = EXT:das/Resources/Public/JavaScript/jquery-4.0.0.min.js
+        jsFile20  = EXT:das/Resources/Public/JavaScript/bootstrap.bundle.min.js
+        jsFile30  = EXT:das/Resources/Public/JavaScript/js.cookie.min.js
+        jsFile40  = EXT:das/Resources/Public/JavaScript/aos.min.js
+        jsFile50  = EXT:das/Resources/Public/JavaScript/glightbox/js/glightbox.min.js
+        jsFile90  = EXT:das/Resources/Public/JavaScript/js.js
+
+        # cat=plugin.tx_das/03; type=string; label= Type of lazy load for images and iframes: lazy (enables it), eager (disables it), auto (relays on browser's configuration).
+        lazyLoading = lazy
+
+        # cat=plugin.tx_das/04; type=string; label= Width of the content area.
+        contentWidth = 1140
+
+        # cat=plugin.tx_das/05; type=string; label= Slide value for the right column slide in the InteriorLRs page layout.
+        InteriorLRsSlide = -1
+
+        # cat=plugin.tx_das/06; type=string; label= Slide value for the left column slide in the InteriorLs page layout.
+        InteriorLsSlide = -1
+
+        # cat=plugin.tx_das/07; type=string; label= Slide value for the left column slide in the InteriorLsR page layout.
+        InteriorLsRSlide = -1
+
+        # cat=plugin.tx_das/08; type=string; label= Slide value for the left and the right columns slide in the InteriorLsRs page layout.
+        InteriorLsRsSlide = -1
+
+        # cat=plugin.tx_das/09; type=string; label= Slide value for the right column slide in the InteriorRs page layout.
+        InteriorRsSlide = -1
+
+        # cat=plugin.tx_das/10; type=integer; label= Margin for buttons.
+        marginForButtons = 2
+        
+        colClasses {
+            16 = d-xl-none
+            8  = d-lg-none d-xl-block
+            24 = d-lg-none
+            4  = d-md-none d-lg-block
+            20 = d-lg-none d-lg-block d-xl-none
+            12 = d-md-none d-xl-block
+            28 = d-md-none
+            2  = d-sm-none d-md-block
+            18 = d-sm-none d-md-block d-xl-none
+            10 = d-sm-none d-md-block d-lg-none d-xl-block
+            26 = d-sm-none d-md-block d-lg-none
+            6  = d-sm-none d-lg-block
+            22 = d-sm-none d-lg-block d-xl-none
+            14 = d-sm-none d-xl-block
+            30 = d-sm-none
+            1  = d-none d-sm-block
+            17 = d-none d-sm-block d-xl-none
+            9  = d-none d-sm-block d-lg-none d-xl-block
+            25 = d-none d-sm-block d-lg-none
+            5  = d-none d-sm-block d-md-none d-lg-block
+            21 = d-none d-sm-block d-md-none d-lg-block d-xl-none
+            13 = d-none d-sm-block d-md-none d-xl-block
+            29 = d-none d-sm-block d-md-none
+            3  = d-none d-md-block
+            19 = d-none d-md-block d-xl-none
+            11 = d-none d-md-block d-lg-none
+            27 = d-none d-md-block
+            7  = d-none d-lg-block
+            23 = d-none d-lg-block d-xl-none
+            15 = d-none d-xl-block
+            31 = d-none
+        }
+        layoutClasses {
+            0 = container
+            1 = container-fluid px-0
+            2 = container-fluid px-0
+            3 = w-md-75 mx-4 mx-md-auto
+            4 = w-md-50 mx-4 mx-md-auto
+        }
+        shadowClasses {
+            0 =
+            1 = shadow-sm
+            2 = shadow
+            3 = shadow-lg
+        }
+        layoutGalleryClasses {
+            gallery {
+                0  =
+                8  =
+                17 = float-md-right pl-md-3 w-md-
+                18 = float-md-left pr-md-3 w-md-
+                25 = float-md-right pl-md-3 w-md-
+                26 = float-md-left pr-md-3 w-md-
+            }
+            bodytext {
+                0  =
+                8  =
+                17 =
+                18 =
+                25 = float-md-left w-md-
+                26 = float-md-right w-md-
+            }
+        }
+        defaultSpaceAfter = 3
+        contentPadding = p-5
+    }
+
+    view {
+        templates {
+            templateRootPath = EXT:das/Resources/Private/Templates/Page/
+            partialRootPath = EXT:das/Resources/Private/Partials/Page/
+            layoutRootPath = EXT:das/Resources/Private/Layouts/Page/
+        }
+        templateRootPath = EXT:das/Resources/Private/Templates/
+        partialRootPath= EXT:das/Resources/Private/Partials/
+        layoutRootPath = EXT:das/Resources/Private/Layouts/
+    }
+}

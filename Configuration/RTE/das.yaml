@@ -1,0 +1,110 @@
+imports:
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Processing.yaml' }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml' }
+    - { resource: 'EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml' }
+
+editor:
+  config:
+    contentsCss: ['EXT:rte_ckeditor/Resources/Public/Css/contents.css', 'EXT:das/Resources/Public/Css/rte.min.css']
+    toolbar:
+      items:
+        - style
+        - heading
+        # grouping separator
+        - '|'
+        - bold
+        - italic
+        - subscript
+        - superscript
+        - '|'
+        - bulletedList
+        - numberedList
+        - blockQuote
+        - alignment
+        - '|'
+        - findAndReplace
+        - link
+        - SoftHyphen
+        - '|'
+        - removeFormat
+        - undo
+        - redo
+        - '|'
+        - insertTable
+        - '|'
+        - specialCharacters
+        - horizontalLine
+        - sourceEditing
+
+    heading:
+      options:
+        - { model: 'paragraph', title: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.p' }
+        - { model: 'heading1', view: 'h1', title: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.h1' }
+        - { model: 'heading2', view: 'h2', title: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.h2' }
+        - { model: 'heading3', view: 'h3', title: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.h3' }
+        - { model: 'heading4', view: 'h4', title: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.h4' }
+        - { model: 'heading5', view: 'h5', title: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.h5' }
+        - { model: 'formatted', view: 'pre', title: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.pre' }
+
+    style:
+      definitions:
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.btn-primary', element: 'a', classes: ['btn btn-primary'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.btn-secondary', element: 'a', classes: ['btn btn-secondary'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.btn-success', element: 'a', classes: ['btn btn-success'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.btn-danger', element: 'a', classes: ['btn btn-danger'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.btn-warning', element: 'a', classes: ['btn btn-warning'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.btn-info', element: 'a', classes: ['btn btn-info'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.btn-light', element: 'a', classes: ['btn btn-light'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.btn-dark', element: 'a', classes: ['btn btn-dark'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-primary', element: 'a', classes: ['link-primary'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-secondary', element: 'a', classes: ['link-secondary'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-success', element: 'a', classes: ['link-success'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-danger', element: 'a', classes: ['link-danger'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-warning', element: 'a', classes: ['link-warning'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-info', element: 'a', classes: ['link-info'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-light', element: 'a', classes: ['link-light'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-dark', element: 'a', classes: ['link-dark'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.link-underline-opacity-0', element: 'a', classes: ['link-underline-opacity-0'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-primary', element: 'span', classes: ['text-primary'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-secondary', element: 'span', classes: ['text-secondary'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-success', element: 'span', classes: ['text-success'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-danger', element: 'span', classes: ['text-danger'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-warning', element: 'span', classes: ['text-warning'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-info', element: 'span', classes: ['text-info'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-light', element: 'span', classes: ['text-light'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-dark', element: 'span', classes: ['text-dark'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-small', element: 'span', classes: ['text-small'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-lowercase', element: 'span', classes: ['text-lowercase'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-uppercase', element: 'span', classes: ['text-uppercase'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-capitalize', element: 'span', classes: ['text-capitalize'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.text-underline', element: 'span', classes: ['text-underline'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.badge-primary', element: 'span', classes: ['badge bg-primary'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.badge-secondary', element: 'span', classes: ['badge bg-secondary'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.badge-success', element: 'span', classes: ['badge bg-success'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.badge-danger', element: 'span', classes: ['badge bg-danger'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.badge-warning', element: 'span', classes: ['badge bg-warning'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.badge-info', element: 'span', classes: ['badge bg-info'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.badge-light', element: 'span', classes: ['badge bg-light'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.badge-dark', element: 'span', classes: ['badge bg-dark text-light'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.code', element: 'span', classes: ['code font-monospace tooltipthis'] }
+        - { name: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rte.table-striped', element: 'table', classes: ['table table-striped'] }
+
+    alignment:
+      options:
+        - { name: 'left', className: 'text-left' }
+        - { name: 'center', className: 'text-center' }
+        - { name: 'right', className: 'text-end' }
+        - { name: 'justify', className: 'text-justify' }
+
+    table:
+      defaultHeadings: { rows: 1 }
+      contentToolbar:
+        - tableColumn
+        - tableRow
+        - mergeTableCells
+        - tableProperties
+        - tableCellProperties
+
+processing:
+  allowTags:
+    - wbr

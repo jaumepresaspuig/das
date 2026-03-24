@@ -1,0 +1,66 @@
+{namespace das=Jp\Das\ViewHelpers}
+
+<f:asset.script identifier="calendar_js" src="EXT:das/Resources/Public/JavaScript/bs-calendar.min.js" />
+<f:asset.css identifier="calendar_css" src="EXT:das/Resources/Public/Css/bs-calendar.min.css" />
+<f:variable name="icsData" value="" />
+<f:if condition="{external_ics}">
+    <f:if condition="{f:startsWith(search: 't3://file?uid=', subject: '{external_ics}')}">
+        <f:then>
+            <v:resource.record table="sys_file" uid="{f:replace(value: '{external_ics}', search: 't3://file?uid=', replace: '')}" field="identifier" as="file">
+                <f:variable name="icsData" value="{das:getFileContent(filepath: 'fileadmin{file.0}')}" />  
+            </v:resource.record>
+        </f:then>
+        <f:else>
+            <f:variable name="icsData" value="{das:getFileContent(filepath: '{external_ics}')}" />
+        </f:else> 
+    </f:if>
+</f:if>
+<div id="tx-das-content-calendar-{data.uid}" class="tx-das-content-calendar tx-das-content-calendar-layout-{layout}"></div>
+<style>
+    <v:condition.string.contains haystack="{views_to_show}" needle="day" else="#tx-das-content-calendar-{data.uid} .wc-select-calendar-view li:has(> a[data-view='day']) { display: none; }" />
+    <v:condition.string.contains haystack="{views_to_show}" needle="week" else="#tx-das-content-calendar-{data.uid} .wc-select-calendar-view li:has(> a[data-view='week']) { display: none; }" />
+    <v:condition.string.contains haystack="{views_to_show}" needle="month" else="#tx-das-content-calendar-{data.uid} .wc-select-calendar-view li:has(> a[data-view='month']) { display: none; }" />
+    <v:condition.string.contains haystack="{views_to_show}" needle="year" else="#tx-das-content-calendar-{data.uid} .wc-select-calendar-view li:has(> a[data-view='year']) { display: none; }" />
+</style>
+<script>
+    jQuery(document).ready(function ($) {bracket}
+        const events = [
+        <f:for each="{items}" as="item" iteration="iteration">
+            {bracket}
+                "id": {iteration.cycle},
+                "title": "{item.name}",
+                "description": "{item.description}",
+                "start": "{item.starting_time -> f:format.date(format: 'Y-m-d H:i:s')}",
+                "end": "{item.ending_time -> f:format.date(format: 'Y-m-d H:i:s')}",
+                "allDay": {item.all_day},
+                "color": "{item.color}",
+                "link": "{f:if(condition: '{item.link}', then: '{f:uri.typolink(parameter: \'{item.link}\')}')}",
+                "location": "{item.location}{f:if(condition: '{item.organizer}', then: '. {item.organizer}')}",
+                "editable": false,
+                "deleteable": false
+            }<f:if condition="!{iteration.isLast}">,</f:if>
+        </f:for>
+        ];
+        <f:if condition="{icsData}">
+            const icsData = `{icsData}`;
+            const eventsFromIcs = $.bsCalendar.utils.convertIcsToAppointments(icsData);
+            eventsFromIcs.forEach(function(appointment) {bracket}
+                events.push(appointment);
+            });
+        </f:if>
+        $(document).ready(function () {bracket}
+            $("#tx-das-content-calendar-{data.uid}").bsCalendar({bracket}
+                startWeekOnSunday: {first_day},
+                startView: "{start_view}",
+                locale: document.getElementsByTagName("html")[0].lang,
+                showAddButton: 0,
+                mainColor: "primary",
+                <f:if condition="!{show_search_box}">search: 0,</f:if>
+                views: ["{v:format.replace(content: '{views_to_show}', substring: ',', replacement: '", "') -> f:format.raw()}"],
+                url: async () => {bracket}
+                    return events;
+                }
+            });
+        });
+    });
+</script>

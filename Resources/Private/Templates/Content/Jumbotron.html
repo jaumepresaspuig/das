@@ -1,0 +1,146 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Jumbotron"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Jumbotron.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+        />
+        <flux:field.input
+            name="header"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.header"
+        />
+        <flux:field.input
+            name="subheader"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.subheader"
+        />
+        <flux:field.text
+            name="text"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.text"
+            rows="3"
+        />
+        <flux:field.input
+            name="link"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.link"
+            config="{renderType: 'inputLink'}"
+        />
+        <flux:field.input
+            name="link_text"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.link_text"
+            size="9"
+        />
+        <flux:field.select
+            name="link_style"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.link_style"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/button_primary.svg'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/button_secondary.svg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/button_success.svg'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/button_danger.svg'},
+                4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/button_warning.svg'},
+                5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/button_info.svg'},
+                6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/button_light.svg'},
+                7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/button_dark.svg'}
+            }"
+            default="primary"
+            showIconTable="1"
+        />
+        <flux:field.select
+            name="text_alignment"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:text_alignment"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:left', 1: ''},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:center', 1: 'text-center'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:right', 1: 'text-end'}
+            }"
+            default="text-center"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.header" />
+                </th>
+                <td>
+                    {header}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.subheader" />
+                </th>
+                <td>
+                    {subheader}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.text" />
+                </th>
+                <td>
+                    <p><f:format.nl2br>{text}</f:format.nl2br></p>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.link" />
+                </th>
+                <td>
+                    <f:link.typolink parameter="{link}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.link_text" />
+                </th>
+                <td>
+                    {link_text}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.jumbotron.link_style" />
+                </th>
+                    <td>
+                        <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{link_style}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{link_style}')}" class="d-inline-block me-1 mb-1" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Jumbotron" arguments="{_all}" />
+</f:section>

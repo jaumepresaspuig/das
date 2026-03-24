@@ -24,12 +24,12 @@ composer req jaumepresaspuig/das
 * Include the TypoScript template
 * Clear all caches
 
-|                  | URL                                                     |
-|------------------|---------------------------------------------------------|
-| **Repository:**  | https://github.com/jaumepresaspuig/das                  |
-| **Read online:** | https://docs.typo3.org/p/jaumepresaspuig/das/main/en-us |
-| **TER:**         | https://extensions.typo3.org/extension/das              |
-| **Homepage:**    | https://das.jaumepresas.com                             |
+|                  | URL                                        |
+|------------------|--------------------------------------------|
+| **Repository:**  | https://github.com/jaumepresaspuig/das     |
+| **Read online:** | https://www.jaumepresas.com/das            |
+| **TER:**         | https://extensions.typo3.org/extension/das |
+| **Homepage:**    | https://das.jaumepresas.com                |
 
 ## Compatibility
 

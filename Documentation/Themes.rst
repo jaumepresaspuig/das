@@ -26,7 +26,7 @@ In order to overwrite assets and the path to the partial folders, the files *myd
     plugin.tx_das {
         settings {
             theme = mydastheme
-            cssFile20 = EXT:mydastheme/Resources/Public/Css/bootstrao.min.css
+            cssFile20 = EXT:mydastheme/Resources/Public/Css/bootstrap.min.css
             cssFile95 = EXT:mydastheme/Resources/Public/Css/css.css
         }
         view {

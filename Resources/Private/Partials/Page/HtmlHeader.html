@@ -103,3 +103,25 @@ With this partial, the extension yoast_seo, if installed, is only used for the a
     <link rel="icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-160x160.png')}" sizes="160x160" />
     <link rel="icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/icon-192x192.png')}" sizes="192x192" />
 </v:page.header>
+
+<f:if condition="{home.tx_das_structureddata} == 'json'">
+    <f:variable name="menu" value="{v:page.rootline() -> v:iterator.reverse()}" />
+    <v:page.header name="tx-das-schema-json">
+<script type="application/ld+json">
+<f:format.raw value="{" />
+"@context": "http://schema.org",
+"@type": "breadcrumbList",
+"itemListElement": [
+<f:for each="{menu}" as="page" iteration="iteration"> <f:format.raw value="{" />
+    "@type": "ListItem",
+    "position": {iteration.cycle},
+    "item": <f:format.raw value="{" />
+        "@id": "{f:uri.typolink(parameter: '{page.uid}', absolute: 1)}",
+        "name": "{page.title}"
+    }
+}<f:if condition="!{iteration.isLast}">,</f:if>
+</f:for>}]
+}
+</script>
+    </v:page.header>
+</f:if>

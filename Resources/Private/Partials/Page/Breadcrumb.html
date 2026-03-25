@@ -1,4 +1,3 @@
-<f:variable name="menu" value="{v:page.rootline() -> v:iterator.reverse()}" />
 <f:switch expression="{home.tx_das_structureddata}">
     <f:case value="microdata">
         <f:variable name="olAttributes" value="itemscope itemtype=\"http://schema.org/breadcrumbList\"" />
@@ -17,26 +16,9 @@
         <f:variable name="liAttributes" value="" />
         <f:variable name="aAttributes" value="{}" />
         <f:variable name="spanAttributes" value="" />
-        <v:page.header name="tx-das-breadcrumb-json">
-<script type="application/ld+json">
-<f:format.raw value="{" />
-"@context": "http://schema.org",
-"@type": "breadcrumbList",
-"itemListElement": [
-<f:for each="{menu}" as="page" iteration="iteration"> <f:format.raw value="{" />
-    "@type": "ListItem",
-    "position": {iteration.cycle},
-    "item": <f:format.raw value="{" />
-        "@id": "{f:uri.typolink(parameter: '{page.uid}', absolute: 1)}",
-        "name": "{page.title}"
-    }
-}<f:if condition="!{iteration.isLast}">,</f:if>
-</f:for>}]
-}
-</script>
-        </v:page.header>
     </f:defaultCase>
 </f:switch>
+<f:variable name="menu" value="{v:page.rootline() -> v:iterator.reverse()}" />
 <nav class="container" aria-label="breadcrumb"{f:if(condition: '{home.tx_das_breadcrumbseparator}', then: ' style="--bs-breadcrumb-divider: \'{home.tx_das_breadcrumbseparator}\';"')}>
     <ol class="breadcrumb pt-2" {olAttributes -> f:format.raw()}>
         <f:for each="{menu}" as="page" iteration="iteration">

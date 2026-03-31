@@ -1,41 +1,3 @@
-<f:comment>
-In this partial we deal with the information to be inserted in the html header. The goal is that the recommended meta tags are always inserted:
-
-robots
-description
-og:type
-og:site_name
-og:title
-og:description
-og:url
-og:image
-og:image:width
-og:image:height
-twitter:card
-twitter:site
-twitter:title
-twitter:description
-twitter:image
-
-even if they don't have any content. 
-
-Plus:
-
-title
-canonical
-
-If an og or twitter meta tag doesn't have any content we take it from the page: title, description, image. For instance, the metas og:title and twitter:title are inserted only if the page field seo_title is not empty. Since we want to insert always these meta tags, here we have to deal with the fields that are empty and use the page's fields instead.
-
-The optional meta tags:
-
-author
-keywords
-
-will be inserted only if they have any content. These are handled by the extension seo, but it only inserts a meta tag if the related field has content.
-
-With this partial, the extension yoast_seo, if installed, is only used for the analysis shown in the BE.
-</f:comment>
-
 <f:variable name="rootline" value="{v:page.rootline()}" />
 <f:variable name="home" value="{rootline.0}" />
 <f:variable name="bstheme" value="{rootline.0.tx_das_bstheme}" />
@@ -57,8 +19,6 @@ With this partial, the extension yoast_seo, if installed, is only used for the a
     </f:if>
 </v:page.resources.fal>
 
-<f:variable name="schema_image_width" value="{v:format.trim(content: '{imageWidth}', characters: 'cm')}" />
-<f:variable name="schema_image_height" value="{v:format.trim(content: '{imageHeight}', characters: 'cm')}" />
 <f:variable name="pageNumber" value="{f:if(condition: '{f:cObject(typoscriptObjectPath: \'lib.pageNumber\')}', then: ' {f:cObject(typoscriptObjectPath: \'lib.pageNumber\')}')}" />
 
 <v:page.header.title title="{f:if(condition: '{titlePrepend}', then: '{titlePrepend} ')}{f:if(condition: '{data.seo_title}', then: '{data.seo_title}', else: '{data.title}{pageNumber}')} . {siteTitle}{f:if(condition: '{titleAppend}', then: ' . {titleAppend}')}" />
@@ -70,18 +30,6 @@ With this partial, the extension yoast_seo, if installed, is only used for the a
 <f:if condition="{data.keywords}">
     <v:page.header.meta name="keywords" content="{data.keywords}" />
 </f:if>
-
-<f:comment>
-<v:page.header.meta property="og:site_name" content="{siteTitle}" />
-<v:page.header.meta property="og:url" content="{v:page.absoluteUrl()}" />
-<f:if condition="{fbAdmins}">
-    <v:page.header.meta property="fb:admins" content="{fbAdmins}" />
-</f:if>
-<f:if condition="{fbAppId}">
-    <v:page.header.meta property="fb:app_id" content="{fbAppId}" />
-</f:if>
-<v:page.header.meta name="twitter:site" content="{siteTitle}" />
-</f:comment>
 
 <v:page.header name="tx-das-page-icons">
     <link rel="shortcut icon" href="{f:uri.image(src:'EXT:{theme}/Resources/Public/Images/Favicons/favicon.png')}" />

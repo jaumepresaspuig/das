@@ -1251,6 +1251,14 @@
                 <source>Default color</source>
                 <target>Color por defecto</target>
             </trans-unit>
+            <trans-unit id="show_rating_stars">
+                <source>Show rating stars</source>
+                <target>Mostrar estrellas de evaluación</target>
+            </trans-unit>
+            <trans-unit id="rating_stars">
+                <source>Rating stars</source>
+                <target>Estrellas de evaluación</target>
+            </trans-unit>
             <trans-unit id="tt_content.quotes.quotes">
                 <source>Quotes</source>
                 <target>Citas</target>

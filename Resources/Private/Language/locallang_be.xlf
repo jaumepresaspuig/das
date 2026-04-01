@@ -939,6 +939,12 @@
             <trans-unit id="default_color">
                 <source>Default color</source>
             </trans-unit>
+            <trans-unit id="show_rating_stars">
+                <source>Show rating stars</source>
+            </trans-unit>
+            <trans-unit id="rating_stars">
+                <source>Rating stars</source>
+            </trans-unit>
             <trans-unit id="tt_content.quotes.quotes">
                 <source>Quotes</source>
             </trans-unit>

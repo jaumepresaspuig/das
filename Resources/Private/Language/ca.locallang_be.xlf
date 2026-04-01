@@ -1287,6 +1287,54 @@
                 <source>Image</source>
                 <target>Imatge</target>
             </trans-unit>
+            <trans-unit id="tt_content.newsticker">
+                <source>News ticker</source>
+                <target>Teletip de notícies</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.description">
+                <source>Simple news ticker.</source>
+                <target>Teletip de notícies senzill.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.transition">
+                <source>Transition</source>
+                <target>Transició</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.transition.0">
+                <source>Slide</source>
+                <target>Desplaçament</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.transition.1">
+                <source>Fade</source>
+                <target>Fos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.interval">
+                <source>Interval between items (seconds)</source>
+                <target>Interval entre elements (segons)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.news">
+                <source>News</source>
+                <target>Notícia</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.header">
+                <source>Header</source>
+                <target>Títol</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.date">
+                <source>Date</source>
+                <target>Data</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.text">
+                <source>Text</source>
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.color">
+                <source>Color</source>
+                <target>Color</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.link">
+                <source>Link</source>
+                <target>Enllaç</target>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
                 <target>Botons socials</target>

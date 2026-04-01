@@ -608,9 +608,10 @@ audio {
     }
 }
 
-/* Quotes */
+/* Quotes, Newsticker */
 
-.tx-das-content-quotes figure {
+.tx-das-content-quotes figure, 
+.tx-das-content-newsticker figure {
     border-left: .35rem solid;
     border-top: 1px solid #eee !important;
     border-right: 1px solid #eee !important;

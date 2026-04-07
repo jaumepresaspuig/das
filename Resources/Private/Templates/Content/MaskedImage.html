@@ -1,0 +1,69 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="MaskedImage"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.maskedimage"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.maskedimage.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/MaskedImage.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.inline.fal
+            name="images"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.maskedimage.images"
+            description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.maskedimage.images.description"
+            minItems="2"
+            maxItems="2"
+            allowedExtensions="jpg,jpeg,png,gif,webp"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.maskedimage.images" />
+                </th>
+                <td>
+                    <v:page.resources.fal table="tt_content" field="images" as="images" record="{record}">
+                        <img src="{f:uri.image(src: '{images.0.id}', width: 75, treatIdAsReference: 1)}" width="75" alt="" />
+                        <img src="{f:uri.image(src: '{images.1.id}', width: 75, treatIdAsReference: 1)}" width="75" alt="" />
+                    </v:page.resources.fal>
+                </td>
+            </tr>
+        </tbody>        
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/MaskedImage" arguments="{_all}" />
+</f:section>

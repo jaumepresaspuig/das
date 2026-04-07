@@ -1363,6 +1363,22 @@
                 <source>First image before, second image after. Both should have the same dimensions or at least the same aspect ratio.</source>
                 <target>Erstes Bild vorher, zweites Bild nachher. Beide sollten die gleichen Abmessungen oder zumindest das gleiche Seitenverhältnis haben.</target>
             </trans-unit>
+            <trans-unit id="tt_content.maskedimage">
+                <source>Masked image</source>
+                <target>Maskiertes Bild</target>
+            </trans-unit>
+            <trans-unit id="tt_content.maskedimage.description">
+                <source>Masked image</source>
+                <target>Maskiertes Bild.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.maskedimage.images">
+                <source>Images</source>
+                <target>Bilder</target>
+            </trans-unit>
+            <trans-unit id="tt_content.maskedimage.images.description">
+                <source>Second image a PNG to be used as a mask. It has to have a transparent or semi-transparent area. Black indicates fully transparent.</source>
+                <target>Das zweite Bild ist ein PNG, das als Maske verwendet wird. Es muss einen transparenten oder halbtransparenten Bereich haben. Schwarz bedeutet vollständig transparent.</target>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
                 <target>Soziale Schaltflächen</target>

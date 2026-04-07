@@ -1,0 +1,6 @@
+<div class="tx-das-content-maskedimage tx-das-content-maskedimage-layout-{layout}" data-id="c{record.uid}">
+    <v:page.resources.fal table="tt_content" field="images" as="images" record="{record}">
+        <f:variable name="mask" value="{f:uri.image(src: '{images.1.uid}', treatIdAsReference: 1)}" />
+        <f:image src="{images.0.url}" alt="{file.description}" loading="{settings.lazyLoading}" style="-webkit-mask-image: url({mask}); mask-image: url({mask});" />
+    </v:page.resources.fal>
+</div>

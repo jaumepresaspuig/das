@@ -1,0 +1,27 @@
+<f:if condition="{items}">    
+    <div class="tx-das-content-newsticker tx-das-content-newsticker-layout-{layout}" id="tx-das-content-newsticker-{record.uid}" data-id="c{record.uid}">
+        <div id="carousel-{record.uid}" class="carousel slide{f:if(condition: '{transition}', then: ' carousel-fade')}" data-bs-ride="carousel" data-bs-interval="{interval}000">
+            <div class="carousel-inner d-flex">
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <div class="carousel-item h-100 {f:if(condition: '{iteration.isFirst}', then: ' active')}">
+                        <f:variable name="color" value="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" />
+                        <figure class="note note-primary p-4 rounded-2 border-{color}">
+                            <h3>
+                                {item.header}
+                            </h3>
+                            <p class="small">
+                                <f:format.date format="%B %e, %Y %H:%M">{item.date}</f:format.date>
+                            </p>
+                            <p class="pb-2">
+                                <f:format.nl2br>{item.text}</f:format.nl2br>
+                                <f:if condition="{item.link}">
+                                    <f:link.typolink parameter="{item.link}"><i class="fa-solid fa-circle-arrow-right"></i></f:link.typolink>
+                                </f:if>
+                            </p>
+                        </figure>
+                    </div>
+                </f:for>
+            </div>
+        </div>
+    </div>
+</f:if>

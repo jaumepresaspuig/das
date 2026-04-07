@@ -699,10 +699,6 @@
                 <source>Cards with image, title, subtitle, and optional link.</source>
                 <target>Targetes amb imatge, títol, subtítol i enllaç opcional</target>
             </trans-unit>
-            <trans-unit id="tt_content.cards.columns">
-                <source>Columns</source>
-                <target>Columnes</target>
-            </trans-unit>
             <trans-unit id="tt_content.cards.animate_cards">
                 <source>Animate cards</source>
                 <target>Anima les targetes</target>
@@ -1251,6 +1247,14 @@
                 <source>Default color</source>
                 <target>Color per defecte</target>
             </trans-unit>
+            <trans-unit id="show_rating_stars">
+                <source>Show rating stars</source>
+                <target>Mostra estrelles d'avaluació</target>
+            </trans-unit>
+            <trans-unit id="rating_stars">
+                <source>Rating stars</source>
+                <target>Estrelles d'avaluació</target>
+            </trans-unit>
             <trans-unit id="tt_content.quotes.quotes">
                 <source>Quotes</source>
                 <target>Cites</target>
@@ -1278,6 +1282,86 @@
             <trans-unit id="tt_content.quotes.image">
                 <source>Image</source>
                 <target>Imatge</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker">
+                <source>News ticker</source>
+                <target>Teletip de notícies</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.description">
+                <source>Simple news ticker.</source>
+                <target>Teletip de notícies senzill.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.transition">
+                <source>Transition</source>
+                <target>Transició</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.transition.0">
+                <source>Slide</source>
+                <target>Desplaçament</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.transition.1">
+                <source>Fade</source>
+                <target>Fos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.interval">
+                <source>Interval between items (seconds)</source>
+                <target>Interval entre elements (segons)</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.news">
+                <source>News</source>
+                <target>Notícia</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.header">
+                <source>Header</source>
+                <target>Títol</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.date">
+                <source>Date</source>
+                <target>Data</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.text">
+                <source>Text</source>
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.color">
+                <source>Color</source>
+                <target>Color</target>
+            </trans-unit>
+            <trans-unit id="tt_content.newsticker.link">
+                <source>Link</source>
+                <target>Enllaç</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer">
+                <source>Audio player</source>
+                <target>Reproductor d'àudio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.description">
+                <source>Audio player</source>
+                <target>Reproductor d'àudio.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.files">
+                <source>Audio files</source>
+                <target>Fitxers d'àudio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.color">
+                <source>Player color</source>
+                <target>Color del reproductor</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage">
+                <source>Before/after image</source>
+                <target>Imatge abans/després</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.description">
+                <source>Before/after image slider to compare two images interactively.</source>
+                <target>Control lliscant abans/després per a comparar dues imatges de manera interactiva.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.images">
+                <source>Images</source>
+                <target>Imatges</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.images.description">
+                <source>First image before, second image after. Both should have the same dimensions or at least the same aspect ratio.</source>
+                <target>Primera imatge abans, segona imatge després. Ambues hauriedn the tenir les mateixes mides o almenys la mateixa relació d'aspecte.</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
@@ -1454,10 +1538,6 @@
             <trans-unit id="tt_content.pricingtable.description">
                 <source>Table to show pricing options or packages available for a product or service.</source>
                 <target>Taula per mostrar opcions o paquets de preus disponibles per a un producte o servei.</target>
-            </trans-unit>
-            <trans-unit id="tt_content.pricingtable.columns">
-                <source>Columns</source>
-                <target>Columnes</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.prices">
                 <source>Prices</source>
@@ -1854,6 +1934,10 @@
             <trans-unit id="rte.table-striped">
                 <source>Striped table</source>
                 <target>Taula ratllada</target>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata.tx_das_cover">
+                <source>Cover</source>
+                <target>Portada</target>
             </trans-unit>
         </body>
     </file>

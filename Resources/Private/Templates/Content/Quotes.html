@@ -100,6 +100,12 @@
             default=""
             showIconTable="1"
         />
+        <flux:field.checkbox
+            name="show_rating_stars"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:show_rating_stars"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
         <flux:form.sheet
             name="itemstab"
             label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.quotes"
@@ -149,6 +155,13 @@
                             8:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
                         }"
                         showIconTable="1"
+                    />
+                    <flux:field.input
+                        name="rating_stars"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:rating_stars"
+                        size="1"
+                        config="{eval: 'int', range: {lower: 0, upper: 5}, slider: {step: 1, width: 100}}"
+                        displayCond="FIELD:options.show_rating_stars:=:1"
                     />
                 </flux:form.object>
             </flux:form.section>
@@ -209,20 +222,31 @@
                 </td>
             </tr>
             <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:show_rating_stars" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: show_rating_stars}" />
+                </td>
+            </tr>
+            <tr>
                 <td colspan="2">
                     <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.quotes" /></strong>
                     <ul class="mt-2">
                         <f:for each="{items}" as="item">
                             <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
                                 <f:if condition="{item.item.image}">
-                                    <f:then>                                    
+                                    <f:then>
                                         <img src="{f:uri.image(src: '{item.item.image}', width: '20c', height: '20c', absolute: 1)}" width="20" height="20" alt="{item.item.name}" class="me-1 mb-1" />
                                     </f:then>
                                     <f:else>
                                         <f:render partial="Content/TransparentPng" arguments="{width: 20}" />
                                     </f:else>
                                 </f:if>
-                                <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{f:if(condition: '{item.item.color}', then: '{item.item.color}', else: '{default_color}')}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{f:if(condition: \'{item.item.color}\', then: \'colors.{item.item.color}\', else: \'default\')}')}" class="d-inline-block me-1 mb-1" />"{item.item.text}". <em>{item.item.author}<f:if condition="{item.item.date}"> (<f:format.date format="%B %e, %Y">{item.item.date}</f:format.date>)</em></f:if>
+                                <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{f:if(condition: '{item.item.color}', then: '{item.item.color}', else: '{default_color}')}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{f:if(condition: \'{item.item.color}\', then: \'colors.{item.item.color}\', else: \'default\')}')}" class="d-inline-block me-1 mb-1" />
+                                <f:if condition="{show_rating_stars}">
+                                    <f:image src="EXT:das/Resources/Public/Images/Stars/stars_{item.item.rating_stars}.svg" width="50" alt="{item.item.rating_stars}" class="d-inline-block me-1 mb-1" />
+                                </f:if>"{item.item.text}". <em>{item.item.author}<f:if condition="{item.item.date}"> (<f:format.date format="%B %e, %Y">{item.item.date}</f:format.date>)</em></f:if>
                             </li>
                         </f:for>
                     </ul>

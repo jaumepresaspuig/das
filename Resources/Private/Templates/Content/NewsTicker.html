@@ -2,15 +2,15 @@
 
 <f:section name="Configuration">
     <flux:form
-        id="PricingTable"
-        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable"
-        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.description"
+        id="NewsTiicker"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.description"
     >
         <flux:form.option.group
             value="dasContent"
         />
         <flux:form.option.icon
-            value="EXT:das/Resources/Public/Icons/Content/PricingTable.png"
+            value="EXT:das/Resources/Public/Icons/Content/NewsTicker.png"
         />
         <flux:field.select
             name="layout"
@@ -21,20 +21,20 @@
             requestUpdate="1"
         />
         <flux:field.select
-            name="columns"
-            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:columns"
+            name="transition"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.transition"
             items="{
-                0:{0: '1', 1: '1'},
-                1:{0: '2', 1: '2'},
-                2:{0: '3', 1: '3'},
-                3:{0: '4', 1: '4'}
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.transition.0', 1: '0'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.transition.1', 1: '1'}
             }"
-            default="3"
+            default=""
+            showIconTable="1"
         />
-        <flux:field.checkbox
-            name="animate"
-            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:animate_entries"
-            config="{renderType: 'checkboxToggle'}"
+        <flux:field.input
+            name="interval"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.interval"
+            size="3"
+            config="{eval: 'int', range: {lower: 5, upper: 20}, slider: {step: 1, width: 200}}"
         />
         <flux:field.select
             name="default_color"
@@ -54,62 +54,33 @@
         />
         <flux:form.sheet
             name="itemstab"
-            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.prices"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.news"
         >
             <flux:form.section
                 name="items"
-                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.prices"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.news"
             >
                 <flux:form.object
                     name="item"
-                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.price"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.news"
                 >
                     <f:render partial="Content/Access" arguments="{_all}" />
                     <flux:field.input
-                        name="title"
-                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.title"
-                        size="6"
+                        name="header"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.header"
                         required="1"
                     />
                     <flux:field.input
-                        name="price"
-                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.price"
-                        size="6"
+                        name="date"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.date"
+                        config="{renderType: 'datetime', format: 'datetime'}"
                         required="1"
-                    />
-                    <flux:field.input
-                        name="currency"
-                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.currency"
-                        size="6"
-                        required="1"
-                    />
-                    <flux:field.select
-                        name="currency_position"
-                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.currency_position"
-                        items="{
-                            0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:after', 1: '1'},
-                            1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:before', 1: '2'}
-                        }"
-                    />
-                    <flux:field.input
-                        name="text_after"
-                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.text_after"
-                        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.text_after.description"
-                        size="6"
                     />
                     <flux:field.text
                         name="text"
-                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.text"
-                    />
-                    <flux:field.input
-                        name="button"
-                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.button"
-                        size="5"
-                    />
-                    <flux:field.input
-                        name="link"
-                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.link"
-                        config="{renderType: 'inputLink'}"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.text"
+                        rows="2"
+                        required="1"
                     />
                     <flux:field.select
                         name="color"
@@ -125,8 +96,12 @@
                             7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
                             8:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
                         }"
-                        default=""
                         showIconTable="1"
+                    />
+                    <flux:field.input
+                        name="link"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.link"
+                        config="{renderType: 'inputLink'}"
                     />
                 </flux:form.object>
             </flux:form.section>
@@ -154,22 +129,6 @@
             </tr>
             <tr>
                 <th>
-                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:columns" />
-                </th>
-                <td>
-                    {columns}
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:animate_entries" />
-                </th>
-                <td>
-                    <f:render partial="Content/Check" arguments="{condition: animate}" />
-                </td>
-            </tr>
-            <tr>
-                <th>
                     <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default_color" />
                 </th>
                 <td>
@@ -177,12 +136,29 @@
                 </td>
             </tr>
             <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.transition" />
+                </th>
+                <td>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.transition.{transition}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.interval" />
+                </th>
+                <td>
+                    {interval}
+                </td>
+            </tr>
+            <tr>
                 <td colspan="2">
-                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.pricingtable.prices" /></strong>
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.newsticker.newsticker" /></strong>
                     <ul class="mt-2">
-                        <f:for each="{items}" as="item">
+                        <f:for each="{items}" as="item">                        
                             <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
-                                <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{f:if(condition: '{item.item.color}', then: '{item.item.color}', else: '{default_color}')}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{f:if(condition: \'{item.item.color}\', then: \'colors.{item.item.color}\', else: \'default\')}')}" class="d-inline-block me-1 mb-1" /><strong>{item.item.title}</strong>: <f:if condition="{item.item.currency_position} == 2">{item.item.currency}</f:if>{item.item.price}<f:if condition="{item.item.currency_position} == 1">{item.item.currency}</f:if><f:if condition="{item.item.highlight} == 1">{item.item.currency}</f:if>{item.item.text_after}
+                                <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{f:if(condition: '{item.item.color}', then: '{item.item.color}', else: '{default_color}')}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{f:if(condition: \'{item.item.color}\', then: \'colors.{item.item.color}\', else: \'default\')}')}" class="d-inline-block me-1 mb-1" />
+                                <strong>{item.item.header}</strong> (<f:format.date format="%B %e, %Y %H:%M">{item.item.date}</f:format.date>) {item.item.text} 
                             </li>
                         </f:for>
                     </ul>
@@ -193,5 +169,5 @@
 </f:section>
 
 <f:section name="Main">
-    <f:render partial="Content/Main/PricingTable" arguments="{_all}" />
+    <f:render partial="Content/Main/NewsTicker" arguments="{_all}" />
 </f:section>

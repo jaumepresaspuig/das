@@ -63,8 +63,13 @@
     <figure class="note note-primary p-4 rounded-2 border-{color}"{f:if(condition: '!{carousel} && {animate}', then: ' data-aos="fade-up" data-aos-delay="{counter}00"')}>
         <i class="fas fa-quote-left fa-2x mb-3 text-{color}"></i>
         <f:if condition="{item.image}">
-            <p class="text-center">
+            <p class="text-center{f:if(condition: '{show_rating_stars}', then: ' mb-0')}">
                 <img src="{f:uri.image(src: '{item.image}', width: '80c', height: '80c', absolute: 1)}" width="80" height="80" alt="{item.author}" class="rounded-circle" />
+            </p>
+        </f:if>
+        <f:if condition="{show_rating_stars}">
+            <p class="text-center">
+                <f:image src="EXT:das/Resources/Public/Images/Stars/stars_{item.rating_stars}.svg" width="100" alt="{item.rating_stars}" />
             </p>
         </f:if>
         <blockquote class="blockquote">

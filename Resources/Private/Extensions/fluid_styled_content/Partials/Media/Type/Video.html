@@ -13,7 +13,7 @@
                 </f:else>
             </f:if>
             <a href="{url}" class="play-video play-video-{file.extension}{f:if(condition: '{data.image_zoom}', then: ' glightbox glightbox-{gallery_id}')}"{f:if(condition: '!{data.image_zoom}', then: ' data-glightbox-id="glightbox-{gallery_id}" target="_blank"')}>
-                <f:image src="{thumbnail}" width="{width}" height="{height}" alt="{file.description}" title="{file.description}" loading="{settings.lazyLoading}" class="img-fluid w-100"  />
+                <f:image src="{thumbnail}" width="{width}" height="{height}" alt="{file.description}" title="{file.description}" loading="{settings.lazyLoading}" class="img-fluid w-100" />
             </a>
         </f:then>
         <f:else>

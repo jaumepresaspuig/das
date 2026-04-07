@@ -14,7 +14,7 @@ The structure of the folders and files of an extension (for example *mydastheme*
    :alt: Das configuration
    :class: with-shadow
 
-In the example, the partials *Content/Main/Cards.html* and *Page/Header.html* overwrite the ones from the extension **Das**, so it's possible to have a different frontend outout for the Cards content element and the page header with the navigation bar.
+In the example, the partials *Content/Main/Cards.html* and *Page/Header.html* overwrite the ones from the extension **Das**, so it's possible to have a different frontend output for the Cards content element and the page header with the navigation bar.
 
 In order to overwrite assets and the path to the partial folders, the files *mydastheme/Configuration/TypoScript/constants.typoscript* and *mydastheme/Configuration/TypoScript/setup.typoscript* should contain something like:
 

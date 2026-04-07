@@ -1,4 +1,9 @@
-.glightbox-container {
+.glightbox {
+  display: block;
+  position: relative;
+}
+
+.glightbox-container.glightbox-container {
   width: 100%;
   height: 100%;
   position: fixed;

@@ -45,3 +45,10 @@ CREATE TABLE tt_content (
     tx_das_stylemenu smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_pagegallery smallint(1) unsigned DEFAULT '0' NOT NULL
 );
+
+#
+# Table structure for table 'sys_file_metadata'
+#
+CREATE TABLE sys_file_metadata (
+    tx_das_cover smallint(1) unsigned DEFAULT '0' NOT NULL
+);

@@ -1336,8 +1336,8 @@
                 <target>Audioplayer</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">
-                <source>Audio player.</source>
-                <target>Audioplayer.</target>
+                <source>Audio player</source>
+                <target>Audioplayer</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.files">
                 <source>Audio files</source>
@@ -1346,6 +1346,22 @@
             <trans-unit id="tt_content.audioplayer.color">
                 <source>Player color</source>
                 <target>Audioplayer Farbe</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage">
+                <source>Before/after image</source>
+                <target>Vorher-/Nachher-Bild</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.description">
+                <source>Before/after image slider to compare two images interactively.</source>
+                <target>Vorher/Nachher-Bildschieberegler zum interaktiven Vergleich zweier Bilder.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.images">
+                <source>Images</source>
+                <target>Bilder</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.images.description">
+                <source>First image before, second image after. Both should have the same dimensions or at least the same aspect ratio.</source>
+                <target>Erstes Bild vorher, zweites Bild nachher. Beide sollten die gleichen Abmessungen oder zumindest das gleiche Seitenverhältnis haben.</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>

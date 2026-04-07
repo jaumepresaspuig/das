@@ -1003,13 +1003,25 @@
                 <source>Audio player</source>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">
-                <source>Audio player.</source>
+                <source>Audio player</source>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.files">
                 <source>Audio files</source>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.color">
                 <source>Player color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage">
+                <source>Before/after image</source>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.description">
+                <source>Before/after image slider to compare two images interactively.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.images">
+                <source>Images</source>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.images.description">
+                <source>First image before, second image after. Both should have the same dimensions or at least the same aspect ratio.</source>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>

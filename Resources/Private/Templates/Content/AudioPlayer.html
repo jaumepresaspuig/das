@@ -1,0 +1,102 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="AudioPlayer"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/AudioPlayer.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+        />
+        <flux:field.select
+            name="color"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.color"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/button_primary.svg'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/button_secondary.svg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/button_success.svg'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/button_danger.svg'},
+                4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/button_warning.svg'},
+                5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/button_info.svg'},
+                6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/button_dark.svg'}
+            }"
+            showIconTable="1"
+        />
+        <flux:field.inline.fal
+            name="assets"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.files"
+            allowedExtensions="mp3,wav,ogg,aac,webm"
+            minItems="1"
+            maxItems="99"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.color" />
+                </th>
+                <td>
+                    <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{color}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{color}')}" class="d-inline-block me-1 mb-1" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.files" /></strong>
+                    <ul class="mt-2">
+                        <v:page.resources.fal table="tt_content" field="assets" record="{record}" as="files">
+                            <f:for each="{files}" as="file">
+                                <li{f:if(condition: '{file.hidden}', then: ' class="text-muted"')}>
+                                    <f:if condition="{file.tx_das_cover}">
+                                        <f:then>
+                                            <v:page.resources.fal table="sys_file_metadata" field="tx_das_cover" uid="{file.file}" as="covers">
+                                                <img src="{f:uri.image(src: '{covers.0.id}', width: '20c', height: '20c', absolute: 1)}" width="20" height="20" alt="{file.title}" class="me-1 mb-1" />
+                                            </v:page.resources.fal>
+                                        </f:then>
+                                        <f:else>
+                                            <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{color}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{color})}" class="d-inline-block me-1 mb-1" />
+                                        </f:else>
+                                    </f:if>
+                                    <strong>{file.title}</strong>. {v:format.replace(content: '{file.description}', substring: '{f:format.raw(value: "\r\n|\n|\r")}', replacement: '. ')}
+                                </li>
+                            </f:for>
+                        </v:page.resources.fal>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/AudioPlayer" arguments="{_all}" />
+</f:section>

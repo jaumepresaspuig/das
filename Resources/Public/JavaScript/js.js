@@ -23,6 +23,7 @@ jQuery(document).ready(function ($) {
     initAlerts();
     initCodeText();
     initTooltips();
+    initAudioPlayer();
 });
 
 function initGallery() {
@@ -45,6 +46,7 @@ function initProgressBars() {
         }, 1000);
     });
 }
+
 function initModal() {
     $(".tx-das-content-modal").each(function() {
         if ( ($(this).attr("data-showonlyonce")=="1") && (Cookies.get(modalId)) ) {
@@ -155,4 +157,45 @@ function initTooltips() {
     });
     const tooltipTriggerList = document.querySelectorAll(".tooltipthis");
     const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+}
+
+function initAudioPlayer() {
+    $(".js-audioplayer").each(function() {
+        var id = $(this).attr("id");
+        $(this).find(".js-control")[0].addEventListener("click", function() {
+            resetPlayback(id, 1);
+            
+        });
+        $(this).find("audio")[0].addEventListener("ended", function() {
+            resetPlayback(id, 0);
+        });
+    });
+}
+
+function playback(id) {
+    var audio = $("#" + id).find("audio");
+    if (audio[0].paused) {
+        $("#" + id).addClass("is-playing"); 
+        audio[0].play();
+        audio.animate({ volume: 1 }, 500);
+    } else {
+        $("#" + id).removeClass("is-playing");
+        audio.animate({ volume: 0 }, 500, function() {
+            audio[0].pause();
+        });
+    }
+}
+
+function resetPlayback(id, play) {
+    $(".js-audioplayer").each(function() {
+        if ($(this).attr("id") !== id) {
+            $(this).removeClass("is-playing");
+            $(this).find("audio").animate({ volume: 0 }, 500, function() {
+                $(this)[0].pause();
+            });
+        }
+    });
+    if (play) {
+        playback(id);
+    }
 }

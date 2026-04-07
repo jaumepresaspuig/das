@@ -201,7 +201,7 @@
             </trans-unit>
             <trans-unit id="image_ratio">
                 <source>Image aspect ratio</source>
-                <target>Proporción de aspecto de la imagen</target>
+                <target>Relación de aspecto de la imagen</target>
             </trans-unit>
             <trans-unit id="image_ratio.original">
                 <source>Original</source>
@@ -698,10 +698,6 @@
             <trans-unit id="tt_content.cards.description">
                 <source>Cards with image, title, subtitle, and optional link.</source>
                 <target>Tarjetas con imagen, título, subtítulo y enlace opcional.</target>
-            </trans-unit>
-            <trans-unit id="tt_content.cards.columns">
-                <source>Columns</source>
-                <target>Columnas</target>
             </trans-unit>
             <trans-unit id="tt_content.cards.animate_cards">
                 <source>Animate cards</source>
@@ -1335,6 +1331,22 @@
                 <source>Link</source>
                 <target>Enlace</target>
             </trans-unit>
+            <trans-unit id="tt_content.audioplayer">
+                <source>Audio player</source>
+                <target>Reproductor de audio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.description">
+                <source>Audio player.</source>
+                <target>Reproductor de audio.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.files">
+                <source>Audio files</source>
+                <target>Ficheros de audio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.color">
+                <source>Player color</source>
+                <target>Color del reproductor</target>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
                 <target>Botones sociales</target>
@@ -1510,10 +1522,6 @@
             <trans-unit id="tt_content.pricingtable.description">
                 <source>Table to show pricing options or packages available for a product or service.</source>
                 <target>Tabla para mostrar opciones de precios o paquetes disponibles para un producto o servicio.</target>
-            </trans-unit>
-            <trans-unit id="tt_content.pricingtable.columns">
-                <source>Columns</source>
-                <target>Columnas</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.prices">
                 <source>Prices</source>
@@ -1910,6 +1918,10 @@
             <trans-unit id="rte.table-striped">
                 <source>Striped table</source>
                 <target>Tabla rayada</target>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata.tx_das_cover">
+                <source>Cover</source>
+                <target>Portada</target>
             </trans-unit>
         </body>
     </file>

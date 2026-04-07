@@ -1,0 +1,23 @@
+<div class="tx-das-content-audioplayer tx-das-content-audioplayer-layout-{layout}">
+    <v:page.resources.fal table="tt_content" field="assets" record="{record}" as="files">
+        <f:for each="{files}" as="file" iteration="i">   
+            <div class="audioplayer-li">
+                <div class="audioplayer js-audioplayer bg-{color}" id="audioplayer-{i.index}">
+                    <button class="audioplayer__control js-control"><div class="audioplayer__control-icon"></div></button>
+                    <h4 class="audioplayer__title">{file.title}<br /><span><f:format.nl2br>{file.description}</f:format.nl2br></span></h4>
+                    <audio preload="auto"><source src="{file.url}" /></audio>
+                    <f:if condition="{file.tx_das_cover}">
+                        <f:then>
+                            <v:page.resources.fal table="sys_file_metadata" field="tx_das_cover" uid="{file.file}" as="covers">
+                                <img src="{f:uri.image(src: '{covers.0.id}', width: '520c', height: '520c', absolute: 1)}" width="520" height="520" alt="{file.title}" class="audioplayer__cover" />
+                            </v:page.resources.fal>
+                        </f:then>
+                        <f:else>
+                            <img src="data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="520" height="520" alt="" class="audioplayer__cover" />
+                        </f:else>
+                    </f:if>
+                </div>
+            </div>
+        </f:for>
+    </v:page.resources.fal>
+</div>

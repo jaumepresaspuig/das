@@ -525,9 +525,6 @@
             <trans-unit id="tt_content.cards.description">
                 <source>Cards with image, title, subtitle, and optional link.</source>
             </trans-unit>
-            <trans-unit id="tt_content.cards.columns">
-                <source>Columns</source>
-            </trans-unit>
             <trans-unit id="tt_content.cards.animate_cards">
                 <source>Animate cards</source>
             </trans-unit>
@@ -1002,6 +999,18 @@
             <trans-unit id="tt_content.newsticker.link">
                 <source>Link</source>
             </trans-unit>
+            <trans-unit id="tt_content.audioplayer">
+                <source>Audio player</source>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.description">
+                <source>Audio player.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.files">
+                <source>Audio files</source>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.color">
+                <source>Player color</source>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
             </trans-unit>
@@ -1133,9 +1142,6 @@
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.description">
                 <source>Table to show pricing options or packages available for a product or service.</source>
-            </trans-unit>
-            <trans-unit id="tt_content.pricingtable.columns">
-                <source>Columns</source>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.prices">
                 <source>Prices</source>
@@ -1433,6 +1439,9 @@
             </trans-unit>
             <trans-unit id="rte.table-striped">
                 <source>Striped table</source>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata.tx_das_cover">
+                <source>Cover</source>
             </trans-unit>
         </body>
     </file>

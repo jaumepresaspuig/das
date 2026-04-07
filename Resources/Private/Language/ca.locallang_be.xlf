@@ -699,10 +699,6 @@
                 <source>Cards with image, title, subtitle, and optional link.</source>
                 <target>Targetes amb imatge, títol, subtítol i enllaç opcional</target>
             </trans-unit>
-            <trans-unit id="tt_content.cards.columns">
-                <source>Columns</source>
-                <target>Columnes</target>
-            </trans-unit>
             <trans-unit id="tt_content.cards.animate_cards">
                 <source>Animate cards</source>
                 <target>Anima les targetes</target>
@@ -1335,6 +1331,22 @@
                 <source>Link</source>
                 <target>Enllaç</target>
             </trans-unit>
+            <trans-unit id="tt_content.audioplayer">
+                <source>Audio player</source>
+                <target>Reproductor d'àudio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.description">
+                <source>Audio player.</source>
+                <target>Reproductor d'àudio.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.files">
+                <source>Audio files</source>
+                <target>Fitxers d'àudio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.color">
+                <source>Player color</source>
+                <target>Color del reproductor</target>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
                 <target>Botons socials</target>
@@ -1510,10 +1522,6 @@
             <trans-unit id="tt_content.pricingtable.description">
                 <source>Table to show pricing options or packages available for a product or service.</source>
                 <target>Taula per mostrar opcions o paquets de preus disponibles per a un producte o servei.</target>
-            </trans-unit>
-            <trans-unit id="tt_content.pricingtable.columns">
-                <source>Columns</source>
-                <target>Columnes</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.prices">
                 <source>Prices</source>
@@ -1910,6 +1918,10 @@
             <trans-unit id="rte.table-striped">
                 <source>Striped table</source>
                 <target>Taula ratllada</target>
+            </trans-unit>
+            <trans-unit id="sys_file_metadata.tx_das_cover">
+                <source>Cover</source>
+                <target>Portada</target>
             </trans-unit>
         </body>
     </file>

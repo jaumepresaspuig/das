@@ -97,22 +97,22 @@ $tempColumns = [
                 [
                     'label' => $languageFilePrefix . 'none',
                     'value' => '0',
-                    'icon' => $imgPath . 'Dropshadow/dropshadow_0.png'
+                    'icon' => $imgPath . 'dropshadow_0.png'
                 ],
                 [
                     'label' => $languageFilePrefix . 'small',
                     'value' => '1',
-                    'icon' => $imgPath. 'Dropshadow/dropshadow_1.png'
+                    'icon' => $imgPath. 'dropshadow_1.png'
                 ],
                 [
                     'label' => $languageFilePrefix . 'normal',
                     'value' => '2',
-                    'icon' => $imgPath . 'Dropshadow/dropshadow_2.png'
+                    'icon' => $imgPath . 'dropshadow_2.png'
                 ],
                 [
                     'label' => $languageFilePrefix . 'large',
                     'value' => '3',
-                    'icon' => $imgPath . 'Dropshadow/dropshadow_3.png'
+                    'icon' => $imgPath . 'dropshadow_3.png'
                 ]
             ],
             'size' => 1,

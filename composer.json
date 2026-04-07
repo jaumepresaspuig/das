@@ -3,7 +3,7 @@
     "description": "Extends pages, content elements and RTE with additional fields to add Bootstrap 5 classes, and adds a new set of content elements, page templates, and viewhelpers to help building sites.",
     "type": "typo3-cms-extension",
     "license": ["LGPL-3.0-or-later"],
-    "version" : "1.0.1",
+    "version" : "1.0.2",
     "homepage": "https://das.jaumepresas.com",
     "authors": [{
         "name": "Jaume Presas Puig",

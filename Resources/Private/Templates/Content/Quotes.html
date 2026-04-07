@@ -233,10 +233,10 @@
                 <td colspan="2">
                     <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.quotes.quotes" /></strong>
                     <ul class="mt-2">
-                        <f:for each="{items}" as="item">                        
+                        <f:for each="{items}" as="item">
                             <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
                                 <f:if condition="{item.item.image}">
-                                    <f:then>                                    
+                                    <f:then>
                                         <img src="{f:uri.image(src: '{item.item.image}', width: '20c', height: '20c', absolute: 1)}" width="20" height="20" alt="{item.item.name}" class="me-1 mb-1" />
                                     </f:then>
                                     <f:else>

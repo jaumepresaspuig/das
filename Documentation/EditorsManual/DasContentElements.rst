@@ -3,7 +3,7 @@
 Das content elements
 ====================
 
-**Das** comes with a set of ready to use content elements, which cover a wide range of options: Accordion, Alert, Buttons, Calendar, Cards, Carousel, Chart, Columns, Container, Counter, Faq's, Iframe, Jumbotron, Modal window, News ticker, Paginator, Pricing table, Progress bars, Quotes, Social buttons, Tabs, and Timeline.
+**Das** comes with a set of ready to use content elements, which cover a wide range of options: Accordion, Alert, Ausio player, Buttons, Calendar, Cards, Carousel, Chart, Columns, Container, Counter, Faq's, Iframe, Jumbotron, Modal window, Paginator, Pricing table, Progress bars, Quotes, Social buttons, Tabs, and Timeline.
 
 .. figure:: ../Images/dasce-1.png
    :width: 999px

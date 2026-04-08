@@ -1337,7 +1337,7 @@
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">
                 <source>Audio player</source>
-                <target>Audioplayer</target>
+                <target>Audioplayer.</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.files">
                 <source>Audio files</source>

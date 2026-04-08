@@ -1023,6 +1023,18 @@
             <trans-unit id="tt_content.beforeafterimage.images.description">
                 <source>First image before, second image after. Both should have the same dimensions or at least the same aspect ratio.</source>
             </trans-unit>
+            <trans-unit id="tt_content.maskedimage">
+                <source>Masked image</source>
+            </trans-unit>
+            <trans-unit id="tt_content.maskedimage.description">
+                <source>Masked image.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.maskedimage.images">
+                <source>Images</source>
+            </trans-unit>
+            <trans-unit id="tt_content.maskedimage.images.description">
+                <source>Second image a PNG to be used as a mask. It has to have a transparent or semi-transparent area. Black indicates fully transparent.</source>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
             </trans-unit>

@@ -844,6 +844,13 @@ audio {
     box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }
 
+/* Masked image */
+
+.tx-das-content-maskedimage img {
+    mask-repeat: no-repeat;
+    mask-size: cover;
+}
+
 /* bg */
 
 .bg-primary-vignete {

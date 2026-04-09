@@ -1017,6 +1017,15 @@
             <trans-unit id="tt_content.beforeafterimage.description">
                 <source>Before/after image slider to compare two images interactively.</source>
             </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition">
+                <source>Disposition</source>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition.h">
+                <source>Horizontal</source>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition.v">
+                <source>Vertical</source>
+            </trans-unit>
             <trans-unit id="tt_content.beforeafterimage.images">
                 <source>Images</source>
             </trans-unit>

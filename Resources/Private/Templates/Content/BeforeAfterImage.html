@@ -20,6 +20,14 @@
             }"
             requestUpdate="1"
         />
+        <flux:field.select
+            name="disposition"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.beforeafterimage.disposition"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.beforeafterimage.disposition.h', 1: 'h'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.beforeafterimage.disposition.v', 1: 'v'}
+            }"
+        />
         <flux:field.inline.fal
             name="images"
             label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.beforeafterimage.images"
@@ -47,6 +55,14 @@
                             <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
                         </f:else>
                     </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.beforeafterimage.disposition" />
+                </th>
+                <td>
+                     <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.beforeafterimage.disposition.{disposition}" />
                 </td>
             </tr>
             <tr>

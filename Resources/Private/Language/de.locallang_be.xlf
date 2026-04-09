@@ -1355,6 +1355,18 @@
                 <source>Before/after image slider to compare two images interactively.</source>
                 <target>Vorher/Nachher-Bildschieberegler zum interaktiven Vergleich zweier Bilder.</target>
             </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition">
+                <source>Disposition</source>
+                <target>Anordnung</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition.h">
+                <source>Horizontal</source>
+                <target>Horizontal</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition.v">
+                <source>Vertical</source>
+                <target>Vertikale</target>
+            </trans-unit>
             <trans-unit id="tt_content.beforeafterimage.images">
                 <source>Images</source>
                 <target>Bilder</target>

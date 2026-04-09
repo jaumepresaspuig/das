@@ -1021,7 +1021,7 @@
                 <source>Disposition</source>
             </trans-unit>
             <trans-unit id="tt_content.beforeafterimage.disposition.h">
-                <source>Horizontal</source>
+                <source>Horitzontal</source>
             </trans-unit>
             <trans-unit id="tt_content.beforeafterimage.disposition.v">
                 <source>Vertical</source>
@@ -1475,6 +1475,12 @@
             </trans-unit>
             <trans-unit id="sys_file_metadata.tx_das_cover">
                 <source>Cover</source>
+            </trans-unit>
+            <trans-unit id="format_date">
+                <source>%B %e, %Y</source>
+            </trans-unit>
+            <trans-unit id="format_datetime">
+                <source>%B %e, %Y %H:%M</source>
             </trans-unit>
         </body>
     </file>

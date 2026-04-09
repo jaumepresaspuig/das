@@ -10,7 +10,7 @@
                                 {item.header}
                             </h3>
                             <p class="small">
-                                <f:format.date format="%B %e, %Y %H:%M">{item.date}</f:format.date>
+                                <f:format.date format="{f:translate(extensionName: 'das', key: 'format_datetime')}">{item.date}</f:format.date>
                             </p>
                             <p class="pb-2">
                                 <f:format.nl2br>{item.text}</f:format.nl2br>

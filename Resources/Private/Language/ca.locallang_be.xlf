@@ -1967,6 +1967,14 @@
                 <source>Cover</source>
                 <target>Portada</target>
             </trans-unit>
+            <trans-unit id="format_date">
+                <source>%B %e, %Y</source>
+                <target>%e %B del %Y</target>
+            </trans-unit>
+            <trans-unit id="format_datetime">
+                <source>%B %e, %Y %H:%M</source>
+                <target>%e %B del %Y, %H:%M</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

@@ -1,0 +1,71 @@
+<f:if condition="{answers}">
+    <f:variable name="poll" value="{f:if(condition: record.l18n_parent, then: '{record.l18n_parent}', else: '{record.uid}')}" />
+    <div class="tx-das-content-poll tx-das-content-poll-layout-{layout} text-center" id="tx-das-content-poll-{poll}" data-id="c{record.uid}" data-poll="{poll}" data-color="{color}">
+        <p>{question}</p>
+        <f:variable name="results" value="{das:poll(poll: 0, preview: 0)}" />
+        <div id="tx-das-content-poll-board-{poll}">
+            <f:if condition="{results.results -> f:count()}">
+                <f:render section="{results.showAnswersOrResults}" arguments="{_all}" />
+            </f:if>
+        </div>
+    </div>
+</f:if>
+
+<f:section name="answers">
+    <p>
+        <f:for each="{v:iterator.explode(content: '{answers}', glue: '{v:const(name: \'PHP_EOL\')}')}" as="answer" iteration="i">
+            <a href="" class="btn btn-outline-{color} btn-lg w-100 mb-2 btn-answer" data-poll="{poll}" data-answer="{i.cycle}">{answer}</a>
+        </f:for>
+    </p>
+    <p>
+        <a href="" class="btn btn-primary btn-send disabled" data-poll="{poll}" data-answer="0" id="tx-das-content-poll-{poll}-send"><f:translate key="send" extensionName="das" /></a>
+    </p>
+    <script>
+        initPoll({poll});
+    </script>
+</f:section>
+
+<f:section name="results">
+    <f:render section="message-{results.message}" arguments="{_all}" />
+    <f:for each="{v:iterator.explode(content: '{answers}', glue: '{v:const(name: \'PHP_EOL\')}')}" as="answer" iteration="i">
+        <div class="progress-container mb-2">
+            <div class="figure-caption mx-1">
+                {answer}
+            </div>
+            <div class="progress" style="height: {size_of_bars}px;">
+                <div class="progress-bar bg-{color} {f:if(condition: '{stripped_bars}', then: 'progress-bar-striped')} {f:if(condition: '{animated_stripes}', then: 'progress-bar-animated')}" aria-valuenow="{results.results.{i.cycle}.percent}" role="progressbar" data-area="{results.results.{i.cycle}.percent}" style="width: {f:if(condition: '{animated_bars}', then: '0', else: '{results.results.{i.cycle}.percent}%')};">
+                    {results.results.{i.cycle}.votes} / {results.results.{i.cycle}.percent}%
+                </div>
+            </div>
+        </div>
+    </f:for>
+    <script>
+        initProgressBars();
+    </script>
+</f:section>
+
+<f:section name="message-thanks">
+    <p class="mt-4">
+        <f:if condition="{thankyou_message} != ''">
+            <f:then>
+                {thankyou_message}
+            </f:then>
+            <f:else>
+                <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.thankyou_message.placeholder" />
+            </f:else>
+        </f:if>
+    </p>
+</f:section>
+
+<f:section name="message-nope">
+    <p class="mt-4">
+        <f:if condition="{already_participated_message} != ''">
+            <f:then>
+                {already_participated_message}
+            </f:then>
+            <f:else>
+                <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.already_participated_message.placeholder" />
+            </f:else>
+        </f:if>
+    </p>
+</f:section>

@@ -1683,6 +1683,162 @@
                 <source>Show text in columns</source>
                 <target>Text in Spalten anzeigen</target>
             </trans-unit>
+            <trans-unit id="tt_content.pricingtable.link">
+                <source>Link</source>
+                <target>Link</target>
+            </trans-unit>
+            <trans-unit id="color">
+                <source>Color</source>
+                <target>Farbe</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert">
+                <source>Alert</source>
+                <target>Alarm</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.description">
+                <source>Alert message.</source>
+                <target>Alarmnachricht.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.type">
+                <source>Type</source>
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.text">
+                <source>Text</source>
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.show_icon">
+                <source>Show icon</source>
+                <target>Symbol anzeigen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.alert.show_dismiss_button">
+                <source>Show dismiss button</source>
+                <target>Schließen-Button anzeigen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron">
+                <source>Jumbotron</source>
+                <target>Jumbotron</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.description">
+                <source>Box to showcase key marketing messages.</source>
+                <target>Box zur Präsentation wichtiger Marketingbotschaften.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.header">
+                <source>Header</source>
+                <target>Überschrift</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.subheader">
+                <source>Subheader</source>
+                <target>Unterüberschrift</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.text">
+                <source>Text</source>
+                <target>Text</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link">
+                <source>Link</source>
+                <target>Link</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link_text">
+                <source>Link button text</source>
+                <target>Text des Link-Buttons</target>
+            </trans-unit>
+            <trans-unit id="tt_content.jumbotron.link_style">
+                <source>Button style</source>
+                <target>Button-Stil</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar">
+                <source>Calendar</source>
+                <target>Kalender</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.description">
+                <source>Calendar.</source>
+                <target>Kalender.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day">
+                <source>First day of the week</source>
+                <target>Erster Tag der Woche</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day.0">
+                <source>Monday</source>
+                <target>Montag</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.first_day.1">
+                <source>Sunday</source>
+                <target>Sonntag</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.start_view">
+                <source>Start view</source>
+                <target>Startansicht</target>
+            </trans-unit>
+            <trans-unit id="tt_content.calendar.views_to_show">
+                <source>Views to show</source>
+                <target>Anzuzeigende Ansichten</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll">
+                <source>Poll</source>
+                <target>Umfrage</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.description">
+                <source>Poll.</source>
+                <target>Umfrage.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.question">
+                <source>Question</source>
+                <target>Frage</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.answers">
+                <source>Answers</source>
+                <target>Antworten</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.answers.description">
+                <source>One line for each answer</source>
+                <target>Für jede Antwort eine Zeile.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.color">
+                <source>Color for the buttons</source>
+                <target>Farbe für die Knöpfe</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message">
+                <source>Thank you message</source>
+                <target>Dankesnachricht</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message.description">
+                <source>If empty: "Thank you for your participation!"</source>
+                <target>Falls leer: "Vielen Dank für Ihre Teilnahme!"</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message.placeholder">
+                <source>Thank you for your participation!</source>
+                <target>Vielen Dank für Ihre Teilnahme!</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message">
+                <source>Message for when already participated</source>
+                <target>Nachricht für bereits Teilnehmer</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message.description">
+                <source>If empty: "Sorry, you can't participate more than once".</source>
+                <target>Falls leer: "Es tut mir leid, Sie können nicht mehr als einmal teilnehmen."</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message.placeholder">
+                <source>Sorry, you can't participate more than once.</source>
+                <target>Es tut mir leid, Sie können nicht mehr als einmal teilnehmen.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.size_of_bars">
+                <source>Size of results bars</source>
+                <target>Größe der Ergebnisbalken</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.stripped_bars">
+                <source>Stripped bars</source>
+                <target>Gestreifte Balken</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.animated_stripes">
+                <source>Animated stripes</source>
+                <target>Animierte Streifen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.animated_bars">
+                <source>Animated bars</source>
+                <target>Animierte Balken</target>
+            </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>
                 <target>Primärschaltfläche</target>
@@ -1870,98 +2026,6 @@
             <trans-unit id="rte.table-striped">
                 <source>Striped table</source>
                 <target>Gestreifte Tabelle</target>
-            </trans-unit>
-            <trans-unit id="tt_content.pricingtable.link">
-                <source>Link</source>
-                <target>Link</target>
-            </trans-unit>
-            <trans-unit id="color">
-                <source>Color</source>
-                <target>Farbe</target>
-            </trans-unit>
-            <trans-unit id="tt_content.alert">
-                <source>Alert</source>
-                <target>Alarm</target>
-            </trans-unit>
-            <trans-unit id="tt_content.alert.description">
-                <source>Alert message.</source>
-                <target>Alarmnachricht.</target>
-            </trans-unit>
-            <trans-unit id="tt_content.alert.type">
-                <source>Type</source>
-                <target>Typ</target>
-            </trans-unit>
-            <trans-unit id="tt_content.alert.text">
-                <source>Text</source>
-                <target>Text</target>
-            </trans-unit>
-            <trans-unit id="tt_content.alert.show_icon">
-                <source>Show icon</source>
-                <target>Symbol anzeigen</target>
-            </trans-unit>
-            <trans-unit id="tt_content.alert.show_dismiss_button">
-                <source>Show dismiss button</source>
-                <target>Schließen-Button anzeigen</target>
-            </trans-unit>
-            <trans-unit id="tt_content.jumbotron">
-                <source>Jumbotron</source>
-                <target>Jumbotron</target>
-            </trans-unit>
-            <trans-unit id="tt_content.jumbotron.description">
-                <source>Box to showcase key marketing messages.</source>
-                <target>Box zur Präsentation wichtiger Marketingbotschaften.</target>
-            </trans-unit>
-            <trans-unit id="tt_content.jumbotron.header">
-                <source>Header</source>
-                <target>Überschrift</target>
-            </trans-unit>
-            <trans-unit id="tt_content.jumbotron.subheader">
-                <source>Subheader</source>
-                <target>Unterüberschrift</target>
-            </trans-unit>
-            <trans-unit id="tt_content.jumbotron.text">
-                <source>Text</source>
-                <target>Text</target>
-            </trans-unit>
-            <trans-unit id="tt_content.jumbotron.link">
-                <source>Link</source>
-                <target>Link</target>
-            </trans-unit>
-            <trans-unit id="tt_content.jumbotron.link_text">
-                <source>Link button text</source>
-                <target>Text des Link-Buttons</target>
-            </trans-unit>
-            <trans-unit id="tt_content.jumbotron.link_style">
-                <source>Button style</source>
-                <target>Button-Stil</target>
-            </trans-unit>
-            <trans-unit id="tt_content.calendar">
-                <source>Calendar</source>
-                <target>Kalender</target>
-            </trans-unit>
-            <trans-unit id="tt_content.calendar.description">
-                <source>Calendar.</source>
-                <target>Kalender.</target>
-            </trans-unit>
-            <trans-unit id="tt_content.calendar.first_day">
-                <source>First day of the week</source>
-                <target>Erster Tag der Woche</target>
-            </trans-unit>
-            <trans-unit id="tt_content.calendar.first_day.0">
-                <source>Monday</source>
-                <target>Montag</target>
-            </trans-unit>
-            <trans-unit id="tt_content.calendar.first_day.1">
-                <source>Sunday</source>
-                <target>Sonntag</target>
-            </trans-unit>
-            <trans-unit id="tt_content.calendar.start_view">
-                <source>Start view</source>
-                <target>Startansicht</target>
-            </trans-unit>
-            <trans-unit id="tt_content.calendar.views_to_show">
-                <source>Views to show</source>
-                <target>Anzuzeigende Ansichten</target>
             </trans-unit>
             <trans-unit id="sys_file_metadata.tx_das_cover">
                 <source>Cover</source>

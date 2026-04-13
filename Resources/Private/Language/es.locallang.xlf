@@ -27,6 +27,10 @@
                 <source>Copy to clipboard</source>
                 <target>Copiar al portapapeles</target>
             </trans-unit>
+            <trans-unit id="send">
+                <source>Send</source>
+                <target>Enviar</target>
+            </trans-unit>
             <trans-unit id="format_date">
                 <source>%B %e, %Y</source>
                 <target>%e de %B de %Y</target>

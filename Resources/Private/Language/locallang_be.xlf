@@ -1332,6 +1332,54 @@
             <trans-unit id="tt_content.textincolumns">
                 <source>Show text in columns</source>
             </trans-unit>
+            <trans-unit id="tt_content.poll">
+                <source>Poll</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.description">
+                <source>Poll.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.question">
+                <source>Question</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.answers">
+                <source>Answers</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.answers.description">
+                <source>One line for each answer</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.color">
+                <source>Color for the buttons</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message">
+                <source>Thank you message</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message.description">
+                <source>If empty: "Thank you for your participation!"</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message.placeholder">
+                <source>Thank you for your participation!</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message">
+                <source>Message for when already participated</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message.description">
+                <source>If empty: "Sorry, you can't participate more than once".</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message.placeholder">
+                <source>Sorry, you can't participate more than once.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.size_of_bars">
+                <source>Size of results bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.stripped_bars">
+                <source>Stripped bars</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.animated_stripes">
+                <source>Animated stripes</source>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.animated_bars">
+                <source>Animated bars</source>
+            </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>
             </trans-unit>

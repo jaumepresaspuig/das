@@ -23,6 +23,10 @@
                 <source>Back</source>
                 <target>Zurück</target>
             </trans-unit>
+            <trans-unit id="send">
+                <source>Send</source>
+                <target>Senden</target>
+            </trans-unit>
             <trans-unit id="copy_to_clipboard">
                 <source>Copy to clipboard</source>
                 <target>In die Zwischenablage kopieren</target>

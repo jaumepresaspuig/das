@@ -21,6 +21,9 @@
             <trans-unit id="copy_to_clipboard">
                 <source>Copy to clipboard</source>
             </trans-unit>
+            <trans-unit id="send">
+                <source>Send</source>
+            </trans-unit>
             <trans-unit id="format_date">
                 <source>%B %e, %Y</source>
             </trans-unit>

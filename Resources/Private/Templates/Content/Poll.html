@@ -1,0 +1,230 @@
+{namespace das=Jp\Das\ViewHelpers}
+
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Poll"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Poll.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.input
+            name="question"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.question"
+            required="1"
+        />
+        <flux:field.text
+            name="answers"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.answers"
+            description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.answers.description"
+            rows="5"
+            cols="32"
+            required="1"
+        />
+        <flux:field.select
+            name="color"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.color"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_primary.svg'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_secondary.svg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/bg_success.svg'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/bg_danger.svg'},
+                4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/bg_warning.svg'},
+                5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/bg_info.svg'},
+                6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
+                7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
+            }"
+            showIconTable="1"
+        />
+        <flux:field.input
+            name="thankyou_message"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.thankyou_message"
+            description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.thankyou_message.description"
+            placeholder="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.thankyou_message.placeholder"
+        />
+        <flux:field.input
+            name="already_participated_message"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.already_participated_message"
+            description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.already_participated_message.description"
+            placeholder="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.already_participated_message.placeholder"
+        />
+        <flux:field.select
+            name="size_of_bars"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.size_of_bars"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:small', 1: '20'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:medium', 1: '30'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:large', 1: '40'}
+            }"
+            default="30"
+        />
+        <flux:field.checkbox
+            name="stripped_bars"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.stripped_bars"
+            config="{renderType: 'checkboxToggle'}"
+            requestUpdate="1"
+        />
+        <flux:field.checkbox
+            name="animated_stripes"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.animated_stripes"
+            config="{renderType: 'checkboxToggle'}"
+            displayCond="FIELD:options.stripped_bars:=:1"
+        />
+        <flux:field.checkbox
+            name="animated_bars"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.animated_bars"
+            config="{renderType: 'checkboxToggle'}"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.question" />
+                </th>
+                <td>
+                    {question}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.color" />
+                </th>
+                <td>
+                    <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{color}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{color}')}" class="d-inline-block me-1 mb-1" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.thankyou_message" />
+                </th>
+                <td>
+                    <f:if condition="{thankyou_message} != ''">
+                        <f:then>
+                            {thankyou_message}
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.thankyou_message.placeholder" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.size_of_bars" />
+                </th>
+                <td>
+                    <f:switch expression="{size_of_bars}">
+                        <f:case value="20">
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:small" />
+                        </f:case>
+                        <f:case value="40">
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:large" />
+                        </f:case>
+                        <f:defaultCase>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:medium" />
+                        </f:defaultCase>
+                    </f:switch>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.already_participated_message" />
+                </th>
+                <td>
+                    <f:if condition="{already_participated_message} != ''">
+                        <f:then>
+                            {already_participated_message}
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.already_participated_message.placeholder" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.stripped_bars" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: stripped_bars}" />
+                </td>
+            </tr>
+            <f:if condition="{stripped_bars}">
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.animated_stripes" />
+                    </th>
+                    <td>
+                        <f:render partial="Content/Check" arguments="{condition: animated_stripes}" />
+                    </td>
+                </tr>
+            </f:if>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.animated_bars" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: animated_bars}" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.poll.answers" /></strong>
+                    <f:variable name="results" value="{das:poll(poll: '{f:if(condition: record.l18n_parent, then: record.l18n_parent, else: record.uid)}', preview: 1)}" />
+                    <table class="mt-2">
+                        <tbody>
+                            <f:for each="{v:iterator.explode(content: '{answers}', glue: '{v:const(name: \'PHP_EOL\')}')}" as="answer" iteration="i">
+                                <tr>
+                                    <td><ul><li>{answer}</li></ul></td>
+                                    <td>
+                                        <span class="d-inline-block mx-1 mb-1" style="width: 300px; background-color: #eaeaea;">
+                                            <span class="d-inline-block bg-{color}" style="width: {results.results.{i.cycle}.percent}%">&nbsp;</span>
+                                        </span>
+                                    </td>
+                                    <td class="text-nowrap"><small>{results.results.{i.cycle}.votes} / {results.results.{i.cycle}.percent}%</small></td>
+                                </tr>
+                            </f:for>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Poll" arguments="{_all}" />
+</f:section>

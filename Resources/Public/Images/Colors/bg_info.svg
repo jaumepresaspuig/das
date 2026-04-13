@@ -10,5 +10,6 @@
   <path
      d="M 1,0 H 17 V 16 H 1 Z"
      fill="#17a2b8"
-     id="path888" />
+     id="path888"
+     style="fill:#abdced;fill-opacity:1" />
 </svg>

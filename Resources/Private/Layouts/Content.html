@@ -18,7 +18,7 @@
                             <f:variable name="isPublished" value="1" />
                         </f:if>
                     </f:case>
-                    <f:defaultCase>                                  
+                    <f:defaultCase>
                         <f:for each="{v:iterator.explode(content: '{usergroup}', glue: ',')}" as="group">
                             <f:contains subject=",{item.item.fe_group}," value=",{group},">
                                 <f:variable name="isPublished" value="1" />

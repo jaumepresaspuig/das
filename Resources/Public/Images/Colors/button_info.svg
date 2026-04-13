@@ -12,7 +12,8 @@
   <path
      fill="#17a2b8"
      d="M 1,0 H 17 V 16 H 1 Z"
-     id="path2" />
+     id="path2"
+     style="fill:#abdced;fill-opacity:1" />
   <text
      y="11.893003"
      x="4.9289999"

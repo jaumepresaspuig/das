@@ -24,7 +24,7 @@ CREATE TABLE tt_content (
     tx_das_order1 smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_imageratio varchar(255) DEFAULT '4x3' NOT NULL,
     tx_das_customclasses varchar(255) DEFAULT '' NOT NULL,
-    tx_das_customstyles mediumtext DEFAULT '' NOT NULL,
+    tx_das_customstyles text DEFAULT '' NOT NULL,
     tx_das_visibility smallint(2) unsigned DEFAULT '0' NOT NULL,
     tx_das_dropshadow smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_bgpredefinedcolor varchar(255) DEFAULT '' NOT NULL,
@@ -43,7 +43,8 @@ CREATE TABLE tt_content (
     tx_das_textincolumns smallint(1) unsigned DEFAULT '1' NOT NULL,
     tx_das_hidecaption smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_stylemenu smallint(1) unsigned DEFAULT '0' NOT NULL,
-    tx_das_pagegallery smallint(1) unsigned DEFAULT '0' NOT NULL
+    tx_das_pagegallery smallint(1) unsigned DEFAULT '0' NOT NULL,
+    tx_das_poll text DEFAULT '' NOT NULL,
 );
 
 #

@@ -1355,6 +1355,18 @@
                 <source>Before/after image slider to compare two images interactively.</source>
                 <target>Control deslizante antes/después para comparar dos imágenes de manera interactiva.</target>
             </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition">
+                <source>Disposition</source>
+                <target>Disposición</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition.h">
+                <source>Horizontal</source>
+                <target>Horizontal</target>
+            </trans-unit>
+            <trans-unit id="tt_content.beforeafterimage.disposition.v">
+                <source>Vertical</source>
+                <target>Vertical</target>
+            </trans-unit>
             <trans-unit id="tt_content.beforeafterimage.images">
                 <source>Images</source>
                 <target>Imágenes</target>
@@ -1763,6 +1775,70 @@
                 <source>Show text in columns</source>
                 <target>Mostrar texto en columnas</target>
             </trans-unit>
+            <trans-unit id="tt_content.poll">
+                <source>Poll</source>
+                <target>Encuesta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.description">
+                <source>Poll.</source>
+                <target>Encuesta.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.question">
+                <source>Question</source>
+                <target>Pregunta</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.answers">
+                <source>Answers</source>
+                <target>Respuestas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.answers.description">
+                <source>One line for each answer</source>
+                <target>Una respuesta por línea</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.color">
+                <source>Color for the buttons</source>
+                <target>Color de los botones</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message">
+                <source>Thank you message</source>
+                <target>Mensaje de agradecimiento</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message.description">
+                <source>If empty: "Thank you for your participation!"</source>
+                <target>Si no se ha rellenado: "¡Gracias por tu participación!"</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.thankyou_message.placeholder">
+                <source>Thank you for your participation!</source>
+                <target>¡Gracias por tu participación!</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message">
+                <source>Message for when already participated</source>
+                <target>Mensaje para cuando ya se ha participado</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message.description">
+                <source>If empty: "Sorry, you can't participate more than once".</source>
+                <target>Si no se ha rellenado: "Lo sentimos, no puedes participar más de una vez."</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.already_participated_message.placeholder">
+                <source>Sorry, you can't participate more than once.</source>
+                <target>Lo sentimos, no puedes participar más de una vez.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.size_of_bars">
+                <source>Size of results bars</source>
+                <target>Medida de las barras de resultados</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.stripped_bars">
+                <source>Stripped bars</source>
+                <target>Barras estriadas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.animated_stripes">
+                <source>Animated stripes</source>
+                <target>Estrias animades</target>
+            </trans-unit>
+            <trans-unit id="tt_content.poll.animated_bars">
+                <source>Animated bars</source>
+                <target>Barras animadas</target>
+            </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>
                 <target>Botón primario</target>
@@ -1954,6 +2030,14 @@
             <trans-unit id="sys_file_metadata.tx_das_cover">
                 <source>Cover</source>
                 <target>Portada</target>
+            </trans-unit>
+            <trans-unit id="format_date">
+                <source>%B %e, %Y</source>
+                <target>%e de %B de %Y</target>
+            </trans-unit>
+            <trans-unit id="format_datetime">
+                <source>%B %e, %Y %H:%M</source>
+                <target>%e de %B de %Y, %H:%M</target>
             </trans-unit>
         </body>
     </file>

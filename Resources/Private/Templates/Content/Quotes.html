@@ -246,7 +246,7 @@
                                 <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{f:if(condition: '{item.item.color}', then: '{item.item.color}', else: '{default_color}')}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{f:if(condition: \'{item.item.color}\', then: \'colors.{item.item.color}\', else: \'default\')}')}" class="d-inline-block me-1 mb-1" />
                                 <f:if condition="{show_rating_stars}">
                                     <f:image src="EXT:das/Resources/Public/Images/Stars/stars_{item.item.rating_stars}.svg" width="50" alt="{item.item.rating_stars}" class="d-inline-block me-1 mb-1" />
-                                </f:if>"{item.item.text}". <em>{item.item.author}<f:if condition="{item.item.date}"> (<f:format.date format="%B %e, %Y">{item.item.date}</f:format.date>)</em></f:if>
+                                </f:if>"{item.item.text}". <em>{item.item.author}<f:if condition="{item.item.date}"> (<f:format.date format="{f:translate(extensionName: 'das', key: 'format_date')}">{item.item.date}</f:format.date>)</em></f:if>
                             </li>
                         </f:for>
                     </ul>

@@ -23,9 +23,21 @@
                 <source>Back</source>
                 <target>Zurück</target>
             </trans-unit>
+            <trans-unit id="send">
+                <source>Send</source>
+                <target>Senden</target>
+            </trans-unit>
             <trans-unit id="copy_to_clipboard">
                 <source>Copy to clipboard</source>
                 <target>In die Zwischenablage kopieren</target>
+            </trans-unit>
+            <trans-unit id="format_date">
+                <source>%B %e, %Y</source>
+                <target>%e. %B %Y</target>
+            </trans-unit>
+            <trans-unit id="format_datetime">
+                <source>%B %e, %Y %H:%M</source>
+                <target>%e. %B %Y, %H:%M</target>
             </trans-unit>
         </body>
     </file>

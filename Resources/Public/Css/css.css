@@ -844,6 +844,40 @@ audio {
     box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
 }
 
+.tx-das-content-beforeafterimage-disposition-v .container-beforeafterimage {
+    place-content: top;
+}
+
+.tx-das-content-beforeafterimage-disposition-v .container-beforeafterimage .slider-image {
+    object-position: top;    
+}
+
+.tx-das-content-beforeafterimage-disposition-v .container-beforeafterimage .image-before {
+    width: 100%;
+    height: var(--position);
+}
+
+.tx-das-content-beforeafterimage-disposition-v .container-beforeafterimage .slider {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    vertical-align: middle;
+    transform: rotate(180deg);
+}
+
+.tx-das-content-beforeafterimage-disposition-v .container-beforeafterimage .slider-line {
+    height: .2rem;
+    width: 100%;
+    left: 50%;
+    top: var(--position);
+}
+
+.tx-das-content-beforeafterimage-disposition-v .container-beforeafterimage .slider-button {
+    left: 50%;
+    top: var(--position);
+    transform: translate(-50%, -50%) rotate(90deg);
+    margin-left: -23px;
+}
+
 /* Masked image */
 
 .tx-das-content-maskedimage img {

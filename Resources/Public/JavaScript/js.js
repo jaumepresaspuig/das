@@ -24,6 +24,7 @@ jQuery(document).ready(function ($) {
     initCodeText();
     initTooltips();
     initAudioPlayer();
+    initPolls();
 });
 
 function initGallery() {
@@ -198,4 +199,37 @@ function resetPlayback(id, play) {
     if (play) {
         playback(id);
     }
+}
+
+function initPolls() {
+    $(".tx-das-content-poll").each(function() {
+        sendPoll($(this).attr("data-poll"), 0);
+    });
+}
+
+function initPoll(poll) {
+    $("#tx-das-content-poll-" + poll + " a.btn-answer").on("click", function() {
+        $(".tx-das-content-poll a.btn-answer").each(function() {
+            if ($(this).hasClass("btn-" + $("#tx-das-content-poll-" + $(this).attr("data-poll")).attr("data-color"))) {
+                $(this).removeClass("btn-" + $("#tx-das-content-poll-" + $(this).attr("data-poll")).attr("data-color")).addClass("btn-outline-" + $("#tx-das-content-poll-" + $(this).attr("data-poll")).attr("data-color"));
+            }
+        });
+        $(this).removeClass("btn-outline-" + $("#tx-das-content-poll-" + $(this).attr("data-poll")).attr("data-color")).addClass("btn-" + $("#tx-das-content-poll-" + $(this).attr("data-poll")).attr("data-color"));
+        $("#tx-das-content-poll-" + poll + " a.btn-send").removeClass("disabled").attr("data-answer", $(this).attr("data-answer"));
+        return false;
+    });
+    $("#tx-das-content-poll-" + poll + " a.btn-send").on("click", function() {
+        sendPoll($(this).attr("data-poll"), $(this).attr("data-answer"));
+        return false;
+    });
+}
+
+function sendPoll(poll, answer) {
+    let pollx = poll;
+    $.get(window.location.href, { no_cache: 1, pk_campaign: poll, pk_kwd: answer }).done(function( data ) {
+        const $resp = $("<div>").html(data);
+        const html = $resp.find("#tx-das-content-poll-board-" + pollx).html() || "";
+        $('#tx-das-content-poll-board-' + pollx).html(html);
+    });
+
 }

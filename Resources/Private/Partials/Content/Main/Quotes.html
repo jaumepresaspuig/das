@@ -78,7 +78,7 @@
             </p>
         </blockquote>
         <figcaption class="blockquote-footer mb-0">
-            {item.author}<f:if condition="{item.date}">, <small><f:format.date format="%B %e, %Y">{item.date}</f:format.date></small></f:if>
+            {item.author}<f:if condition="{item.date}">, <small><f:format.date format="{f:translate(extensionName: 'das', key: 'format_date')}">{item.date}</f:format.date></small></f:if>
         </figcaption>
     </figure>
 </f:section>

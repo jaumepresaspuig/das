@@ -162,23 +162,25 @@
                     <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.stripped_bars" />
                 </th>
                 <td>
-                <f:render partial="Content/Check" arguments="{condition: stripped_bars}" />
+                    <f:render partial="Content/Check" arguments="{condition: stripped_bars}" />
                 </td>
             </tr>
-            <tr>
-                <th>
-                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.animated_stripes" />
-                </th>
-                <td>
-                <f:render partial="Content/Check" arguments="{condition: animated_stripes}" />
-                </td>
-            </tr>
+            <f:if condition="{stripped_bars}">
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.animated_stripes" />
+                    </th>
+                    <td>
+                        <f:render partial="Content/Check" arguments="{condition: animated_stripes}" />
+                    </td>
+                </tr>
+            </f:if>
             <tr>
                 <th>
                     <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.animated_bars" />
                 </th>
                 <td>
-                <f:render partial="Content/Check" arguments="{condition: animated_bars}" />
+                    <f:render partial="Content/Check" arguments="{condition: animated_bars}" />
                 </td>
             </tr>
             <tr>
@@ -186,7 +188,7 @@
                     <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.show_label" />
                 </th>
                 <td>
-                <f:render partial="Content/Check" arguments="{condition: show_label}" />
+                    <f:render partial="Content/Check" arguments="{condition: show_label}" />
                 </td>
             </tr>
             <tr>
@@ -194,7 +196,7 @@
                     <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.progressbars.vertical_bars" />
                 </th>
                 <td>
-                <f:render partial="Content/Check" arguments="{condition: vertical_bars}" />
+                    <f:render partial="Content/Check" arguments="{condition: vertical_bars}" />
                 </td>
             </tr>
             <f:if condition="{vertical_bars}">

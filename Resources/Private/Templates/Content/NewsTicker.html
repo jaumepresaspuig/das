@@ -158,7 +158,7 @@
                         <f:for each="{items}" as="item">                        
                             <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
                                 <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{f:if(condition: '{item.item.color}', then: '{item.item.color}', else: '{default_color}')}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{f:if(condition: \'{item.item.color}\', then: \'colors.{item.item.color}\', else: \'default\')}')}" class="d-inline-block me-1 mb-1" />
-                                <strong>{item.item.header}</strong> (<f:format.date format="%B %e, %Y %H:%M">{item.item.date}</f:format.date>) {item.item.text} 
+                                <strong>{item.item.header}</strong> (<f:format.date format="{f:translate(extensionName: 'das', key: 'format_datetime')}">{item.item.date}</f:format.date>) {item.item.text} 
                             </li>
                         </f:for>
                     </ul>

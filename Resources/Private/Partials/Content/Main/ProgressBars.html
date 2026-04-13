@@ -3,7 +3,7 @@
         <f:for each="{items}" as="item" iteration="iteration">
             <f:variable name="area" value="{item.area as integer}" />
             <f:variable name="area" value="{f:if(condition: '{area} > 100', then: '100', else: '{area}')}" />
-    <f:variable name="color" value="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" />
+            <f:variable name="color" value="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" />
             <div class="progress-container mb-2"{f:if(condition: '{vertical_bars} && {vertical_bars_height}', then: ' style="width: {vertical_bars_height}px;"')}>
                 <div class="figure-caption mx-1">
                     {item.title}<f:if condition="!{show_label}"> <small>({area}%)</small></f:if>

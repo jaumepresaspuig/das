@@ -1419,6 +1419,22 @@
                 <source>Rounded</source>
                 <target>Gerundet</target>
             </trans-unit>
+            <trans-unit id="tt_content.sharepage">
+                <source>Share page</source>
+                <target>Seite teilen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.description">
+                <source>Share page in the most common social platforms.</source>
+                <target>Seite teilen auf den gängigsten Social-Media-Plattformen.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.platforms">
+                <source>Platforms</source>
+                <target>Plattformen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.rounded">
+                <source>Rounded</source>
+                <target>Gerundet</target>
+            </trans-unit>
             <trans-unit id="tt_content.tabs">
                 <source>Tabs</source>
                 <target>Tabs</target>

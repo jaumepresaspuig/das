@@ -39,6 +39,10 @@
                 <source>%B %e, %Y %H:%M</source>
                 <target>%e de %B de %Y, %H:%M</target>
             </trans-unit>
+            <trans-unit id="share_this_page">
+                <source>Share this page</source>
+                <target>Comparte esta página</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

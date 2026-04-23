@@ -1396,7 +1396,7 @@
                 <target>Botons socials</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.description">
-                <source>Buttons of the most common social platfroms.</source>
+                <source>Buttons of the most common social platforms.</source>
                 <target>Botons de les plataformes socials més comunes.</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.buttons">
@@ -1416,6 +1416,22 @@
                 <target>Url</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.rounded">
+                <source>Rounded</source>
+                <target>Arrodonit</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage">
+                <source>Share page</source>
+                <target>Compareteix pàgina</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.description">
+                <source>Share page in the most common social platforms.</source>
+                <target>Compareteix pàgina a les plataformes socials més comunes.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.platforms">
+                <source>Platforms</source>
+                <target>Plataformes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.rounded">
                 <source>Rounded</source>
                 <target>Arrodonit</target>
             </trans-unit>

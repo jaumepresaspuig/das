@@ -221,8 +221,9 @@ audio {
     margin-bottom: 0 !important
 }
 
-/* Social buttons */
+/* Social buttons - Share page */
 
+.tx-das-content-sharepage a,
 .tx-das-content-socialbuttons a {
     display: inline-block;
     padding: 3.5px 6px;
@@ -233,92 +234,119 @@ audio {
     color: #fff
 }
 
+.tx-das-content-sharepage-sm a,
 .tx-das-content-socialbuttons-sm a {
     padding: 4px 5px;
     font-size: 10px
 }
 
+.tx-das-content-sharepage-lg a,
 .tx-das-content-socialbuttons-lg a {
     padding: 8px 12px;
     font-size: 30px
 }
   
+.tx-das-content-socialbuttons a:hover,
 .tx-das-content-socialbuttons a:hover {
     opacity: 0.7
 }
 
+.tx-das-content-sharepage a.bandcamp,
 .tx-das-content-socialbuttons a.bandcamp {
     background: #0cacd7
 }
 
+.tx-das-content-sharepage a.facebook,
 .tx-das-content-socialbuttons a.facebook {
     background: #3b5998
 }
 
+.tx-das-content-sharepage a.flickr,
 .tx-das-content-socialbuttons a.flickr {
     background: #f40083
 }
 
+.tx-das-content-sharepage a.foursquare,
 .tx-das-content-socialbuttons a.foursquare {
     background: #45bbff
 }
 
+.tx-das-content-sharepage a.instagram,
 .tx-das-content-socialbuttons a.instagram {
     background: #125688
 }
 
+.tx-das-content-sharepage a.linkedin,
 .tx-das-content-socialbuttons a.linkedin {
     background: #007bb5
 }
 
+.tx-das-content-sharepage a.pinterest,
 .tx-das-content-socialbuttons a.pinterest {
     background: #cb2027
 }
 
+.tx-das-content-sharepage a.reddit,
 .tx-das-content-socialbuttons a.reddit {
     background: #ff5700
 }
 
+.tx-das-content-sharepage a.snapchat,
 .tx-das-content-socialbuttons a.snapchat {
     background: #0096e5
 }
 
+.tx-das-content-sharepage a.soundcloud,
 .tx-das-content-socialbuttons a.soundcloud {
     background: #ff5500
 }
 
+.tx-das-content-sharepage a.stumbleupon,
 .tx-das-content-socialbuttons a.stumbleupon {
     background: #eb4924
 }
 
+.tx-das-content-sharepage a.tiktok,
 .tx-das-content-socialbuttons a.tiktok {
     background: #000
 }
 
+.tx-das-content-sharepage a.tumblr,
 .tx-das-content-socialbuttons a.tumblr {
     background: #2c4762
 }
 
+.tx-das-content-sharepage a.twitter,
 .tx-das-content-socialbuttons a.twitter {
     background: #55acee
 }
 
+.tx-das-content-sharepage a.vimeo,
 .tx-das-content-socialbuttons a.vimeo {
     background: #45bbff
 }
 
+.tx-das-content-sharepage a.vine,
 .tx-das-content-socialbuttons a.vine {
     background: #00b489
 }
 
+.tx-das-content-sharepage a.whatsapp,
+.tx-das-content-socialbuttons a.whatsapp {
+    background: #4cc45b
+}
+
+.tx-das-content-sharepage a.xing,
 .tx-das-content-socialbuttons a.xing {
     background: #161c24
 }
 
+.tx-das-content-sharepage a.yahoo,
 .tx-das-content-socialbuttons a.yahoo {
     background: #430297
 }
 
+.tx-das-content-sharepage a.youtube,
 .tx-das-content-socialbuttons a.youtube {
     background: #bb0000
 }

@@ -1391,6 +1391,18 @@
                 <source>Second image a PNG to be used as a mask. It has to have a transparent or semi-transparent area. Black indicates fully transparent.</source>
                 <target>Das zweite Bild ist ein PNG, das als Maske verwendet wird. Es muss einen transparenten oder halbtransparenten Bereich haben. Schwarz bedeutet vollständig transparent.</target>
             </trans-unit>
+            <trans-unit id="tt_content.magnifierglass">
+                <source>Magnifier glass</source>
+                <target>Bildlupe</target>
+            </trans-unit>
+            <trans-unit id="tt_content.magnifierglass.description">
+                <source>Image magnifier glass</source>
+                <target>Bildlupe.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.magnifierglass.image">
+                <source>Image</source>
+                <target>Bild</target>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
                 <target>Soziale Schaltflächen</target>
@@ -1416,6 +1428,22 @@
                 <target>URL</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.rounded">
+                <source>Rounded</source>
+                <target>Gerundet</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage">
+                <source>Share page</source>
+                <target>Seite teilen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.description">
+                <source>Share page in the most common social platforms.</source>
+                <target>Seite teilen auf den gängigsten Social-Media-Plattformen.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.platforms">
+                <source>Platforms</source>
+                <target>Plattformen</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.rounded">
                 <source>Rounded</source>
                 <target>Gerundet</target>
             </trans-unit>

@@ -25,6 +25,8 @@ jQuery(document).ready(function ($) {
     initTooltips();
     initAudioPlayer();
     initPolls();
+    initMagnifierGlass();
+
 });
 
 function initGallery() {
@@ -229,7 +231,45 @@ function sendPoll(poll, answer) {
     $.get(window.location.href, { no_cache: 1, pk_campaign: poll, pk_kwd: answer }).done(function( data ) {
         const $resp = $("<div>").html(data);
         const html = $resp.find("#tx-das-content-poll-board-" + pollx).html() || "";
-        $('#tx-das-content-poll-board-' + pollx).html(html);
+        $("#tx-das-content-poll-board-" + pollx).html(html);
     });
+}
 
+function initMagnifierGlass() {
+    $(".tx-das-content-magnifierglass").each(function() {
+        var large = $(this).find(".large"),
+            small = $(this).find(".small"),
+            native_width = 0,
+	        native_height = 0
+            large_width = 0,
+            small_width = 0,
+            large_height = 0,
+            small_height = 0;
+        $(this).on("mousemove", function(e) {
+            if (!native_width && !native_height){
+                native_width = small.attr("data-width");
+                native_height = small.attr("data-height");
+                large_width = large.width();
+                small_width = small.width();
+                large_height = large.height();
+                small_height = small.height();
+            }
+            var magnify_offset = $(this).offset(),
+                mx = e.pageX - magnify_offset.left,
+                my = e.pageY - magnify_offset.top;
+            if (mx < $(this).width() && my < $(this).height() && mx > 0 && my > 0) {
+                large.fadeIn(100);
+            } else{
+                large.fadeOut(100);
+            }
+            if (large.is(":visible")) {
+                var rx = Math.round(mx/small.width()*native_width - large_width/2) * -1,
+                    ry = Math.round(my/small.height()*native_height - large_height/2) * -1,
+                    bgp = rx + "px " + ry + "px",                
+                    px = mx - large_width / 2,
+                    py = my - large_height / 2;
+                large.css({left: px, top: py, backgroundPosition: bgp});
+            }
+        });
+    });
 }

@@ -1,0 +1,6 @@
+<div class="tx-das-content-magnifierglass tx-das-content-magnifierglass-layout-{layout}" data-id="c{record.uid}">
+    <v:page.resources.fal table="tt_content" field="images" as="images" record="{record}">
+        <div class="large" style="background: url('{images.0.url}') no-repeat;"></div>
+        <img src="{f:uri.image(src: '{images.0.uid}', treatIdAsReference: 1)}" alt="{file.description}" class="small" loading="{settings.lazyLoading}" data-width="{images.0.width}" data-height="{images.0.height}" />
+    </v:page.resources.fal>
+</div>

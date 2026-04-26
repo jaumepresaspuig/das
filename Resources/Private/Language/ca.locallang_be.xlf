@@ -1391,12 +1391,24 @@
                 <source>Second image a PNG to be used as a mask. It has to have a transparent or semi-transparent area. Black indicates fully transparent.</source>
                 <target>La segona imatge ha de ser un PNG que s'utilitzarà com a màscara. Ha de tenir una zona transparent o semitransparent. El negre indica transparència completa.</target>
             </trans-unit>
+            <trans-unit id="tt_content.magnifierglass">
+                <source>Magnifier glass</source>
+                <target>Lupa d'augment</target>
+            </trans-unit>
+            <trans-unit id="tt_content.magnifierglass.description">
+                <source>Image magnifier glass</source>
+                <target>Lupa d'augment.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.magnifierglass.image">
+                <source>Image</source>
+                <target>Imatge</target>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
                 <target>Botons socials</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.description">
-                <source>Buttons of the most common social platfroms.</source>
+                <source>Buttons of the most common social platforms.</source>
                 <target>Botons de les plataformes socials més comunes.</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.buttons">
@@ -1416,6 +1428,22 @@
                 <target>Url</target>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.rounded">
+                <source>Rounded</source>
+                <target>Arrodonit</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage">
+                <source>Share page</source>
+                <target>Compareteix pàgina</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.description">
+                <source>Share page in the most common social platforms.</source>
+                <target>Compareteix pàgina a les plataformes socials més comunes.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.platforms">
+                <source>Platforms</source>
+                <target>Plataformes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.rounded">
                 <source>Rounded</source>
                 <target>Arrodonit</target>
             </trans-unit>

@@ -1044,11 +1044,20 @@
             <trans-unit id="tt_content.maskedimage.images.description">
                 <source>Second image a PNG to be used as a mask. It has to have a transparent or semi-transparent area. Black indicates fully transparent.</source>
             </trans-unit>
+            <trans-unit id="tt_content.magnifierglass">
+                <source>Magnifier glass</source>
+            </trans-unit>
+            <trans-unit id="tt_content.magnifierglass.description">
+                <source>Image magnifier glass.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.magnifierglass.image">
+                <source>Image</source>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.description">
-                <source>Buttons of the most common social platfroms.</source>
+                <source>Buttons of the most common social platforms.</source>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.buttons">
                 <source>Buttons</source>
@@ -1063,6 +1072,18 @@
                 <source>Url</source>
             </trans-unit>
             <trans-unit id="tt_content.socialbuttons.rounded">
+                <source>Rounded</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage">
+                <source>Share page</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.description">
+                <source>Share page in the most common social platforms.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.platforms">
+                <source>Platforms</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sharepage.rounded">
                 <source>Rounded</source>
             </trans-unit>
             <trans-unit id="tt_content.tabs">

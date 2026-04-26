@@ -30,6 +30,9 @@
             <trans-unit id="format_datetime">
                 <source>%B %e, %Y %H:%M</source>
             </trans-unit>
+            <trans-unit id="share_this_page">
+                <source>Share this page</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

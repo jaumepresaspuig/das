@@ -1,0 +1,46 @@
+<f:if condition="{platforms}">
+    <div class="tx-das-content-sharepage tx-das-content-sharepage-layout-{layout} {alignment} {f:if(condition: '{size}', then: 'tx-das-content-sharepage-{size}')}" data-id="c{record.uid}">
+        <div class="{f:if(condition: '{alignment} == \'\' || {type} == \'btn-block btn-social\'', then: 'ml-n{settings.marginForButtons}')}{f:if(condition: '{alignment} == \'text-end\'', then: 'mr-n{settings.marginForButtons}')}">
+            <f:variable name="page_url" value="{v:page.absoluteUrl()}" />
+            <f:variable name="rounded" value="{f:if(condition: '{rounded}', then: ' rounded-circle')}" />
+            <f:variable name="mt" value="{f:if(condition: '{alignment} == \'text-center\'', then: ' mt-2')}" />
+            <f:variable name="platforms" value="{v:iterator.explode(content: '{platforms}', glue: ',')}" />
+            <p>
+                <f:translate extensionName="das" key="share_this_page" />
+                <f:if condition="{alignment} == 'text-center'">
+                    <br />
+                </f:if>
+                <f:for each="{platforms}" as="platform" iteration="iteration">
+                    <f:switch expression="{platform}">
+                        <f:case value="Facebook">
+                            <f:variable name="url" value="https://facebook.com/sharer/sharer.php?u={page_url}" />
+                        </f:case>
+                        <f:case value="Instagram">
+                            <f:variable name="url" value="https://www.instagram.com/shareArticle/?mini=true&url={page_url}" />
+                        </f:case>
+                        <f:case value="LinkedIn">
+                            <f:variable name="url" value="https://www.linkedin.com/sharing/share-offsite/?url={page_url}" />
+                        </f:case>
+                        <f:case value="Reddit">
+                            <f:variable name="url" value="https://www.reddit.com/submit?url={page_url}&title={page.title}" />
+                        </f:case>
+                        <f:case value="Tumblr">
+                            <f:variable name="url" value="https://www.tumblr.com/widgets/share/tool?canonicalUrl={page_url}" />
+                        </f:case>
+                        <f:case value="Twitter">
+                            <f:variable name="url" value="https://twitter.com/intent/tweet?text={page.title}&url=URL{page_url}" />
+                        </f:case>
+                        <f:case value="WhatsApp">
+                            <f:variable name="url" value="https://web.whatsapp.com/send?text={page_url}" />
+                        </f:case>
+                        <f:case value="Xing">
+                            <f:variable name="url" value="https://www.xing.com/spi/shares/new?url={page_url}" />
+                        </f:case>
+                    </f:switch>
+                    <f:variable name="platform_lower" value="{platform -> f:format.case(mode: 'lower')}" />
+                    <a href="{url}" target="_blank" class="{platform_lower} mb-{settings.marginForButtons} mx-{settings.marginForButtons} tooltipthis{rounded}{mt}" title="{platform}"><i class="fab fa-{platform_lower}"></i></a>
+                </f:for>
+            </p>
+        </div>
+    </div>
+</f:if>

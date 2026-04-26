@@ -1044,6 +1044,15 @@
             <trans-unit id="tt_content.maskedimage.images.description">
                 <source>Second image a PNG to be used as a mask. It has to have a transparent or semi-transparent area. Black indicates fully transparent.</source>
             </trans-unit>
+            <trans-unit id="tt_content.magnifierglass">
+                <source>Magnifier glass</source>
+            </trans-unit>
+            <trans-unit id="tt_content.magnifierglass.description">
+                <source>Image magnifier glass.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.magnifierglass.image">
+                <source>Image</source>
+            </trans-unit>
             <trans-unit id="tt_content.socialbuttons">
                 <source>Social buttons</source>
             </trans-unit>

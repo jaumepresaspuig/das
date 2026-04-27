@@ -702,6 +702,12 @@
             <trans-unit id="tt_content.sidece.button_color">
                 <source>Button color</source>
             </trans-unit>
+            <trans-unit id="tt_content.randomce">
+                <source>Random CE</source>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce.description">
+                <source>Container of Text &amp; Media content elements to be shown randomly.</source>
+            </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>
             </trans-unit>

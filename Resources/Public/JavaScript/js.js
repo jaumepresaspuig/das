@@ -27,6 +27,7 @@ jQuery(document).ready(function ($) {
     initPolls();
     initMagnifierGlass();
     initSideCe();
+    initRandomCe();
 
 });
 
@@ -229,6 +230,17 @@ function sendPoll(poll, answer) {
         const $resp = $("<div>").html(data);
         const html = $resp.find("#tx-das-content-poll-board-" + pollx).html() || "";
         $("#tx-das-content-poll-board-" + pollx).html(html);
+    });
+}
+
+function initRandomCe() {
+    $(".tx-das-content-randomce").each(function() {
+        let pid = $(this).attr("data-id");
+        $.get(window.location.href, { no_cache: 1, gclid: pid }).done(function( data ) {
+            const $resp = $("<div>").html(data);
+            const html = $resp.find("#tx-das-content-randomce-" + pid).html() || "";
+            $("#tx-das-content-randomce-" + pid).html(html);
+        });
     });
 }
 

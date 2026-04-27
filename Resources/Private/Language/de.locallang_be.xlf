@@ -932,8 +932,16 @@
                 <target>Schaltflächfarbe</target>
             </trans-unit>
             <trans-unit id="tt_content.sidece.description">
-                <source>Container of content elements to be shown in a sliding side column.</source>
+                <source>Container of content elements to be shown in a slidingside column.</source>
                 <target>Container von Inhaltselementen, die in einer schwenkbaren Seitenleiste angezeigt werden sollen.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce">
+                <source>Random CE</source>
+                <target>Zufälliges CE</target>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce.description">
+                <source>Container of Text &amp; Media content elements to be shown randomly.</source>
+                <target>Container von Text &amp; Medien-Inhaltselementen, die zufällig angezeigt werden sollen.</target>
             </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>

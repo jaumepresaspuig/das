@@ -928,12 +928,20 @@
                 <target>Contenido lateral</target>
             </trans-unit>
             <trans-unit id="tt_content.sidece.description">
-                <source>Container of content elements to be shown in a slidingside column.</source>
-                <target>Contenedor de elementos de contenido que se mostrarán en una columna lateral deslizante.</target>
+                <source>Container of content elements to be shown in a sliding side column.</source>
+                <target>Contenedor de elementos de contenido que se mostrarán en una columna lateral.</target>
             </trans-unit>
             <trans-unit id="tt_content.sidece.button_color">
                 <source>Button color</source>
                 <target>Color del botón</target>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce">
+                <source>Random CE</source>
+                <target>Contenido aleatorio</target>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce.description">
+                <source>Container of Text &amp; Media content elements to be shown randomly.</source>
+                <target>Contenedor de elementos de contenido Texto y Medios que se mostrarán aleatoriamente.</target>
             </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>

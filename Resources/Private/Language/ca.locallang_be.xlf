@@ -935,6 +935,14 @@
                 <source>Button color</source>
                 <target>Color del botó</target>
             </trans-unit>
+            <trans-unit id="tt_content.randomce">
+                <source>Random CE</source>
+                <target>Contingut aleatori</target>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce.description">
+                <source>Container of Text &amp; Media content elements to be shown randomly.</source>
+                <target>Contenidor d'elements de contingut Text &amp; Mitjans per a ser mostrats aleatòriament.</target>
+            </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>
                 <target>Comptador</target>

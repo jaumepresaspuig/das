@@ -693,6 +693,15 @@
             <trans-unit id="tt_content.container.fixed_bg">
                 <source>Fixed background image</source>
             </trans-unit>
+            <trans-unit id="tt_content.sidece">
+                <source>Side CE</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.description">
+                <source>Container of content elements to be shown in a sliding side column.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.button_color">
+                <source>Button color</source>
+            </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>
             </trans-unit>

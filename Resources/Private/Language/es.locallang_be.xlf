@@ -923,6 +923,18 @@
                 <source>Fixed background image</source>
                 <target>Imagen de fondo fija</target>
             </trans-unit>
+            <trans-unit id="tt_content.sidece">
+                <source>Side CE</source>
+                <target>Contenido lateral</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.description">
+                <source>Container of content elements to be shown in a slidingside column.</source>
+                <target>Contenedor de elementos de contenido que se mostrarán en una columna lateral deslizante.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.button_color">
+                <source>Button color</source>
+                <target>Color del botón</target>
+            </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>
                 <target>Contador</target>

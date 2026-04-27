@@ -905,7 +905,7 @@
             </trans-unit>
             <trans-unit id="tt_content.container.description">
                 <source>Container of content elements grouped so they can share a common background and a set of classes and styles.</source>
-                <target>Contenidor d'elements de contingut agrupats per compartir un fons comú i un conjunt de classes i estils</target>
+                <target>Contenidor d'elements de contingut agrupats per compartir un fons comú i un conjunt de classes i estils.</target>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_color">
                 <source>Background color</source>
@@ -922,6 +922,18 @@
             <trans-unit id="tt_content.container.fixed_bg">
                 <source>Fixed background image</source>
                 <target>Imatge de fons fixa</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece">
+                <source>Side CE</source>
+                <target>Contingut lateral</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.description">
+                <source>Container of content elements to be shown in a sliding side column.</source>
+                <target>Contenidor d'elements de contingut per ser mostrats en una columna lateral lliscant.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.button_color">
+                <source>Button color</source>
+                <target>Color del botó</target>
             </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>

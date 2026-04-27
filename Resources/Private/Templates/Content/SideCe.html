@@ -1,0 +1,84 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="SideCe"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.sidece"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.sidece.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/SideCe.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+        />
+        <flux:field.select
+            name="button_color"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.sidece.button_color"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_primary.svg'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_secondary.svg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/bg_success.svg'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/bg_danger.svg'},
+                4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/bg_warning.svg'},
+                5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/bg_info.svg'},
+                6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
+                7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
+            }"
+            default="primary"
+            showIconTable="1"
+        />
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column
+                    colPos="91"
+                    name="ce1"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:content"
+                >
+                    <flux:form.variable name="maxitems" value="1"/>
+                </flux:grid.column>
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+             <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.sidece.button_color" />
+                </th>
+                <td>
+                    <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{button_color}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{button_color}')}" class="d-inline-block me-1 mb-1" />
+                </td>
+             </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/SideCe" arguments="{_all}" />
+</f:section>

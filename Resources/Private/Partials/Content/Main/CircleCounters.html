@@ -1,0 +1,33 @@
+<f:if condition="{items}">
+    <div class="tx-das-content-circlecounters tx-das-content-circlecounters-layout-{layout}" data-id="c{record.uid}">
+        <f:if condition="{columns} == 1">
+            <f:then>
+                <f:for each="{items}" as="item" iteration="iteration">
+                    <f:render section="circlecounter" arguments="{_all}" />
+                </f:for>
+            </f:then>
+            <f:else>
+                <f:variable name="colss" value="{12 / columns}" />
+                <f:variable name="counter" value="0" />
+                <f:for each="{items -> v:iterator.chunk(count: '{columns}')}" as="itemx" iteration="iteration">
+                    <div class="row">
+                        <f:for each="{itemx}" as="item" iteration="iterationx">
+                            <f:variable name="cols" value="{f:if(condition: '{iterationx.total} < {columns}', then: '{12 / iterationx.total}', else: '{colss}')}" />
+                            <div class="col-md-{cols} mb-2 d-flex text-center flex-column align-items-center">
+                                <f:variable name="counter" value="{counter + 1}" />
+                                <f:render section="circlecounter" arguments="{_all}" />
+                            </div>
+                        </f:for>
+                    </div>
+                </f:for>
+            </f:else>
+        </f:if>
+    </div>
+</f:if>
+
+<f:section name="circlecounter">
+     <div{f:if(condition: '{animate}', then: ' data-aos="fade-up" data-aos-delay="{counter}00"')}>
+        <div class="circlecounter mb-2" id="circlecounter_{record.uid}_{counter}" data-percentage="{item.percentage}" data-seconds="0" data-color="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" data-bs-toggle="circle-progress"></div>
+        <p>{item.title}</p>
+    </div>
+</f:section>

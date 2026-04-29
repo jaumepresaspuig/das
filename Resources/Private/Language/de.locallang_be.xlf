@@ -63,6 +63,10 @@
                 <source>Color</source>
                 <target>Farbe</target>
             </trans-unit>
+            <trans-unit id="default_color">
+                <source>Default color</source>
+                <target>Standardfarbe</target>
+            </trans-unit>
             <trans-unit id="none">
                 <source>None</source>
                 <target>Keine</target>
@@ -596,8 +600,8 @@
                 <target>Icon aus dem Font Awesome Icon-Set</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.icon.description">
-                <source>For example: fab fa-typo3, fas fa-exclamation</source>
-                <target>Zum Beispiel: fab fa-typo3, fas fa-exclamation</target>
+                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</source>
+                <target>Zum Beispiel: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.size">
                 <source>Size</source>
@@ -1263,10 +1267,6 @@
                 <source>Interval between items (seconds)</source>
                 <target>Intervall zwischen Elementen (Sekunden)</target>
             </trans-unit>
-            <trans-unit id="default_color">
-                <source>Default color</source>
-                <target>Standardfarbe</target>
-            </trans-unit>
             <trans-unit id="show_rating_stars">
                 <source>Show rating stars</source>
                 <target>Bewertung anzeigen (Sterne)</target>
@@ -1295,13 +1295,37 @@
                 <source>Text</source>
                 <target>Text</target>
             </trans-unit>
-            <trans-unit id="color">
-                <source>Color</source>
-                <target>Farbe</target>
-            </trans-unit>
             <trans-unit id="tt_content.quotes.image">
                 <source>Image</source>
                 <target>Bild</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters">
+                <source>Circle counters</source>
+                <target>Kreis-Zähler</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.description">
+                <source>Gallery of circle counters.</source>
+                <target>Galerie der Kreis-Zähler.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.animate_counters">
+                <source>Animate counters</source>
+                <target>Kreis-Zähler animieren</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.counters">
+                <source>Counters</source>
+                <target>Kreis-Zähler</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.counter">
+                <source>Counter</source>
+                <target>Kreis-Zähler</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.title">
+                <source>Title</source>
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.percentage">
+                <source>Percentage</source>
+                <target>Prozentsatz</target>
             </trans-unit>
             <trans-unit id="tt_content.newsticker">
                 <source>Newsticker</source>
@@ -1734,10 +1758,6 @@
             <trans-unit id="tt_content.pricingtable.link">
                 <source>Link</source>
                 <target>Link</target>
-            </trans-unit>
-            <trans-unit id="color">
-                <source>Color</source>
-                <target>Farbe</target>
             </trans-unit>
             <trans-unit id="tt_content.alert">
                 <source>Alert</source>

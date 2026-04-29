@@ -63,6 +63,10 @@
                 <source>Color</source>
                 <target>Color</target>
             </trans-unit>
+            <trans-unit id="default_color">
+                <source>Default color</source>
+                <target>Color per defecte</target>
+            </trans-unit>
             <trans-unit id="none">
                 <source>None</source>
                 <target>Cap</target>
@@ -596,8 +600,8 @@
                 <target>Icona del conjunt d'icones Font Awesome</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.icon.description">
-                <source>For example: fab fa-typo3, fas fa-exclamation</source>
-                <target>Per exemple: fab fa-typo3, fas fa-exclamation</target>
+                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</source>
+                <target>Per exemple: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.size">
                 <source>Size</source>
@@ -905,7 +909,7 @@
             </trans-unit>
             <trans-unit id="tt_content.container.description">
                 <source>Container of content elements grouped so they can share a common background and a set of classes and styles.</source>
-                <target>Contenidor d'elements de contingut agrupats per compartir un fons comú i un conjunt de classes i estils</target>
+                <target>Contenidor d'elements de contingut agrupats per compartir un fons comú i un conjunt de classes i estils.</target>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_color">
                 <source>Background color</source>
@@ -922,6 +926,26 @@
             <trans-unit id="tt_content.container.fixed_bg">
                 <source>Fixed background image</source>
                 <target>Imatge de fons fixa</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece">
+                <source>Side CE</source>
+                <target>Contingut lateral</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.description">
+                <source>Container of content elements to be shown in a sliding side column.</source>
+                <target>Contenidor d'elements de contingut per ser mostrats en una columna lateral lliscant.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.button_color">
+                <source>Button color</source>
+                <target>Color del botó</target>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce">
+                <source>Random CE</source>
+                <target>Contingut aleatori</target>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce.description">
+                <source>Container of Text &amp; Media content elements to be shown randomly.</source>
+                <target>Contenidor d'elements de contingut Text &amp; Mitjans per a ser mostrats aleatòriament.</target>
             </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>
@@ -1243,10 +1267,6 @@
                 <source>Interval between items (seconds)</source>
                 <target>Interval entre elements (segons)</target>
             </trans-unit>
-            <trans-unit id="default_color">
-                <source>Default color</source>
-                <target>Color per defecte</target>
-            </trans-unit>
             <trans-unit id="show_rating_stars">
                 <source>Show rating stars</source>
                 <target>Mostra estrelles d'avaluació</target>
@@ -1282,6 +1302,34 @@
             <trans-unit id="tt_content.quotes.image">
                 <source>Image</source>
                 <target>Imatge</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters">
+                <source>Circle counters</source>
+                <target>Comptadors en cercle</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.description">
+                <source>Gallery of circle counters.</source>
+                <target>Galeria de comptadors en cercle.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.animate_counters">
+                <source>Animate counters</source>
+                <target>Anima els comptadors</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.counters">
+                <source>Counters</source>
+                <target>Comptadors</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.counter">
+                <source>Counter</source>
+                <target>Comptador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.title">
+                <source>Title</source>
+                <target>Títol</target>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.percentage">
+                <source>Percentage</source>
+                <target>Percentatge</target>
             </trans-unit>
             <trans-unit id="tt_content.newsticker">
                 <source>News ticker</source>
@@ -1642,10 +1690,6 @@
             <trans-unit id="tt_content.pricingtable.link">
                 <source>Link</source>
                 <target>Enllaç</target>
-            </trans-unit>
-            <trans-unit id="color">
-                <source>Color</source>
-                <target>Color</target>
             </trans-unit>
             <trans-unit id="tt_content.alert">
                 <source>Alert</source>

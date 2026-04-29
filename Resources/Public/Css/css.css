@@ -955,6 +955,46 @@ audio {
     }
 }
 
+/* Side CE */
+
+.tx-das-content-sidece {
+    position: fixed;
+    top: calc(50% + 50px);
+    right: -500px;
+    transform: translateX(100%);
+    transform: translateY(-50%);
+    width: 500px;
+    max-width: calc(100% - 70px);
+    z-index: 100;
+    background-color: #fff;
+    transition: 0.25s;
+}
+
+.tx-das-content-sidece.shadow {
+    width: 500px;
+    max-width: calc(100% - 70px);
+}
+
+.tx-das-content-sidece.open {
+    right: 0;
+}
+
+html[data-bs-theme="dark"] {
+    .tx-das-content-sidece {
+        background-color: #212529;
+    }
+}
+
+.tx-das-content-sidece-button {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    transform: rotate(-90deg) translateX(-50%);
+    transform-origin: left bottom;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
 /* bg */
 
 .bg-primary-vignete {

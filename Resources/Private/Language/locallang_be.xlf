@@ -42,9 +42,6 @@
             <trans-unit id="extra_fields">
                 <source>Enable extra fields</source>
             </trans-unit>
-            <trans-unit id="color">
-                <source>Color</source>
-            </trans-unit>
             <trans-unit id="none">
                 <source>None</source>
             </trans-unit>
@@ -448,7 +445,7 @@
                 <source>Icon from the Font Awesome icon set</source>
             </trans-unit>
             <trans-unit id="pages.fontawesome.icon.description">
-                <source>For example: fab fa-typo3, fas fa-exclamation</source>
+                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</source>
             </trans-unit>
             <trans-unit id="pages.fontawesome.size">
                 <source>Size</source>
@@ -693,6 +690,21 @@
             <trans-unit id="tt_content.container.fixed_bg">
                 <source>Fixed background image</source>
             </trans-unit>
+            <trans-unit id="tt_content.sidece">
+                <source>Side CE</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.description">
+                <source>Container of content elements to be shown in a sliding side column.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.sidece.button_color">
+                <source>Button color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce">
+                <source>Random CE</source>
+            </trans-unit>
+            <trans-unit id="tt_content.randomce.description">
+                <source>Container of Text &amp; Media content elements to be shown randomly.</source>
+            </trans-unit>
             <trans-unit id="tt_content.counter">
                 <source>Counter</source>
             </trans-unit>
@@ -933,9 +945,6 @@
             <trans-unit id="tt_content.quotes.interval">
                 <source>Interval between items (seconds)</source>
             </trans-unit>
-            <trans-unit id="default_color">
-                <source>Default color</source>
-            </trans-unit>
             <trans-unit id="show_rating_stars">
                 <source>Show rating stars</source>
             </trans-unit>
@@ -957,11 +966,29 @@
             <trans-unit id="tt_content.quotes.text">
                 <source>Text</source>
             </trans-unit>
-            <trans-unit id="color">
-                <source>Color</source>
-            </trans-unit>
             <trans-unit id="tt_content.quotes.image">
                 <source>Image</source>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters">
+                <source>Circle counters</source>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.description">
+                <source>Gallery of circle counters.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.animate_counters">
+                <source>Animate counters</source>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.counters">
+                <source>Counters</source>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.counter">
+                <source>Counter</source>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="tt_content.circlecounters.percentage">
+                <source>Percentage</source>
             </trans-unit>
             <trans-unit id="tt_content.newsticker">
                 <source>News ticker</source>
@@ -1021,7 +1048,7 @@
                 <source>Disposition</source>
             </trans-unit>
             <trans-unit id="tt_content.beforeafterimage.disposition.h">
-                <source>Horitzontal</source>
+                <source>Horizontal</source>
             </trans-unit>
             <trans-unit id="tt_content.beforeafterimage.disposition.v">
                 <source>Vertical</source>
@@ -1235,6 +1262,9 @@
             </trans-unit>
             <trans-unit id="color">
                 <source>Color</source>
+            </trans-unit>
+            <trans-unit id="default_color">
+                <source>Default color</source>
             </trans-unit>
             <trans-unit id="tt_content.alert">
                 <source>Alert</source>

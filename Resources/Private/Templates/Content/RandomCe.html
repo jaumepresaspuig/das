@@ -1,0 +1,60 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="RandomCe"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.randomce"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.randomce.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/RandomCe.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+        />
+        <flux:grid>
+            <flux:grid.row>
+                <flux:grid.column
+                    colPos="91"
+                    name="ce1"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:content"
+                >
+                    <flux:form.variable name="allowedContentTypes" value="textmedia"/>
+                </flux:grid.column>
+            </flux:grid.row>
+        </flux:grid>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/RandomCe" arguments="{_all}" />
+</f:section>

@@ -1,0 +1,46 @@
+
+<f:variable name="dateandtime" value="{f:replace(value: '{date_and_time}', search: 'T', replace: ' ')}" />
+<f:variable name="dateandtime" value="{f:replace(value: '{dateandtime}', search: 'Z', replace: '')}" />
+<div class="tx-das-content-countdown tx-das-content-countdown-layout-{layout} text-center" data-dateandtime="{dateandtime}">
+    <table class="m-auto">
+        <tbody>
+            <tr>
+                <td class="days text-center">
+                    <span>&nbsp;</span>
+                    <br />
+                    <small><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:days" /></small>
+                </td>
+                <td class="text-center">
+                    <span>:</span>
+                    <br />
+                    <small>&nbsp;</small>
+                </td>
+                <td class="hours text-center">
+                    <span>&nbsp;</span>
+                    <br />
+                    <small><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:hours" /></small>
+                </td>
+                <td class="text-center">
+                    <span>:</span>
+                    <br />
+                    <small>&nbsp;</small>
+                </td>
+                <td class="minutes text-center">
+                    <span>&nbsp;</span>
+                    <br />
+                    <small><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:minutes" /></small>
+                </td>
+                <td class="text-center">
+                    <span>:</span>
+                    <br />
+                    <small>&nbsp;</small>
+                </td>
+                <td class="seconds text-center">
+                    <span>&nbsp;</span>
+                    <br />
+                    <small><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:seconds" /></small>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

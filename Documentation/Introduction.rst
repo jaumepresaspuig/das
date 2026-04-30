@@ -34,7 +34,7 @@ What's in Das?
 
 * **Page layouts**: A set of page layouts that cover any possible scenario.
 
-* **Content elements**: A set of more than twenty ready to use content elements.
+* **Content elements**: A set of more than thirty ready to use content elements.
 
 * **New fields in content elements**: New fields added to enhance all type of content elements.
 

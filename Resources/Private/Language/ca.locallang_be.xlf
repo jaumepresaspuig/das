@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
-  <file source-language="en" target-language="ca" datatype="plaintext" original="messages" date="2026-03-04T16:25:19Z" product-name="das">
-    <header/>
+    <file source-language="en" target-language="ca" datatype="plaintext" original="messages" date="2026-03-04T16:25:19Z" product-name="das">
+        <header/>
         <body>
             <trans-unit id="checked.0">
                 <source>No</source>
@@ -1002,6 +1002,18 @@
             <trans-unit id="tt_content.counter.counter_color">
                 <source>Counter color</source>
                 <target>Color del comptador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown">
+                <source>Countdown</source>
+                <target>Comptador enrere</target>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown.description">
+                <source>Countdown timer.</source>
+                <target>Comptador enrere.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown.date_and_time">
+                <source>Date and time</source>
+                <target>Data i hora</target>
             </trans-unit>
             <trans-unit id="tt_content.faqs">
                 <source>Faq's</source>
@@ -2110,6 +2122,22 @@
             <trans-unit id="format_datetime">
                 <source>%B %e, %Y %H:%M</source>
                 <target>%e %B del %Y, %H:%M</target>
+            </trans-unit>
+            <trans-unit id="days">
+                <source>Day/s</source>
+                <target>Dia/es</target>
+            </trans-unit>
+            <trans-unit id="hours">
+                <source>Hour/s</source>
+                <target>Hora/es</target>
+            </trans-unit>
+            <trans-unit id="minutes">
+                <source>Minute/s</source>
+                <target>Minut/s</target>
+            </trans-unit>
+            <trans-unit id="seconds">
+                <source>Second/s</source>
+                <target>Segon/s</target>
             </trans-unit>
         </body>
     </file>

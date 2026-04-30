@@ -1003,6 +1003,18 @@
                 <source>Counter color</source>
                 <target>Farbauswahl für Zähler</target>
             </trans-unit>
+            <trans-unit id="tt_content.countdown">
+                <source>Countdown</source>
+                <target>Countdown</target>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown.description">
+                <source>Countdown timer.</source>
+                <target>Countdown-Timer.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown.date_and_time">
+                <source>Date and time</source>
+                <target>Datum und Uhrzeit</target>
+            </trans-unit>
             <trans-unit id="tt_content.faqs">
                 <source>Faq's</source>
                 <target>Häufig gestellte Fragen</target>
@@ -2106,6 +2118,22 @@
             <trans-unit id="format_datetime">
                 <source>%B %e, %Y %H:%M</source>
                 <target>%e. %B %Y, %H:%M</target>
+            </trans-unit>
+            <trans-unit id="days">
+                <source>Day/s</source>
+                <target>Tag/e</target>
+            </trans-unit>
+            <trans-unit id="hours">
+                <source>Hour/s</source>
+                <target>Stunde/n</target>
+            </trans-unit>
+            <trans-unit id="minutes">
+                <source>Minute/s</source>
+                <target>Minute/n</target>
+            </trans-unit>
+            <trans-unit id="seconds">
+                <source>Second/s</source>
+                <target>Sekunde/n</target>
             </trans-unit>
         </body>
     </file>

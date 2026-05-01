@@ -175,6 +175,10 @@
                 <source>Animate images</source>
                 <target>Animar imágenes</target>
             </trans-unit>
+            <trans-unit id="gallery_masonry">
+                <source>Masonry gallery</source>
+                <target>Galería Masonry</target>
+            </trans-unit>
             <trans-unit id="hide_caption">
                 <source>Hide caption for the thumbnails</source>
                 <target>Ocultar título para las miniaturas</target>

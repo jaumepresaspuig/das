@@ -183,6 +183,10 @@
                 <source>Animate images</source>
                 <target>Bilder animieren</target>
             </trans-unit>
+            <trans-unit id="gallery_masonry">
+                <source>Masonry gallery</source>
+                <target>Masonry-Galerie</target>
+            </trans-unit>
             <trans-unit id="hide_caption">
                 <source>Hide caption for the thumbnails</source>
                 <target>Bildunterschrift für die Miniaturansichten ausblenden</target>

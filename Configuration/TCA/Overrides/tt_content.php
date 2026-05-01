@@ -22,6 +22,20 @@ $tempColumns = [
         'config' => [
             'type' => 'check',
             'renderType' => 'checkboxToggle'
+        ],
+    ],
+    'tx_das_gallerymasonry' => [
+        'label' => $languageFilePrefix . 'gallery_masonry',
+        'displayCond' => [
+            'AND' => [
+                'FIELD:imageorient:<:10',
+                'FIELD:imagecols:>:1',
+                'FIELD:tx_das_imageratio:=:'
+            ]
+        ],
+        'config' => [
+            'type' => 'check',
+            'renderType' => 'checkboxToggle'
         ]
     ],
     'tx_das_hidecaption' => [
@@ -418,7 +432,8 @@ $tempColumns = [
             'minitems' => 1,
             'maxitems' => 1,
             'default' => '4x3',
-        ]
+        ],
+        'onChange' => 'reload',
     ],
     'tx_das_columns' => [
         'label' => $languageFilePrefix . 'columns',
@@ -708,6 +723,7 @@ ExtensionManagementUtility::addFieldsToPalette(
     'tx_das_imageratio',
 );
 
+
 ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'gallerySettings',
@@ -726,6 +742,13 @@ ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'gallerySettings',
     'tx_das_order1',
+    'after:tx_das_imageratio'
+);
+
+ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'gallerySettings',
+    'tx_das_gallerymasonry',
     'after:tx_das_imageratio'
 );
 
@@ -790,6 +813,7 @@ ExtensionManagementUtility::addToAllTCAtypes(
 );
 
 $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['imageorient']['onChange'] = 'reload';
+$GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['imagecols']['onChange'] = 'reload';
 $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['image_zoom']['onChange'] = 'reload';
 
 $TCA['tt_content']['columns']['header']['l10n_mode'] = '';

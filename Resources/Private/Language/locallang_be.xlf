@@ -129,6 +129,9 @@
             <trans-unit id="gallery_animate">
                 <source>Animate images</source>
             </trans-unit>
+            <trans-unit id="gallery_masonry">
+                <source>Masonry gallery</source>
+            </trans-unit>
             <trans-unit id="hide_caption">
                 <source>Hide caption for the thumbnails</source>
             </trans-unit>

@@ -52,29 +52,32 @@
     <f:variable name="gallery_width" value="{f:if(condition: '{data.imageorient} >= 25', then: '{gallery_width}', else: '12')}" />
     <f:variable name="gallery_id" value="{f:if(condition: '{data.tx_das_pagegallery}', then: 'p{data.pid}', else: 'c{data.uid}')}" />
     <div class="ce-type-textmedia-gallery {settings.layoutGalleryClasses.gallery.{data.imageorient}} col-md-{gallery_width}{f:if(condition: '{data.imageorient} >= 25', then: ' pl-0 pr-0')}{f:if(condition: '{data.imageorient} == 25 && {data.tx_das_order1}', then: ' mobile-order-1')}" id="gallery-{data.uid}">
-        <f:switch expression="{data.imagecols}">
-            <f:case value="3">
-                <f:variable name="colclass" value="col-12 col-sm-6 col-md-4" />
-            </f:case>
-            <f:case value="4">
-                <f:variable name="colclass" value="col-12 col-sm-6 col-md-3" />
-            </f:case>
-            <f:case value="5">
-                <f:variable name="colclass" value="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2_4" />
-            </f:case>
-            <f:case value="6">
-                <f:variable name="colclass" value="col-12 col-sm-6 col-md-4 col-lg-3 col-lg-2" />
-            </f:case>
-            <f:defaultCase>
-                <f:variable name="colclass" value="col-12 col-sm-6" />
-            </f:defaultCase>
-        </f:switch>
         <f:if condition="{data.imageorient} < 10 && {data.imagecols} > 1 && {data.tx_das_gallerymasonry}">
             <f:then>
                 <v:page.header name="tx-das-masonry">
                     <script src="{f:uri.resource(path:'EXT:das/Resources/Public/JavaScript/masonry.min.js')}"></script>
                 </v:page.header>
-                <div class="row" data-masonry='{"percentPosition": true }'>
+                <f:switch expression="{data.imagecols}">
+                    <f:case value="1">
+                        <f:variable name="colclass" value="col-12" />
+                    </f:case>
+                    <f:case value="3">
+                        <f:variable name="colclass" value="col-12 col-sm-6 col-md-4" />
+                    </f:case>
+                    <f:case value="4">
+                        <f:variable name="colclass" value="col-12 col-sm-6 col-md-3" />
+                    </f:case>
+                    <f:case value="5">
+                        <f:variable name="colclass" value="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2_4" />
+                    </f:case>
+                    <f:case value="6">
+                        <f:variable name="colclass" value="col-12 col-sm-6 col-md-4 col-lg-3 col-lg-2" />
+                    </f:case>
+                    <f:defaultCase>
+                        <f:variable name="colclass" value="col-12 col-sm-6" />
+                    </f:defaultCase>
+                </f:switch>
+                <div class="row" data-masonry='{"percentPosition": true}'>
                     <f:for each="{gallery.rows}" as="row">
                         <f:for each="{row.columns}" as="column">
                             <f:if condition="{column.media}">
@@ -91,7 +94,7 @@
                     <div class="row">
                         <f:for each="{row.columns}" as="column">
                             <f:if condition="{column.media}">
-                                <div class="{colclass}">
+                                <div class="col-sm">
                                     <f:render partial="Media/Type" arguments="{file: column.media, data: data, settings: settings, width: width, height: height, gallery_id: gallery_id}" />
                                 </div>
                             </f:if>

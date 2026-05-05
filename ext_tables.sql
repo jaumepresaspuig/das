@@ -45,6 +45,7 @@ CREATE TABLE tt_content (
     tx_das_stylemenu smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_pagegallery smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_poll text DEFAULT '' NOT NULL,
+    tx_das_gallerymasonry smallint(1) unsigned DEFAULT '0' NOT NULL,
 );
 
 #

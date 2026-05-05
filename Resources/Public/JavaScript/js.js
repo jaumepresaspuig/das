@@ -29,6 +29,8 @@ jQuery(document).ready(function ($) {
     initSideCe();
     initRandomCe();
     initCircleCounters();
+    initCountdowns();
+    initMasonryGalleries();
 
 });
 
@@ -290,6 +292,43 @@ function initSideCe() {
     });
 }
 
+function initCountdowns() {
+    $(".tx-das-content-countdown").each(function() {
+        var $el = $(this),
+            dateAndTime = $el.attr("data-dateandtime"),
+            targetDate = new Date(dateAndTime);
+        setInterval(function() {
+            var now = new Date(),
+                distance = targetDate - now,
+                days = Math.floor(distance / (1000 * 60 * 60 * 24)),
+                hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+                minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+                seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            if (hours < 10) hours = "0" + hours;
+            if (minutes < 10) minutes = "0" + minutes;
+            if (seconds < 10) seconds = "0" + seconds;
+            $el.find("td.days span").text(days);
+            $el.find("td.hours span").text(hours);
+            $el.find("td.minutes span").text(minutes);
+            $el.find("td.seconds span").text(seconds);
+        }, 1000);
+    });
+}
+
+function initMasonryGalleries() {
+    $(".tx-das-content-masonrygallery").each(function() {
+        var galleryId = $(this).attr("id");
+        var msnry = new Masonry("#" + galleryId + " .masonry-grid", {
+            itemSelector: ".masonry-grid-item",
+            columnWidth: ".masonry-grid-sizer",
+            percentPosition: true
+        });
+        imagesLoaded("#" + galleryId + " .masonry-grid", function() {
+            msnry.layout();
+        });
+    });
+}
+
 function initCircleCounters() {
     var testInterval = {};
     $(".tx-das-content-circlecounters .circlecounter").each(function() {
@@ -314,7 +353,7 @@ function initCircleCounters() {
             }, 30);
         })(id, $el);
     });
-};
+}
 
 (function ($) {
     $.fn.circleProgress = function (options, params) {

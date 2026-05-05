@@ -995,6 +995,26 @@ html[data-bs-theme="dark"] {
     border-bottom-right-radius: 0;
 }
 
+/* Counterdown */
+
+.tx-das-content-countdown table {
+    opacity: 0.5;
+}
+
+.tx-das-content-countdown table td span {
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 0 0.2rem;
+}
+
+@media (min-width: 768px) {
+    .tx-das-content-countdown table td span {
+        font-size: 4rem;
+        line-height: 4rem;
+        padding: 0 0.6rem;
+    }
+}
+
 /* bg */
 
 .bg-primary-vignete {
@@ -1035,6 +1055,41 @@ html[data-bs-theme="dark"] {
 
 .shadow {
     width: calc(100% - 2rem);
+}
+
+/* Cols */
+
+.col-2_4 {
+    flex: 0 0 auto;
+    width: 20%;
+}
+
+@media (min-width: 576px) {
+    .col-sm-2_4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-2_4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-2_4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .col-xl-2_4 {
+        flex: 0 0 auto;
+        width: 20%;
+    }
 }
 
 /* */

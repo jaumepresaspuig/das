@@ -129,6 +129,9 @@
             <trans-unit id="gallery_animate">
                 <source>Animate images</source>
             </trans-unit>
+            <trans-unit id="gallery_masonry">
+                <source>Masonry gallery</source>
+            </trans-unit>
             <trans-unit id="hide_caption">
                 <source>Hide caption for the thumbnails</source>
             </trans-unit>
@@ -747,6 +750,15 @@
             <trans-unit id="tt_content.counter.counter_color">
                 <source>Counter color</source>
             </trans-unit>
+            <trans-unit id="tt_content.countdown">
+                <source>Countdown</source>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown.description">
+                <source>Countdown timer.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown.date_and_time">
+                <source>Date and time</source>
+            </trans-unit>
             <trans-unit id="tt_content.faqs">
                 <source>Faq's</source>
             </trans-unit>
@@ -1030,7 +1042,7 @@
                 <source>Audio player</source>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">
-                <source>Audio player</source>
+                <source>Audio player.</source>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.files">
                 <source>Audio files</source>
@@ -1580,6 +1592,18 @@
             </trans-unit>
             <trans-unit id="format_datetime">
                 <source>%B %e, %Y %H:%M</source>
+            </trans-unit>
+            <trans-unit id="days">
+                <source>Day/s</source>
+            </trans-unit>
+            <trans-unit id="hours">
+                <source>Hour/s</source>
+            </trans-unit>
+            <trans-unit id="minutes">
+                <source>Minute/s</source>
+            </trans-unit>
+            <trans-unit id="seconds">
+                <source>Second/s</source>
             </trans-unit>
         </body>
     </file>

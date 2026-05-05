@@ -22,6 +22,20 @@ $tempColumns = [
         'config' => [
             'type' => 'check',
             'renderType' => 'checkboxToggle'
+        ],
+    ],
+    'tx_das_gallerymasonry' => [
+        'label' => $languageFilePrefix . 'gallery_masonry',
+        'displayCond' => [
+            'AND' => [
+                'FIELD:imageorient:<:10',
+                'FIELD:imagecols:>:1',
+                'FIELD:tx_das_imageratio:=:'
+            ]
+        ],
+        'config' => [
+            'type' => 'check',
+            'renderType' => 'checkboxToggle'
         ]
     ],
     'tx_das_hidecaption' => [
@@ -418,7 +432,8 @@ $tempColumns = [
             'minitems' => 1,
             'maxitems' => 1,
             'default' => '4x3',
-        ]
+        ],
+        'onChange' => 'reload',
     ],
     'tx_das_columns' => [
         'label' => $languageFilePrefix . 'columns',
@@ -665,7 +680,9 @@ $GLOBALS['TCA']['tt_content']['palettes']['bg'] = [
     'showitem' => '
         tx_das_bgpredefinedcolor,
         tx_das_bgcolor,
+        --linebreak--,
         tx_das_bgimage,
+        --linebreak--,
         tx_das_bgoverlay,
         tx_das_bgoverlayvignete,
         tx_das_fixedbg
@@ -678,6 +695,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['fontawesome'] = [
         tx_das_faicon;' . $languageFilePrefix . 'pages.fontawesome.icon,
         tx_das_fasize;' . $languageFilePrefix . 'pages.fontawesome.size,
         tx_das_fapredefinedcolor;' . $languageFilePrefix . 'pages.fontawesome.predefined_color,
+        --linebreak--,
         tx_das_facolor;' . $languageFilePrefix . 'pages.fontawesome.color,
         tx_das_faposition;' . $languageFilePrefix . 'pages.fontawesome.position
     '
@@ -708,6 +726,7 @@ ExtensionManagementUtility::addFieldsToPalette(
     'tx_das_imageratio',
 );
 
+
 ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'gallerySettings',
@@ -726,6 +745,13 @@ ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'gallerySettings',
     'tx_das_order1',
+    'after:tx_das_imageratio'
+);
+
+ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'gallerySettings',
+    'tx_das_gallerymasonry',
     'after:tx_das_imageratio'
 );
 
@@ -790,6 +816,7 @@ ExtensionManagementUtility::addToAllTCAtypes(
 );
 
 $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['imageorient']['onChange'] = 'reload';
+$GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['imagecols']['onChange'] = 'reload';
 $GLOBALS['TCA']['tt_content']['types']['textmedia']['columnsOverrides']['image_zoom']['onChange'] = 'reload';
 
 $TCA['tt_content']['columns']['header']['l10n_mode'] = '';

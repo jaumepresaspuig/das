@@ -183,6 +183,10 @@
                 <source>Animate images</source>
                 <target>Anima les imatges</target>
             </trans-unit>
+            <trans-unit id="gallery_masonry">
+                <source>Masonry gallery</source>
+                <target>Galeria Masonry</target>
+            </trans-unit>
             <trans-unit id="hide_caption">
                 <source>Hide caption for the thumbnails</source>
                 <target>Amaga el peu de foto a les miniatures</target>
@@ -1003,6 +1007,18 @@
                 <source>Counter color</source>
                 <target>Color del comptador</target>
             </trans-unit>
+            <trans-unit id="tt_content.countdown">
+                <source>Countdown</source>
+                <target>Comptador enrere</target>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown.description">
+                <source>Countdown timer.</source>
+                <target>Comptador enrere.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.countdown.date_and_time">
+                <source>Date and time</source>
+                <target>Data i hora</target>
+            </trans-unit>
             <trans-unit id="tt_content.faqs">
                 <source>Faq's</source>
                 <target>Preguntes freqüents</target>
@@ -1384,7 +1400,7 @@
                 <target>Reproductor d'àudio</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">
-                <source>Audio player</source>
+                <source>Audio player.</source>
                 <target>Reproductor d'àudio.</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.files">
@@ -2110,6 +2126,22 @@
             <trans-unit id="format_datetime">
                 <source>%B %e, %Y %H:%M</source>
                 <target>%e %B del %Y, %H:%M</target>
+            </trans-unit>
+            <trans-unit id="days">
+                <source>Day/s</source>
+                <target>Dia/es</target>
+            </trans-unit>
+            <trans-unit id="hours">
+                <source>Hour/s</source>
+                <target>Hora/es</target>
+            </trans-unit>
+            <trans-unit id="minutes">
+                <source>Minute/s</source>
+                <target>Minut/s</target>
+            </trans-unit>
+            <trans-unit id="seconds">
+                <source>Second/s</source>
+                <target>Segon/s</target>
             </trans-unit>
         </body>
     </file>

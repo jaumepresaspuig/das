@@ -1400,7 +1400,7 @@
                 <target>Reproductor d'àudio</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">
-                <source>Audio player</source>
+                <source>Audio player.</source>
                 <target>Reproductor d'àudio.</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.files">

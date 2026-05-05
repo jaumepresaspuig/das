@@ -680,7 +680,9 @@ $GLOBALS['TCA']['tt_content']['palettes']['bg'] = [
     'showitem' => '
         tx_das_bgpredefinedcolor,
         tx_das_bgcolor,
+        --linebreak--,
         tx_das_bgimage,
+        --linebreak--,
         tx_das_bgoverlay,
         tx_das_bgoverlayvignete,
         tx_das_fixedbg
@@ -693,6 +695,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['fontawesome'] = [
         tx_das_faicon;' . $languageFilePrefix . 'pages.fontawesome.icon,
         tx_das_fasize;' . $languageFilePrefix . 'pages.fontawesome.size,
         tx_das_fapredefinedcolor;' . $languageFilePrefix . 'pages.fontawesome.predefined_color,
+        --linebreak--,
         tx_das_facolor;' . $languageFilePrefix . 'pages.fontawesome.color,
         tx_das_faposition;' . $languageFilePrefix . 'pages.fontawesome.position
     '

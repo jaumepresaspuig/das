@@ -1042,7 +1042,7 @@
                 <source>Audio player</source>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">
-                <source>Audio player</source>
+                <source>Audio player.</source>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.files">
                 <source>Audio files</source>

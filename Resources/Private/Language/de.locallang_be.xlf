@@ -1392,7 +1392,7 @@
                 <target>Link</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer">
-                <source>Audio player</source>
+                <source>Audio player.</source>
                 <target>Audioplayer</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">

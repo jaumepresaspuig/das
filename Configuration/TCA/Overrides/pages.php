@@ -208,12 +208,15 @@ $GLOBALS['TCA']['pages']['palettes']['page'] = [
     'displayCond' => 'FIELD:is_siteroot:REQ:true',
     'showitem' => '
         tx_das_logo,
+        --linebreak--,
         tx_das_bstheme,
         tx_das_navigationlevels,
         tx_das_searchpageuid,
+        --linebreak--,
         tx_das_structureddata,
         tx_das_showlanguageselector,
         tx_das_showpagetitle,
+        --linebreak--,
         tx_das_breadcrumb,
         tx_das_breadcrumbseparator
     '

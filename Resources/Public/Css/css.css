@@ -1006,6 +1006,20 @@ html[data-bs-theme="dark"] {
     }
 }
 
+/* Pricing table */
+
+.tx-das-content-pricingtable .ribbon {
+    position: absolute;
+    top: 9px;
+    right: -68px;
+    transform: rotate(45deg);
+    width: 179px;
+    z-index: 1;
+    font-size: 14px;
+    background: #ccc;
+    color: #000;
+}
+
 /* bg */
 
 .bg-primary-vignete {

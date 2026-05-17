@@ -1695,6 +1695,10 @@
                 <source>Link</source>
                 <target>Enlace</target>
             </trans-unit>
+            <trans-unit id="tt_content.pricingtable.ribbon">
+                <source>Ribbon text</source>
+                <target>Texto de la cinta</target>
+            </trans-unit>
             <trans-unit id="color">
                 <source>Color</source>
                 <target>Color</target>

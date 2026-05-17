@@ -1707,6 +1707,10 @@
                 <source>Link</source>
                 <target>Enllaç</target>
             </trans-unit>
+            <trans-unit id="tt_content.pricingtable.ribbon">
+                <source>Ribbon text</source>
+                <target>Text de la cinta</target>
+            </trans-unit>
             <trans-unit id="tt_content.alert">
                 <source>Alert</source>
                 <target>Alerta</target>

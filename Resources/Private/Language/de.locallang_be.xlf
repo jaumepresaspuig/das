@@ -171,6 +171,10 @@
                 <source>Extra large: desktops (&gt;=1200px)</source>
                 <target>Extra groß: Desktops (&gt;=1200px)</target>
             </trans-unit>
+            <trans-unit id="preheader">
+                <source>Pre header</source>
+                <target>Vorkopf</target>
+            </trans-unit>
             <trans-unit id="html_in_header">
                 <source>Move the content to the html header</source>
                 <target>Bewege den Inhalt in den HTML-Kopf</target>
@@ -318,6 +322,10 @@
             <trans-unit id="center">
                 <source>Center</source>
                 <target>Zentrieren</target>
+            </trans-unit>
+            <trans-unit id="middle">
+                <source>Middle</source>
+                <target>Mitte</target>
             </trans-unit>
             <trans-unit id="top">
                 <source>Top</source>
@@ -1699,6 +1707,14 @@
                 <source>Button</source>
                 <target>Schaltfläche</target>
             </trans-unit>
+            <trans-unit id="tt_content.pricingtable.link">
+                <source>Link</source>
+                <target>Link</target>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.ribbon">
+                <source>Ribbon text</source>
+                <target>Schleife</target>
+            </trans-unit>
             <trans-unit id="tt_content.calendar.views.day">
                 <source>Day</source>
                 <target>Tag</target>
@@ -1770,14 +1786,6 @@
             <trans-unit id="tt_content.textincolumns">
                 <source>Show text in columns</source>
                 <target>Text in Spalten anzeigen</target>
-            </trans-unit>
-            <trans-unit id="tt_content.pricingtable.link">
-                <source>Link</source>
-                <target>Link</target>
-            </trans-unit>
-            <trans-unit id="tt_content.pricingtable.ribbon">
-                <source>Ribbon text</source>
-                <target>Ribbon-Text</target>
             </trans-unit>
             <trans-unit id="tt_content.alert">
                 <source>Alert</source>

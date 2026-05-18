@@ -120,6 +120,9 @@
             <trans-unit id="hidden.xl">
                 <source>Extra large: desktops (&gt;=1200px)</source>
             </trans-unit>
+            <trans-unit id="preheader">
+                <source>Pre header</source>
+            </trans-unit>
             <trans-unit id="html_in_header">
                 <source>Move the content to the html header</source>
             </trans-unit>
@@ -1271,6 +1274,9 @@
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.link">
                 <source>Link</source>
+            </trans-unit>
+            <trans-unit id="tt_content.pricingtable.ribbon">
+                <source>Ribbon text</source>
             </trans-unit>
             <trans-unit id="color">
                 <source>Color</source>

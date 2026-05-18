@@ -171,6 +171,10 @@
                 <source>Extra large: desktops (>=1200px)</source>
                 <target>Molt gran: escriptoris (>=1200px)</target>
             </trans-unit>
+            <trans-unit id="preheader">
+                <source>Pre header</source>
+                <target>Precapçalera</target>
+            </trans-unit>
             <trans-unit id="html_in_header">
                 <source>Move the content to the html header</source>
                 <target>Mou el contingut a la capçalera HTML</target>
@@ -318,6 +322,10 @@
             <trans-unit id="center">
                 <source>Center</source>
                 <target>Centre</target>
+            </trans-unit>
+            <trans-unit id="middle">
+                <source>Middle</source>
+                <target>Al mig</target>
             </trans-unit>
             <trans-unit id="top">
                 <source>Top</source>

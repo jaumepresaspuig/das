@@ -163,6 +163,10 @@
                 <source>Extra large: desktops (&gt;=1200px)</source>
                 <target>Extra grande: escritorios (&gt;=1200px)</target>
             </trans-unit>
+            <trans-unit id="preheader">
+                <source>Pre header</source>
+                <target>Precabecera</target>
+            </trans-unit>
             <trans-unit id="html_in_header">
                 <source>Move the content to the html header</source>
                 <target>Mover el contenido a la cabecera html</target>
@@ -310,6 +314,10 @@
             <trans-unit id="center">
                 <source>Center</source>
                 <target>Centro</target>
+            </trans-unit>
+            <trans-unit id="middle">
+                <source>Middle</source>
+                <target>Al medio</target>
             </trans-unit>
             <trans-unit id="top">
                 <source>Top</source>

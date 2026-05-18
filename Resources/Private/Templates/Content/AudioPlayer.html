@@ -33,13 +33,18 @@
             }"
             showIconTable="1"
         />
-        <flux:field.inline.fal
-            name="assets"
+        <flux:form.sheet
+            name="itemstab"
             label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.files"
-            allowedExtensions="mp3,wav,ogg,aac,webm"
-            minItems="1"
-            maxItems="99"
-        />
+        >
+            <flux:field.inline.fal
+                name="assets"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.files"
+                allowedExtensions="mp3,wav,ogg,aac,webm"
+                minItems="1"
+                maxItems="99"
+            />
+        </flux:form.sheet>
     </flux:form>
 </f:section>
 

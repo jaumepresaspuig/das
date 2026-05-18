@@ -19,6 +19,7 @@ CREATE TABLE pages (
 # Table structure for table 'tt_content'
 #
 CREATE TABLE tt_content (
+    tx_das_preheader varchar(255) DEFAULT '' NOT NULL,
     tx_das_htmlinheader smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_galleryanimate smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_order1 smallint(1) unsigned DEFAULT '0' NOT NULL,
@@ -45,7 +46,7 @@ CREATE TABLE tt_content (
     tx_das_stylemenu smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_pagegallery smallint(1) unsigned DEFAULT '0' NOT NULL,
     tx_das_poll text DEFAULT '' NOT NULL,
-    tx_das_gallerymasonry smallint(1) unsigned DEFAULT '0' NOT NULL,
+    tx_das_gallerymasonry smallint(1) unsigned DEFAULT '0' NOT NULL
 );
 
 #

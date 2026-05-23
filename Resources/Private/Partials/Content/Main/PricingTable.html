@@ -31,7 +31,7 @@
 
 <f:section name="price">
     <f:variable name="color" value="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" />
-    <div class="card mb-4 rounded-3 w-100 text-center shadow-sm {color}" style="width: 18rem; display: flex; flex-direction: column; justify-content: space-between;"{f:if(condition: '!{carousel} && {animate}', then: ' data-aos="fade-up" data-aos-delay="{counter}00"')}>
+    <div class="card mb-4 rounded-3 w-100 text-center shadow-sm {color} overflow-hidden" style="width: 18rem; display: flex; flex-direction: column; justify-content: space-between;"{f:if(condition: '!{carousel} && {animate}', then: ' data-aos="fade-up" data-aos-delay="{counter}00"')}>
         <div class="card-header py-3{f:if(condition: '{color}', then: ' text-white bg-{color} border-{color}')}" id="tabs-{record.uid}-{item.uid}">
             <h4 class="my-0 fw-normal{f:if(condition: '{color} == \'info\' || {color} == \'light\' || {color} == \'warning\'', then: ' text-black')}">
                 {item.title}

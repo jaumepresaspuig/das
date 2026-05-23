@@ -1,5 +1,5 @@
 lib.gclid = TEXT
-lib.value =
+lib.gclid.value =
 
 [request && traverse(request.getQueryParams(), 'gclid') > 0]
     config {

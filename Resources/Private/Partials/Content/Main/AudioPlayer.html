@@ -1,4 +1,7 @@
+{namespace das=Jp\Das\ViewHelpers}
+
 <div class="tx-das-content-audioplayer tx-das-content-audioplayer-layout-{layout}">
+    <f:variable name="cover_default" value="data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
     <v:page.resources.fal table="tt_content" field="assets" record="{record}" as="files">
         <f:for each="{files}" as="file" iteration="i">   
             <div class="audioplayer-li">
@@ -6,16 +9,18 @@
                     <button class="audioplayer__control js-control"><div class="audioplayer__control-icon"></div></button>
                     <h4 class="audioplayer__title">{file.title}<br /><span><f:format.nl2br>{file.description}</f:format.nl2br></span></h4>
                     <audio preload="auto"><source src="{file.url}" /></audio>
+                    <f:variable name="cover" value="" />
                     <f:if condition="{file.tx_das_cover}">
-                        <f:then>
-                            <v:page.resources.fal table="sys_file_metadata" field="tx_das_cover" uid="{file.file}" as="covers">
-                                <img src="{f:uri.image(src: '{covers.0.id}', width: '520c', height: '520c', absolute: 1)}" width="520" height="520" alt="{file.title}" class="audioplayer__cover" />
-                            </v:page.resources.fal>
-                        </f:then>
-                        <f:else>
-                            <img src="data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" width="520" height="520" alt="" class="audioplayer__cover" />
-                        </f:else>
+                        <v:page.resources.fal table="sys_file_metadata" field="tx_das_cover" uid="{file.file}" as="covers">
+                            <f:if condition="{covers.0.id}">
+                                <f:variable name="cover" value="{f:uri.image(src: '{covers.0.id}', width: '300c', height: '300c', absolute: 1)}" />
+                            </f:if>
+                        </v:page.resources.fal>
                     </f:if>
+                    <f:if condition="!{cover} && {getcovers}">
+                        <f:variable name="cover" value="{das:getCover(description: '{file.description}')}" />
+                    </f:if>
+                    <img src="{f:if(condition: '{cover}', then: '{cover}', else: '{cover_default}')}" width="300" height="300" alt="{file.title}" class="audioplayer__cover" />
                 </div>
             </div>
         </f:for>

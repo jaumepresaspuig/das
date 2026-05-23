@@ -1053,6 +1053,12 @@
             <trans-unit id="tt_content.audioplayer.color">
                 <source>Player color</source>
             </trans-unit>
+            <trans-unit id="tt_content.audioplayer.getcovers">
+                <source>Get covers</source>
+            </trans-unit>
+            <trans-unit id="tt_content.audioplayer.getcovers.description">
+                <source>Get covers from iTunes when missing from the files.</source>
+            </trans-unit>
             <trans-unit id="tt_content.beforeafterimage">
                 <source>Before/after image</source>
             </trans-unit>

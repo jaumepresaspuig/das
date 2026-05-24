@@ -15,7 +15,7 @@
         </f:if>
         <f:if condition="{data.bodytext}">
             <f:then>
-                <div class="col-md-{bodytext_width}{f:if(condition: '{data.tx_das_textincolumns} > 1', then: ' text-column text-column-{data.tx_das_textincolumns}')}{f:if(condition: '{data.imageorient} == 25 && {data.tx_das_order1}', then: ' mobile-order-2')}">
+                <div class="col-md-{bodytext_width}{f:if(condition: '{data.tx_das_textincolumns} > 1', then: ' text-column text-column-{data.tx_das_textincolumns}')}{f:if(condition: '{data.imageorient} == 25 && {data.tx_das_order1}', then: ' order-last order-md-first')}">
                     <f:if condition="{gallery.position.noWrap}">
                         <f:render partial="Header/All" arguments="{_all}" />
                     </f:if>

@@ -9,11 +9,11 @@
     <v:content.render column="4" />
 </div>
 <div class="container pt-4">
-    <div class="row">    
-        <aside id="leftColumn" class="col-md-3 gx-0">
+    <div class="row">
+        <aside id="leftColumn" class="col-md-3 gx-0 order-last order-md-first">
             <v:content.render column="1" slide="{InteriorLsSlide}" />
         </aside>
-        <div id="pageContent" class="col-md-9 gx-0">
+        <div id="pageContent" class="col-md-9 gx-0 order-first order-md-last">
             <f:if condition="{home.tx_das_breadcrumb} == 2">
                 <f:render partial="Breadcrumb" arguments="{_all}" />
             </f:if>

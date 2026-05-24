@@ -7,7 +7,7 @@ Templates and partials of these TYPO3 content elements and plug-ins: File links,
 
 Content elements have been enhanced with some extra fields.
 
-The *Headlines* palette has now some extra fields to add a Font Awesome icon to the header, allowing to choose its size, position and color.
+The *Headlines* palette has now some extra fields for a Pre header and to add a Font Awesome icon to the header, allowing to choose its size, position and color.
 
 The :guilabel:`Appearance` tab has now some extra fields and new predefined options for the field Layout:
 

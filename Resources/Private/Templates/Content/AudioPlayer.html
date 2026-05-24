@@ -33,13 +33,24 @@
             }"
             showIconTable="1"
         />
-        <flux:field.inline.fal
-            name="assets"
-            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.files"
-            allowedExtensions="mp3,wav,ogg,aac,webm"
-            minItems="1"
-            maxItems="99"
+        <flux:field.checkbox
+            name="getcovers"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.getcovers"
+            description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.getcovers.description"
+            config="{renderType: 'checkboxToggle'}"
         />
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.files"
+        >
+            <flux:field.inline.fal
+                name="assets"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.files"
+                allowedExtensions="mp3,wav,ogg,aac,webm"
+                minItems="1"
+                maxItems="99"
+            />
+        </flux:form.sheet>
     </flux:form>
 </f:section>
 
@@ -67,6 +78,14 @@
                 </th>
                 <td>
                     <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{color}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{color}')}" class="d-inline-block me-1 mb-1" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.audioplayer.getcovers" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: getcovers}" />
                 </td>
             </tr>
             <tr>

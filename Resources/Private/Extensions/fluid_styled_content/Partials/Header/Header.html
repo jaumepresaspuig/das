@@ -2,6 +2,9 @@
     <f:variable name="h" value="{f:if(condition: '{data.header_layout} == 0', then: '{settings.defaultHeaderType}', else: '{data.header_layout}')}" />
     <f:variable name="faposition" value="{f:if(condition: '{data.tx_das_faposition} == \'left\' || {data.tx_das_faposition} == \'top\'', then: '1', else: '2')}" />
     <h{h} class="{f:if(condition: '{data.header_position}', then: 'text-{data.header_position} ')}{data.tx_das_textcolor}">
+        <f:if condition="{data.tx_das_preheader}">
+            <span class="fs-6">{data.tx_das_preheader}</span><br />
+        </f:if>
         <f:render section="faicon" arguments="{data: '{data}', position: '1', faposition: faposition}" />
         <f:link.typolink parameter="{data.header_link}">
             {data.header}

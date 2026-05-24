@@ -54,21 +54,22 @@
 
 <f:if condition="{home.tx_das_structureddata} == 'json'">
     <f:variable name="menu" value="{v:page.rootline() -> v:iterator.reverse()}" />
+    <f:variable name="bracket" value="{f:format.raw(value: '{')}" />
     <v:page.header name="tx-das-schema-json">
 <script type="application/ld+json">
-<f:format.raw value="{" />
+{bracket}
 "@context": "http://schema.org",
 "@type": "breadcrumbList",
 "itemListElement": [
-<f:for each="{menu}" as="page" iteration="iteration"> <f:format.raw value="{" />
+<f:for each="{menu}" as="page" iteration="iteration"> {bracket}
     "@type": "ListItem",
     "position": {iteration.cycle},
-    "item": <f:format.raw value="{" />
+    "item": {bracket}
         "@id": "{f:uri.typolink(parameter: '{page.uid}', absolute: 1)}",
         "name": "{page.title}"
     }
 }<f:if condition="!{iteration.isLast}">,</f:if>
-</f:for>}]
+</f:for>]
 }
 </script>
     </v:page.header>

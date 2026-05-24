@@ -65,15 +65,6 @@ h1 {
     }
 }
 
-@media (max-width: 767px) {
-    .mobile-order-1 {
-        order: 1;
-    }
-    .mobile-order-2 {
-        order: 2;
-    }
-}
-
 #pageHeader {
     background: #fff
 }
@@ -1013,6 +1004,20 @@ html[data-bs-theme="dark"] {
         line-height: 4rem;
         padding: 0 0.6rem;
     }
+}
+
+/* Pricing table */
+
+.tx-das-content-pricingtable .ribbon {
+    position: absolute;
+    top: 9px;
+    right: -68px;
+    transform: rotate(45deg);
+    width: 179px;
+    z-index: 1;
+    font-size: 14px;
+    background: #ccc;
+    color: #000;
 }
 
 /* bg */

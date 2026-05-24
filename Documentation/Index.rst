@@ -18,6 +18,9 @@ Das
 :Author:
    Jaume Presas Puig
 
+:Homepage:
+   `https://das.jaumepresaspuig.com <https://das.jaumepresaspuig.com>`__.
+
 :License:
    This document is published under the `Open Publication License <https://www.opencontent.org/openpub/>`__.
 

@@ -8,6 +8,13 @@ $languageFilePrefix = 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:'
 $imgPath = 'EXT:das/Resources/Public/Images/';
 
 $tempColumns = [
+    'tx_das_preheader' => [
+        'label' => $languageFilePrefix . 'preheader',
+        'config' => [
+            'type' => 'input',
+            'eval' => 'trim'
+        ]
+    ],
     'tx_das_htmlinheader' => [
         'displayCond' => 'FIELD:CType:=:html',
         'label' => $languageFilePrefix . 'html_in_header',
@@ -92,7 +99,8 @@ $tempColumns = [
         'label' => $languageFilePrefix . 'custom_classes',
         'config' => [
             'type' => 'input',
-            'size' => '80'
+            'size' => '80',
+            'eval' => 'trim'
         ]
     ],
     'tx_das_customstyles' => [
@@ -692,18 +700,25 @@ $GLOBALS['TCA']['tt_content']['palettes']['bg'] = [
 $GLOBALS['TCA']['tt_content']['palettes']['fontawesome'] = [
     'label' => $languageFilePrefix . 'pages.fontawesome',
     'showitem' => '
-        tx_das_faicon;' . $languageFilePrefix . 'pages.fontawesome.icon,
-        tx_das_fasize;' . $languageFilePrefix . 'pages.fontawesome.size,
-        tx_das_fapredefinedcolor;' . $languageFilePrefix . 'pages.fontawesome.predefined_color,
+        tx_das_faicon,
+        tx_das_fasize,
+        tx_das_fapredefinedcolor,
         --linebreak--,
-        tx_das_facolor;' . $languageFilePrefix . 'pages.fontawesome.color,
-        tx_das_faposition;' . $languageFilePrefix . 'pages.fontawesome.position
+        tx_das_facolor,
+        tx_das_faposition
     '
 ];
-
 ExtensionManagementUtility::addTCAcolumns(
     'tt_content',
     $tempColumns
+);
+
+ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'headers',
+    'tx_das_preheader,
+    --linebreak--',
+    'before:header'
 );
 
 ExtensionManagementUtility::addToAllTCAtypes(
@@ -716,43 +731,14 @@ ExtensionManagementUtility::addToAllTCAtypes(
 ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'gallerySettings',
-    'tx_das_gallerywidth',
-    'after:imageorient'
-);
-
-ExtensionManagementUtility::addFieldsToPalette(
-    'tt_content',
-    'gallerySettings',
-    'tx_das_imageratio',
-);
-
-
-ExtensionManagementUtility::addFieldsToPalette(
-    'tt_content',
-    'gallerySettings',
-    'tx_das_galleryanimate',
-    'after:tx_das_imageratio'
-);
-
-ExtensionManagementUtility::addFieldsToPalette(
-    'tt_content',
-    'gallerySettings',
-    'tx_das_hidecaption',
-    ''
-);
-
-ExtensionManagementUtility::addFieldsToPalette(
-    'tt_content',
-    'gallerySettings',
-    'tx_das_order1',
-    'after:tx_das_imageratio'
-);
-
-ExtensionManagementUtility::addFieldsToPalette(
-    'tt_content',
-    'gallerySettings',
-    'tx_das_gallerymasonry',
-    'after:tx_das_imageratio'
+    'tx_das_gallerywidth,
+    tx_das_imageratio,
+    tx_das_galleryanimate,
+    tx_das_hidecaption,
+    tx_das_order1,
+    tx_das_gallerymasonry
+    ',
+    'after:imagecols'
 );
 
 ExtensionManagementUtility::addFieldsToPalette(

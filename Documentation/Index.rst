@@ -19,7 +19,7 @@ Das
    Jaume Presas Puig
 
 :Homepage:
-   `https://das.jaumepresaspuig.com <https://das.jaumepresaspuig.com>`__.
+   `https://das.jaumepresas.com <https://das.jaumepresas.com>`__.
 
 :License:
    This document is published under the `Open Publication License <https://www.opencontent.org/openpub/>`__.

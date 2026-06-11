@@ -135,6 +135,10 @@
                 <source>Drop shadow</source>
                 <target>Sombra</target>
             </trans-unit>
+            <trans-unit id="headerlike">
+                <source>Header like</source>
+                <target>Cabecera como</target>
+            </trans-unit>
             <trans-unit id="visibility">
                 <source>Visibility</source>
                 <target>Visibilidad</target>
@@ -172,8 +176,8 @@
                 <target>Mover el contenido a la cabecera html</target>
             </trans-unit>
             <trans-unit id="html_in_header.description">
-                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend</source>
-                <target>Hará que todos los campos de la pestaña de Apariencia sean ignorados al renderizar el frontend</target>
+                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend.</source>
+                <target>Hará que todos los campos de la pestaña de Apariencia sean ignorados al renderizar el frontend.</target>
             </trans-unit>
             <trans-unit id="gallery_animate">
                 <source>Animate images</source>
@@ -288,8 +292,8 @@
                 <target>Color de fondo</target>
             </trans-unit>
             <trans-unit id="bg_color.description">
-                <source>Overwrites background predefined color</source>
-                <target>Sobrescribe el color de fondo por defecto</target>
+                <source>Overwrites background predefined color.</source>
+                <target>Sobrescribe el color de fondo por defecto.</target>
             </trans-unit>
             <trans-unit id="bg_image">
                 <source>Background image or video</source>
@@ -412,7 +416,7 @@
                 <target>Página de búsqueda</target>
             </trans-unit>
             <trans-unit id="pages.search_page_uid.description">
-                <source>To enable search box (it requires the extension indexed_search)</source>
+                <source>To enable search box (it requires the extension indexed_search).</source>
                 <target>Habilitar el campo de búsqueda (requiere la extensión indexed_search)</target>
             </trans-unit>
             <trans-unit id="pages.navigation_levels">
@@ -460,8 +464,8 @@
                 <target>Mostrar el camino de navegación</target>
             </trans-unit>
             <trans-unit id="pages.breadcrumb.description">
-                <source>In all pages except home</source>
-                <target>En todas las páginas excepto en la de inicio</target>
+                <source>In all pages except home.</source>
+                <target>En todas las páginas excepto en la de inicio.</target>
             </trans-unit>
             <trans-unit id="pages.breadcrumb.0">
                 <source>Don't show it</source>
@@ -484,8 +488,8 @@
                 <target>Mostrar título de la página</target>
             </trans-unit>
             <trans-unit id="pages.show_page_title.description">
-                <source>H1, in all pages except home</source>
-                <target>H1, en todas las páginas excepto en la de inicio</target>
+                <source>H1, in all pages except home.</source>
+                <target>H1, en todas las páginas excepto en la de inicio.</target>
             </trans-unit>
             <trans-unit id="pages.backend_layout">
                 <source>Page Layout</source>
@@ -604,8 +608,8 @@
                 <target>Icono del conjunto de iconos Font Awesome</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.icon.description">
-                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</source>
-                <target>Por ejemplo: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</target>
+                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection).</source>
+                <target>Por ejemplo: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection).</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.size">
                 <source>Size</source>
@@ -620,8 +624,8 @@
                 <target>Color</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.color.description">
-                <source>Overrides the predefined color</source>
-                <target>Sustituye el color por defecto</target>
+                <source>Overrides the predefined color.</source>
+                <target>Sustituye el color por defecto.</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.position">
                 <source>Position</source>
@@ -1128,16 +1132,16 @@
                 <target>Abrirla en n segundos</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoopen.description">
-                <source>If 0, it opens once the page is loaded</source>
-                <target>Si es 0, se abre una vez que la página está cargada</target>
+                <source>If 0, it opens once the page is loaded.</source>
+                <target>Si es 0, se abre una vez que la página está cargada.</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose">
                 <source>Close it in n seconds after it has been opened</source>
                 <target>Cerrarla en n segundos después de haber sido abierta</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose.description">
-                <source>If 0, user has to close it</source>
-                <target>Si es 0, el usuario debe cerrarla</target>
+                <source>If 0, user has to close it.</source>
+                <target>Si es 0, el usuario debe cerrarla.</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.show_only_once">
                 <source>Show the modal window only once per user session</source>
@@ -1640,20 +1644,24 @@
                 <target>Etiqueta</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.glue">
-                <source>Character to separate fields (for example: , ; # |)</source>
-                <target>Carácter para separar campos (por ejemplo: , ; # |)</target>
-            </trans-unit>
-            <trans-unit id="tt_content.chart.glue.preview">
                 <source>Character to separate fields</source>
                 <target>Carácter para separar campos</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.glue.description">
+                <source>For example: , ; # |</source>
+                <target>Por ejemplo: , ; # |</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.file">
                 <source>File from where to import the data</source>
                 <target>Archivo del que importar los datos</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.data">
-                <source>Data (overwrites file)</source>
-                <target>Datos (sobrescribe el archivo)</target>
+                <source>Data</source>
+                <target>Datos</target>
+            </trans-unit>  
+            <trans-unit id="tt_content.chart.data.description">
+                <source>Overwrites file.</source>
+                <target>Sobrescribe el archivo.</target>
             </trans-unit>  
             <trans-unit id="tt_content.pricingtable">
                 <source>Pricing table</source>
@@ -1908,8 +1916,8 @@
                 <target>Mensaje de agradecimiento</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.thankyou_message.description">
-                <source>If empty: "Thank you for your participation!"</source>
-                <target>Si no se ha rellenado: "¡Gracias por tu participación!"</target>
+                <source>If empty: "Thank you for your participation!".</source>
+                <target>Si no se ha rellenado: "¡Gracias por tu participación!".</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.thankyou_message.placeholder">
                 <source>Thank you for your participation!</source>

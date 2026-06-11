@@ -665,6 +665,39 @@ $tempColumns = [
             'default' => '1',
         ]
     ],
+    'tx_das_headerlike' => [
+        'label' => $languageFilePrefix . 'headerlike',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                [
+                    'label' => '',
+                    'value' => ''
+                ],
+                [
+                    'label' => 'H1',
+                    'value' => 'h1'
+                ],
+                [
+                    'label' => 'H2',
+                    'value' => 'h2'
+                ],
+                [
+                    'label' => 'H3',
+                    'value' => 'h3'
+                ],
+                [
+                    'label' => 'H4',
+                    'value' => 'h4'
+                ],
+                [
+                    'label' => 'H5',
+                    'value' => 'h5'
+                ]
+            ]
+        ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['palettes']['visibility'] = [
@@ -719,6 +752,13 @@ ExtensionManagementUtility::addFieldsToPalette(
     'tx_das_preheader,
     --linebreak--',
     'before:header'
+);
+
+ExtensionManagementUtility::addFieldsToPalette(
+    'tt_content',
+    'headers',
+    'tx_das_headerlike',
+    'after:header_layout'
 );
 
 ExtensionManagementUtility::addToAllTCAtypes(

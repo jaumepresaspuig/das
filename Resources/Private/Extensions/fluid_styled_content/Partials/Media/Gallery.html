@@ -27,23 +27,23 @@
         <f:else>
             <f:switch expression="{data.tx_das_imageratio}">
                 <f:case value="16x9">
-                    <f:variable name="width" value="516c" />
-                    <f:variable name="height" value="282c" />
+                    <f:variable name="width" value="551c" />
+                    <f:variable name="height" value="310c" />
                 </f:case>
                 <f:case value="4x3">
-                    <f:variable name="width" value="516c" />
-                    <f:variable name="height" value="375c" />
+                    <f:variable name="width" value="551c" />
+                    <f:variable name="height" value="413c" />
                 </f:case>
                 <f:case value="1x1">
-                    <f:variable name="width" value="516c" />
-                    <f:variable name="height" value="516c" />
+                    <f:variable name="width" value="551c" />
+                    <f:variable name="height" value="551c" />
                 </f:case>
-                <f:case value="4x3">
-                    <f:variable name="width" value="375c" />
-                    <f:variable name="height" value="516c" />
+                <f:case value="3x4">
+                    <f:variable name="width" value="413c" />
+                    <f:variable name="height" value="551c" />
                 </f:case>
                 <f:defaultCase>
-                    <f:variable name="width" value="516" />
+                    <f:variable name="width" value="551" />
                     <f:variable name="height" value="" />
                 </f:defaultCase>
             </f:switch>

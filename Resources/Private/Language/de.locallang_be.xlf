@@ -143,6 +143,10 @@
                 <source>Drop shadow</source>
                 <target>Schlagschatten</target>
             </trans-unit>
+            <trans-unit id="headerlike">
+                <source>Header like</source>
+                <target>Header wie</target>
+            </trans-unit>
             <trans-unit id="visibility">
                 <source>Visibility</source>
                 <target>Sichtbarkeit</target>
@@ -180,8 +184,8 @@
                 <target>Bewege den Inhalt in den HTML-Kopf</target>
             </trans-unit>
             <trans-unit id="html_in_header.description">
-                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend</source>
-                <target>Alle Felder im Reiter „Aussehen“ werden beim Rendering des frontend ignoriert</target>
+                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend.</source>
+                <target>Alle Felder im Reiter „Aussehen“ werden beim Rendering des frontend ignoriert.</target>
             </trans-unit>
             <trans-unit id="gallery_animate">
                 <source>Animate images</source>
@@ -296,8 +300,8 @@
                 <target>Hintergrundfarbe</target>
             </trans-unit>
             <trans-unit id="bg_color.description">
-                <source>Overwrites background predefined color</source>
-                <target>Überschreibt die vordefinierte Hintergrundfarbe</target>
+                <source>Overwrites background predefined color.</source>
+                <target>Überschreibt die vordefinierte Hintergrundfarbe.</target>
             </trans-unit>
             <trans-unit id="bg_image">
                 <source>Background image or video</source>
@@ -323,13 +327,13 @@
                 <source>Center</source>
                 <target>Zentrieren</target>
             </trans-unit>
-            <trans-unit id="middle">
-                <source>Middle</source>
-                <target>Mitte</target>
-            </trans-unit>
             <trans-unit id="top">
                 <source>Top</source>
                 <target>Oben</target>
+            </trans-unit>
+            <trans-unit id="middle">
+                <source>Middle</source>
+                <target>Mitte</target>
             </trans-unit>
             <trans-unit id="bottom">
                 <source>Bottom</source>
@@ -420,8 +424,8 @@
                 <target>Suchseite</target>
             </trans-unit>
             <trans-unit id="pages.search_page_uid.description">
-                <source>To enable search box (it requires the extension indexed_search)</source>
-                <target>Um das Suchfeld zu aktivieren (es erfordert die Erweiterung indexed_search)</target>
+                <source>To enable search box (it requires the extension indexed_search).</source>
+                <target>Um das Suchfeld zu aktivieren (es erfordert die Erweiterung indexed_search).</target>
             </trans-unit>
             <trans-unit id="pages.navigation_levels">
                 <source>Number of navigation levels to show</source>
@@ -468,8 +472,8 @@
                 <target>Brotkrumen anzeigen</target>
             </trans-unit>
             <trans-unit id="pages.breadcrumb.description">
-                <source>In all pages except home</source>
-                <target>Auf allen Seiten außer der Startseite</target>
+                <source>In all pages except home.</source>
+                <target>Auf allen Seiten außer der Startseite.</target>
             </trans-unit>
             <trans-unit id="pages.breadcrumb.0">
                 <source>Don't show it</source>
@@ -493,7 +497,7 @@
             </trans-unit>
             <trans-unit id="pages.show_page_title.description">
                 <source>H1, in all pages except home</source>
-                <target>H1, auf allen Seiten außer der Startseite</target>
+                <target>H1, auf allen Seiten außer der Startseite.</target>
             </trans-unit>
             <trans-unit id="pages.backend_layout">
                 <source>Page Layout</source>
@@ -612,8 +616,8 @@
                 <target>Icon aus dem Font Awesome Icon-Set</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.icon.description">
-                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</source>
-                <target>Zum Beispiel: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</target>
+                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection).</source>
+                <target>Zum Beispiel: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection).</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.size">
                 <source>Size</source>
@@ -628,8 +632,8 @@
                 <target>Farbe</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.color.description">
-                <source>Overrides the predefined color</source>
-                <target>Überschreibt die vordefinierte Farbe</target>
+                <source>Overrides the predefined color.</source>
+                <target>Überschreibt die vordefinierte Farbe.</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.position">
                 <source>Position</source>
@@ -928,8 +932,8 @@
                 <target>Hintergrundfarbe</target>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_color.description">
-                <source>Overrides the background predefined color</source>
-                <target>Überschreibt die vordefinierte Hintergrundfarbe</target>
+                <source>Overrides the background predefined color.</source>
+                <target>Überschreibt die vordefinierte Hintergrundfarbe.</target>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_file">
                 <source>Background image or video</source>
@@ -1136,16 +1140,16 @@
                 <target>Öffnen Sie es in n Sekunden</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoopen.description">
-                <source>If 0, it opens once the page is loaded</source>
-                <target>Wenn 0, wird es geöffnet, sobald die Seite geladen ist</target>
+                <source>If 0, it opens once the page is loaded.</source>
+                <target>Wenn 0, wird es geöffnet, sobald die Seite geladen ist.</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose">
                 <source>Close it in n seconds after it has been opened</source>
                 <target>Schließen Sie es in n Sekunden, nachdem es geöffnet wurde</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose.description">
-                <source>If 0, user has to close it</source>
-                <target>Wenn 0, muss der Benutzer es schließen</target>
+                <source>If 0, user has to close it.</source>
+                <target>Wenn 0, muss der Benutzer es schließen.</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.show_only_once">
                 <source>Show the modal window only once per user session</source>
@@ -1248,8 +1252,8 @@
                 <target>Balkenfarbe</target>
             </trans-unit>
             <trans-unit id="tt_content.progressbars.area_color.description">
-                <source>Overrides the default one</source>
-                <target>Überschreibt die Standardfarbe</target>
+                <source>Overrides the default one.</source>
+                <target>Überschreibt die Standardfarbe.</target>
             </trans-unit>
             <trans-unit id="tt_content.progressbars.show_label">
                 <source>Show percentage inside the bars</source>
@@ -1472,7 +1476,7 @@
                 <target>Bildlupe</target>
             </trans-unit>
             <trans-unit id="tt_content.magnifierglass.description">
-                <source>Image magnifier glass</source>
+                <source>Image magnifier glass.</source>
                 <target>Bildlupe.</target>
             </trans-unit>
             <trans-unit id="tt_content.magnifierglass.image">
@@ -1648,20 +1652,24 @@
                 <target>Bezeichnung</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.glue">
-                <source>Character to separate fields (for example: , ; # |)</source>
-                <target>Zeichen zur Trennung von Feldern (z. B.: , ; # |)</target>
-            </trans-unit>
-            <trans-unit id="tt_content.chart.glue.preview">
                 <source>Character to separate fields</source>
                 <target>Zeichen zur Trennung von Feldern</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.glue.description">
+                <source>For example: , ; # |</source>
+                <target>Z. B.: , ; # |</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.file">
                 <source>File from where to import the data</source>
                 <target>Datei, aus der die Daten importiert werden sollen</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.data">
-                <source>Data (overwrites file)</source>
-                <target>Daten (überschreibt Datei)</target>
+                <source>Data</source>
+                <target>Daten</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.data.description">
+                <source>Overwrites file.</source>
+                <target>Überschreibt Datei.</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable">
                 <source>Pricing table</source>
@@ -1908,8 +1916,8 @@
                 <target>Dankesnachricht</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.thankyou_message.description">
-                <source>If empty: "Thank you for your participation!"</source>
-                <target>Falls leer: "Vielen Dank für Ihre Teilnahme!"</target>
+                <source>If empty: "Thank you for your participation!".</source>
+                <target>Falls leer: "Vielen Dank für Ihre Teilnahme!".</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.thankyou_message.placeholder">
                 <source>Thank you for your participation!</source>

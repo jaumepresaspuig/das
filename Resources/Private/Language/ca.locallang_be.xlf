@@ -143,6 +143,10 @@
                 <source>Drop shadow</source>
                 <target>Ombra projectada</target>
             </trans-unit>
+            <trans-unit id="headerlike">
+                <source>Header like</source>
+                <target>Capçalera com</target>
+            </trans-unit>
             <trans-unit id="visibility">
                 <source>Visibility</source>
                 <target>Visibilitat</target>
@@ -180,8 +184,8 @@
                 <target>Mou el contingut a la capçalera HTML</target>
             </trans-unit>
             <trans-unit id="html_in_header.description">
-                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend</source>
-                <target>Aquesta opció farà que tots els camps de la pestanya Aparença s'ignorin durant el renderitzat del frontend</target>
+                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend.</source>
+                <target>Aquesta opció farà que tots els camps de la pestanya Aparença s'ignorin durant el renderitzat del frontend.</target>
             </trans-unit>
             <trans-unit id="gallery_animate">
                 <source>Animate images</source>
@@ -296,8 +300,8 @@
                 <target>Color de fons</target>
             </trans-unit>
             <trans-unit id="bg_color.description">
-                <source>Overwrites background predefined color</source>
-                <target>Sobrescriu el color de fons per defecte</target>
+                <source>Overwrites background predefined color.</source>
+                <target>Sobrescriu el color de fons per defecte.</target>
             </trans-unit>
             <trans-unit id="bg_image">
                 <source>Background image or video</source>
@@ -420,8 +424,8 @@
                 <target>Pàgina de cerca</target>
             </trans-unit>
             <trans-unit id="pages.search_page_uid.description">
-                <source>To enable search box (it requires the extension indexed_search)</source>
-                <target>Habilitar el camp de cerca (requereix l'extensió indexed_search)</target>
+                <source>To enable search box (it requires the extension indexed_search).</source>
+                <target>Habilitar el camp de cerca (requereix l'extensió indexed_search).</target>
             </trans-unit>
             <trans-unit id="pages.navigation_levels">
                 <source>Number of navigation levels to show</source>
@@ -468,8 +472,8 @@
                 <target>Mostra la ruta de navegació</target>
             </trans-unit>
             <trans-unit id="pages.breadcrumb.description">
-                <source>In all pages except home</source>
-                <target>En totes les pàgines excepte la d'inici</target>
+                <source>In all pages except home.</source>
+                <target>En totes les pàgines excepte la d'inici.</target>
             </trans-unit>
             <trans-unit id="pages.breadcrumb.0">
                 <source>Don't show it</source>
@@ -493,7 +497,7 @@
             </trans-unit>
             <trans-unit id="pages.show_page_title.description">
                 <source>H1, in all pages except home</source>
-                <target>H1, a totes les pàgines excepte la d'inici</target>
+                <target>H1, a totes les pàgines excepte la d'inici.</target>
             </trans-unit>
             <trans-unit id="pages.backend_layout">
                 <source>Page Layout</source>
@@ -612,8 +616,8 @@
                 <target>Icona del conjunt d'icones Font Awesome</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.icon.description">
-                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</source>
-                <target>Per exemple: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</target>
+                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection).</source>
+                <target>Per exemple: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection).</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.size">
                 <source>Size</source>
@@ -628,8 +632,8 @@
                 <target>Color</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.color.description">
-                <source>Overrides the predefined color</source>
-                <target>Substitueix el color per defecte</target>
+                <source>Overrides the predefined color.</source>
+                <target>Substitueix el color per defecte.</target>
             </trans-unit>
             <trans-unit id="pages.fontawesome.position">
                 <source>Position</source>
@@ -713,7 +717,7 @@
             </trans-unit>
             <trans-unit id="tt_content.cards.description">
                 <source>Cards with image, title, subtitle, and optional link.</source>
-                <target>Targetes amb imatge, títol, subtítol i enllaç opcional</target>
+                <target>Targetes amb imatge, títol, subtítol i enllaç opcional.</target>
             </trans-unit>
             <trans-unit id="tt_content.cards.animate_cards">
                 <source>Animate cards</source>
@@ -845,7 +849,7 @@
             </trans-unit>
             <trans-unit id="tt_content.cols.description">
                 <source>Columns (up to six) where to place any content.</source>
-                <target>Columnes (fins a sis) per ubicar qualsevol contingut</target>
+                <target>Columnes (fins a sis) per ubicar qualsevol contingut.</target>
             </trans-unit>
             <trans-unit id="tt_content.cols.content">
                 <source>Content</source>
@@ -928,8 +932,8 @@
                 <target>Color de fons</target>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_color.description">
-                <source>Overrides the background predefined color</source>
-                <target>Sobrescriu el color de fons per defecte</target>
+                <source>Overrides the background predefined color.</source>
+                <target>Sobrescriu el color de fons per defecte.</target>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_file">
                 <source>Background image or video</source>
@@ -965,7 +969,7 @@
             </trans-unit>
             <trans-unit id="tt_content.counter.description">
                 <source>Animated counter from one number to another.</source>
-                <target>Comptador animat d'un número a un altre</target>
+                <target>Comptador animat d'un número a un altre.</target>
             </trans-unit>
             <trans-unit id="tt_content.counter.number_from">
                 <source>Number from</source>
@@ -1136,12 +1140,12 @@
                 <target>Obre-la en n segons</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoopen.description">
-                <source>If 0, it opens once the page is loaded</source>
-                <target>Si és 0, s'obre un cop la pàgina ha carregat</target>
+                <source>If 0, it opens once the page is loaded.</source>
+                <target>Si és 0, s'obre un cop la pàgina ha carregat.</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose">
-                <source>Close it in n seconds after it has been opened</source>
-                <target>Tanca-la en n segons després d'haver estat oberta</target>
+                <source>Close it in n seconds after it has been opened.</source>
+                <target>Tanca-la en n segons després d'haver estat oberta.</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose.description">
                 <source>If 0, user has to close it</source>
@@ -1248,8 +1252,8 @@
                 <target>Color de la barra</target>
             </trans-unit>
             <trans-unit id="tt_content.progressbars.area_color.description">
-                <source>Overrides the default one</source>
-                <target>Sobrescriu el per defecte</target>
+                <source>Overrides the default one.</source>
+                <target>Sobrescriu el per defecte.</target>
             </trans-unit>
             <trans-unit id="tt_content.progressbars.show_label">
                 <source>Show percentage inside the bars</source>
@@ -1460,7 +1464,7 @@
                 <target>Imatge enmascarada</target>
             </trans-unit>
             <trans-unit id="tt_content.maskedimage.description">
-                <source>Masked image</source>
+                <source>Masked image.</source>
                 <target>Imatge enmascarada.</target>
             </trans-unit>
             <trans-unit id="tt_content.maskedimage.images">
@@ -1476,7 +1480,7 @@
                 <target>Lupa d'augment</target>
             </trans-unit>
             <trans-unit id="tt_content.magnifierglass.description">
-                <source>Image magnifier glass</source>
+                <source>Image magnifier glass.</source>
                 <target>Lupa d'augment.</target>
             </trans-unit>
             <trans-unit id="tt_content.magnifierglass.image">
@@ -1600,8 +1604,8 @@
                 <target>Menú de categories</target>
             </trans-unit>
             <trans-unit id="tt_content.catsmenu.description">
-                <source>Categories menu</source>
-                <target>Menú de categories</target>
+                <source>Categories menu.</source>
+                <target>Menú de categories.</target>
             </trans-unit>
             <trans-unit id="tt_content.catsmenu.page_uid">
                 <source>Parent page</source>
@@ -1652,20 +1656,24 @@
                 <target>Etiqueta</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.glue">
-                <source>Character to separate fields (for example: , ; # |)</source>
-                <target>Caràcter per separar camps (per exemple: , ; # |)</target>
-            </trans-unit>
-            <trans-unit id="tt_content.chart.glue.preview">
                 <source>Character to separate fields</source>
                 <target>Caràcter per separar camps</target>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.glue.description">
+                <source>For example: , ; # |</source>
+                <target>Per exemple: , ; # |</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.file">
                 <source>File from where to import the data</source>
                 <target>Fitxer des del qual importar les dades</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.data">
-                <source>Data (overwrites file)</source>
-                <target>Dades (sobrescriptura del fitxer)</target>
+                <source>Data</source>
+                <target>Dades</target>
+            </trans-unit> 
+            <trans-unit id="tt_content.chart.data.description">
+                <source>Overwrites file.</source>
+                <target>Sobrescriptura del fitxer.</target>
             </trans-unit>  
             <trans-unit id="tt_content.pricingtable">
                 <source>Pricing table</source>
@@ -1896,8 +1904,8 @@
                 <target>Respostes</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.answers.description">
-                <source>One line for each answer</source>
-                <target>Una resposta per línia</target>
+                <source>One line for each answer.</source>
+                <target>Una resposta per línia.</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.color">
                 <source>Color for the buttons</source>
@@ -1908,8 +1916,8 @@
                 <target>Missatge d'agraiment</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.thankyou_message.description">
-                <source>If empty: "Thank you for your participation!"</source>
-                <target>Si no s'ha emplenat: "Gràcies per la vostra participació!"</target>
+                <source>If empty: "Thank you for your participation!".</source>
+                <target>Si no s'ha emplenat: "Gràcies per la vostra participació!".</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.thankyou_message.placeholder">
                 <source>Thank you for your participation!</source>

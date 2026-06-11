@@ -99,6 +99,9 @@
             <trans-unit id="drop_shadow">
                 <source>Drop shadow</source>
             </trans-unit>
+            <trans-unit id="headerlike">
+                <source>Header like</source>
+            </trans-unit>
             <trans-unit id="visibility">
                 <source>Visibility</source>
             </trans-unit>
@@ -127,7 +130,7 @@
                 <source>Move the content to the html header</source>
             </trans-unit>
             <trans-unit id="html_in_header.description">
-                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend</source>
+                <source>It will make all the fields in the Appearance tab to be ignored when rendering the frontend.</source>
             </trans-unit>
             <trans-unit id="gallery_animate">
                 <source>Animate images</source>
@@ -217,7 +220,7 @@
                 <source>Background color</source>
             </trans-unit>
             <trans-unit id="bg_color.description">
-                <source>Overwrites background predefined color</source>
+                <source>Overwrites background predefined color.</source>
             </trans-unit>
             <trans-unit id="bg_image">
                 <source>Background image or video</source>
@@ -236,6 +239,9 @@
             </trans-unit>
             <trans-unit id="center">
                 <source>Center</source>
+            </trans-unit>
+            <trans-unit id="middle">
+                <source>Middle</source>
             </trans-unit>
             <trans-unit id="top">
                 <source>Top</source>
@@ -307,7 +313,7 @@
                 <source>Search page</source>
             </trans-unit>
             <trans-unit id="pages.search_page_uid.description">
-                <source>To enable search box (it requires the extension indexed_search)</source>
+                <source>To enable search box (it requires the extension indexed_search).</source>
             </trans-unit>
             <trans-unit id="pages.navigation_levels">
                 <source>Number of navigation levels to show</source>
@@ -361,7 +367,7 @@
                 <source>Show page title</source>
             </trans-unit>
             <trans-unit id="pages.show_page_title.description">
-                <source>H1, in all pages except home</source>
+                <source>H1, in all pages except home.</source>
             </trans-unit>
             <trans-unit id="pages.backend_layout">
                 <source>Page Layout</source>
@@ -451,7 +457,7 @@
                 <source>Icon from the Font Awesome icon set</source>
             </trans-unit>
             <trans-unit id="pages.fontawesome.icon.description">
-                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection)</source>
+                <source>For example: fab fa-typo3, fas fa-exclamation (https://fontawesome.com/search?ic=free-collection).</source>
             </trans-unit>
             <trans-unit id="pages.fontawesome.size">
                 <source>Size</source>
@@ -463,7 +469,7 @@
                 <source>Color</source>
             </trans-unit>
             <trans-unit id="pages.fontawesome.color.description">
-                <source>Overrides the predefined color</source>
+                <source>Overrides the predefined color.</source>
             </trans-unit>
             <trans-unit id="pages.fontawesome.position">
                 <source>Position</source>
@@ -688,7 +694,7 @@
                 <source>Background color</source>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_color.description">
-                <source>Overrides the background predefined color</source>
+                <source>Overrides the background predefined color.</source>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_file">
                 <source>Background image or video</source>
@@ -844,13 +850,13 @@
                 <source>Open it in n seconds</source>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoopen.description">
-                <source>If 0, it opens once the page is loaded</source>
+                <source>If 0, it opens once the page is loaded.</source>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose">
                 <source>Close it in n seconds after it has been opened</source>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose.description">
-                <source>If 0, user has to close it</source>
+                <source>If 0, user has to close it.</source>
             </trans-unit>
             <trans-unit id="tt_content.modal.show_only_once">
                 <source>Show the modal window only once per user session</source>
@@ -928,7 +934,7 @@
                 <source>Bar color</source>
             </trans-unit>
             <trans-unit id="tt_content.progressbars.area_color.description">
-                <source>Overrides the default one</source>
+                <source>Overrides the default one.</source>
             </trans-unit>
             <trans-unit id="tt_content.progressbars.show_label">
                 <source>Show percentage inside the bars</source>
@@ -1189,7 +1195,7 @@
                 <source>Categories menu</source>
             </trans-unit>
             <trans-unit id="tt_content.catsmenu.description">
-                <source>Categories menu</source>
+                <source>Categories menu.</source>
             </trans-unit>
             <trans-unit id="tt_content.catsmenu.page_uid">
                 <source>Parent page</source>
@@ -1228,16 +1234,19 @@
                 <source>Label</source>
             </trans-unit>
             <trans-unit id="tt_content.chart.glue">
-                <source>Character to separate fields (for example: , ; # |)</source>
-            </trans-unit>
-            <trans-unit id="tt_content.chart.glue.preview">
                 <source>Character to separate fields</source>
+            </trans-unit>
+            <trans-unit id="tt_content.chart.glue.description">
+                <source>For example: , ; # |</source>
             </trans-unit>
             <trans-unit id="tt_content.chart.file">
                 <source>File from where to import the data</source>
             </trans-unit>
             <trans-unit id="tt_content.chart.data">
-                <source>Data (overwrites file)</source>
+                <source>Data</source>
+            </trans-unit>  
+            <trans-unit id="tt_content.chart.data.description">
+                <source>Overwrites file.</source>
             </trans-unit>  
             <trans-unit id="tt_content.pricingtable">
                 <source>Pricing table</source>
@@ -1420,7 +1429,7 @@
                 <source>Answers</source>
             </trans-unit>
             <trans-unit id="tt_content.poll.answers.description">
-                <source>One line for each answer</source>
+                <source>One line for each answer.</source>
             </trans-unit>
             <trans-unit id="tt_content.poll.color">
                 <source>Color for the buttons</source>
@@ -1429,7 +1438,7 @@
                 <source>Thank you message</source>
             </trans-unit>
             <trans-unit id="tt_content.poll.thankyou_message.description">
-                <source>If empty: "Thank you for your participation!"</source>
+                <source>If empty: "Thank you for your participation!".</source>
             </trans-unit>
             <trans-unit id="tt_content.poll.thankyou_message.placeholder">
                 <source>Thank you for your participation!</source>

@@ -41,7 +41,7 @@
                         <f:variable name="colss" value="{12 / columns}" />
                         <f:variable name="counter" value="0" />
                         <f:for each="{items -> v:iterator.chunk(count: '{columns}')}" as="itemx" iteration="iteration">
-                            <div class="row h-100 w-100{f:if(condition: '{carousel}', then: ' carousel-item')}{f:if(condition: '{carousel} && {iteration.isFirst}', then: ' active')}">
+                            <div class="row h-100{f:if(condition: '{carousel}', then: ' carousel-item')}{f:if(condition: '{carousel} && {iteration.isFirst}', then: ' active')}">
                                 <f:for each="{itemx}" as="item" iteration="iterationx">
                                     <f:variable name="cols" value="{f:if(condition: '{iterationx.total} < {columns}', then: '{12 / iterationx.total}', else: '{colss}')}" />
                                     <div class="col-md-{cols} mb-2 d-flex">

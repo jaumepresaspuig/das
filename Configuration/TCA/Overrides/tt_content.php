@@ -698,6 +698,13 @@ $tempColumns = [
             ]
         ]
     ],
+    'tx_das_poll' => [
+        'label' => '',
+        'config' => [
+            'type' => 'text',
+            'rows' => 3
+        ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['palettes']['visibility'] = [
@@ -741,6 +748,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['fontawesome'] = [
         tx_das_faposition
     '
 ];
+
 ExtensionManagementUtility::addTCAcolumns(
     'tt_content',
     $tempColumns
@@ -824,7 +832,7 @@ ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
     '--palette--;;fontawesome',
     '',
-    'after:header'
+    'after:tx_das_bgimage'
 );
 
 ExtensionManagementUtility::addToAllTCAtypes(

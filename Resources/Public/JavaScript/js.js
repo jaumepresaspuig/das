@@ -31,6 +31,7 @@ jQuery(document).ready(function ($) {
     initCircleCounters();
     initCountdowns();
     initMasonryGalleries();
+    initSharePageLinks();
 
 });
 
@@ -229,7 +230,7 @@ function initPoll(poll) {
 
 function sendPoll(poll, answer) {
     let pollx = poll;
-    $.get(window.location.href, { no_cache: 1, pk_campaign: poll, pk_kwd: answer }).done(function( data ) {
+    $.get(window.location.href, { no_cache: 1, utm_campaign: poll, utm_term: answer }).done(function( data ) {
         const $resp = $("<div>").html(data);
         const html = $resp.find("#tx-das-content-poll-board-" + pollx).html() || "";
         $("#tx-das-content-poll-board-" + pollx).html(html);
@@ -239,7 +240,7 @@ function sendPoll(poll, answer) {
 function initRandomCe() {
     $(".tx-das-content-randomce").each(function() {
         let pid = $(this).attr("data-id");
-        $.get(window.location.href, { no_cache: 1, gclid: pid }).done(function( data ) {
+        $.get(window.location.href, { no_cache: 1, utm_content: pid }).done(function( data ) {
             const $resp = $("<div>").html(data);
             const html = $resp.find("#tx-das-content-randomce-" + pid).html() || "";
             $("#tx-das-content-randomce-" + pid).html(html);
@@ -352,6 +353,12 @@ function initCircleCounters() {
                 $elRef.attr("data-seconds", seconds + 1);
             }, 30);
         })(id, $el);
+    });
+}
+
+function initSharePageLinks() {
+    $(".tx-das-content-sharepage a.sharepage").each(function() {
+        $(this).attr("href", $(this).attr("href") + encodeURIComponent(window.location.href));
     });
 }
 

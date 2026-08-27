@@ -1,4 +1,4 @@
-[request && traverse(request.getQueryParams(), 'pk_campaign') > 0]
+[request && traverse(request.getQueryParams(), 'utm_campaign') > 0]
     config {
         no_cache = 1
         index_enable = 0
@@ -13,7 +13,7 @@
         10 = CONTENT
         10 {
             table = tt_content
-            select.uidInList.data = GP:pk_campaign
+            select.uidInList.data = GP:utm_campaign
         }
     }
 [END]

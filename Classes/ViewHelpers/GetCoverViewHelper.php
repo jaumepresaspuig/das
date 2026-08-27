@@ -20,7 +20,7 @@ class GetCoverViewHelper extends AbstractViewHelper
     /**
      * @var ConfigurationManagerInterface
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('description', 'string', 'Album description', '', true);
     }

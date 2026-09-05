@@ -642,7 +642,74 @@
             <trans-unit id="pages.mega_menu">
                 <source>Show sub-pages of this page as a mega menu in the navigation bar</source>
                 <target>Mostrar subpáginas de esta página como un mega menú en la barra de navegación</target>
-            </trans-unit>
+            </trans-unit>            <trans-unit id="pages.watermark">
+                <source>Watermark</source>
+                <target>Marca de agua</target>
+          </trans-unit>
+            <trans-unit id="pages.show_watermark">
+                <source>Show watermark</source>
+                <target>Mostrar marca de agua</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.description">
+                <source>Displays a watermark on the images in Text &amp; Media content elements.</source>
+                <target>Muestra una marca de agua en las imágenes de los elementos de contenido de Texto y Medios.</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.image">
+                <source>Image</source>
+                <target>Imagen</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position">
+                <source>Position</source>
+                <target>Posición</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.1">
+                <source>Top left</source>
+                <target>Arriba a la izquierda</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.2">
+                <source>Top center</source>
+                <target>Arriba en el centro</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.3">
+                <source>Top right</source>
+                <target>Arriba a la derecha</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.4">
+                <source>Middle left</source>
+                <target>Medio a la izquierda</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.5">
+                <source>Middle center</source>
+                <target>Medio en el centro</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.6">
+                <source>Middle right</source>
+                <target>Medio a la derecha</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.7">
+                <source>Bottom left</source>
+                <target>Inferior a la izquierda</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.8">
+                <source>Bottom center</source>
+                <target>Inferior en el centro</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.9">
+                <source>Bottom right</source>
+                <target>Inferior a la derecha</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.size">
+                <source>Size (%)</source>
+                <target>Tamaño (%)</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.size.description">
+                <source>Relative to the source image width.</source>
+                <target>Relativo al ancho de la imagen de origen.</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.opacity">
+                <source>Opacity (%)</source>
+                <target></target>
+          </trans-unit>
             <trans-unit id="tt_content.accordion">
                 <source>Accordion</source>
                 <target>Acordeón</target>

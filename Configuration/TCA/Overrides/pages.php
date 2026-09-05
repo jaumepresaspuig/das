@@ -202,6 +202,136 @@ $tempColumns = [
             'renderType' => 'checkboxToggle'
         ]
     ],
+    'tx_das_showwatermark' => [
+        'label' => $languageFilePrefix . 'show_watermark',
+        'displayCond' => 'FIELD:is_siteroot:REQ:true',
+        'onChange' => 'reload',
+        'l10n_mode' => 'exclude',
+        'l10n_display' => 'defaultAsReadonly',
+        'config' => [
+            'type' => 'check',
+            'renderType' => 'checkboxToggle'
+        ]
+    ],
+    'tx_das_watermarkimage' => [
+        'label' => $languageFilePrefix . 'watermark.image',
+        'displayCond' => 'FIELD:is_siteroot:REQ:true',
+        'config' => [
+            'type' => 'file',
+            'maxitems' => 1,
+            'allowed' => 'png',
+            'appearance' => [
+                'fileUploadAllowed' => 0
+            ]
+        ],
+    ],
+    'tx_das_watermarkposition' => [
+        'label' => $languageFilePrefix . 'watermark.position',
+        'displayCond' => [
+            'AND' => [
+                'FIELD:is_siteroot:REQ:true',
+                'FIELD:tx_das_showwatermark:REQ:true'
+            ]
+        ],
+        'l10n_mode' => 'exclude',
+        'l10n_display' => 'defaultAsReadonly',
+        'config' => [
+            'type' => 'select',
+            'renderType' => 'selectSingle',
+            'items' => [
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.1',
+                    'value' => 'top-left'
+                ],
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.2',
+                    'value' => 'top-center'
+                ],
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.3',
+                    'value' => 'top-right'
+                ],
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.4',
+                    'value' => 'middle-left'
+                ],
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.5',
+                    'value' => 'middle-center'
+                ],
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.6',
+                    'value' => 'middle-right'
+                ],
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.7',
+                    'value' => 'bottom-left'
+                ],
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.8',
+                    'value' => 'bottom-center'
+                ],
+                [
+                    'label' => $languageFilePrefix . 'watermark.position.9',
+                    'value' => 'bottom-right'
+                ]
+            ],
+            'size' => 1,
+            'minitems' => 1,
+            'maxitems' => 1,
+            'default' => 'middle-center'
+        ]
+    ],
+    'tx_das_watermarksize' => [
+        'label' => $languageFilePrefix . 'watermark.size',
+        'description' => $languageFilePrefix . 'watermark.size.description',
+        'displayCond' => [
+            'AND' => [
+                'FIELD:is_siteroot:REQ:true',
+                'FIELD:tx_das_showwatermark:REQ:true'
+            ]
+        ],
+        'l10n_mode' => 'exclude',
+        'l10n_display' => 'defaultAsReadonly',
+        'config' => [
+            'type' => 'number',
+            'format' => 'integer',
+            'range' => [
+                'lower' => 20,
+                'upper' => 80,
+            ],
+            'slider' => [
+                'step' => 1,
+            ],
+            'default' => 50,
+            'width' => 200
+        ],
+    ],
+    'tx_das_watermarkopacity' => [
+        'label' => $languageFilePrefix . 'watermark.opacity',
+        'description' => $languageFilePrefix . 'watermark.opacity.description',
+        'displayCond' => [
+            'AND' => [
+                'FIELD:is_siteroot:REQ:true',
+                'FIELD:tx_das_showwatermark:REQ:true'
+            ]
+        ],
+        'l10n_mode' => 'exclude',
+        'l10n_display' => 'defaultAsReadonly',
+        'config' => [
+            'type' => 'number',
+            'format' => 'integer',
+            'range' => [
+                'lower' => 20,
+                'upper' => 80,
+            ],
+            'slider' => [
+                'step' => 1,
+            ],
+            'default' => 50,
+            'width' => 200
+        ],
+    ]
 ];
 
 $GLOBALS['TCA']['pages']['palettes']['page'] = [
@@ -222,6 +352,20 @@ $GLOBALS['TCA']['pages']['palettes']['page'] = [
     '
 ];
 
+$GLOBALS['TCA']['pages']['palettes']['watermark'] = [
+    'displayCond' => 'FIELD:is_siteroot:REQ:true',
+    'label' => $languageFilePrefix . 'watermark',
+    'description' => $languageFilePrefix . 'watermark.description',
+    'showitem' => '
+        tx_das_showwatermark,
+        tx_das_watermarkimage,
+        --linebreak--,
+        tx_das_watermarkposition,
+        tx_das_watermarksize,
+        tx_das_watermarkopacity
+    '
+];
+
 ExtensionManagementUtility::addTCAcolumns(
     'pages',
     $tempColumns
@@ -239,6 +383,7 @@ ExtensionManagementUtility::addToAllTCAtypes(
     '--div--;' . $languageFilePrefix . 'site_configuration,
         --palette--;;page,
         --palette--;;html_header,
-        --palette--;;page_header
+        --palette--;;page_header,
+        --palette--;;watermark
     '
 );

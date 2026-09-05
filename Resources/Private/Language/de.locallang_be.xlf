@@ -650,7 +650,74 @@
             <trans-unit id="pages.mega_menu">
                 <source>Show sub-pages of this page as a mega menu in the navigation bar</source>
                 <target>Unterseiten dieser Seite in der Navigationsleiste als Mega-Menü anzeigen</target>
-            </trans-unit>
+            </trans-unit>            <trans-unit id="pages.watermark">
+                <source>Watermark</source>
+                <target>Wasserzeichen</target>
+          </trans-unit>
+            <trans-unit id="pages.show_watermark">
+                <source>Show watermark</source>
+                <target>Wasserzeichen anzeigen</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.description">
+                <source>Displays a watermark on the images in Text &amp; Media content elements.</source>
+                <target>Zeigt ein Wasserzeichen auf den Bildern in Text- und Medieninhaltelementen an.</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.image">
+                <source>Image</source>
+                <target>Bild</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position">
+                <source>Position</source>
+                <target>Position</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.1">
+                <source>Top left</source>
+                <target>Oben links</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.2">
+                <source>Top center</source>
+                <target>Oben mitte</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.3">
+                <source>Top right</source>
+                <target>Oben rechts</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.4">
+                <source>Middle left</source>
+                <target>Mitte links</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.5">
+                <source>Middle center</source>
+                <target>Mitte mitte</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.6">
+                <source>Middle right</source>
+                <target>Mitte rechts</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.7">
+                <source>Bottom left</source>
+                <target>Unten links</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.8">
+                <source>Bottom center</source>
+                <target>Unten mitte</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.9">
+                <source>Bottom right</source>
+                <target>Unten rechts</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.size">
+                <source>Size (%)</source>
+                <target>Größe (%)</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.size.description">
+                <source>Relative to the source image width.</source>
+                <target>Relativ zur Breite des Quellbildes.</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.opacity">
+                <source>Opacity (%)</source>
+                <target>Deckkraft (%)</target>
+          </trans-unit>
             <trans-unit id="tt_content.accordion">
                 <source>Accordion</source>
                 <target>Akordeon</target>

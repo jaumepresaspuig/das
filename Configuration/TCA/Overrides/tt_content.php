@@ -698,6 +698,16 @@ $tempColumns = [
             ]
         ]
     ],
+    'tx_das_showwatermark' => [
+        'label' => $languageFilePrefix . 'pages.show_watermark',
+        'displayCond' => 'FIELD:CType:=:textmedia',
+        'l10n_mode' => 'exclude',
+        'l10n_display' => 'defaultAsReadonly',
+        'config' => [
+            'type' => 'check',
+            'renderType' => 'checkboxToggle'
+        ]
+    ],
     'tx_das_poll' => [
         'label' => '',
         'config' => [
@@ -804,7 +814,8 @@ ExtensionManagementUtility::addFieldsToPalette(
 ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'imagelinks',
-    'tx_das_pagegallery'
+    'tx_das_pagegallery,
+    tx_das_showwatermark'
 );
 
 ExtensionManagementUtility::addToAllTCAtypes(

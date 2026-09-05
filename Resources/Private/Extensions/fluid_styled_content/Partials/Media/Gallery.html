@@ -82,7 +82,7 @@
                         <f:for each="{row.columns}" as="column">
                             <f:if condition="{column.media}">
                                 <div class="{colclass}">
-                                    <f:render partial="Media/Type" arguments="{file: column.media, data: data, settings: settings, width: width, height: height, gallery_id: gallery_id}" />
+                                    <f:render partial="Media/Type" arguments="{file: column.media, data: data, settings: settings, width: width, height: height, gallery_id: gallery_id, watermark: watermark}" />
                                 </div>
                             </f:if>
                         </f:for>
@@ -95,7 +95,7 @@
                         <f:for each="{row.columns}" as="column">
                             <f:if condition="{column.media}">
                                 <div class="col-sm">
-                                    <f:render partial="Media/Type" arguments="{file: column.media, data: data, settings: settings, width: width, height: height, gallery_id: gallery_id}" />
+                                    <f:render partial="Media/Type" arguments="{file: column.media, data: data, settings: settings, width: width, height: height, gallery_id: gallery_id, watermark: watermark}" />
                                 </div>
                             </f:if>
                         </f:for>

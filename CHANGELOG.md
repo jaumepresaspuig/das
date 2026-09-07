@@ -2,6 +2,7 @@ Latest release: 1.0.9 (2026/06/18 00:40:13)
 
 All release change logs:
 
+* [1.0.10 (2026/09/07) - Full list of changes](https://github.com/jaumepresaspuig/das/compare/1.0.9...1.0.10)
 * [1.0.9 (2026/05/24) - Full list of changes](https://github.com/jaumepresaspuig/das/compare/1.0.8...1.0.9)
 * [1.0.8 (2026/05/24) - Full list of changes](https://github.com/jaumepresaspuig/das/compare/1.0.7...1.0.8)
 * [1.0.7 (2026/05/05) - Full list of changes](https://github.com/jaumepresaspuig/das/compare/1.0.6...1.0.7)

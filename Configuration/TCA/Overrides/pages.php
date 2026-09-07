@@ -16,7 +16,16 @@ $tempColumns = [
             'allowed' => 'jpg,jpeg,png,gif,webp',
             'appearance' => [
                 'fileUploadAllowed' => 0
-            ]
+            ],
+            'overrideChildTca' => [
+                'types' => [
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                        'showitem' => '
+                            --palette--;;filePalette
+                        ',
+                    ],
+                ],
+            ],
         ],
     ],
     'tx_das_structureddata' => [
@@ -222,7 +231,16 @@ $tempColumns = [
             'allowed' => 'png',
             'appearance' => [
                 'fileUploadAllowed' => 0
-            ]
+            ],
+            'overrideChildTca' => [
+                'types' => [
+                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                        'showitem' => '
+                            --palette--;;filePalette
+                        ',
+                    ],
+                ],
+            ],
         ],
     ],
     'tx_das_watermarkposition' => [
@@ -302,9 +320,10 @@ $tempColumns = [
             ],
             'slider' => [
                 'step' => 1,
+                'width' => 100
             ],
             'default' => 50,
-            'width' => 200
+            'width' => 100
         ],
     ],
     'tx_das_watermarkopacity' => [
@@ -327,9 +346,10 @@ $tempColumns = [
             ],
             'slider' => [
                 'step' => 1,
+                'width' => 100
             ],
             'default' => 50,
-            'width' => 200
+            'width' => 100
         ],
     ]
 ];

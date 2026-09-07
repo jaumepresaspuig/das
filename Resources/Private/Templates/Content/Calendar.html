@@ -85,13 +85,13 @@
                     <flux:field.input
                         name="starting_time"
                         label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.starting_time"
-                        config="{renderType: 'datetime'}"
+                        config="{type: 'datetime', format: 'datetime'}"
                         size="13"
                     />
                     <flux:field.input
                         name="ending_time"
                         label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.calendar.event.ending_time"
-                        config="{renderType: 'datetime'}"
+                        config="{type: 'datetime', format: 'datetime'}"
                         size="13"
                         displayCond="FIELD:all_day:=:0"
                     />

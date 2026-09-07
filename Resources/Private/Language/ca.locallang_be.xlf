@@ -650,7 +650,74 @@
             <trans-unit id="pages.mega_menu">
                 <source>Show sub-pages of this page as a mega menu in the navigation bar</source>
                 <target>Mostra les subpàgines d'aquesta pàgina com un mega menú a la barra de navegació</target>
-            </trans-unit>
+            </trans-unit>            <trans-unit id="pages.watermark">
+                <source>Watermark</source>
+                <target>Marca d'aigua</target>
+          </trans-unit>
+            <trans-unit id="pages.show_watermark">
+                <source>Show watermark</source>
+                <target>Mostra la marca d'aigua</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.description">
+                <source>Displays a watermark on the images in Text &amp; Media content elements.</source>
+                <target>Mostra una marca d'aigua en les imatges dels elements de contingut de Text i Mitjans.</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.image">
+                <source>Image</source>
+                <target>Imatge</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position">
+                <source>Position</source>
+                <target>Posició</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.1">
+                <source>Top left</source>
+                <target>Superior esquerra</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.2">
+                <source>Top center</source>
+                <target>Superior al centre</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.3">
+                <source>Top right</source>
+                <target>Superior dreta</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.4">
+                <source>Middle left</source>
+                <target>Meitat esquerra</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.5">
+                <source>Middle center</source>
+                <target>Meitat al centre</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.6">
+                <source>Middle right</source>
+                <target>Meitat dreta</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.7">
+                <source>Bottom left</source>
+                <target>Inferior esquerra</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.8">
+                <source>Bottom center</source>
+                <target>Inferior al centre</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.position.9">
+                <source>Bottom right</source>
+                <target>Inferior dreta</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.size">
+                <source>Size (%)</source>
+                <target>Mida (%)</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.size.description">
+                <source>Relative to the source image width.</source>
+                <target>Relativa a l'amplada de la imatge d'origen.</target>
+          </trans-unit>
+            <trans-unit id="pages.watermark.opacity">
+                <source>Opacity (%)</source>
+                <target></target>
+          </trans-unit>
             <trans-unit id="tt_content.accordion">
                 <source>Accordion</source>
                 <target>Acordió</target>

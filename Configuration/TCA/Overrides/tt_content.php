@@ -698,6 +698,23 @@ $tempColumns = [
             ]
         ]
     ],
+    'tx_das_showwatermark' => [
+        'label' => $languageFilePrefix . 'pages.show_watermark',
+        'displayCond' => 'FIELD:CType:=:textmedia',
+        'l10n_mode' => 'exclude',
+        'l10n_display' => 'defaultAsReadonly',
+        'config' => [
+            'type' => 'check',
+            'renderType' => 'checkboxToggle'
+        ]
+    ],
+    'tx_das_poll' => [
+        'label' => '',
+        'config' => [
+            'type' => 'text',
+            'rows' => 3
+        ]
+    ],
 ];
 
 $GLOBALS['TCA']['tt_content']['palettes']['visibility'] = [
@@ -741,6 +758,7 @@ $GLOBALS['TCA']['tt_content']['palettes']['fontawesome'] = [
         tx_das_faposition
     '
 ];
+
 ExtensionManagementUtility::addTCAcolumns(
     'tt_content',
     $tempColumns
@@ -796,7 +814,8 @@ ExtensionManagementUtility::addFieldsToPalette(
 ExtensionManagementUtility::addFieldsToPalette(
     'tt_content',
     'imagelinks',
-    'tx_das_pagegallery'
+    'tx_das_pagegallery,
+    tx_das_showwatermark'
 );
 
 ExtensionManagementUtility::addToAllTCAtypes(
@@ -824,7 +843,7 @@ ExtensionManagementUtility::addToAllTCAtypes(
     'tt_content',
     '--palette--;;fontawesome',
     '',
-    'after:header'
+    'after:tx_das_bgimage'
 );
 
 ExtensionManagementUtility::addToAllTCAtypes(

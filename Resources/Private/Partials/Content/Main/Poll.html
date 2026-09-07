@@ -1,3 +1,5 @@
+{namespace das=Jp\Das\ViewHelpers}
+
 <f:if condition="{answers}">
     <f:variable name="poll" value="{f:if(condition: record.l18n_parent, then: '{record.l18n_parent}', else: '{record.uid}')}" />
     <div class="tx-das-content-poll tx-das-content-poll-layout-{layout} text-center" id="tx-das-content-poll-{poll}" data-id="c{record.uid}" data-poll="{poll}" data-color="{color}">

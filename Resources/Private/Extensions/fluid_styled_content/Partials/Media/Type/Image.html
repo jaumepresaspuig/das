@@ -1,3 +1,6 @@
+{namespace das=Jp\Das\ViewHelpers}
+
+<f:variable name="isImage" value="{f:contains(value: 'image', subject: '{file.mimeType}')}" />
 <f:if condition="!{width}">
     <f:variable name="width" value="{dimensions.width}" />
 </f:if>
@@ -13,7 +16,11 @@
         </f:then>
         <f:else>
             <f:if condition="{data.image_zoom}">
-                <a href="{file.publicUrl}" title="{file.title}" class="glightbox glightbox-{gallery_id}" data-glightbox-id="glightbox-{gallery_id}" data-glightbox="title:{file.title}{f:if(condition: '{file.description}', then: '. {file.description}')}">
+                <f:variable name="crop" value="" />
+                <f:if condition="{file.extension} == 'png'">
+                    <f:variable name="crop">{"default":{"cropArea":{"height":1,"width":1,"x":0,"y":0},"selectedRatio":"NaN","focusArea":null}}</f:variable>
+                </f:if>
+                <a href="{f:if(condition: '{isImage} && {watermark.watermarkImage} && {file.extension} != \'svg\'', then: '{das:watermarkImageUri(srcImage: file.publicUrl, watermarkImage: \'{watermark.watermarkImage}\', watermarkOpacity: \'{watermark.watermarkOpacity}\', watermarkPosition: \'{watermark.watermarkPosition}\', watermarkSize: \'{watermark.watermarkSize}\', crop: \'{crop}\')}', else: '{file.publicUrl}')}" title="{file.title}" class="glightbox glightbox-{gallery_id}" data-glightbox-id="glightbox-{gallery_id}" data-glightbox="title:{file.title}{f:if(condition: '{file.description}', then: '. {file.description}')}">
             </f:if>
             <f:render section="image" arguments="{_all}" />
             <f:if condition="{data.image_zoom}">
@@ -28,13 +35,20 @@
     </f:if>
 </figure>
 
-<f:section name="image">    
+<f:section name="image">
     <f:if condition="{file.extension} == 'svg'">
         <f:then>
-            <img  src="{file.publicUrl}" alt="{file.alternative}" title="{file.title}" loading="{settings.lazyLoading}" class="img-fluid w-100" />
+            <img src="{file.publicUrl}" alt="{file.alternative}" title="{file.title}" loading="{settings.lazyLoading}" class="img-fluid w-100" />
         </f:then>
         <f:else>
-            <f:media class="img-fluid w-100" file="{file}" width="{width}" height="{height}" alt="{file.alternative}" title="{file.title}" loading="{settings.lazyLoading}" />
+            <f:if condition="{isImage} && {watermark.watermarkImage}">
+                <f:then>
+                    <img src="{das:watermarkImageUri(srcImage: '{file.publicUrl}', watermarkImage: '{watermark.watermarkImage}', watermarkOpacity: '{watermark.watermarkOpacity}', watermarkPosition: '{watermark.watermarkPosition}', watermarkSize: '{watermark.watermarkSize}', width: '{width}', height: '{height}', crop: '{file.referenceProperties.crop}')}" alt="{file.alternative}" title="{file.title}" loading="{settings.lazyLoading}" class="img-fluid w-100" />
+                </f:then>
+                <f:else>
+                    <f:media class="img-fluid w-100" file="{file}" width="{width}" height="{height}" alt="{file.alternative}" title="{file.title}" loading="{settings.lazyLoading}" />
+                </f:else>
+            </f:if>
         </f:else>
     </f:if>
 </f:section>

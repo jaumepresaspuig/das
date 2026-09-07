@@ -19,7 +19,7 @@ class PollViewHelper extends AbstractViewHelper
 {    /**
      * @var ConfigurationManagerInterface
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('poll', 'integer', 'Uid of the poll', 0, true);
         $this->registerArgument('preview', 'integer', 'If preview', 0, true);
@@ -38,12 +38,12 @@ class PollViewHelper extends AbstractViewHelper
         if ($this->arguments['preview']) {
             $poll = (int)$this->arguments['poll'];
         } else {
-            $poll = (isset($_GET['pk_campaign']) && $_GET['pk_campaign'] !== '')
-                  ? (int)$_GET['pk_campaign']
+            $poll = (isset($_GET['utm_campaign']) && $_GET['utm_campaign'] !== '')
+                  ? (int)$_GET['utm_campaign']
                   : 0;
         }
-        $answer = (isset($_GET['pk_kwd']) && $_GET['pk_kwd'] !== '')
-                ? (int)$_GET['pk_kwd']
+        $answer = (isset($_GET['utm_term']) && $_GET['utm_term'] !== '')
+                ? (int)$_GET['utm_term']
                 : 0;
         if ($poll) {
             $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable('tt_content');

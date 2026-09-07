@@ -7,6 +7,19 @@
 </f:section>
 
 <f:section name="Main">
+    <f:variable name="watermark" value="{}" />
+    <f:if condition="{data.tx_das_showwatermark}">
+        <f:variable name="rootline" value="{v:page.rootline()}" />
+        <f:variable name="home" value="{rootline.0}" />
+        <f:if condition="{home.tx_das_showwatermark} && {home.tx_das_watermarkimage}">
+            <f:variable name="watermark" value="{
+                watermarkImage: '{f:uri.image(src: \'{home.tx_das_watermarkimage}\', treatIdAsReference: 1)}',
+                watermarkOpacity: '{home.tx_das_watermarkopacity}',
+                watermarkPosition: '{home.tx_das_watermarkposition}',
+                watermarkSize: '{home.tx_das_watermarksize}'
+            }" />
+        </f:if>
+    </f:if>
     <div class="row">
         <f:variable name="gallery_width" value="{f:if(condition: '{data.imageorient} >= 25', then: '{data.tx_das_gallerywidth}', else: '12')}" />
         <f:variable name="bodytext_width" value="{f:if(condition: '{data.imageorient} >= 25', then: '{v:math.subtract(a: 12, b: gallery_width)}', else: '12')}" />       

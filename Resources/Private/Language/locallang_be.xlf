@@ -483,6 +483,57 @@
             <trans-unit id="pages.mega_menu">
                 <source>Show sub-pages of this page as a mega menu in the navigation bar</source>
             </trans-unit>
+            <trans-unit id="pages.watermark">
+                <source>Watermark</source>
+            </trans-unit>
+            <trans-unit id="pages.show_watermark">
+                <source>Show watermark</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.description">
+                <source>Displays a watermark on the images in Text &amp; Media content elements.</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position">
+                <source>Position</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.1">
+                <source>Top left</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.2">
+                <source>Top center</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.3">
+                <source>Top right</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.4">
+                <source>Middle left</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.5">
+                <source>Middle center</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.6">
+                <source>Middle right</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.7">
+                <source>Bottom left</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.8">
+                <source>Bottom center</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.position.9">
+                <source>Bottom right</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.size">
+                <source>Size (%)</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.size.description">
+                <source>Relative to the source image width.</source>
+            </trans-unit>
+            <trans-unit id="pages.watermark.opacity">
+                <source>Opacity (%)</source>
+            </trans-unit>
             <trans-unit id="tt_content.accordion">
                 <source>Accordion</source>
             </trans-unit>

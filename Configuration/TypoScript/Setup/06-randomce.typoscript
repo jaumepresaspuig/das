@@ -1,7 +1,7 @@
-lib.gclid = TEXT
-lib.gclid.value =
+lib.utm_content = TEXT
+lib.utm_content.value =
 
-[request && traverse(request.getQueryParams(), 'gclid') > 0]
+[request && traverse(request.getQueryParams(), 'utm_content') > 0]
     config {
         no_cache = 1
         index_enable = 0
@@ -12,12 +12,12 @@ lib.gclid.value =
         includeCSS >
         includeJS >
     }
-    lib.gclid.data = GP:gclid
+    lib.utm_content.data = GP:utm_content
     page {
         10 = CONTENT
         10 {
             table = tt_content
-            select.uidInList.data = GP:gclid
+            select.uidInList.data = GP:utm_content
         }
     }
 [END]

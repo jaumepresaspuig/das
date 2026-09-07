@@ -20,7 +20,7 @@ class GetThumbnailViewHelper extends AbstractViewHelper
     /**
      * @var ConfigurationManagerInterface
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('provider', 'string', 'Provider: YouTube or Vimeo', '', true);
         $this->registerArgument('identifier', 'string', 'Video identifier', '', true);

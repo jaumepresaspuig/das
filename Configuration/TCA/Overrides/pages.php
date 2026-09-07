@@ -3,6 +3,7 @@
 defined('TYPO3') or die();
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Resource\FileType;
 
 $languageFilePrefix = 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:pages.';
 
@@ -19,7 +20,7 @@ $tempColumns = [
             ],
             'overrideChildTca' => [
                 'types' => [
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                    FileType::IMAGE->value => [
                         'showitem' => '
                             --palette--;;filePalette
                         ',
@@ -224,7 +225,12 @@ $tempColumns = [
     ],
     'tx_das_watermarkimage' => [
         'label' => $languageFilePrefix . 'watermark.image',
-        'displayCond' => 'FIELD:is_siteroot:REQ:true',
+        'displayCond' => [
+            'AND' => [
+                'FIELD:is_siteroot:REQ:true',
+                'FIELD:tx_das_showwatermark:REQ:true'
+            ]
+        ],
         'config' => [
             'type' => 'file',
             'maxitems' => 1,
@@ -234,7 +240,7 @@ $tempColumns = [
             ],
             'overrideChildTca' => [
                 'types' => [
-                    \TYPO3\CMS\Core\Resource\File::FILETYPE_IMAGE => [
+                    FileType::IMAGE->value => [
                         'showitem' => '
                             --palette--;;filePalette
                         ',
@@ -322,8 +328,7 @@ $tempColumns = [
                 'step' => 1,
                 'width' => 100
             ],
-            'default' => 50,
-            'width' => 100
+            'default' => 50
         ],
     ],
     'tx_das_watermarkopacity' => [
@@ -348,8 +353,7 @@ $tempColumns = [
                 'step' => 1,
                 'width' => 100
             ],
-            'default' => 50,
-            'width' => 100
+            'default' => 50
         ],
     ]
 ];

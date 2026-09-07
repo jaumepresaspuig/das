@@ -17,11 +17,11 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         parent::initializeArguments();
 
         $this->registerArgument('srcImage', 'string', 'The source image.', true);
-        $this->registerArgument('width', 'string', 'Image width in pixels. Add c to crop, for example 200c', false, '');
-        $this->registerArgument('height', 'string', 'Image height in pixels. Add c to crop, for example 200c', false, '');
+        $this->registerArgument('width', 'string', 'Image width in pixels. You can add c to crop, for example 200c', false, '');
+        $this->registerArgument('height', 'string', 'Image height in pixels. You can add c to crop, for example 200c', false, '');
         $this->registerArgument('crop', 'string', 'Use the crop data stored on the FAL image object', false, '');
         $this->registerArgument('watermarkImage', 'string', 'The watermark image.', true);
-        $this->registerArgument('watermarkPosition', 'string', 'Watermark position', false, 'bottom-right');
+        $this->registerArgument('watermarkPosition', 'string', 'Watermark position', false, 'middle-center');
         $this->registerArgument('watermarkOpacity', 'int', 'Watermark opacity from 1 to 100', false, 50);
         $this->registerArgument('watermarkSize', 'int', 'Watermark width as a percentage of the processed source image width', false, 25);
     }
@@ -127,9 +127,6 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
                 }
             }
         }
-
-        imagedestroy($sourceImage);
-        imagedestroy($watermarkImage);
 
         return $this->getPublicUri($outputPath);
     }
@@ -286,8 +283,6 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
             $cropHeight
         );
 
-        imagedestroy($image);
-
         return $croppedImage;
     }
 
@@ -387,9 +382,6 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
             $targetWidth,
             $targetHeight
         );
-
-        imagedestroy($scaledImage);
-        imagedestroy($image);
 
         return $croppedImage;
     }
@@ -544,7 +536,6 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
             $watermarkHeight
         );
 
-        imagedestroy($opacityImage);
     }
 
     /**

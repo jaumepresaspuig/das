@@ -15,6 +15,7 @@ Once **Das** has been installed the TYPO3 instance is ready to go, with the page
 * *Show language selector*: to show, well, the language selector in the header
 * *Show breadcrumb:* to enable the breadcrumb, to be shown before or after the Featured content area
 * *Breadcrumb items separator*: to set the character to be used as item separator in the breadcrumb
+* *Watermark*: a palette to configure a watermark to be shown in the images of the Text & Media content elements, with the image to be used and its position, size and opacity. It has to be enabled on each Text & Media content element
 
 .. figure:: ./Images/quick-start-1.png
    :width: 1176px

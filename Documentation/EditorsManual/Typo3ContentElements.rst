@@ -59,7 +59,11 @@ Text & Media
 
 The **Text & Media** content element has been enhanced to handle properly images and video galleries, making them fully responsive. It's possible to select the width of the gallery when beside text and the aspect ratio of the thumbnails, so all thumbnails are shown in a consistent grid. YouTube and Vimeo thumbnails are retrieved from their servers and stored locally, so no user information is sent to their servers.
 
-The palette *Behavior* in the :guilabel:`Media` tab has a new field, *Include the media in the page gallery instead of the content*, to force the media of the content element to be part of a global page gallery if enlarged.
+The palette *Behavior* in the :guilabel:`Media` tab has two new fields:
+
+* *Include the media in the page gallery instead of the content*: to force the media of the content element to be part of a global page gallery if enlarged.
+
+* *Show watermark*: to show a watermark on the images (thumbnails and full-size). The watermark has to be configured in the home page.
 
 .. figure:: ../Images/typo3ce-4.png
    :width: 940px

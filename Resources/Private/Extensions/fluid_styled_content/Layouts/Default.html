@@ -28,6 +28,8 @@
     <f:defaultCase>
     </f:defaultCase>
 </f:switch>
+<f:variable name="bracket" value="{f:format.raw(value: '{')}" />
+<f:variable name="ce_id" value="c{f:if(condition: '{data._LOCALIZED_UID}', then: '{data._LOCALIZED_UID}', else: '{data.uid}')}" />
 <f:if condition="!{wrapping}">
     <f:then>
         <f:if condition="{data.CType} == 'html'">
@@ -44,21 +46,46 @@
     <f:else>
         <f:variable name="bg" value="0" />
         <f:if condition="{data.tx_das_bgcolor} || {data.tx_das_bgpredefinedcolor} || {data.tx_das_bgimage}">
-        <f:variable name="bg" value="1" />
+            <f:variable name="bg" value="1" />
         </f:if>
-        <f:variable name="bg_img" value="" />
         <f:if condition="{data.tx_das_bgimage}">
             {v:content.resources.fal(field: 'tx_das_bgimage', uid: '{data.uid}', asObjects: 1) -> v:iterator.first() -> f:variable(name: 'bg')}
             <f:if condition="{bg.extension} == 'jpg' || {bg.extension} == 'jpeg' || {bg.extension} == 'png' || {bg.extension} == 'gif' || {bg.extension} == 'webp'">
                 <f:variable name="bg_img" value="{f:uri.image(image: '{bg}')}" />
+<style>
+    #{ce_id} .tx-das-bg {bracket}
+        background-image: url({bg_img});
+        container-type: inline-size;
+    }
+    @container (max-width: 1200px) {bracket}
+        #{ce_id} .tx-das-bg {bracket}
+            background-image: url({f:uri.image(image: '{bg}', maxWidth: 1200)});
+        }
+    }
+    @container (max-width: 992px) {bracket}
+        #{ce_id} .tx-das-bg {bracket}
+            background-image: url({f:uri.image(image: '{bg}', maxWidth: 992)});
+        }
+    }
+    @container (max-width: 768px) {bracket}
+        #{ce_id} .tx-das-bg {bracket}
+            background-image: url({f:uri.image(image: '{bg}', maxWidth: 768)});
+        }
+    }
+    @container (max-width: 576px) {bracket}
+        #{ce_id} .tx-das-bg {bracket}
+            background-image: url({f:uri.image(image: '{bg}', maxWidth: 576)});
+        }
+    }
+</style>
             </f:if>
         </f:if>
         <f:if condition="{data.layout} == 3 || {data.layout} == 4">
             <div class="container">
         </f:if>
-            <div id="c{f:if(condition: '{data._LOCALIZED_UID}', then: '{data._LOCALIZED_UID}', else: '{data.uid}')}" class="ce ce-type-{data.CType} {f:if(condition: '{data.colPos} > 100', then: '', else: '{settings.layoutClasses.{data.layout}}')} {f:if(condition: '{data.tx_das_dropshadow}', then: '{settings.shadowClasses.{data.tx_das_dropshadow}}')} {f:if(condition: '{data.tx_das_dropshadow}', then: '{settings.contentPadding}')} mt-{data.space_before_class} mb-{f:if(condition: '{data.space_after_class} == 100', then: '{settings.defaultSpaceAfter}', else: '{data.space_after_class}')} {f:if(condition: '{data.tx_das_visibility}', then: '{settings.colClasses.{data.tx_das_visibility}}')} {data.tx_das_textcolor} {data.tx_das_customclasses}" style="{data.tx_das_customstyles}">
+            <div id="{ce_id}" class="ce ce-type-{data.CType} {f:if(condition: '{data.colPos} > 100', then: '', else: '{settings.layoutClasses.{data.layout}}')} {f:if(condition: '{data.tx_das_dropshadow}', then: '{settings.shadowClasses.{data.tx_das_dropshadow}}')} {f:if(condition: '{data.tx_das_dropshadow}', then: '{settings.contentPadding}')} mt-{data.space_before_class} mb-{f:if(condition: '{data.space_after_class} == 100', then: '{settings.defaultSpaceAfter}', else: '{data.space_after_class}')} {f:if(condition: '{data.tx_das_visibility}', then: '{settings.colClasses.{data.tx_das_visibility}}')} {data.tx_das_textcolor} {data.tx_das_customclasses} {f:if(condition: '{bg} && {bg_img}', then: 'tx-das-bg-wrapper')}" style="{data.tx_das_customstyles}">
                 <f:if condition="{bg}">
-                    <div class="tx-das-bg{f:if(condition: '!{data.tx_das_bgcolor}', then: ' {data.tx_das_bgpredefinedcolor}')}{f:if(condition: ' {data.tx_das_fixedbg}', then: ' tx-das-bg-fixed')} {settings.contentPadding} px-4 px-md-5" style="{f:if(condition: '{data.tx_das_bgcolor}', then: 'background-color: {data.tx_das_bgcolor};')}{f:if(condition: '{bg_img}', then: ' background-image: url({bg_img});')}">
+                    <div class="tx-das-bg{f:if(condition: '!{data.tx_das_bgcolor}', then: ' {data.tx_das_bgpredefinedcolor}')}{f:if(condition: ' {data.tx_das_fixedbg}', then: ' tx-das-bg-fixed')} {settings.contentPadding} px-4 px-md-5" style="{f:if(condition: '{data.tx_das_bgcolor}', then: 'background-color: {data.tx_das_bgcolor};')}">
                 </f:if>
                 <f:if condition="{data.tx_das_bgimage} && {data.tx_das_bgoverlay}">
                     <div class="overlay {data.tx_das_bgoverlay}{f:if(condition: '{data.tx_das_bgoverlay} != \'bg-blur\' && {data.tx_das_bgoverlayvignete}', then: '-vignete')}"></div>

@@ -20,7 +20,11 @@
                 <f:if condition="{file.extension} == 'png'">
                     <f:variable name="crop">{"default":{"cropArea":{"height":1,"width":1,"x":0,"y":0},"selectedRatio":"NaN","focusArea":null}}</f:variable>
                 </f:if>
-                <a href="{f:if(condition: '{isImage} && {watermark.watermarkImage} && {file.extension} != \'svg\'', then: '{das:watermarkImageUri(srcImage: file.publicUrl, watermarkImage: \'{watermark.watermarkImage}\', watermarkOpacity: \'{watermark.watermarkOpacity}\', watermarkPosition: \'{watermark.watermarkPosition}\', watermarkSize: \'{watermark.watermarkSize}\', crop: \'{crop}\')}', else: '{file.publicUrl}')}" title="{file.title}" class="glightbox glightbox-{gallery_id}" data-glightbox-id="glightbox-{gallery_id}" data-glightbox="title:{file.title}{f:if(condition: '{file.description}', then: '. {file.description}')}">
+                <f:variable name="publicUrl" value="{file.publicUrl}" />
+                <f:if condition="{isImage} && {watermark.watermarkImage} && {file.extension} != 'svg'">
+                    <f:variable name="publicUrl" value="{das:watermarkImageUri(srcImage: '{file.publicUrl}', watermarkImage: '{watermark.watermarkImage}', watermarkOpacity: '{watermark.watermarkOpacity}', watermarkPosition: '{watermark.watermarkPosition}', watermarkSize: '{watermark.watermarkSize}', crop: '{crop}')}" />
+                </f:if>
+                <a href="{publicUrl}" title="{file.title}" class="glightbox glightbox-{gallery_id}" data-glightbox-id="glightbox-{gallery_id}" data-glightbox="title:{file.title}{f:if(condition: '{file.description}', then: '. {file.description}')}">
             </f:if>
             <f:render section="image" arguments="{_all}" />
             <f:if condition="{data.image_zoom}">

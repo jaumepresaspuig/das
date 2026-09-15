@@ -3,6 +3,7 @@
 defined('TYPO3') or die();
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+use TYPO3\CMS\Core\Resource\FileType;
 
 $languageFilePrefix = 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:';
 $imgPath = 'EXT:das/Resources/Public/Images/';
@@ -258,7 +259,16 @@ $tempColumns = [
             'allowed' => 'jpg,jpeg,png,gif,webp,youtube,vimeo,mp4',
             'appearance' => [
                 'fileUploadAllowed' => 0
-            ]
+            ],
+            'overrideChildTca' => [
+                'types' => [
+                    FileType::IMAGE->value => [
+                        'showitem' => '
+                            --palette--;;filePalette,crop
+                        ',
+                    ],
+                ],
+            ],
         ],
         'onChange' => 'reload',
     ],

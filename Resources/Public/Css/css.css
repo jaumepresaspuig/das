@@ -24,6 +24,11 @@ section {
     padding: 2rem 0
 }
 
+.tx-das-bg-wrapper {
+  container-type: inline-size;
+  width: 100%;
+}
+
 h1,
 h2,
 h3,

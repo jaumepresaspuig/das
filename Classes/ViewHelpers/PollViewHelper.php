@@ -16,7 +16,8 @@ use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class PollViewHelper extends AbstractViewHelper
-{    /**
+{
+     /**
      * @var ConfigurationManagerInterface
      */
     public function initializeArguments(): void
@@ -24,8 +25,16 @@ class PollViewHelper extends AbstractViewHelper
         $this->registerArgument('poll', 'integer', 'Uid of the poll', 0, true);
         $this->registerArgument('preview', 'integer', 'If preview', 0, true);
     }
+
     /**
-     * @return array
+     * @return array{
+     *     results: array<string, array{
+     *         votes: int,
+     *         percent: float|string
+     *     }>,
+     *     message: string,
+     *     showAnswersOrResults: string
+     * }
      */
     public function render(): array
     {

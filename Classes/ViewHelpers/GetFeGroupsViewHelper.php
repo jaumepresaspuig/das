@@ -18,7 +18,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 class GetFeGroupsViewHelper extends AbstractViewHelper
 {
     /**
-     * @return array
+     * @return list<array{0: string, 1: int}>
      */
     public function render(): array
     {

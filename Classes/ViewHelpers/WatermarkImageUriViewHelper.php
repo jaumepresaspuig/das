@@ -2,6 +2,13 @@
 
 declare(strict_types=1);
 
+/*
+ * This file is part of the "das" Extension for TYPO3 CMS.
+ *
+ * For the full copyright and license information, please read the
+ * LICENSE file that was distributed with this source code.
+ */
+
 namespace Jp\Das\ViewHelpers;
 
 use TYPO3\CMS\Core\Resource\File;
@@ -12,10 +19,12 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 final class WatermarkImageUriViewHelper extends AbstractViewHelper
 {
+    /**
+     * @var ConfigurationManagerInterface
+     * @return void
+     */
     public function initializeArguments(): void
     {
-        parent::initializeArguments();
-
         $this->registerArgument('srcImage', 'string', 'The source image.', true);
         $this->registerArgument('width', 'string', 'Image width in pixels. You can add c to crop, for example 200c', false, '');
         $this->registerArgument('height', 'string', 'Image height in pixels. You can add c to crop, for example 200c', false, '');
@@ -26,6 +35,10 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         $this->registerArgument('watermarkSize', 'int', 'Watermark width as a percentage of the processed source image width', false, 25);
     }
 
+    /**
+     * @return string
+     * @throws \RuntimeException
+     */
     public function render(): string
     {
         $srcFile = $this->getFile((string)$this->arguments['srcImage']);
@@ -45,17 +58,9 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         $sourceImage = $this->loadImage($srcPath);
         $watermarkImage = $this->loadImage($watermarkPath);
 
-        $sourceImage = $this->applyFalCropIfRequired(
-            $sourceImage,
-            $srcFile,
-            (bool)$this->arguments['crop']
-        );
+        $sourceImage = $this->applyFalCropIfRequired($sourceImage,$srcFile, (bool)$this->arguments['crop']);
 
-        $sourceImage = $this->resizeSourceImage(
-            $sourceImage,
-            (string)$this->arguments['width'],
-            (string)$this->arguments['height']
-        );
+        $sourceImage = $this->resizeSourceImage($sourceImage, (string)$this->arguments['width'], (string)$this->arguments['height']);
 
         $watermarkSize = max(1, min(100, (int)$this->arguments['watermarkSize']));
         $watermarkOpacity = max(1, min(100, (int)$this->arguments['watermarkOpacity']));
@@ -63,17 +68,9 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         $sourceWidth = imagesx($sourceImage);
         $watermarkWidth = max(1, (int)round($sourceWidth * ($watermarkSize / 100)));
 
-        $watermarkImage = $this->resizePreservingRatio(
-            $watermarkImage,
-            $watermarkWidth
-        );
+        $watermarkImage = $this->resizePreservingRatio($watermarkImage, $watermarkWidth);
 
-        $this->applyWatermark(
-            $sourceImage,
-            $watermarkImage,
-            (string)$this->arguments['watermarkPosition'],
-            $watermarkOpacity
-        );
+        $this->applyWatermark($sourceImage, $watermarkImage, (string)$this->arguments['watermarkPosition'], $watermarkOpacity);
 
         $extension = strtolower((string)$srcFile->getProperty('extension'));
 
@@ -131,6 +128,9 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         return $this->getPublicUri($outputPath);
     }
 
+    /**
+     * @return File
+     */
     private function getFile(string $source): File
     {
         /** @var ResourceFactory $resourceFactory */
@@ -143,6 +143,10 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         return $resourceFactory->getFileObjectFromCombinedIdentifier($source);
     }
 
+    /**
+     * @return GdImage
+     * @throws \RuntimeException
+     */
     private function loadImage(string $path): \GdImage
     {
         $imageInfo = @getimagesize($path);
@@ -178,6 +182,9 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         return $image;
     }
 
+    /**
+     * @return GdImage
+     */
     private function applyFalCropIfRequired(
         \GdImage $image,
         File $file,
@@ -225,13 +232,9 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         $x = (int)round((float)$cropArea['x'] * $sourceWidth);
         $y = (int)round((float)$cropArea['y'] * $sourceHeight);
 
-        $cropWidth = (int)round(
-            (float)$cropArea['width'] * $sourceWidth
-        );
+        $cropWidth = (int)round((float)$cropArea['width'] * $sourceWidth);
 
-        $cropHeight = (int)round(
-            (float)$cropArea['height'] * $sourceHeight
-        );
+        $cropHeight = (int)round((float)$cropArea['height'] * $sourceHeight);
 
         /*
          * Keep the crop rectangle inside the source image.
@@ -239,53 +242,28 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         $x = max(0, min($sourceWidth - 1, $x));
         $y = max(0, min($sourceHeight - 1, $y));
 
-        $cropWidth = max(
-            1,
-            min($sourceWidth - $x, $cropWidth)
-        );
+        $cropWidth = max(1, min($sourceWidth - $x, $cropWidth));
 
-        $cropHeight = max(
-            1,
-            min($sourceHeight - $y, $cropHeight)
-        );
+        $cropHeight = max(1, min($sourceHeight - $y, $cropHeight));
 
-        $croppedImage = imagecreatetruecolor(
-            $cropWidth,
-            $cropHeight
-        );
+        $croppedImage = imagecreatetruecolor($cropWidth, $cropHeight);
 
         imagealphablending($croppedImage, false);
+
         imagesavealpha($croppedImage, true);
 
-        $transparent = imagecolorallocatealpha(
-            $croppedImage,
-            0,
-            0,
-            0,
-            127
-        );
+        $transparent = imagecolorallocatealpha($croppedImage,0, 0, 0, 127);
 
-        imagefill(
-            $croppedImage,
-            0,
-            0,
-            $transparent
-        );
+        imagefill($croppedImage, 0, 0, $transparent);
 
-        imagecopy(
-            $croppedImage,
-            $image,
-            0,
-            0,
-            $x,
-            $y,
-            $cropWidth,
-            $cropHeight
-        );
+        imagecopy($croppedImage, $image, 0, 0, $x, $y, $cropWidth, $cropHeight);
 
         return $croppedImage;
     }
 
+    /**
+     * @return GdImage
+     */
     private function resizeSourceImage(
         \GdImage $image,
         string $widthSpec,
@@ -305,15 +283,11 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         $targetHeight = $heightData['value'] ?? null;
 
         if ($targetWidth === null && $targetHeight !== null) {
-            $targetWidth = (int)round(
-                $sourceWidth * ($targetHeight / $sourceHeight)
-            );
+            $targetWidth = (int)round($sourceWidth * ($targetHeight / $sourceHeight));
         }
 
         if ($targetHeight === null && $targetWidth !== null) {
-            $targetHeight = (int)round(
-                $sourceHeight * ($targetWidth / $sourceWidth)
-            );
+            $targetHeight = (int)round($sourceHeight * ($targetWidth / $sourceWidth));
         }
 
         $targetWidth = max(1, (int)$targetWidth);
@@ -322,70 +296,44 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         $mustCrop = ($widthData['crop'] ?? false) || ($heightData['crop'] ?? false);
 
         if (!$mustCrop) {
-            $ratio = min(
-                $targetWidth / $sourceWidth,
-                $targetHeight / $sourceHeight
-            );
+            $ratio = min($targetWidth / $sourceWidth, $targetHeight / $sourceHeight);
 
             $targetWidth = max(1, (int)round($sourceWidth * $ratio));
             $targetHeight = max(1, (int)round($sourceHeight * $ratio));
 
-            return $this->resizeImage(
-                $image,
-                $targetWidth,
-                $targetHeight
-            );
+            return $this->resizeImage($image, $targetWidth, $targetHeight);
         }
 
         /*
          * Crop-to-fill behaviour for values such as 200c x 200c.
          */
-        $scale = max(
-            $targetWidth / $sourceWidth,
-            $targetHeight / $sourceHeight
-        );
+        $scale = max($targetWidth / $sourceWidth, $targetHeight / $sourceHeight);
 
         $scaledWidth = max(1, (int)round($sourceWidth * $scale));
         $scaledHeight = max(1, (int)round($sourceHeight * $scale));
 
-        $scaledImage = $this->resizeImage(
-            $image,
-            $scaledWidth,
-            $scaledHeight
-        );
+        $scaledImage = $this->resizeImage($image, $scaledWidth, $scaledHeight);
 
         $croppedImage = imagecreatetruecolor($targetWidth, $targetHeight);
 
         imagealphablending($croppedImage, false);
         imagesavealpha($croppedImage, true);
 
-        $transparent = imagecolorallocatealpha(
-            $croppedImage,
-            0,
-            0,
-            0,
-            127
-        );
+        $transparent = imagecolorallocatealpha($croppedImage, 0, 0, 0, 127);
 
         imagefill($croppedImage, 0, 0, $transparent);
 
         $sourceX = max(0, (int)floor(($scaledWidth - $targetWidth) / 2));
         $sourceY = max(0, (int)floor(($scaledHeight - $targetHeight) / 2));
 
-        imagecopy(
-            $croppedImage,
-            $scaledImage,
-            0,
-            0,
-            $sourceX,
-            $sourceY,
-            $targetWidth,
-            $targetHeight
-        );
+        imagecopy($croppedImage, $scaledImage, 0, 0, $sourceX, $sourceY, $targetWidth, $targetHeight);
 
         return $croppedImage;
     }
 
+    /**
+     * @return GdImage
+     */
     private function resizePreservingRatio(
         \GdImage $image,
         int $targetWidth
@@ -393,14 +341,14 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         $sourceWidth = imagesx($image);
         $sourceHeight = imagesy($image);
 
-        $targetHeight = max(
-            1,
-            (int)round($sourceHeight * ($targetWidth / $sourceWidth))
-        );
+        $targetHeight = max(1, (int)round($sourceHeight * ($targetWidth / $sourceWidth)));
 
         return $this->resizeImage($image, $targetWidth, $targetHeight);
     }
 
+    /**
+     * @return GdImage
+     */
     private function resizeImage(
         \GdImage $image,
         int $width,
@@ -411,32 +359,18 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         imagealphablending($resizedImage, false);
         imagesavealpha($resizedImage, true);
 
-        $transparent = imagecolorallocatealpha(
-            $resizedImage,
-            0,
-            0,
-            0,
-            127
-        );
+        $transparent = imagecolorallocatealpha($resizedImage, 0, 0, 0, 127);
 
         imagefill($resizedImage, 0, 0, $transparent);
 
-        imagecopyresampled(
-            $resizedImage,
-            $image,
-            0,
-            0,
-            0,
-            0,
-            $width,
-            $height,
-            imagesx($image),
-            imagesy($image)
-        );
+        imagecopyresampled($resizedImage, $image, 0, 0, 0, 0, $width, $height, imagesx($image), imagesy($image));
 
         return $resizedImage;
     }
 
+    /**
+     * @return void
+     */
     private function applyWatermark(
         \GdImage $sourceImage,
         \GdImage $watermarkImage,
@@ -483,13 +417,7 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         imagealphablending($opacityImage, false);
         imagesavealpha($opacityImage, true);
 
-        $transparent = imagecolorallocatealpha(
-            $opacityImage,
-            0,
-            0,
-            0,
-            127
-        );
+        $transparent = imagecolorallocatealpha($opacityImage, 0, 0, 0, 127);
 
         imagefill($opacityImage, 0, 0, $transparent);
 
@@ -502,47 +430,23 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
                 $blue = $rgba & 0xFF;
                 $alpha = ($rgba >> 24) & 0x7F;
 
-                $newAlpha = 127 - (int)round(
-                    (127 - $alpha) * ($opacity / 100)
-                );
+                $newAlpha = 127 - (int)round((127 - $alpha) * ($opacity / 100));
 
-                $color = imagecolorallocatealpha(
-                    $opacityImage,
-                    $red,
-                    $green,
-                    $blue,
-                    max(0, min(127, $newAlpha))
-                );
+                $color = imagecolorallocatealpha($opacityImage, $red, $green, $blue, max(0, min(127, $newAlpha)));
 
-                imagesetpixel(
-                    $opacityImage,
-                    $watermarkX,
-                    $watermarkY,
-                    $color
-                );
+                imagesetpixel($opacityImage, $watermarkX, $watermarkY, $color);
             }
         }
 
         imagealphablending($sourceImage, true);
 
-        imagecopy(
-            $sourceImage,
-            $opacityImage,
-            $x,
-            $y,
-            0,
-            0,
-            $watermarkWidth,
-            $watermarkHeight
-        );
+        imagecopy($sourceImage, $opacityImage, $x, $y, 0, 0, $watermarkWidth, $watermarkHeight);
 
     }
 
     /**
-     * Parses values such as:
-     *
-     * 100
-     * 100c
+     * @return array{value: int, crop: bool}|null
+     * @throws \InvalidArgumentException
      */
     private function parseDimension(string $value): ?array
     {
@@ -568,6 +472,10 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
         ];
     }
 
+    /**
+     * @return string
+     * @throws \RuntimeException
+     */
     private function getPublicUri(string $absolutePath): string
     {
         $publicPath = rtrim(Environment::getPublicPath(), DIRECTORY_SEPARATOR);

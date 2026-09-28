@@ -491,9 +491,13 @@
                 <source>Breadcrumb items separator</source>
                 <target>Separador d'elements de la ruta de navegació</target>
             </trans-unit>
-            <trans-unit id="pages.show_page_title">
-                <source>Show page title</source>
-                <target>Mostra el títol de la pàgina</target>
+            <trans-unit id="pages.breadcrumb.2">
+                <source>After the featured content</source>
+                <target>Després del contingut destacat</target>
+            </trans-unit>
+            <trans-unit id="pages.google_maps_key">
+                <source>Google Maps key</source>
+                <target>Clau dels mapes de Google</target>
             </trans-unit>
             <trans-unit id="pages.show_page_title.description">
                 <source>H1, in all pages except home</source>
@@ -2021,6 +2025,54 @@
             <trans-unit id="tt_content.textincolumns">
                 <source>Show text in columns</source>
                 <target>Mostra text en columnes</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map">
+                <source>Google map</source>
+                <target>Mapa de Google</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.description">
+                <source>Google map with any number of markers.</source>
+                <target>Mapa de Google amb qualsevol nombre de marcadors.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.latitude">
+                <source>Latitude</source>
+                <target>Latitud</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.longitude">
+                <source>Longitude</source>
+                <target>Longitud</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.ratio">
+                <source>Map aspect ratio</source>
+                <target>Relació d'aspecte del mapa</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.zoom">
+                <source>Zoom</source>
+                <target>Zoom</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.autoclose">
+                <source>Close info windows in n seconds after they have been opened.</source>
+                <target>Tanca les finestres d'informació en n segons després d'haver estat obertes.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.autoclose.description">
+                <source>If 0, user has to close them</source>
+                <target>Si és 0, l'usuari ha de tancar-les</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.pins">
+                <source>Markers</source>
+                <target>Marcadors</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.pin">
+                <source>Marker</source>
+                <target>Marcador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.name">
+                <source>Name</source>
+                <target>Nom</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.text">
+                <source>Text</source>
+                <target>Text</target>
             </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>

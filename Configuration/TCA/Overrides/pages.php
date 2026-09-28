@@ -159,6 +159,20 @@ $tempColumns = [
             'default' => '/'
         ]
     ],
+    'tx_das_googlemapskey' => [
+        'label' => $languageFilePrefix . 'google_maps_key',
+        'displayCond' => [
+            'AND' => [
+                'FIELD:is_siteroot:REQ:true'
+            ]
+        ],
+        'l10n_mode' => 'exclude',
+        'l10n_display' => 'defaultAsReadonly',
+        'config' => [
+            'type' => 'input',
+            'eval' => 'trim'
+        ]
+    ],
     'tx_das_showpagetitle' => [
         'label' => $languageFilePrefix . 'show_page_title',
         'description' => $languageFilePrefix . 'show_page_title.description',
@@ -372,7 +386,8 @@ $GLOBALS['TCA']['pages']['palettes']['page'] = [
         tx_das_showpagetitle,
         --linebreak--,
         tx_das_breadcrumb,
-        tx_das_breadcrumbseparator
+        tx_das_breadcrumbseparator,
+        tx_das_googlemapskey
     '
 ];
 

@@ -32,6 +32,7 @@ jQuery(document).ready(function ($) {
     initCountdowns();
     initMasonryGalleries();
     initSharePageLinks();
+    initGoogleMaps();
 
 });
 
@@ -359,6 +360,33 @@ function initCircleCounters() {
 function initSharePageLinks() {
     $(".tx-das-content-sharepage a.sharepage").each(function() {
         $(this).attr("href", $(this).attr("href") + encodeURIComponent(window.location.href));
+    });
+}
+
+function initGoogleMaps() {
+    if ($("gmp-map").length && googlemapskey !== "") {
+        $.getScript("https://maps.googleapis.com/maps/api/js?loading=async&libraries=maps,marker&callback=initMaps&key=" + googlemapskey, function() {});
+    }
+}
+
+async function initMaps() {
+    const mapElement = document.querySelector("gmp-map");
+    await customElements.whenDefined("gmp-map");
+    const map = mapElement.innerMap;
+    const infoWindow = new google.maps.InfoWindow();
+    const markers = document.querySelectorAll("gmp-advanced-marker");
+    markers.forEach((marker) => {
+        marker.addEventListener("gmp-click", () => {
+            let content = `<h3>` + marker.title + `</h3><p>` + marker.getAttribute("data-description") + `</p>`;
+            infoWindow.setContent(content);
+            infoWindow.open({
+                map: map,
+                anchor: marker
+            });
+            if (marker.getAttribute("data-close") > 0) {
+                setTimeout(function () { infoWindow.close(); }, marker.getAttribute("data-close") * 1000);
+            }
+        });
     });
 }
 

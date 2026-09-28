@@ -483,6 +483,10 @@
                 <source>Breadcrumb items separator</source>
                 <target>Separador de elementos del camino de navegación</target>
             </trans-unit>
+            <trans-unit id="pages.google_maps_key">
+                <source>Google Maps key</source>
+                <target>Clave de los mapas de Google</target>
+            </trans-unit>
             <trans-unit id="pages.show_page_title">
                 <source>Show page title</source>
                 <target>Mostrar título de la página</target>
@@ -1950,10 +1954,6 @@
                 <source>Color</source>
                 <target>Color</target>
             </trans-unit>
-            <trans-unit id="tt_content.textincolumns">
-                <source>Show text in columns</source>
-                <target>Mostrar texto en columnas</target>
-            </trans-unit>
             <trans-unit id="tt_content.poll">
                 <source>Poll</source>
                 <target>Encuesta</target>
@@ -2017,6 +2017,58 @@
             <trans-unit id="tt_content.poll.animated_bars">
                 <source>Animated bars</source>
                 <target>Barras animadas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.textincolumns">
+                <source>Show text in columns</source>
+                <target>Mostrar texto en columnas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map">
+                <source>Google map</source>
+                <target>Mapa de Google</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.description">
+                <source>Google map with any number of markers.</source>
+                <target>Mapa de Google con cualquier número de marcadores.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.latitude">
+                <source>Latitude</source>
+                <target>Latitud</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.longitude">
+                <source>Longitude</source>
+                <target>Longitud</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.ratio">
+                <source>Map aspect ratio</source>
+                <target>Relación de aspecto del mapa</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.zoom">
+                <source>Zoom</source>
+                <target>Zoom</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.autoclose">
+                <source>Close info windows in n seconds after they have been opened</source>
+                <target>Cerrar las ventanas de información en n segundos después de haber sido abiertas</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.autoclose.description">
+                <source>If 0, user has to close them.</source>
+                <target>Si es 0, el usuario debe cerrarlas.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.pins">
+                <source>Markers</source>
+                <target>Marcadores</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.pin">
+                <source>Marker</source>
+                <target>Marcador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.name">
+                <source>Name</source>
+                <target>Nombre</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.text">
+                <source>Text</source>
+                <target>Texto</target>
             </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>

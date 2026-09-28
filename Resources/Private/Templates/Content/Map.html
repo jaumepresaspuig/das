@@ -1,0 +1,175 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Map"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Map.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+            requestUpdate="1"
+        />
+        <flux:field.input
+            name="latitude"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.latitude"
+            required="1"
+        />
+        <flux:field.input
+            name="longitude"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.longitude"
+            required="1"
+        />
+        <flux:field.select
+            name="ratio"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.ratio"
+            items="{
+                0:{0: '21:9', 1: '21x9'},
+                1:{0: '16:9', 1: '16x9'},
+                2:{0: '4:3', 1: '4x3'},
+                3:{0: '1:1', 1: '1x1'}
+            }"
+            default="16x9"
+        />
+        <flux:field.input
+            name="zoom"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.zoom"
+            size="2"
+            default="15"
+            config="{eval: 'int', range: {lower: 0, upper: 22}, slider: {step: 1, width: 200}}"
+        />
+        <flux:field.input
+            name="autoclose"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.autoclose"
+            description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.autoclose.description"
+            size="2"
+            default="0"
+            config="{eval: 'int', range: {lower: 0, upper: 15}, slider: {step: 1, width: 200}}"
+        />
+        <flux:form.sheet
+            name="itemstab"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.pins"
+        >
+            <flux:form.section
+                name="items"
+                label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.pins"
+            >
+                <flux:form.object
+                    name="item"
+                    label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.pin"
+                >
+                    <flux:field.checkbox
+                        name="active"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:active"
+                        default="1"
+                        config="{renderType: 'checkboxToggle'}"
+                    />
+                    <flux:field.input
+                        name="name"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.name"
+                        required="1"
+                    />
+                    <flux:field.input
+                        name="latitude"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.latitude"
+                        required="1"
+                    />
+                    <flux:field.input
+                        name="longitude"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.longitude"
+                        required="1"
+                    />
+                    <flux:field.text
+                        name="text"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.text"
+                        rows="5"
+                    />
+                </flux:form.object>
+            </flux:form.section>
+        </flux:form.sheet>
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.latitude" />
+                    </th>
+                    <td>
+                        {latitude}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.longitude" />
+                    </th>
+                    <td>
+                        {longitude}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.ratio" />
+                    </th>
+                    <td>
+                        {ratio}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.zoom" />
+                    </th>
+                    <td>
+                        {zoom}
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.autoclose" />
+                    </th>
+                    <td>
+                        {autoclose}
+                    </td>
+                </tr>
+            <tr>
+                <td colspan="2">
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.pins" /></strong><br />
+                    <f:for each="{items}" as="item" iteration="iteration">
+                        <f:if condition="!{item.item.active}"><f:then><span class="text-muted">{item.item.name}</span></f:then><f:else>{item.item.name}</f:else></f:if><f:if condition="!{iteration.isLast}">,</f:if>
+                    </f:for>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Map" arguments="{_all}" />
+</f:section>

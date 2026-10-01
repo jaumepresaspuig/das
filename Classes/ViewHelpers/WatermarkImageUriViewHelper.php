@@ -489,6 +489,6 @@ final class WatermarkImageUriViewHelper extends AbstractViewHelper
             );
         }
 
-        return ltrim(substr($absolutePath, strlen($publicPath)), '/');
+        return substr($absolutePath, strlen($publicPath));
     }
 }

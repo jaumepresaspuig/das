@@ -4,9 +4,87 @@
     <f:if condition="{home.tx_das_googlemapskey}">
         <div class="tx-das-content-map tx-das-content-map-layout-{layout} ratio ratio-{ratio}" id="tx-das-content-map-{record.uid}" data-id="c{record.uid}">
             <gmp-map center="{latitude}, {longitude}" zoom="{zoom}" map-id="map{record.uid}">
-                <f:for each="{items}" as="item">
-                    <gmp-advanced-marker position="{item.latitude}, {item.longitude}" title="{item.name}" data-description="{item.text -> f:format.nl2br()}" data-close="{autoclose}" gmp-clickable></gmp-advanced-marker>
-                </f:for>
+                <f:if condition="{items -> f:count()}">
+                    <f:switch expression="{default_color}">
+                        <f:case value="primary">
+                            <f:variable name="itemdefaultcolor" value="#007bff" />
+                            <f:variable name="itemdefaultborder" value="#0062cc" />
+                        </f:case>
+                        <f:case value="secondary">
+                            <f:variable name="itemdefaultcolor" value="#6c757d" />
+                            <f:variable name="itemdefaultborder" value="#545b62" />
+                        </f:case>
+                        <f:case value="success">
+                            <f:variable name="itemdefaultcolor" value="#28a745" />
+                            <f:variable name="itemdefaultborder" value="#1e7e34" />
+                        </f:case>
+                        <f:case value="danger">
+                            <f:variable name="itemdefaultcolor" value="#dc3545" />
+                            <f:variable name="itemdefaultborder" value="#bd2130" />
+                        </f:case>
+                        <f:case value="warning">
+                            <f:variable name="itemdefaultcolor" value="#ffc107" />
+                            <f:variable name="itemdefaultborder" value="#d39e00" />
+                        </f:case>
+                        <f:case value="info">
+                            <f:variable name="itemdefaultcolor" value="#17a2b8" />
+                            <f:variable name="itemdefaultborder" value="#117a8b" />
+                        </f:case>
+                        <f:case value="light">
+                            <f:variable name="itemcdefaultolor" value="#f8f9fa" />
+                            <f:variable name="itemdefaultborder" value="#dae0e5" />
+                        </f:case>
+                        <f:case value="dark">
+                            <f:variable name="itemdefaultcolor" value="#343a40" />
+                            <f:variable name="itemdefaultborder" value="#1d2124" />
+                        </f:case>
+                        <f:defaultCase>
+                            <f:variable name="itemdefaultcolor" value="" />
+                            <f:variable name="itemdefaultborder" value="" />
+                        </f:defaultCase>
+                    </f:switch>
+                    <f:for each="{items}" as="item">
+                        <f:switch expression="{item.pin_color}">
+                            <f:case value="primary">
+                                <f:variable name="itemcolor" value="#007bff" />
+                                <f:variable name="itemborder" value="#0062cc" />
+                            </f:case>
+                            <f:case value="secondary">
+                                <f:variable name="itemcolor" value="#6c757d" />
+                                <f:variable name="itemborder" value="#545b62" />
+                            </f:case>
+                            <f:case value="success">
+                                <f:variable name="itemcolor" value="#28a745" />
+                                <f:variable name="itemborder" value="#1e7e34" />
+                            </f:case>
+                            <f:case value="danger">
+                                <f:variable name="itemcolor" value="#dc3545" />
+                                <f:variable name="itemborder" value="#bd2130" />
+                            </f:case>
+                            <f:case value="warning">
+                                <f:variable name="itemcolor" value="#ffc107" />
+                                <f:variable name="itemborder" value="#d39e00" />
+                            </f:case>
+                            <f:case value="info">
+                                <f:variable name="itemcolor" value="#17a2b8" />
+                                <f:variable name="itemborder" value="#117a8b" />
+                            </f:case>
+                            <f:case value="light">
+                                <f:variable name="itemcolor" value="#f8f9fa" />
+                                <f:variable name="itemborder" value="#dae0e5" />
+                            </f:case>
+                            <f:case value="dark">
+                                <f:variable name="itemcolor" value="#343a40" />
+                                <f:variable name="itemborder" value="#1d2124" />
+                            </f:case>
+                            <f:defaultCase>
+                                <f:variable name="itemcolor" value="{itemdefaultcolor}" />
+                                <f:variable name="itemborder" value="{itemdefaultborder}" />
+                            </f:defaultCase>
+                        </f:switch>
+                        <gmp-advanced-marker position="{item.latitude}, {item.longitude}" title="{item.name}" data-description="{item.text -> f:format.nl2br()}" data-color="{itemcolor}" data-border="{itemborder}" data-close="{autoclose}" gmp-clickable></gmp-advanced-marker>
+                    </f:for>
+                </f:if>
             </gmp-map>
         </div>
     </f:if>

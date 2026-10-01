@@ -375,16 +375,23 @@ async function initMaps() {
     const map = mapElement.innerMap;
     const infoWindow = new google.maps.InfoWindow();
     const markers = document.querySelectorAll("gmp-advanced-marker");
+    const { PinElement } = await google.maps.importLibrary("marker");
     markers.forEach((marker) => {
+        const pin = new PinElement({
+            background: marker.dataset.color || "#ea4335",
+            borderColor: marker.dataset.border || "#b31412",
+            glyphColor: marker.dataset.border || "#b31412",
+        });
+        marker.replaceChildren(pin);
         marker.addEventListener("gmp-click", () => {
-            let content = `<h3>` + marker.title + `</h3><p>` + marker.getAttribute("data-description") + `</p>`;
+            let content = `<h3>` + marker.title + `</h3><p>` + marker.dataset.description + `</p>`;
             infoWindow.setContent(content);
             infoWindow.open({
                 map: map,
                 anchor: marker
             });
-            if (marker.getAttribute("data-close") > 0) {
-                setTimeout(function () { infoWindow.close(); }, marker.getAttribute("data-close") * 1000);
+            if (marker.dataset.close > 0) {
+                setTimeout(function () { infoWindow.close(); }, marker.dataset.close * 1000);
             }
         });
     });

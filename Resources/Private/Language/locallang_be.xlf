@@ -363,7 +363,7 @@
             <trans-unit id="pages.breadcrumb_separator">
                 <source>Breadcrumb items separator</source>
             </trans-unit>
-            <trans-unit id="pages.google_maps_key">
+            <trans-unit id="pages.breadcrumb_google_maps_key">
                 <source>Google Maps key</source>
             </trans-unit>
             <trans-unit id="pages.show_page_title">
@@ -1536,6 +1536,12 @@
             <trans-unit id="tt_content.map.zoom">
                 <source>Zoom</source>
             </trans-unit>
+            <trans-unit id="tt_content.map.default_color">
+                <source>Pin color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.map.default_color.default">
+                <source>Google Maps default color</source>
+            </trans-unit>
             <trans-unit id="tt_content.map.autoclose">
                 <source>Close info windows in n seconds after they have been opened</source>
             </trans-unit>
@@ -1553,6 +1559,12 @@
             </trans-unit>
             <trans-unit id="tt_content.map.text">
                 <source>Text</source>
+            </trans-unit>
+            <trans-unit id="tt_content.map.pin_color">
+                <source>Pin color</source>
+            </trans-unit>
+            <trans-unit id="tt_content.map.pin_color.description">
+                <source>Overrides the default one.</source>
             </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>

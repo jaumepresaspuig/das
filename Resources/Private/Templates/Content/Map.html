@@ -48,6 +48,23 @@
             default="15"
             config="{eval: 'int', range: {lower: 0, upper: 22}, slider: {step: 1, width: 200}}"
         />
+        <flux:field.select
+            name="default_color"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.default_color"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.default_color.default', 1: 'pin', 2: 'EXT:das/Resources/Public/Images/Colors/bg_pin.svg'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_primary.svg'},
+                2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_secondary.svg'},
+                3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/bg_success.svg'},
+                4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/bg_danger.svg'},
+                5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/bg_warning.svg'},
+                6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/bg_info.svg'},
+                7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
+                8:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
+            }"
+            default=""
+            showIconTable="1"
+        />
         <flux:field.input
             name="autoclose"
             label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.autoclose"
@@ -93,6 +110,24 @@
                         name="text"
                         label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.text"
                         rows="5"
+                    />
+                    <flux:field.select
+                        name="pin_color"
+                        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.default_color"
+                        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.default_color.description"
+                        items="{
+                            0:{0: '', 1: '', 2: 'EXT:das/Resources/Public/Images/Colors/bg_.svg'},
+                            1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.primary', 1: 'primary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_primary.svg'},
+                            2:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.secondary', 1: 'secondary', 2: 'EXT:das/Resources/Public/Images/Colors/bg_secondary.svg'},
+                            3:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.success', 1: 'success', 2: 'EXT:das/Resources/Public/Images/Colors/bg_success.svg'},
+                            4:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.danger', 1: 'danger', 2: 'EXT:das/Resources/Public/Images/Colors/bg_danger.svg'},
+                            5:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.warning', 1: 'warning', 2: 'EXT:das/Resources/Public/Images/Colors/bg_warning.svg'},
+                            6:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.info', 1: 'info', 2: 'EXT:das/Resources/Public/Images/Colors/bg_info.svg'},
+                            7:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.light', 1: 'light', 2: 'EXT:das/Resources/Public/Images/Colors/bg_light.svg'},
+                            8:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.dark', 1: 'dark', 2: 'EXT:das/Resources/Public/Images/Colors/bg_dark.svg'}
+                        }"
+                        default=""
+                        showIconTable="1"
                     />
                 </flux:form.object>
             </flux:form.section>
@@ -144,6 +179,14 @@
                 </tr>
                 <tr>
                     <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.default_color" />
+                    </th>
+                    <td>
+                        <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{default_color}.svg" width="20" height="20" alt="{f:if(condition: '{default_color} == \'pin\'', then: '{f:translate(key: \'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.default_color.default\')}', else: '{f:translate(key: \'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:colors.{default_color}\')}')}" class="d-inline-block me-1 mb-1" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
                         <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.zoom" />
                     </th>
                     <td>
@@ -160,7 +203,15 @@
                 </tr>
             <tr>
                 <td colspan="2">
-                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.pins" /></strong><br />
+                    <strong><f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.pins" /></strong>
+                    <ul class="mt-2">
+                        <f:for each="{items}" as="item">
+                            <li{f:if(condition: '!{item.item.active}', then: ' class="text-muted"')}>
+                               <f:image src="EXT:das/Resources/Public/Images/Colors/bg_{f:if(condition: '{item.item.pin_color}', then: '{item.item.pin_color}', else: '{default_color}')}.svg" width="20" height="20" alt="{f:translate(key: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:{f:if(condition: \'{item.item.color}\', then: \'colors.{item.item.color}\', else: \'default\')}')}" class="d-inline-block me-1 mb-1" />
+                               {item.item.name}
+                            </li>
+                        </f:for>
+                    </ul>
                     <f:for each="{items}" as="item" iteration="iteration">
                         <f:if condition="!{item.item.active}"><f:then><span class="text-muted">{item.item.name}</span></f:then><f:else>{item.item.name}</f:else></f:if><f:if condition="!{iteration.isLast}">,</f:if>
                     </f:for>

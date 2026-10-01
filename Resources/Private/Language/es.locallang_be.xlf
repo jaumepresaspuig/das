@@ -2046,6 +2046,14 @@
                 <source>Zoom</source>
                 <target>Zoom</target>
             </trans-unit>
+            <trans-unit id="tt_content.map.default_color">
+                <source>Pin color</source>
+                <target>Color del marcador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.default_color.default">
+                <source>Google Maps default color</source>
+                <target>Color por defecto del Google Maps</target>
+            </trans-unit>
             <trans-unit id="tt_content.map.autoclose">
                 <source>Close info windows in n seconds after they have been opened</source>
                 <target>Cerrar las ventanas de información en n segundos después de haber sido abiertas</target>
@@ -2069,6 +2077,14 @@
             <trans-unit id="tt_content.map.text">
                 <source>Text</source>
                 <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.pin_color">
+                <source>Pin color</source>
+                <target>Color del marcador</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.pin_color.description">
+                <source>Overrides the default one.</source>
+                <target>Sobreescribe el por defecto.</target>
             </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>

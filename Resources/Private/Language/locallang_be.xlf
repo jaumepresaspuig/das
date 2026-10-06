@@ -1519,10 +1519,13 @@
                 <source>Show text in columns</source>
             </trans-unit>
             <trans-unit id="tt_content.map">
-                <source>Google map</source>
+                <source>Map</source>
             </trans-unit>
             <trans-unit id="tt_content.map.description">
-                <source>Google map with any number of markers.</source>
+                <source>Google Maps or OpenStreetMap map with any number of markers.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.map.provider">
+                <source>Map provider</source>
             </trans-unit>
             <trans-unit id="tt_content.map.latitude">
                 <source>Latitude</source>
@@ -1540,7 +1543,7 @@
                 <source>Pin color</source>
             </trans-unit>
             <trans-unit id="tt_content.map.default_color.default">
-                <source>Google Maps default color</source>
+                <source>Default color</source>
             </trans-unit>
             <trans-unit id="tt_content.map.autoclose">
                 <source>Close info windows in n seconds after they have been opened</source>

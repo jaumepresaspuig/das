@@ -20,6 +20,16 @@
             }"
             requestUpdate="1"
         />
+        <flux:field.select
+            name="mapprovider"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.provider"
+            items="{
+                0:{0: 'Google Maps', 1: 'googlemaps', 2: 'EXT:das/Resources/Public/Images/Map/googlemaps.png'},
+                1:{0: 'OpenStreetMap', 1: 'openstreetmap', 2: 'EXT:das/Resources/Public/Images/Map/openstreetmap.png'}
+            }"
+            showIconTable="1"
+            default="googlemaps"
+        />
         <flux:field.input
             name="latitude"
             label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.latitude"
@@ -155,6 +165,14 @@
             </tr>
                 <tr>
                     <th>
+                        <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.provider" />
+                    </th>
+                    <td>
+                        <f:image src="EXT:das/Resources/Public/Images/Map/{mapprovider}.png" width="16" height="16" alt="{mapprovider}" class="d-inline-block me-1 mb-1" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>
                         <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.map.latitude" />
                     </th>
                     <td>
@@ -212,9 +230,6 @@
                             </li>
                         </f:for>
                     </ul>
-                    <f:for each="{items}" as="item" iteration="iteration">
-                        <f:if condition="!{item.item.active}"><f:then><span class="text-muted">{item.item.name}</span></f:then><f:else>{item.item.name}</f:else></f:if><f:if condition="!{iteration.isLast}">,</f:if>
-                    </f:for>
                 </td>
             </tr>
         </tbody>

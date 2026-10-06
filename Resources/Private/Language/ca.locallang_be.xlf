@@ -2027,12 +2027,16 @@
                 <target>Mostra text en columnes</target>
             </trans-unit>
             <trans-unit id="tt_content.map">
-                <source>Google map</source>
-                <target>Mapa de Google</target>
+                <source>Map</source>
+                <target>Mapa</target>
             </trans-unit>
             <trans-unit id="tt_content.map.description">
-                <source>Google map with any number of markers.</source>
-                <target>Mapa de Google amb qualsevol nombre de marcadors.</target>
+                <source>Google Maps or OpenStreetMap map with any number of markers.</source>
+                <target>Mapa de Google Maps o OpenStreetMap amb qualsevol nombre de marcadors.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.map.provider">
+                <source>Map provider</source>
+                <target>Proveïdor de mapes</target>
             </trans-unit>
             <trans-unit id="tt_content.map.latitude">
                 <source>Latitude</source>
@@ -2055,8 +2059,8 @@
                 <target>Color del marcador</target>
             </trans-unit>
             <trans-unit id="tt_content.map.default_color.default">
-                <source>Google Maps default color</source>
-                <target>Color per defecte del Google Maps</target>
+                <source>Default color</source>
+                <target>Color per defecte</target>
             </trans-unit>
             <trans-unit id="tt_content.map.autoclose">
                 <source>Close info windows in n seconds after they have been opened.</source>

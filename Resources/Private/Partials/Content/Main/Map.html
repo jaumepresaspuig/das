@@ -1,91 +1,163 @@
 <f:if condition="{latitude} && {longitude}">
-    <f:variable name="rootline" value="{v:page.rootline()}" />
-    <f:variable name="home" value="{rootline.0}" />
-    <f:if condition="{home.tx_das_googlemapskey}">
-        <div class="tx-das-content-map tx-das-content-map-layout-{layout} ratio ratio-{ratio}" id="tx-das-content-map-{record.uid}" data-id="c{record.uid}">
-            <gmp-map center="{latitude}, {longitude}" zoom="{zoom}" map-id="map{record.uid}">
-                <f:if condition="{items -> f:count()}">
-                    <f:switch expression="{default_color}">
-                        <f:case value="primary">
-                            <f:variable name="itemdefaultcolor" value="#007bff" />
-                            <f:variable name="itemdefaultborder" value="#0062cc" />
-                        </f:case>
-                        <f:case value="secondary">
-                            <f:variable name="itemdefaultcolor" value="#6c757d" />
-                            <f:variable name="itemdefaultborder" value="#545b62" />
-                        </f:case>
-                        <f:case value="success">
-                            <f:variable name="itemdefaultcolor" value="#28a745" />
-                            <f:variable name="itemdefaultborder" value="#1e7e34" />
-                        </f:case>
-                        <f:case value="danger">
-                            <f:variable name="itemdefaultcolor" value="#dc3545" />
-                            <f:variable name="itemdefaultborder" value="#bd2130" />
-                        </f:case>
-                        <f:case value="warning">
-                            <f:variable name="itemdefaultcolor" value="#ffc107" />
-                            <f:variable name="itemdefaultborder" value="#d39e00" />
-                        </f:case>
-                        <f:case value="info">
-                            <f:variable name="itemdefaultcolor" value="#17a2b8" />
-                            <f:variable name="itemdefaultborder" value="#117a8b" />
-                        </f:case>
-                        <f:case value="light">
-                            <f:variable name="itemcdefaultolor" value="#f8f9fa" />
-                            <f:variable name="itemdefaultborder" value="#dae0e5" />
-                        </f:case>
-                        <f:case value="dark">
-                            <f:variable name="itemdefaultcolor" value="#343a40" />
-                            <f:variable name="itemdefaultborder" value="#1d2124" />
-                        </f:case>
-                        <f:defaultCase>
-                            <f:variable name="itemdefaultcolor" value="" />
-                            <f:variable name="itemdefaultborder" value="" />
-                        </f:defaultCase>
-                    </f:switch>
-                    <f:for each="{items}" as="item">
-                        <f:switch expression="{item.pin_color}">
-                            <f:case value="primary">
-                                <f:variable name="itemcolor" value="#007bff" />
-                                <f:variable name="itemborder" value="#0062cc" />
-                            </f:case>
-                            <f:case value="secondary">
-                                <f:variable name="itemcolor" value="#6c757d" />
-                                <f:variable name="itemborder" value="#545b62" />
-                            </f:case>
-                            <f:case value="success">
-                                <f:variable name="itemcolor" value="#28a745" />
-                                <f:variable name="itemborder" value="#1e7e34" />
-                            </f:case>
-                            <f:case value="danger">
-                                <f:variable name="itemcolor" value="#dc3545" />
-                                <f:variable name="itemborder" value="#bd2130" />
-                            </f:case>
-                            <f:case value="warning">
-                                <f:variable name="itemcolor" value="#ffc107" />
-                                <f:variable name="itemborder" value="#d39e00" />
-                            </f:case>
-                            <f:case value="info">
-                                <f:variable name="itemcolor" value="#17a2b8" />
-                                <f:variable name="itemborder" value="#117a8b" />
-                            </f:case>
-                            <f:case value="light">
-                                <f:variable name="itemcolor" value="#f8f9fa" />
-                                <f:variable name="itemborder" value="#dae0e5" />
-                            </f:case>
-                            <f:case value="dark">
-                                <f:variable name="itemcolor" value="#343a40" />
-                                <f:variable name="itemborder" value="#1d2124" />
-                            </f:case>
-                            <f:defaultCase>
-                                <f:variable name="itemcolor" value="{itemdefaultcolor}" />
-                                <f:variable name="itemborder" value="{itemdefaultborder}" />
-                            </f:defaultCase>
-                        </f:switch>
-                        <gmp-advanced-marker position="{item.latitude}, {item.longitude}" title="{item.name}" data-description="{item.text -> f:format.nl2br()}" data-color="{itemcolor}" data-border="{itemborder}" data-close="{autoclose}" gmp-clickable></gmp-advanced-marker>
-                    </f:for>
+    <f:switch expression="{default_color}">
+        <f:case value="primary">
+            <f:variable name="itemdefaultcolor" value="#007bff" />
+            <f:variable name="itemdefaultborder" value="#0062cc" />
+        </f:case>
+        <f:case value="secondary">
+            <f:variable name="itemdefaultcolor" value="#6c757d" />
+            <f:variable name="itemdefaultborder" value="#545b62" />
+        </f:case>
+        <f:case value="success">
+            <f:variable name="itemdefaultcolor" value="#28a745" />
+            <f:variable name="itemdefaultborder" value="#1e7e34" />
+        </f:case>
+        <f:case value="danger">
+            <f:variable name="itemdefaultcolor" value="#dc3545" />
+            <f:variable name="itemdefaultborder" value="#bd2130" />
+        </f:case>
+        <f:case value="warning">
+            <f:variable name="itemdefaultcolor" value="#ffc107" />
+            <f:variable name="itemdefaultborder" value="#d39e00" />
+        </f:case>
+        <f:case value="info">
+            <f:variable name="itemdefaultcolor" value="#17a2b8" />
+            <f:variable name="itemdefaultborder" value="#117a8b" />
+        </f:case>
+        <f:case value="light">
+            <f:variable name="itemcdefaultolor" value="#f8f9fa" />
+            <f:variable name="itemdefaultborder" value="#dae0e5" />
+        </f:case>
+        <f:case value="dark">
+            <f:variable name="itemdefaultcolor" value="#343a40" />
+            <f:variable name="itemdefaultborder" value="#1d2124" />
+        </f:case>
+        <f:defaultCase>
+            <f:variable name="itemdefaultcolor" value="" />
+            <f:variable name="itemdefaultborder" value="" />
+        </f:defaultCase>
+    </f:switch>
+    <div class="tx-das-content-map tx-das-content-map-layout-{layout} ratio ratio-{ratio}" id="tx-das-content-map-{record.uid}" data-id="c{record.uid}">
+        <f:switch expression="{mapprovider}">
+            <f:case value="openstreetmap">
+                <div class="osm-map" id="osm-map-{record.uid}" data-latitude="{latitude}" data-longitude="{longitude}" data-zoom="{zoom}" data-close="{autoclose}">
+                    <f:if condition="{items -> f:count()}">
+                        <f:for each="{items}" as="item">
+                            <f:switch expression="{item.pin_color}">
+                                <f:case value="primary">
+                                    <f:variable name="itemcolor" value="#007bff" />
+                                    <f:variable name="itemborder" value="#0062cc" />
+                                </f:case>
+                                <f:case value="secondary">
+                                    <f:variable name="itemcolor" value="#6c757d" />
+                                    <f:variable name="itemborder" value="#545b62" />
+                                </f:case>
+                                <f:case value="success">
+                                    <f:variable name="itemcolor" value="#28a745" />
+                                    <f:variable name="itemborder" value="#1e7e34" />
+                                </f:case>
+                                <f:case value="danger">
+                                    <f:variable name="itemcolor" value="#dc3545" />
+                                    <f:variable name="itemborder" value="#bd2130" />
+                                </f:case>
+                                <f:case value="warning">
+                                    <f:variable name="itemcolor" value="#ffc107" />
+                                    <f:variable name="itemborder" value="#d39e00" />
+                                </f:case>
+                                <f:case value="info">
+                                    <f:variable name="itemcolor" value="#17a2b8" />
+                                    <f:variable name="itemborder" value="#117a8b" />
+                                </f:case>
+                                <f:case value="light">
+                                    <f:variable name="itemcolor" value="#f8f9fa" />
+                                    <f:variable name="itemborder" value="#dae0e5" />
+                                </f:case>
+                                <f:case value="dark">
+                                    <f:variable name="itemcolor" value="#343a40" />
+                                    <f:variable name="itemborder" value="#1d2124" />
+                                </f:case>
+                                <f:defaultCase>
+                                    <f:variable name="itemcolor" value="{itemdefaultcolor}" />
+                                    <f:variable name="itemborder" value="{itemdefaultborder}" />
+                                </f:defaultCase>
+                            </f:switch>
+                            <div data-latitude="{item.latitude}" data-longitude="{item.longitude}" data-title="{item.name}" data-description="{item.text -> f:format.nl2br()}" data-color="{itemcolor}" data-border="{itemborder}" data-close="{autoclose}" class="d-none"></div>
+                        </f:for>
+                    </f:if>
+                </div>
+            </f:case>
+            <f:defaultCase>
+                <f:variable name="rootline" value="{v:page.rootline()}" />
+                <f:variable name="home" value="{rootline.0}" />
+                <f:if condition="{home.tx_das_googlemapskey}">
+                    <f:then>
+                        <gmp-map center="{latitude}, {longitude}" zoom="{zoom}" map-id="map{record.uid}">
+                            <f:if condition="{items -> f:count()}">
+                                <f:for each="{items}" as="item">
+                                    <f:switch expression="{item.pin_color}">
+                                        <f:case value="primary">
+                                            <f:variable name="itemcolor" value="#007bff" />
+                                            <f:variable name="itemborder" value="#0062cc" />
+                                        </f:case>
+                                        <f:case value="secondary">
+                                            <f:variable name="itemcolor" value="#6c757d" />
+                                            <f:variable name="itemborder" value="#545b62" />
+                                        </f:case>
+                                        <f:case value="success">
+                                            <f:variable name="itemcolor" value="#28a745" />
+                                            <f:variable name="itemborder" value="#1e7e34" />
+                                        </f:case>
+                                        <f:case value="danger">
+                                            <f:variable name="itemcolor" value="#dc3545" />
+                                            <f:variable name="itemborder" value="#bd2130" />
+                                        </f:case>
+                                        <f:case value="warning">
+                                            <f:variable name="itemcolor" value="#ffc107" />
+                                            <f:variable name="itemborder" value="#d39e00" />
+                                        </f:case>
+                                        <f:case value="info">
+                                            <f:variable name="itemcolor" value="#17a2b8" />
+                                            <f:variable name="itemborder" value="#117a8b" />
+                                        </f:case>
+                                        <f:case value="light">
+                                            <f:variable name="itemcolor" value="#f8f9fa" />
+                                            <f:variable name="itemborder" value="#dae0e5" />
+                                        </f:case>
+                                        <f:case value="dark">
+                                            <f:variable name="itemcolor" value="#343a40" />
+                                            <f:variable name="itemborder" value="#1d2124" />
+                                        </f:case>
+                                        <f:defaultCase>
+                                            <f:variable name="itemcolor" value="{itemdefaultcolor}" />
+                                            <f:variable name="itemborder" value="{itemdefaultborder}" />
+                                        </f:defaultCase>
+                                    </f:switch>
+                                    <gmp-advanced-marker position="{item.latitude}, {item.longitude}" title="{item.name}" data-description="{item.text -> f:format.nl2br()}" data-color="{itemcolor}" data-border="{itemborder}" data-close="{autoclose}" gmp-clickable></gmp-advanced-marker>
+                                </f:for>
+                            </f:if>
+                        </gmp-map>
+                    </f:then>
+                    <f:else>
+                        <div class="alert alert-danger" role="alert">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+                                <symbol id="check-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                </symbol>
+                                <symbol id="info-fill" viewBox="0 0 16 16">
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z" />
+                                </symbol>
+                                <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+                                    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </symbol>
+                            </svg>
+                            <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:" width="24" height="24" style="fill: currentcolor;">
+                                <use xlink:href="#exclamation-triangle-fill"></use>
+                            </svg>
+                            Missing Google Maps API key. Please set the key in the root page properties.
+                        </div>
+                    </f:else>
                 </f:if>
-            </gmp-map>
-        </div>
-    </f:if>
+            </f:defaultCase>
+        </f:switch>
+    </div>
 </f:if>

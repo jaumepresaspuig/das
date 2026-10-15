@@ -24,7 +24,7 @@ config {
     sys_language_overlay = 0
     hideNonTranslated = 0
     typolinkEnableLinksAcrossDomains = 1
-    removeDefaultJS = 1
+    removeDefaultJS = 0
     removeDefaultCS = 1
     removePageCss = 1
     compressCss = 1

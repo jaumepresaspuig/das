@@ -692,8 +692,8 @@ $tempColumns = [
                     'value' => 'h4'
                 ],
                 [
-                    'label' => 'H5',
-                    'value' => 'h5'
+                    'label' => $languageFilePrefix . 'hidden',
+                    'value' => 'd-none'
                 ]
             ]
         ]

@@ -46,9 +46,9 @@
         </f:if>
         <div class="card-body {item.text_color}">
             <f:if condition="{item.title}">
-                <h5 class="card-title">
+                <h2 class="card-title h5">
                     {item.title}
-                </h5>
+                </h2>
             </f:if>
             <f:if condition="{item.subtitle}">
                 <p class="card-text">
@@ -56,30 +56,30 @@
                 </p>
             </f:if>
             <f:if condition="{extra_fields}">
-                <p>
+                <p class="d-inline-flex">
                     <f:if condition="{item.email}">
-                        <a href="mailto:{item.email}" class="fa fa-envelope link-underline link-underline-opacity-0 text-{item.button_color}" title="E-mail"></a>
+                        <f:link.typolink parameter="mailto:{item.email}" class="fa fa-envelope link-underline link-underline-opacity-0 text-{item.button_color}" title="{f:translate(extensionName: 'das', key: 'email')}" additionalAttributes="{aria-label: '{f:translate(extensionName: \'das\', key: \'email\')}'}">&nbsp;</f:link.typolink>
                     </f:if>
                     <f:if condition="{item.page}">
-                        <f:link.typolink parameter="{item.page}" class="fa fa-square-plus link-underline link-underline-opacity-0 text-{item.button_color}">&nbsp;</f:link.typolink>
+                        <f:link.typolink parameter="{item.page}" class="fa fa-square-plus link-underline link-underline-opacity-0 text-{item.button_color}" title="{f:translate(extensionName: 'das', key: 'personal_page')}" target="_blank" additionalAttributes="{aria-label: '{f:translate(extensionName: \'das\', key: \'personal_page\')}'}">&nbsp;</f:link.typolink>
                     </f:if>
                     <f:if condition="{item.facebook}">
-                        <a href="{item.facebook}" class="fab fa-facebook blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Facebook"></a>
+                        <a href="{item.facebook}" class="fab fa-facebook blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Facebook" target="_blank" aria-label="Facebook"></a>
                     </f:if>
                     <f:if condition="{item.twitter}">
-                        <a href="{item.twitter}" class="fab fa-twitter blank link-underline link-underline-opacity-0 text-{item.button_color}" title="X"></a>
+                        <a href="{item.twitter}" class="fab fa-twitter blank link-underline link-underline-opacity-0 text-{item.button_color}" title="X" target="_blank" aria-label="X"></a>
                     </f:if>
                     <f:if condition="{item.instagram}">
-                        <a href="{item.instagram}" class="fab fa-instagram blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Instagram"></a>
+                        <a href="{item.instagram}" class="fab fa-instagram blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Instagram" target="_blank" aria-label="Instagram"></a>
                     </f:if>
                     <f:if condition="{item.linkedin}">
-                        <a href="{item.linkedin}" class="fab fa-linkedin blank link-underline link-underline-opacity-0 text-{item.button_color}" title="LinkedIn"></a>
+                        <a href="{item.linkedin}" class="fab fa-linkedin blank link-underline link-underline-opacity-0 text-{item.button_color}" title="LinkedIn" target="_blank" aria-label="LinkedIn"></a>
                     </f:if>
                     <f:if condition="{item.pinterest}">
-                        <a href="{item.pinterest}" class="fab fa-square-pinterest blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Pinterest"></a>
+                        <a href="{item.pinterest}" class="fab fa-square-pinterest blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Pinterest" target="_blank" aria-label="Pinterest"></a>
                     </f:if>
                     <f:if condition="{item.xing}">
-                        <a href="{item.xing}" class="fab fa-square-xing blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Xing"></a>
+                        <a href="{item.xing}" class="fab fa-square-xing blank link-underline link-underline-opacity-0 text-{item.button_color}" title="Xing" target="_blank" aria-label="Xing"></a>
                     </f:if>
                 </p>
             </f:if>

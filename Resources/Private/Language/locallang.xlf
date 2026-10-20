@@ -33,6 +33,30 @@
             <trans-unit id="share_this_page">
                 <source>Share this page</source>
             </trans-unit>
+            <trans-unit id="play">
+                <source>Play</source>
+            </trans-unit>
+            <trans-unit id="open_close">
+                <source>Open/Close</source>
+            </trans-unit>
+            <trans-unit id="navigation">
+                <source>Navigation</source>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>Previous</source>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>Next</source>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>Email</source>
+            </trans-unit>
+            <trans-unit id="personal_page">
+                <source>Personal page</source>
+            </trans-unit>
+            <trans-unit id="enlarge">
+                <source>Enlarge</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

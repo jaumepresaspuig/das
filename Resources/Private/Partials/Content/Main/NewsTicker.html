@@ -6,16 +6,18 @@
                     <div class="carousel-item h-100 {f:if(condition: '{iteration.isFirst}', then: ' active')}">
                         <f:variable name="color" value="{f:if(condition: '{item.color}', then: '{item.color}', else: '{default_color}')}" />
                         <figure class="note note-primary p-4 rounded-2 border-{color}">
-                            <h3>
+                            <h2 class="h3">
                                 {item.header}
-                            </h3>
+                            </h2>
                             <p class="small">
                                 <f:format.date format="{f:translate(extensionName: 'das', key: 'format_datetime')}">{item.date}</f:format.date>
                             </p>
                             <p class="pb-2">
                                 <f:format.nl2br>{item.text}</f:format.nl2br>
                                 <f:if condition="{item.link}">
-                                    <f:link.typolink parameter="{item.link}"><i class="fa-solid fa-circle-arrow-right"></i></f:link.typolink>
+                                    <f:link.typolink parameter="{item.link}" additionalAttributes="{aria-label: '{f:translate(extensionName: \'das\', key: \'read_more\')}'}">
+                                        <i class="fa-solid fa-circle-arrow-right"></i>
+                                    </f:link.typolink>
                                 </f:if>
                             </p>
                         </figure>

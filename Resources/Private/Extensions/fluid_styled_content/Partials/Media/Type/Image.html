@@ -10,7 +10,7 @@
 <figure class="figure w-100" data-aos="{f:if(condition: '{data.tx_das_galleryanimate}', then: 'fade-up')}" data-aos-delay="100">
     <f:if condition="{file.link}">
         <f:then>
-            <f:link.typolink parameter="{file.link}" title="{file.title}">
+            <f:link.typolink parameter="{file.link}" title="{file.title}" additionalAttributes="{aria-label: '{file.title}'}">
                 <f:render section="image" arguments="{_all}" />
             </f:link.typolink>
         </f:then>
@@ -24,7 +24,7 @@
                 <f:if condition="{isImage} && {watermark.watermarkImage} && {file.extension} != 'svg'">
                     <f:variable name="publicUrl" value="{das:watermarkImageUri(srcImage: '{file.publicUrl}', watermarkImage: '{watermark.watermarkImage}', watermarkOpacity: '{watermark.watermarkOpacity}', watermarkPosition: '{watermark.watermarkPosition}', watermarkSize: '{watermark.watermarkSize}', crop: '{crop}')}" />
                 </f:if>
-                <a href="{publicUrl}" title="{file.title}" class="glightbox glightbox-{gallery_id}" data-glightbox-id="glightbox-{gallery_id}" data-glightbox="title:{file.title}{f:if(condition: '{file.description}', then: '. {file.description}')}">
+                <a href="{publicUrl}" title="{file.title}" class="glightbox glightbox-{gallery_id}" data-glightbox-id="glightbox-{gallery_id}" data-glightbox="title:{file.title}{f:if(condition: '{file.description}', then: '. {file.description}')}" aria-label="{f:if(condition: '{file.title}', then: '{file.title}', else: '{f:translate(extensionName: \'das\', key: \'enlarge\')}')}">
             </f:if>
             <f:render section="image" arguments="{_all}" />
             <f:if condition="{data.image_zoom}">

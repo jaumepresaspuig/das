@@ -43,6 +43,38 @@
                 <source>Share this page</source>
                 <target>Comparte esta página</target>
             </trans-unit>
+            <trans-unit id="play">
+                <source>Play</source>
+                <target>Reproducir</target>
+            </trans-unit>
+            <trans-unit id="open_close">
+                <source>Open/Close</source>
+                <target>Abre/Cierra</target>
+            </trans-unit>
+            <trans-unit id="navigation">
+                <source>Navigation</source>
+                <target>Navegación</target>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>Previous</source>
+                <target>Anterior</target>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>Next</source>
+                <target>Siguiente</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>Email</source>
+                <target>Correo electrónico</target>
+            </trans-unit>
+            <trans-unit id="personal_page">
+                <source>Personal page</source>
+                <target>Página personal</target>
+            </trans-unit>
+            <trans-unit id="enlarge">
+                <source>Enlarge</source>
+                <target>Ampliar</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

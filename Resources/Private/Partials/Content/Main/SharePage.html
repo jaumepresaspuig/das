@@ -37,7 +37,7 @@
                         </f:case>
                     </f:switch>
                     <f:variable name="platform_lower" value="{platform -> f:format.case(mode: 'lower')}" />
-                    <a href="{url}" target="_blank" class="sharepage {platform_lower} mb-{settings.marginForButtons} mx-{settings.marginForButtons} tooltipthis{rounded}{mt}" title="{platform}"><i class="fab fa-{platform_lower}"></i></a>
+                    <a href="{url}" target="_blank" class="sharepage {platform_lower} mb-{settings.marginForButtons} mx-{settings.marginForButtons} tooltipthis{rounded}{mt}" title="{platform}" aria-label="{platform}"><i class="fab fa-{platform_lower}"></i></a>
                 </f:for>
             </p>
         </div>

@@ -17,6 +17,7 @@
             <f:form.hidden name="search[extendedSearch]" value="{searchParams.extendedSearch}" />
         </div>
         <fieldset>
+            <legend class="d-none"><f:translate key="form.linkToRegularSearch" /></legend>
             <p class="form-floating">
                 <f:form.textfield name="search[sword]" value="{sword}" id="tx-indexedsearch-searchbox-sword" placeholder="{f:translate(key: 'form.searchFor')}" class="form-control" />
                 <label for="tx-indexedsearch-searchbox-sword"><f:translate key="form.searchFor" /></label>
@@ -30,6 +31,7 @@
                         <label for="tx-indexedsearch-selectbox-searchtype"><f:translate key="form.match" />:</label>
                         <f:if condition="{allDefaultOperands}">
                             <f:form.select name="search[defaultOperand]" options="{allDefaultOperands}" value="{searchParams.defaultOperand}" id="tx-indexedsearch-selectbox-defaultoperand" class="form-select" />
+                        <label for="tx-indexedsearch-selectbox-defaultoperand" class="d-none"><f:translate key="form.searchIn" />:</label>
                         </f:if>
                     </p>
                 </f:if>
@@ -56,6 +58,7 @@
                         <f:form.select name="search[sortOrder]" options="{allSortOrders}" value="{searchParams.sortOrder}" id="tx-indexedsearch-selectbox-order" class="form-select" />
                         <label for="tx-indexedsearch-selectbox-order"><f:translate key="form.orderBy" />:</label>
                         <f:form.select name="search[sortDesc]"  options="{allSortDescendings}" value="{searchParams.sortDesc}" id="tx-indexedsearch-selectbox-desc" class="form-select" />
+                        <label for="tx-indexedsearch-selectbox-desc" class="d-none"><f:translate key="form.orderBy" />:</label>
                     </p>
                 </f:if>
                 <f:if condition="{allNumberOfResults}">

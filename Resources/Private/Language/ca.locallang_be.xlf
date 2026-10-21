@@ -654,7 +654,8 @@
             <trans-unit id="pages.mega_menu">
                 <source>Show sub-pages of this page as a mega menu in the navigation bar</source>
                 <target>Mostra les subpàgines d'aquesta pàgina com un mega menú a la barra de navegació</target>
-            </trans-unit>            <trans-unit id="pages.watermark">
+            </trans-unit>
+            <trans-unit id="pages.watermark">
                 <source>Watermark</source>
                 <target>Marca d'aigua</target>
           </trans-unit>

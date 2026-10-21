@@ -7,12 +7,12 @@
     <nav class="mt-3">
         <ul class="pagination pagination-sm justify-content-center">
             <li class="page-item{f:if(condition: '!{pagination.previousPageNumber}', then: ' disabled')}">
-                <a href="#" class="page-link tx-indexedsearch-page-selector" data-prefix="tx_indexedsearch" data-pointer="0" data-free-index-uid="{freeIndexUid}">
+                <a href="#" class="page-link tx-indexedsearch-page-selector" data-prefix="tx_indexedsearch" data-pointer="0" data-free-index-uid="{freeIndexUid}" role="button">
                     <span aria-hidden="true">&laquo;</span>
                 </a>
             </li>
             <li class="page-item{f:if(condition: '!{pagination.previousPageNumber}', then: ' disabled')}">
-                <a href="#" class="page-link tx-indexedsearch-page-selector" data-prefix="tx_indexedsearch" data-pointer="{pagination.previousPageNumber - 1}" data-free-index-uid="{freeIndexUid}">
+                <a href="#" class="page-link tx-indexedsearch-page-selector" data-prefix="tx_indexedsearch" data-pointer="{pagination.previousPageNumber - 1}" data-free-index-uid="{freeIndexUid}" role="button">
                     <span aria-hidden="true">&lsaquo;</span>
                 </a>
             </li>
@@ -23,12 +23,12 @@
                 </li>
             </f:for>
             <li class="page-item{f:if(condition: '!{pagination.nextPageNumber}', then: ' disabled')}">
-                <a href="#" class="page-link tx-indexedsearch-page-selector" data-prefix="tx_indexedsearch" data-pointer="{pagination.nextPageNumber - 1}" data-free-index-uid="{freeIndexUid}">
+                <a href="#" class="page-link tx-indexedsearch-page-selector" data-prefix="tx_indexedsearch" data-pointer="{pagination.nextPageNumber - 1}" data-free-index-uid="{freeIndexUid}" role="button">
                     <span aria-hidden="true">&rsaquo;</span>
                 </a>
             </li>
             <li class="page-item{f:if(condition: '!{pagination.nextPageNumber}', then: ' disabled')}">
-                <a href="#" class="page-link tx-indexedsearch-page-selector" data-prefix="tx_indexedsearch" data-pointer="{pagination.paginator.numberOfPages  - 1}" data-free-index-uid="{freeIndexUid}">
+                <a href="#" class="page-link tx-indexedsearch-page-selector" data-prefix="tx_indexedsearch" data-pointer="{pagination.paginator.numberOfPages  - 1}" data-free-index-uid="{freeIndexUid}" role="button">
                     <span aria-hidden="true">&raquo;</span>
                 </a>
             </li>

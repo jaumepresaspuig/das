@@ -6,8 +6,8 @@
         <f:for each="{files}" as="file" iteration="i">   
             <div class="audioplayer-li">
                 <div class="audioplayer js-audioplayer bg-{color}" id="audioplayer-{i.index}">
-                    <button class="audioplayer__control js-control"><div class="audioplayer__control-icon"></div></button>
-                    <h4 class="audioplayer__title">{file.title}<br /><span><f:format.nl2br>{file.description}</f:format.nl2br></span></h4>
+                    <button class="audioplayer__control js-control" aria-label="{f:translate(extensionName: 'das', key: 'play')}"><div class="audioplayer__control-icon"></div></button>
+                    <h2 class="audioplayer__title h4">{file.title}<br /><span><f:format.nl2br>{file.description}</f:format.nl2br></span></h2>
                     <audio preload="auto"><source src="{file.url}" /></audio>
                     <f:variable name="cover" value="" />
                     <f:if condition="{file.tx_das_cover}">

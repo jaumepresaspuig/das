@@ -2701,8 +2701,8 @@
                 class: `d-flex align-items-center py-1 ps-3 justify-content-center wc-nav-view-wrapper flex-wrap flex-lg-nowrap text-nowrap bg-body rounded-pill shadow-sm`,
                 html: [
                     `<strong class="me-3 user-select-none text-body" id="${data.elements.wrapperViewContainerTitleId}"></strong>`,
-                    `<a data-prev href="#" class="text-decoration-none text-body d-flex align-items-center justify-content-center" style="width:24px; height:24px;"><i class="${settings.icons.prev}"></i></a>`,
-                    `<a class="mx-2 text-decoration-none text-body d-flex align-items-center justify-content-center" data-next href="#" style="width:24px; height:24px;"><i class="${settings.icons.next}"></i></a>`,
+                    `<a data-prev href="#" role="button" class="text-decoration-none text-body d-flex align-items-center justify-content-center" style="width:24px; height:24px;"><i class="${settings.icons.prev}"></i></a>`,
+                    `<a class="mx-2 text-decoration-none text-body d-flex align-items-center justify-content-center" data-next href="#" role="button" style="width:24px; height:24px;"><i class="${settings.icons.next}"></i></a>`,
                 ].join('')
             }).appendTo(rightCol);
 
@@ -2753,8 +2753,8 @@
                     '<div class="d-flex justify-content-between align-items-center gap-2">',
                     `<span id="${data.elements.wrapperSmallMonthCalendarTitleId}" class="fw-bold text-body"></span>`,
                     '<div>',
-                    `<a data-prev href="#" class="text-decoration-none text-body me-2"><i class="${settings.icons.prev}"></i></a>`,
-                    `<a data-next href="#" class="text-decoration-none text-body"><i class="${settings.icons.next}"></i></a>`,
+                    `<a data-prev href="#" role="button" class="text-decoration-none text-body me-2"><i class="${settings.icons.prev}"></i></a>`,
+                    `<a data-next href="#" role="button" class="text-decoration-none text-body"><i class="${settings.icons.next}"></i></a>`,
                     '</div>',
                     '</div>',
                     '</div>',

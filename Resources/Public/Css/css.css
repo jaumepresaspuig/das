@@ -955,19 +955,17 @@ audio {
 .tx-das-content-sidece {
     position: fixed;
     top: calc(50% + 50px);
-    right: -500px;
+    right: -400px;
     transform: translateX(100%);
     transform: translateY(-50%);
-    width: 500px;
-    max-width: calc(100% - 70px);
+    width: 400px;
     z-index: 100;
     background-color: #fff;
     transition: 0.25s;
 }
 
 .tx-das-content-sidece.shadow {
-    width: 500px;
-    max-width: calc(100% - 70px);
+    width: 400px;
 }
 
 .tx-das-content-sidece.open {
@@ -988,6 +986,16 @@ html[data-bs-theme="dark"] {
     transform-origin: left bottom;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+}
+
+@media (min-width: 576px) {
+    .tx-das-content-sidece {
+        right: -500px;
+        width: 500px;
+    }
+    .tx-das-content-sidece.shadow {
+        width: 500px;
+    }
 }
 
 /* Counterdown */

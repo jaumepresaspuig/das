@@ -7,7 +7,7 @@ Templates and partials of these TYPO3 content elements and plug-ins: File links,
 
 Content elements have been enhanced with some extra fields.
 
-The *Headlines* palette has now some extra fields for a Pre header and to add a Font Awesome icon to the header, allowing to choose its size, position and color. Also, an additional field allows to style the header independently from the chosen layout.
+The *Headlines* palette has now some extra fields for a Pre header and to allow to style the header independently from the chosen layout.
 
 The :guilabel:`Appearance` tab has now some extra fields and new predefined options for the field Layout:
 
@@ -16,6 +16,8 @@ The :guilabel:`Appearance` tab has now some extra fields and new predefined opti
 * *Drop shadow*: to add a drop shadow around the content, with different intensities
 
 * *Background*: this new palette allows to add a background to the content. It can be a predefined or custom color, and an image or a video. If an image or video, it can be blurred or have a vignette, to make the text more readable
+
+* *Add icon to the header*: this new palette allows to add a Font Awesome icon to the header, allowing to choose its size, position and color
 
 * *Custom classes and styles*: this new palette allows to force the text to be black or white regardless the styles (useful when setting a background) and add classes and custom inline styles to be applied to the content
 

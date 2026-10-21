@@ -3,7 +3,7 @@
         <div class="{f:if(condition: '{alignment} == \'\' || {type} == \'btn-block btn-social\'', then: 'ml-n{settings.marginForButtons}')}{f:if(condition: '{alignment} == \'text-end\'', then: 'mr-n{settings.marginForButtons}')}">
             <f:for each="{items}" as="item" iteration="iteration">
                 <f:variable name="platorm" value="{item.platorm -> f:format.case(mode: 'lower')}" />
-                <f:link.typolink parameter="{item.url}" class="{platorm} mb-{settings.marginForButtons} mx-{settings.marginForButtons}{f:if(condition: '{rounded}', then: ' rounded-circle')} tooltipthis"  title="{item.platorm}" target="_blank">
+                <f:link.typolink parameter="{item.url}" class="{platorm} mb-{settings.marginForButtons} mx-{settings.marginForButtons}{f:if(condition: '{rounded}', then: ' rounded-circle')} tooltipthis" title="{item.platorm}" target="_blank" additionalAttributes="{aria-label: '{item.platorm}'}">
                     <i class="fab fa-{platorm}"></i>
                 </f:link.typolink>
             </f:for>

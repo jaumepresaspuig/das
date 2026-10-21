@@ -21,10 +21,10 @@
                         </f:for>
                     </div>
                     <f:if condition="{navigation}">
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="prev" aria-label="{f:translate(extensionName: 'das', key: 'previous')}">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel-{record.uid}" data-bs-slide="next" aria-label="{f:translate(extensionName: 'das', key: 'next')}">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </f:if>

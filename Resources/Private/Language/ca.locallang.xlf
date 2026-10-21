@@ -43,6 +43,38 @@
                 <source>Share this page</source>
                 <target>Comparteix aquesta pàgina</target>
             </trans-unit>
+            <trans-unit id="play">
+                <source>Play</source>
+                <target>Reprodueix</target>
+            </trans-unit>
+            <trans-unit id="open_close">
+                <source>Open/Close</source>
+                <target>Obre/Tanca</target>
+            </trans-unit>
+            <trans-unit id="navigation">
+                <source>Navigation</source>
+                <target>Navegació</target>
+            </trans-unit>
+            <trans-unit id="previous">
+                <source>Previous</source>
+                <target>Anterior</target>
+            </trans-unit>
+            <trans-unit id="next">
+                <source>Next</source>
+                <target>Següent</target>
+            </trans-unit>
+            <trans-unit id="email">
+                <source>Email</source>
+                <target>Correu electrònic</target>
+            </trans-unit>
+            <trans-unit id="personal_page">
+                <source>Personal page</source>
+                <target>Pàgina personal</target>
+            </trans-unit>
+            <trans-unit id="enlarge">
+                <source>Enlarge</source>
+                <target>Amplia</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

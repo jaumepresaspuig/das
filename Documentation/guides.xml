@@ -10,8 +10,8 @@
     <project
         title="Das"
         copyright="Jaume Presas Puig"
-         release="main (development)"
-         version="main (development)"
+        release="main (development)"
+        version="main (development)"
     />
     <extension
         class="\T3Docs\Typo3DocsTheme\DependencyInjection\Typo3DocsThemeExtension"

@@ -500,7 +500,7 @@
                 <target>Clau dels mapes de Google</target>
             </trans-unit>
             <trans-unit id="pages.show_page_title.description">
-                <source>H1, in all pages except home</source>
+                <source>H1, in all pages except home.</source>
                 <target>H1, a totes les pàgines excepte la d'inici.</target>
             </trans-unit>
             <trans-unit id="pages.backend_layout">
@@ -745,7 +745,7 @@
             </trans-unit>
             <trans-unit id="tt_content.buttons.description">
                 <source>Buttons with different sizes and styles.</source>
-                <target>Botons amb diferents mides i estils</target>
+                <target>Botons amb diferents mides i estils.</target>
             </trans-unit>
             <trans-unit id="tt_content.buttons.buttons">
                 <source>Buttons</source>
@@ -1220,8 +1220,8 @@
                 <target>Tanca-la en n segons després d'haver estat oberta.</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.autoclose.description">
-                <source>If 0, user has to close it</source>
-                <target>Si és 0, l'usuari ha de tancar-la</target>
+                <source>If 0, user has to close it.</source>
+                <target>Si és 0, l'usuari ha de tancar-la.</target>
             </trans-unit>
             <trans-unit id="tt_content.modal.show_only_once">
                 <source>Show the modal window only once per user session</source>
@@ -1732,8 +1732,8 @@
                 <target>Caràcter per separar camps</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.glue.description">
-                <source>For example: , ; # |</source>
-                <target>Per exemple: , ; # |</target>
+                <source>For example: , ; # |.</source>
+                <target>Per exemple: , ; # |.</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.file">
                 <source>File from where to import the data</source>
@@ -1788,8 +1788,8 @@
                 <target>Text per afegir després del preu</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.text_after.description">
-                <source>For example: /mo</source>
-                <target>Per exemple: /mes</target>
+                <source>For example: /mo.</source>
+                <target>Per exemple: /mes.</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.text">
                 <source>Description</source>
@@ -1964,8 +1964,8 @@
                 <target>Enquesta</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.description">
-                <source>Poll.</source>
-                <target>Enquesta.</target>
+                <source>Simple poll.</source>
+                <target>Enquesta senzilla.</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.question">
                 <source>Question</source>
@@ -2068,8 +2068,8 @@
                 <target>Tanca les finestres d'informació en n segons després d'haver estat obertes.</target>
             </trans-unit>
             <trans-unit id="tt_content.map.autoclose.description">
-                <source>If 0, user has to close them</source>
-                <target>Si és 0, l'usuari ha de tancar-les</target>
+                <source>If 0, user has to close them.</source>
+                <target>Si és 0, l'usuari ha de tancar-les.</target>
             </trans-unit>
             <trans-unit id="tt_content.map.pins">
                 <source>Markers</source>
@@ -2094,6 +2094,38 @@
             <trans-unit id="tt_content.map.pin_color.description">
                 <source>Overrides the default one.</source>
                 <target>Sobrescriu el per defecte.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code">
+                <source>Code</source>
+                <target>Codi</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.description">
+                <source>Highlited code.</source>
+                <target>Codi ressaltat.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language">
+                <source>Language</source>
+                <target>Llenguatge</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.style">
+                <source>Style</source>
+                <target>Estil</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.default">
+                <source>Light</source>
+                <target>Clar</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.vs-dark">
+                <source>Dark</source>
+                <target>Fosc</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language.autodetect">
+                <source>Autodetect</source>
+                <target>Detecció automàtica</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.code">
+                <source>Code</source>
+                <target>Codi</target>
             </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>

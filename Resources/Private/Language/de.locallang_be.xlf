@@ -500,7 +500,7 @@
                 <target>Seitentitel anzeigen</target>
             </trans-unit>
             <trans-unit id="pages.show_page_title.description">
-                <source>H1, in all pages except home</source>
+                <source>H1, in all pages except home.</source>
                 <target>H1, auf allen Seiten außer der Startseite.</target>
             </trans-unit>
             <trans-unit id="pages.backend_layout">
@@ -1480,7 +1480,7 @@
                 <target>Audioplayer</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.description">
-                <source>Audio player</source>
+                <source>Audio player.</source>
                 <target>Audioplayer.</target>
             </trans-unit>
             <trans-unit id="tt_content.audioplayer.files">
@@ -1532,7 +1532,7 @@
                 <target>Maskiertes Bild</target>
             </trans-unit>
             <trans-unit id="tt_content.maskedimage.description">
-                <source>Masked image</source>
+                <source>Masked image.</source>
                 <target>Maskiertes Bild.</target>
             </trans-unit>
             <trans-unit id="tt_content.maskedimage.images">
@@ -1672,8 +1672,8 @@
                 <target>Kategorienmenü</target>
             </trans-unit>
             <trans-unit id="tt_content.catsmenu.description">
-                <source>Categories menu</source>
-                <target>Kategorienmenü</target>
+                <source>Categories menu.</source>
+                <target>Kategorienmenü.</target>
             </trans-unit>
             <trans-unit id="tt_content.catsmenu.page_uid">
                 <source>Parent page</source>
@@ -1784,8 +1784,8 @@
                 <target>Text, der nach dem Preis hinzugefügt werden soll</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.text_after.description">
-                <source>For example: /mo</source>
-                <target>Zum Beispiel: /mo</target>
+                <source>For example: /mo.</source>
+                <target>Zum Beispiel: /mo.</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.text">
                 <source>Description</source>
@@ -1960,7 +1960,7 @@
                 <target>Umfrage</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.description">
-                <source>Poll.</source>
+                <source>Simple poll.</source>
                 <target>Umfrage.</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.question">
@@ -2089,6 +2089,38 @@
             <trans-unit id="tt_content.map.pin_color.description">
                 <source>Overrides the default one.</source>
                 <target>Überschreibt die Standardfarbe.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code">
+                <source>Code</source>
+                <target>Code</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.description">
+                <source>Highlited code.</source>
+                <target>Hervorgehobener Code.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.style">
+                <source>Style</source>
+                <target>Stil</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.default">
+                <source>Light</source>
+                <target>Hell</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.vs-dark">
+                <source>Dark</source>
+                <target>Dunkel</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language">
+                <source>Language</source>
+                <target>Programmiersprache</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language.autodetect">
+                <source>Autodetect</source>
+                <target>Automatische Erkennung</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.code">
+                <source>Code</source>
+                <target>Code</target>
             </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>

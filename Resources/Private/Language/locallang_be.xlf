@@ -349,7 +349,7 @@
                 <source>Show breadcrumb</source>
             </trans-unit>
             <trans-unit id="pages.breadcrumb.description">
-                <source>In all pages except home</source>
+                <source>In all pages except home.</source>
             </trans-unit>
             <trans-unit id="pages.breadcrumb.0">
                 <source>Don't show it</source>
@@ -1291,7 +1291,7 @@
                 <source>Character to separate fields</source>
             </trans-unit>
             <trans-unit id="tt_content.chart.glue.description">
-                <source>For example: , ; # |</source>
+                <source>For example: , ; # |.</source>
             </trans-unit>
             <trans-unit id="tt_content.chart.file">
                 <source>File from where to import the data</source>
@@ -1333,7 +1333,7 @@
                 <source>Text to add after the price</source>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.text_after.description">
-                <source>For example: /mo</source>
+                <source>For example: /mo.</source>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.text">
                 <source>Description</source>
@@ -1471,7 +1471,7 @@
                 <source>Poll</source>
             </trans-unit>
             <trans-unit id="tt_content.poll.description">
-                <source>Poll.</source>
+                <source>Simple poll.</source>
             </trans-unit>
             <trans-unit id="tt_content.poll.question">
                 <source>Question</source>
@@ -1568,6 +1568,30 @@
             </trans-unit>
             <trans-unit id="tt_content.map.pin_color.description">
                 <source>Overrides the default one.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.code">
+                <source>Code</source>
+            </trans-unit>
+            <trans-unit id="tt_content.code.description">
+                <source>Highlited code.</source>
+            </trans-unit>
+            <trans-unit id="tt_content.code.style">
+                <source>Style</source>
+            </trans-unit>
+            <trans-unit id="tt_content.code.default">
+                <source>Light</source>
+            </trans-unit>
+            <trans-unit id="tt_content.code.vs-dark">
+                <source>Dark</source>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language">
+                <source>Language</source>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language.autodetect">
+                <source>Autodetect</source>
+            </trans-unit>
+            <trans-unit id="tt_content.code.code">
+                <source>Code</source>
             </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>

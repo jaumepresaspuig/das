@@ -417,7 +417,7 @@
             </trans-unit>
             <trans-unit id="pages.search_page_uid.description">
                 <source>To enable search box (it requires the extension indexed_search).</source>
-                <target>Habilitar el campo de búsqueda (requiere la extensión indexed_search)</target>
+                <target>Habilitar el campo de búsqueda (requiere la extensión indexed_search).</target>
             </trans-unit>
             <trans-unit id="pages.navigation_levels">
                 <source>Number of navigation levels to show</source>
@@ -996,8 +996,8 @@
                 <target>Color de fondo</target>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_color.description">
-                <source>Overrides the background predefined color</source>
-                <target>Sustituye el color de fondo por defecto</target>
+                <source>Overrides the background predefined color.</source>
+                <target>Sustituye el color de fondo por defecto.</target>
             </trans-unit>
             <trans-unit id="tt_content.container.bg_file">
                 <source>Background image or video</source>
@@ -1316,8 +1316,8 @@
                 <target>Color de la barra</target>
             </trans-unit>
             <trans-unit id="tt_content.progressbars.area_color.description">
-                <source>Overrides the default one</source>
-                <target>Sustituye el por defecto</target>
+                <source>Overrides the default one.</source>
+                <target>Sustituye el por defecto.</target>
             </trans-unit>
             <trans-unit id="tt_content.progressbars.show_label">
                 <source>Show percentage inside the bars</source>
@@ -1524,7 +1524,7 @@
                 <target>Imagen enmascarada</target>
             </trans-unit>
             <trans-unit id="tt_content.maskedimage.description">
-                <source>Masked image</source>
+                <source>Masked image.</source>
                 <target>Imagen enmascarada.</target>
             </trans-unit>
             <trans-unit id="tt_content.maskedimage.images">
@@ -1540,7 +1540,7 @@
                 <target>Lupa de aumento</target>
             </trans-unit>
             <trans-unit id="tt_content.magnifierglass.description">
-                <source>Image magnifier glass</source>
+                <source>Image magnifier glass.</source>
                 <target>Lupa de aumento.</target>
             </trans-unit>
             <trans-unit id="tt_content.magnifierglass.image">
@@ -1664,8 +1664,8 @@
                 <target>Menú de categorías</target>
             </trans-unit>
             <trans-unit id="tt_content.catsmenu.description">
-                <source>Categories menu</source>
-                <target>Menú de categorías</target>
+                <source>Categories menu.</source>
+                <target>Menú de categorías.</target>
             </trans-unit>
             <trans-unit id="tt_content.catsmenu.page_uid">
                 <source>Parent page</source>
@@ -1720,8 +1720,8 @@
                 <target>Carácter para separar campos</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.glue.description">
-                <source>For example: , ; # |</source>
-                <target>Por ejemplo: , ; # |</target>
+                <source>For example: , ; # |.</source>
+                <target>Por ejemplo: , ; # |.</target>
             </trans-unit>
             <trans-unit id="tt_content.chart.file">
                 <source>File from where to import the data</source>
@@ -1776,8 +1776,8 @@
                 <target>Texto para agregar después del precio</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.text_after.description">
-                <source>For example: /mo</source>
-                <target>Por ejemplo: /mes</target>
+                <source>For example: /mo.</source>
+                <target>Por ejemplo: /mes.</target>
             </trans-unit>
             <trans-unit id="tt_content.pricingtable.text">
                 <source>Description</source>
@@ -1960,8 +1960,8 @@
                 <target>Encuesta</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.description">
-                <source>Poll.</source>
-                <target>Encuesta.</target>
+                <source>Simple poll.</source>
+                <target>Encuesta simple.</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.question">
                 <source>Question</source>
@@ -1972,8 +1972,8 @@
                 <target>Respuestas</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.answers.description">
-                <source>One line for each answer</source>
-                <target>Una respuesta por línea</target>
+                <source>One line for each answer.</source>
+                <target>Una respuesta por línea.</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.color">
                 <source>Color for the buttons</source>
@@ -1997,7 +1997,7 @@
             </trans-unit>
             <trans-unit id="tt_content.poll.already_participated_message.description">
                 <source>If empty: "Sorry, you can't participate more than once".</source>
-                <target>Si no se ha rellenado: "Lo sentimos, no puedes participar más de una vez."</target>
+                <target>Si no se ha rellenado: "Lo sentimos, no puedes participar más de una vez".</target>
             </trans-unit>
             <trans-unit id="tt_content.poll.already_participated_message.placeholder">
                 <source>Sorry, you can't participate more than once.</source>
@@ -2090,6 +2090,38 @@
             <trans-unit id="tt_content.map.pin_color.description">
                 <source>Overrides the default one.</source>
                 <target>Sobreescribe el por defecto.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code">
+                <source>Code</source>
+                <target>Código</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.description">
+                <source>Highlited code.</source>
+                <target>Código resaltado.</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.style">
+                <source>Style</source>
+                <target>Estilo</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.default">
+                <source>Light</source>
+                <target>Claro</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.vs-dark">
+                <source>Dark</source>
+                <target>Oscuro</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language">
+                <source>Language</source>
+                <target>Lenguage</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language.autodetect">
+                <source>Autodetect</source>
+                <target>Detección automática</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.code">
+                <source>Code</source>
+                <target>Código</target>
             </trans-unit>
             <trans-unit id="rte.btn-primary">
                 <source>Button primary</source>

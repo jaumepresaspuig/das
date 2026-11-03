@@ -1,0 +1,136 @@
+<f:layout name="Content" />
+
+<f:section name="Configuration">
+    <flux:form
+        id="Code"
+        label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code"
+        description="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.description"
+    >
+        <flux:form.option.group
+            value="dasContent"
+        />
+        <flux:form.option.icon
+            value="EXT:das/Resources/Public/Icons/Content/Code.png"
+        />
+        <flux:field.select
+            name="layout"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default', 1: '0'}
+            }"
+        />
+        <flux:field.select
+            name="style"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.style"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.default', 1: 'default'},
+                1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.vs-dark', 1: 'vs-dark'}
+            }"
+        />
+        <flux:field.select
+            name="language"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.language"
+            items="{
+                0:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.language.autodetect', 1: ''},
+                1:{0: 'ActionScript', 1: 'actionscript'},
+                2:{0: 'Bash', 1: 'bash'},
+                3:{0: 'Basic', 1: 'basic'},
+                4:{0: 'C', 1: 'c'},
+                5:{0: 'C++', 1: 'cpp'},
+                6:{0: 'C#', 1: 'csharp'},
+                7:{0: 'CSS', 1: 'css'},
+                8:{0: 'Diff', 1: 'diff'},
+                9:{0: 'Django', 1: 'django'},
+                10:{0: 'DOS', 1: 'dos'},
+                11:{0: 'Go', 1: 'go'},
+                12:{0: 'HTML', 1: 'xtml'},
+                13:{0: 'Java', 1: 'java'},
+                14:{0: 'JavaScript', 1: 'javascript'},
+                15:{0: 'JSON', 1: 'json'},
+                16:{0: 'Kotlin', 1: 'kotlin'},
+                17:{0: 'LaTeX', 1: 'tex'},
+                18:{0: 'Less', 1: 'less'},
+                19:{0: 'Markdown', 1: 'markdown'},
+                20:{0: 'Nginx', 1: 'nginx'},
+                21:{0: 'Perl', 1: 'perl'},
+                22:{0: 'PHP', 1: 'php'},
+                23:{0: 'Plaintext', 1: 'plaintext'},
+                24:{0: 'PostgreSQL', 1: 'pgsql'},
+                25:{0: 'PowerShell', 1: 'powershell'},
+                26:{0: 'Python', 1: 'python'},
+                27:{0: 'Ruby', 1: 'ruby'},
+                28:{0: 'Rust', 1: 'rust'},
+                29:{0: 'SCSS', 1: 'scss'},
+                30:{0: 'SQL', 1: 'sql'},
+                31:{0: 'Swift', 1: 'swift'},
+                32:{0: 'TypeScript', 1: 'typescript'},
+                33:{0: 'VB.Net', 1: 'vbnet'},
+                34:{0: 'XML', 1: 'xml'},
+                35:{0: 'YAML', 1: 'yaml'}
+            }"
+        />
+        <flux:field.text
+            name="code"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.code"
+            rows="10"
+            required="1"
+        />
+    </flux:form>
+</f:section>
+
+<f:section name="Preview">
+    <table class="table table-condensed table-hover">
+        <tbody>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:layout" />
+                </th>
+                <td width="20%">
+                    <f:if condition="{layout} == 0">
+                        <f:then>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:default" />
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:custom" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.style" />
+                </th>
+                <td width="20%">
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.{style}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.language" />
+                </th>
+                <td>
+                    <f:if condition="{language}">
+                        <f:then>
+                            {language}
+                        </f:then>
+                        <f:else>
+                            <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.language.autodetect" />
+                        </f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.code" />
+                </th>
+                <td>
+                    <pre><f:format.crop maxCharacters="250" append="..." respectHtml="false">{code}</f:format.crop></pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</f:section>
+
+<f:section name="Main">
+    <f:render partial="Content/Main/Code" arguments="{_all}" />
+</f:section>

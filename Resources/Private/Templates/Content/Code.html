@@ -27,6 +27,12 @@
                 1:{0: 'LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.vs-dark', 1: 'vs-dark'}
             }"
         />
+        <flux:field.checkbox
+            name="show_copyandpaste_button"
+            label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.show_copyandpaste_button"
+            config="{renderType: 'checkboxToggle'}"
+            default="0"
+        />
         <flux:field.select
             name="language"
             label="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.language"
@@ -102,6 +108,14 @@
                 </th>
                 <td width="20%">
                     <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.{style}" />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <f:translate key="LLL:EXT:das/Resources/Private/Language/locallang_be.xlf:tt_content.code.show_copyandpaste_button" />
+                </th>
+                <td>
+                    <f:render partial="Content/Check" arguments="{condition: show_copyandpaste_button}" />
                 </td>
             </tr>
             <tr>

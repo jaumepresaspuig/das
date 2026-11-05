@@ -152,6 +152,10 @@ function initCodeText() {
     $(".code").on("click", function() {
         navigator.clipboard.writeText($(this).text());
     });
+    $(".copyandpaste").on("click", function() {
+        navigator.clipboard.writeText($("#" + $(this).attr("data-id")).text());
+        return false;
+    });
 }
 
 function initTooltips() {
@@ -160,6 +164,9 @@ function initTooltips() {
         $(this).attr("title", "");
     });
     $(".code").each(function () {
+        $(this).attr("data-bs-title", copy_to_clipboard);
+    });
+    $(".copyandpaste").each(function () {
         $(this).attr("data-bs-title", copy_to_clipboard);
     });
     const tooltipTriggerList = document.querySelectorAll(".tooltipthis");

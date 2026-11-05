@@ -1584,6 +1584,9 @@
             <trans-unit id="tt_content.code.vs-dark">
                 <source>Dark</source>
             </trans-unit>
+            <trans-unit id="tt_content.code.show_copyandpaste_button">
+                <source>Show copy and paste button</source>
+            </trans-unit>
             <trans-unit id="tt_content.code.language">
                 <source>Language</source>
             </trans-unit>

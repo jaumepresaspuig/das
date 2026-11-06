@@ -44,7 +44,7 @@
             </p>
         </div>
         <f:if condition="{item.button} && {item.link}">
-            <f:link.typolink parameter="{item.link}" class="btn btn-lg m-2 {f:if(condition: '{color}', then: 'btn-{color}', else: 'btn-outline-dark')}">
+            <f:link.typolink parameter="{item.link}" class="btn btn-lg m-2 stretched-link {f:if(condition: '{color}', then: 'btn-{color}', else: 'btn-outline-dark')}">
                 {item.button}
             </f:link.typolink>
         </f:if>

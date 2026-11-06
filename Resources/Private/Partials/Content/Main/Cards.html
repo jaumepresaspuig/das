@@ -84,7 +84,7 @@
                 </p>
             </f:if>
             <f:if condition="{item.button} && {item.link}">
-                <f:link.typolink parameter="{item.link}" class="btn btn-{item.button_color} btn-sm">
+                <f:link.typolink parameter="{item.link}" class="btn btn-{item.button_color} btn-sm{f:if(condition: '!{extra_fields}', then: ' stretched-link')}">
                     {item.button}
                 </f:link.typolink>
             </f:if>

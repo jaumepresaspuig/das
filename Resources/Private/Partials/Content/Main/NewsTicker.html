@@ -15,7 +15,7 @@
                             <p class="pb-2">
                                 <f:format.nl2br>{item.text}</f:format.nl2br>
                                 <f:if condition="{item.link}">
-                                    <f:link.typolink parameter="{item.link}" additionalAttributes="{aria-label: '{f:translate(extensionName: \'das\', key: \'read_more\')}'}">
+                                    <f:link.typolink parameter="{item.link}" class="stretched-link" additionalAttributes="{aria-label: '{f:translate(extensionName: \'das\', key: \'read_more\')}'}">
                                         <i class="fa-solid fa-circle-arrow-right"></i>
                                     </f:link.typolink>
                                 </f:if>

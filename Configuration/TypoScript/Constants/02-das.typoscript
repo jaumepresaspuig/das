@@ -13,7 +13,7 @@ plugin.tx_das {
         cssFile30 = EXT:das/Resources/Public/Css/fontawesome-all.min.css
         cssFile40 = EXT:das/Resources/Public/Css/aos.min.css
         cssFile50 = EXT:das/Resources/Public/JavaScript/glightbox/css/glightbox.min.css
-        cssFile90 = EXT:das/Resources/Public/Css/css.css
+        cssFile90 = EXT:das/Resources/Public/Css/css.min.css
 
         jsFile10  = EXT:das/Resources/Public/JavaScript/jquery-4.0.0.min.js
         jsFile20  = EXT:das/Resources/Public/JavaScript/bootstrap.bundle.min.js

@@ -2103,10 +2103,6 @@
                 <source>Highlited code.</source>
                 <target>Codi ressaltat.</target>
             </trans-unit>
-            <trans-unit id="tt_content.code.language">
-                <source>Language</source>
-                <target>Llenguatge</target>
-            </trans-unit>
             <trans-unit id="tt_content.code.style">
                 <source>Style</source>
                 <target>Estil</target>
@@ -2118,6 +2114,14 @@
             <trans-unit id="tt_content.code.vs-dark">
                 <source>Dark</source>
                 <target>Fosc</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.show_copyandpaste_button">
+                <source>Show copy and paste button</source>
+                <target>Mostra botó de copiar i enganxar</target>
+            </trans-unit>
+            <trans-unit id="tt_content.code.language">
+                <source>Language</source>
+                <target>Llenguatge</target>
             </trans-unit>
             <trans-unit id="tt_content.code.language.autodetect">
                 <source>Autodetect</source>

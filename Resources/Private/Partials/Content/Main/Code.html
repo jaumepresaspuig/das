@@ -1,6 +1,6 @@
-<div class="tx-das-content-code tx-das-content-code-layout-{layout}">
-    <pre><code{f:if(condition: '{language}', then: ' class="language-{language}"')}>{code}</code></pre>
-    <f:asset.css identifier="code-highlight-css" href="EXT:das/Resources/Public/JavaScript/highlight/styles/{style}.min.css" />
+<div class="tx-das-content-code tx-das-content-code-layout-{layout} tx-das-content-code-style-{style}">
+    <pre><code{f:if(condition: '{language}', then: ' class="language-{language}"')}>{code}</code><f:if condition="{show_copyandpaste_button}"><a href="#" class="copyandpaste tooltipthis" title="" data-id="code-{record.uid}"><i class="fa-regular fa-copy"></i></a><div class="d-none" id="code-{record.uid}">{code}</div></f:if></pre>
+    <f:asset.css identifier="code-highlight-css" href="EXT:das/Resources/Public/JavaScript/highlight/styles/default.min.css" />
     <f:asset.script identifier="code-highlight-js" src="EXT:das/Resources/Public/JavaScript/highlight/highlight.min.js" />
     <f:if condition="{language}">
         <f:asset.script identifier="code-highlight-js-{language}" src="EXT:das/Resources/Public/JavaScript/highlight/languages/{language}.min.js" />

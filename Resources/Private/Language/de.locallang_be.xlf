@@ -2110,6 +2110,10 @@
                 <source>Dark</source>
                 <target>Dunkel</target>
             </trans-unit>
+            <trans-unit id="tt_content.code.show_copyandpaste_button">
+                <source>Show copy and paste button</source>
+                <target>Copy- und Paste-Button anzeigen</target>
+            </trans-unit>
             <trans-unit id="tt_content.code.language">
                 <source>Language</source>
                 <target>Programmiersprache</target>

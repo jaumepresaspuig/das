@@ -27,7 +27,7 @@ In order to overwrite assets and the path to the partial folders, the files *myd
         settings {
             theme = mydastheme
             cssFile20 = EXT:mydastheme/Resources/Public/Css/bootstrap.min.css
-            cssFile95 = EXT:mydastheme/Resources/Public/Css/css.css
+            cssFile90 = EXT:mydastheme/Resources/Public/Css/css.min.css
         }
         view {
             templates {
